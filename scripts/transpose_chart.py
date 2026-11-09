@@ -81,6 +81,11 @@ def main(src, dst, frm, to, *flags):
         edits = []
         for ws in lines.values():
             toks = [token(w[4]) for w in ws]
+            # Allow a leading section label such as "Intro:" or "Interlude 2:".
+            for i, w in enumerate(ws[:3]):
+                if w[4].endswith(':') and all(x[4][0].isalpha() or x[4][0].isdigit() for x in ws[:i + 1]):
+                    toks[: i + 1] = [('', '', '')] * (i + 1)
+                    break
             if all(t is not None for t in toks) and any(t[1] for t in toks):
                 for w, (pre, ch, post) in zip(ws, toks):
                     if ch:

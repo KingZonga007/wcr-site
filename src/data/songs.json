@@ -29,6 +29,35 @@
     "source": "manual"
   },
   {
+    "slug": "i-give-you-all",
+    "title": "I Give You All",
+    "key": "G",
+    "writers": null,
+    "themes": [],
+    "ccli": null,
+    "charts": {
+      "recording": {
+        "key": "G",
+        "file": "/charts/i-give-you-all-G.pdf"
+      },
+      "congregational": {
+        "key": "E",
+        "file": "/charts/i-give-you-all-E.pdf"
+      },
+      "extras": []
+    },
+    "lyrics": null,
+    "story": null,
+    "youtubeId": null,
+    "recordings": [],
+    "year": 2026,
+    "firstYear": 2026,
+    "publisher": "West Coast Revival",
+    "listen": null,
+    "unreleased": true,
+    "source": "manual"
+  },
+  {
     "slug": "o-for-a-thousand-tongues-to-sing",
     "title": "O For a Thousand Tongues to Sing",
     "key": "E",
