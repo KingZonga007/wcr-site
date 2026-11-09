@@ -160,6 +160,7 @@ export async function updateReleases(songs) {
       songs.push(s);
     }
     const y = Number(r.date.slice(0, 4));
+    if (s.unreleased) { delete s.unreleased; s.year = y; s.firstYear = y; }
     if (!s.recordings.some((x) => x.year === y)) s.recordings.push({ year: y, publisher: 'West Coast Revival', album: { title: r.single ? 'Single' : r.album, confidence: 'confirmed' }, version: null, tempo: '' });
     s.year = Math.max(s.year || 0, y);
     s.listen = { spotify: r.spotify || s.listen?.spotify, apple: r.apple || s.listen?.apple, youtube: r.youtube || s.listen?.youtube, amazon: r.amazon || s.listen?.amazon, songlink: r.songlink, exact: true };

@@ -14,7 +14,8 @@ const featuredSlugs = featuredList.slice(0, 6);
 const featured = featuredSlugs.map((s) => songs.find((x) => x.slug === s)).filter(Boolean);
 // Latest release: kept current by scripts/update-content.mjs; falls back to the newest song.
 const latestRel = releases.latest;
-const latest = latestRel ? (songs.find((s) => s.title.toLowerCase() === latestRel.title.toLowerCase()) || songs[0]) : songs[0];
+const released = songs.filter((s) => !s.unreleased);
+const latest = latestRel ? (songs.find((s) => s.title.toLowerCase() === latestRel.title.toLowerCase()) || released[0]) : released[0];
 const latestLinks = latestRel ? { spotify: latestRel.spotify || latest.listen.spotify, apple: latestRel.apple || latest.listen.apple, youtube: latestRel.youtube || latest.listen.youtube, amazon: latestRel.amazon || latest.listen.amazon } : latest.listen;
 const latestYear = latestRel ? latestRel.date.slice(0, 4) : latest.year;
 const ep = episodes[0];

@@ -6,7 +6,7 @@ import songs from '../data/songs.json';
 
 // Keeps "Our story" current: names the newest release unless the story already does.
 const singlesLine = 'Since then, West Coast Revival has focused on singles, starting in 2019 with "Behold Our God (Almost Acoustic)" and continuing through "Flesh and Blood," "The Armor" and "We Three Kings." "The Sparrow" followed in 2021, alongside <em>Oh the Deep</em>, a remastering of the original <em>FUSE</em> EP. 2022 brought "Before My Knees Could Reach the Ground," and 2025 saw "Solid Rock," "In You Is Mercy" and "Have You Been to Jesus."';
-const latestTitle = releases.latest?.title || songs[0]?.title;
+const latestTitle = releases.latest?.title || songs.find((s) => !s.unreleased)?.title;
 const latestDate = releases.latest?.date ? new Date(releases.latest.date + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }) : null;
 const latestSlug = songs.find((x) => x.title.toLowerCase() === (latestTitle || '').toLowerCase())?.slug;
 const showLatest = latestTitle && !singlesLine.toLowerCase().includes(latestTitle.toLowerCase());

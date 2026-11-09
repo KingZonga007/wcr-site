@@ -18,7 +18,7 @@ const schema = [{
   name: song.title,
   url: `${SITE.url}/songs/${song.slug}`,
   byArtist: { '@id': `${SITE.url}/#artist` },
-  datePublished: String(song.year),
+  ...(song.unreleased ? {} : { datePublished: String(song.year) }),
   ...(song.writers ? { recordingOf: { '@type': 'MusicComposition', name: song.title, composer: song.writers } } : {}),
 }];
 const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet, lyrics and where to listen.`;
@@ -26,15 +26,24 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
 <Base title={`${song.title} Chords and Lyrics (Free PDF)`} description={desc} image="/img/img-8084-1600.webp" schema={schema} current="songs">
   <section class="section" style="padding-bottom:40px; background: linear-gradient(rgba(10,12,22,.8), var(--bg)), url('/img/img-8084-1600.webp') center/cover">
     <div class="wrap">
-      <p class="eyebrow"><a href={href('/songs')} style="color:inherit;text-decoration:none">Songs</a> / {song.year}</p>
+      <p class="eyebrow"><a href={href('/songs')} style="color:inherit;text-decoration:none">Songs</a> / {song.unreleased ? 'Coming soon' : song.year}</p>
       <h1>{song.title}</h1>
       <p class="lead">{song.writers ? `Written by ${song.writers}` : 'West Coast Revival'}</p>
-      <div class="listen-row" style="margin-top:18px">
-        <a class="btn primary" href={song.listen.spotify} data-out="spotify">Spotify</a>
-        <a class="btn ghost" href={song.listen.apple} data-out="apple_music">Apple Music</a>
-        <a class="btn ghost" href={song.listen.youtube} data-out="youtube">YouTube</a>
-        <a class="btn ghost" href={song.listen.amazon} data-out="amazon">Amazon Music</a>
-      </div>
+      {song.unreleased ? (
+        <>
+          <div class="listen-row" style="margin-top:18px">
+            {['Spotify', 'Apple Music', 'YouTube', 'Amazon Music'].map((n) => <span class="btn ghost soon" aria-disabled="true">{n}: coming soon</span>)}
+          </div>
+          <p class="muted" style="margin-top:12px">This song hasn't been released yet. The charts are free now, and listening links will appear here when it comes out.</p>
+        </>
+      ) : (
+        <div class="listen-row" style="margin-top:18px">
+          <a class="btn primary" href={song.listen.spotify} data-out="spotify">Spotify</a>
+          <a class="btn ghost" href={song.listen.apple} data-out="apple_music">Apple Music</a>
+          <a class="btn ghost" href={song.listen.youtube} data-out="youtube">YouTube</a>
+          <a class="btn ghost" href={song.listen.amazon} data-out="amazon">Amazon Music</a>
+        </div>
+      )}
     </div>
   </section>
 
@@ -85,7 +94,7 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
           {song.ccli && (<><dt>CCLI</dt><dd>{song.ccli}</dd></>)}
           {song.themes.length > 0 && (<><dt>Themes</dt><dd>{song.themes.join(', ')}</dd></>)}
           <dt>Recordings</dt>
-          <dd>{song.recordings.map((r) => <div>{r.year} · {r.album.title}{r.version ? ` (${r.version})` : ''}</div>)}</dd>
+          <dd>{song.unreleased && song.recordings.length === 0 && <div>Coming soon</div>}{song.recordings.map((r) => <div>{r.year} · {r.album.title}{r.version ? ` (${r.version})` : ''}</div>)}</dd>
         </dl>
         {isSGM && <p class="muted" style="font-size:.85rem;margin-top:14px">Originally released with Sovereign Grace Music.</p>}
         {inEpisodes.length > 0 && (
@@ -107,7 +116,7 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
         <h2>More songs</h2>
         <div class="grid three">
           {related.map((s) => (
-            <a class="card song-card" href={href(`/songs/${s.slug}`)}><h3>{s.title}</h3><span class="meta">{s.year}</span></a>
+            <a class="card song-card" href={href(`/songs/${s.slug}`)}><h3>{s.title}</h3><span class="meta">{s.unreleased ? 'Coming soon' : s.year}</span></a>
           ))}
         </div>
       </div>

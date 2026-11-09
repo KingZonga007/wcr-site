@@ -123,7 +123,7 @@ if os.path.exists(OUT):
         if p.get("listen", {}).get("exact"):
             s["listen"] = p["listen"]
     for slug, p in prev.items():
-        if slug not in songs and p.get("source") == "auto":
+        if slug not in songs and p.get("source") in ("auto", "manual"):
             songs[slug] = p
 
 out = sorted(songs.values(), key=lambda s: (-s["year"], s["title"]))

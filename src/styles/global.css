@@ -52,6 +52,7 @@ h3 { font-size: 1.35rem; font-weight: 500; }
 .btn.primary:hover { filter: brightness(1.08); color: var(--accent-ink); }
 .btn.ghost { border-color: rgba(244,239,230,.45); color: var(--ink); background: transparent; }
 .btn.ghost:hover { border-color: var(--ink); color: var(--ink); }
+.btn.soon { opacity: .55; cursor: default; font-weight: 500; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* Header */

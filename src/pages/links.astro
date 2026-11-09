@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import EmailForm from '../components/EmailForm.astro';
 import { SITE, href } from '../lib/site.js';
 import songs from '../data/songs.json';
-const latest = songs[0];
+const latest = songs.find((s) => !s.unreleased);
 ---
 <Base title="Links" description="West Coast Revival: latest release, Worship Is Warfare, free charts and more.">
   <section class="section" style="padding-top:48px">

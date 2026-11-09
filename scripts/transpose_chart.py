@@ -28,6 +28,16 @@ NOTE = {n: i for i, n in enumerate(SHARPS)} | {n: i for i, n in enumerate(FLATS)
 CHORD = re.compile(r'^([A-G][#b]?)((?:m(?!aj)|maj|sus|dim|aug|add|M)?[0-9]*(?:sus[0-9]*)?)(?:/([A-G][#b]?))?$')
 
 
+def token(t):
+    """Split a chord-line token into (prefix, chord, suffix); None if it isn't one."""
+    if t in ('|', '||', '-', '/') or re.fullmatch(r'[xX]\d+|\(?\d+x\)?', t):
+        return ('', '', '')
+    m = re.fullmatch(r'(\|*\(?)(.+?)(\)?\|*)', t)
+    if m and CHORD.match(m.group(2)):
+        return m.groups()
+    return None
+
+
 def shift(note, steps, scale):
     return scale[(NOTE[note] + steps) % 12]
 
@@ -64,30 +74,30 @@ def main(src, dst, frm, to, *flags):
     scale = FLATS if to in FLAT_KEYS else SHARPS
     doc = fitz.open(src)
     for page in doc:
-        words = page.get_text('words')  # x0,y0,x1,y1,text,block,line,word
+        words = [(*w[:4], w[4].replace('\u200b', ''), *w[5:]) for w in page.get_text('words')]
         lines = {}
         for w in words:
             lines.setdefault((w[5], w[6]), []).append(w)
         edits = []
         for ws in lines.values():
-            if all(CHORD.match(w[4]) for w in ws):
-                for w in ws:
-                    edits.append((w, transpose(w[4], steps, scale)))
+            toks = [token(w[4]) for w in ws]
+            if all(t is not None for t in toks) and any(t[1] for t in toks):
+                for w, (pre, ch, post) in zip(ws, toks):
+                    if ch:
+                        edits.append((w, pre + transpose(ch, steps, scale) + post))
         # Header "Key - C"
         hdr = None
         for ws in lines.values():
             t = [w[4] for w in ws]
             if len(t) >= 3 and t[0] == 'Key' and t[1] == '-':
                 hdr = ws[2]
-        spans = {}
-        for b in page.get_text('dict')['blocks']:
-            for l in b.get('lines', []):
-                for s in l['spans']:
-                    spans.setdefault(round(s['bbox'][1]), s)
+        spans = [sp for bl in page.get_text('dict')['blocks'] for l in bl.get('lines', []) for sp in l['spans'] if sp['text'].strip('\u200b ')]
 
         def baseline_and_size(w):
-            best = min(spans.values(), key=lambda s: abs(s['bbox'][1] - w[1]) + abs(s['bbox'][0] - w[0]) * 0.01)
-            return best['origin'][1], best['size']
+            cx, cy = (w[0] + w[2]) / 2, (w[1] + w[3]) / 2
+            inside = [sp for sp in spans if fitz.Rect(sp['bbox']).contains(fitz.Point(cx, cy))]
+            best = inside[0] if inside else min(spans, key=lambda sp: abs(sp['bbox'][1] - w[1]) + abs(sp['bbox'][0] - w[0]) * 0.01)
+            return best['origin'][1], best['size'], best['font'], best['flags']
 
         if steps == 0:
             edits, hdr = [], None
@@ -96,14 +106,19 @@ def main(src, dst, frm, to, *flags):
             clean(page)
         if hdr:
             info.append((hdr, to, *baseline_and_size(hdr)))
-        for w, new, y, size in info:
+        for w, new, y, size, *_ in info:
             # Tight box around the glyphs only, so lyrics above/below are untouched.
             page.add_redact_annot(fitz.Rect(w[0] + 0.5, y - size * 0.7, w[2] - 0.5, y - size * 0.05), fill=(1, 1, 1))
         page.apply_redactions(images=fitz.PDF_REDACT_IMAGE_REMOVE if '--clean' in flags else fitz.PDF_REDACT_IMAGE_NONE)
         page.insert_font(fontname='chord', fontfile=str(CHORD_FONT))
         page.insert_font(fontname='hdr', fontfile=str(HEADER_FONT))
-        for w, new, y, size in info:
-            font = 'hdr' if w is hdr else 'chord'
+        for w, new, y, size, fname, sflags in info:
+            if w is hdr:
+                font = 'hdr'
+            elif 'open' in fname.lower():
+                font = 'chord'
+            else:  # Arial/Helvetica-style charts
+                font = 'hebo' if (sflags & 16 or 'bold' in fname.lower()) else 'helv'
             page.insert_text((w[0], y), new, fontname=font, fontsize=size, color=(0, 0, 0))
     doc.save(dst, garbage=3, deflate=True)
     print(f'{len(edits)} chords moved {frm} -> {to}' + (' (cleaned)' if '--clean' in flags else ''))

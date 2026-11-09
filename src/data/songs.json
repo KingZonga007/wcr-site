@@ -1,5 +1,34 @@
 [
   {
+    "slug": "and-can-it-be",
+    "title": "And Can It Be",
+    "key": "G",
+    "writers": null,
+    "themes": [],
+    "ccli": null,
+    "charts": {
+      "recording": {
+        "key": "G",
+        "file": "/charts/and-can-it-be-G.pdf"
+      },
+      "congregational": {
+        "key": "E",
+        "file": "/charts/and-can-it-be-E.pdf"
+      },
+      "extras": []
+    },
+    "lyrics": null,
+    "story": null,
+    "youtubeId": null,
+    "recordings": [],
+    "year": 2026,
+    "firstYear": 2026,
+    "publisher": "West Coast Revival",
+    "listen": null,
+    "unreleased": true,
+    "source": "manual"
+  },
+  {
     "slug": "have-you-been-to-jesus",
     "title": "Have You Been to Jesus",
     "key": "G",
