@@ -74,7 +74,7 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
             ))}
           </div>
         )}
-        {!song.charts.recording && (
+        {!song.charts.recording && !song.charts.congregational && (
           <div class="card">
             <p><strong>Charts for this song are coming soon.</strong> Join the list and we'll let you know when they're posted. Your email also unlocks every free chart on the site.</p>
             <EmailForm source={`chart-waitlist:${song.slug}`} event="chart_signup" song={song.slug} cta="Send me the charts" musicianOption thanks="You're in. Every chart on the site is now unlocked, and we'll let you know when this one is posted." />

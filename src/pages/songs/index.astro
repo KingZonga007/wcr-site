@@ -26,7 +26,7 @@ const sorts = [
       <div class="grid three" id="list">
         {[...songs].sort((a, b) => { const fa = featured.indexOf(a.slug), fb = featured.indexOf(b.slug); return (fa < 0) - (fb < 0) || fa - fb; }).map((s) => (
           <a class="card song-card" href={href(`/songs/${s.slug}`)} data-title={s.title.toLowerCase()} data-year={s.year} data-feat={featured.indexOf(s.slug)} hidden={!featured.includes(s.slug)}>
-            <span class="badge">{s.charts.recording ? 'Free charts' : 'Charts coming'}</span>
+            <span class="badge">{(s.charts.recording || s.charts.congregational) ? 'Free charts' : 'Charts coming'}</span>
             <h3>{s.title}</h3>
             {(s.unreleased || s.key || s.recordings.length > 1) && <span class="meta">{[s.unreleased ? 'Releasing soon' : '', s.recordings.length > 1 ? `${s.recordings.length} recordings` : '', s.key ? `Key of ${s.key}` : ''].filter(Boolean).join(' · ')}</span>}
           </a>

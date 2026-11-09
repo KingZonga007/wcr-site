@@ -29,6 +29,32 @@
     "source": "manual"
   },
   {
+    "slug": "o-for-a-thousand-tongues-to-sing",
+    "title": "O For a Thousand Tongues to Sing",
+    "key": "E",
+    "writers": null,
+    "themes": [],
+    "ccli": null,
+    "charts": {
+      "recording": null,
+      "congregational": {
+        "key": "E",
+        "file": "/charts/o-for-a-thousand-tongues-to-sing-E.pdf"
+      },
+      "extras": []
+    },
+    "lyrics": null,
+    "story": null,
+    "youtubeId": null,
+    "recordings": [],
+    "year": 2026,
+    "firstYear": 2026,
+    "publisher": "West Coast Revival",
+    "listen": null,
+    "unreleased": true,
+    "source": "manual"
+  },
+  {
     "slug": "have-you-been-to-jesus",
     "title": "Have You Been to Jesus",
     "key": "A",
