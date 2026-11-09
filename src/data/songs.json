@@ -31,13 +31,19 @@
   {
     "slug": "have-you-been-to-jesus",
     "title": "Have You Been to Jesus",
-    "key": "G",
+    "key": "A",
     "writers": null,
     "themes": [],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "A",
+        "file": "/charts/have-you-been-to-jesus-A.pdf"
+      },
+      "congregational": {
+        "key": "G",
+        "file": "/charts/have-you-been-to-jesus-G.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
@@ -69,13 +75,19 @@
   {
     "slug": "in-you-is-mercy",
     "title": "In You Is Mercy",
-    "key": null,
+    "key": "C",
     "writers": null,
     "themes": [],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "C",
+        "file": "/charts/in-you-is-mercy-C.pdf"
+      },
+      "congregational": {
+        "key": "C",
+        "file": "/charts/in-you-is-mercy-C.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
