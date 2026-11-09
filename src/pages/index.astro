@@ -3,12 +3,14 @@ import Base from '../layouts/Base.astro';
 import EmailForm from '../components/EmailForm.astro';
 import LiveStatus from '../components/LiveStatus.astro';
 import { SITE, href } from '../lib/site.js';
+import featuredList from '../data/featured.json';
 import songs from '../data/songs.json';
 import episodes from '../data/episodes.json';
 import releases from '../data/releases.json';
 
 // Most popular first (Ryan's order)
-const featuredSlugs = ['behold-our-god', 'all-creatures-of-our-god-and-king', 'the-sparrow', 'before-my-knees-could-reach-the-ground', 'in-you-is-mercy', 'solid-rock'];
+// Order set in src/data/featured.json (also the default view on /songs).
+const featuredSlugs = featuredList.slice(0, 6);
 const featured = featuredSlugs.map((s) => songs.find((x) => x.slug === s)).filter(Boolean);
 // Latest release: kept current by scripts/update-content.mjs; falls back to the newest song.
 const latestRel = releases.latest;

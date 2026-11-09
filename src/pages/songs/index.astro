@@ -2,8 +2,10 @@
 import Base from '../../layouts/Base.astro';
 import { href } from '../../lib/site.js';
 import songs from '../../data/songs.json';
+import featured from '../../data/featured.json';
 
 const sorts = [
+  { key: 'featured', label: 'Featured' },
   { key: 'newest', label: 'Newest' },
   { key: 'oldest', label: 'Oldest' },
   { key: 'az', label: 'A to Z' },
@@ -22,8 +24,8 @@ const sorts = [
         {sorts.map((o, i) => <button type="button" data-sort={o.key} aria-pressed={i === 0 ? 'true' : 'false'}>{o.label}</button>)}
       </div>
       <div class="grid three" id="list">
-        {songs.map((s) => (
-          <a class="card song-card" href={href(`/songs/${s.slug}`)} data-title={s.title.toLowerCase()} data-year={s.year}>
+        {[...songs].sort((a, b) => { const fa = featured.indexOf(a.slug), fb = featured.indexOf(b.slug); return (fa < 0) - (fb < 0) || fa - fb; }).map((s) => (
+          <a class="card song-card" href={href(`/songs/${s.slug}`)} data-title={s.title.toLowerCase()} data-year={s.year} data-feat={featured.indexOf(s.slug)} hidden={!featured.includes(s.slug)}>
             <span class="badge">{s.charts.recording ? 'Free charts' : 'Charts coming'}</span>
             <h3>{s.title}</h3>
             {(s.key || s.recordings.length > 1) && <span class="meta">{[s.recordings.length > 1 ? `${s.recordings.length} recordings` : '', s.key ? `Key of ${s.key}` : ''].filter(Boolean).join(' · ')}</span>}
@@ -31,13 +33,16 @@ const sorts = [
         ))}
       </div>
       <p id="empty" class="muted" hidden>No songs match that search.</p>
+      <p class="muted" id="more" style="margin-top:20px">Showing featured songs. Choose Newest or A to Z to see all {songs.length}.</p>
     </div>
   </section>
   <script is:inline>
     (function () {
       var q = document.getElementById('q'), list = document.getElementById('list');
       var cards = [].slice.call(list.querySelectorAll('.song-card'));
+      var mode = 'featured';
       var sorters = {
+        featured: function (a, b) { var x = +a.dataset.feat, y = +b.dataset.feat; return (x < 0) - (y < 0) || x - y; },
         newest: function (a, b) { return b.dataset.year - a.dataset.year || a.dataset.title.localeCompare(b.dataset.title); },
         oldest: function (a, b) { return a.dataset.year - b.dataset.year || a.dataset.title.localeCompare(b.dataset.title); },
         az: function (a, b) { return a.dataset.title.localeCompare(b.dataset.title); },
@@ -45,12 +50,14 @@ const sorts = [
       };
       function filter() {
         var t = q.value.trim().toLowerCase(), n = 0;
-        cards.forEach(function (c) { var show = !t || c.dataset.title.indexOf(t) > -1; c.hidden = !show; if (show) n++; });
+        cards.forEach(function (c) { var show = t ? c.dataset.title.indexOf(t) > -1 : (mode !== 'featured' || +c.dataset.feat > -1); c.hidden = !show; if (show) n++; });
         document.getElementById('empty').hidden = n > 0;
+        document.getElementById('more').hidden = mode !== 'featured' || !!t;
       }
       q.addEventListener('input', filter);
       document.querySelectorAll('button[data-sort]').forEach(function (b) {
         b.addEventListener('click', function () {
+          mode = b.dataset.sort; filter();
           cards.sort(sorters[b.dataset.sort]).forEach(function (c) { list.appendChild(c); });
           document.querySelectorAll('button[data-sort]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
         });

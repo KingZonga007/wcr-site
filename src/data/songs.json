@@ -1320,14 +1320,26 @@
   {
     "slug": "day-after-day",
     "title": "Day After Day",
-    "key": null,
+    "key": "B",
     "writers": null,
     "themes": [],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
+      "recording": {
+        "key": "B",
+        "file": "/charts/day-after-day-B.pdf"
+      },
+      "congregational": {
+        "key": "B",
+        "file": "/charts/day-after-day-B.pdf"
+      },
+      "extras": [
+        {
+          "label": "Guitar chart (G, capo 4)",
+          "key": "G",
+          "file": "/charts/day-after-day-G-capo-4.pdf"
+        }
+      ]
     },
     "lyrics": null,
     "story": null,
