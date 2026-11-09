@@ -431,7 +431,7 @@
   {
     "slug": "behold-our-god",
     "title": "Behold Our God",
-    "key": null,
+    "key": "C",
     "writers": "Jonathan Baird, Meghan Baird, Ryan Baird, Stephen Altrogge",
     "themes": [
       "God's greatness",
@@ -439,8 +439,14 @@
     ],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "C",
+        "file": "/charts/behold-our-god-C.pdf"
+      },
+      "congregational": {
+        "key": "C",
+        "file": "/charts/behold-our-god-C.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
