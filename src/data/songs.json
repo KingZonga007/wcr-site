@@ -145,15 +145,21 @@
   {
     "slug": "solid-rock",
     "title": "Solid Rock",
-    "key": null,
+    "key": "E",
     "writers": null,
     "themes": [
       "Hymn"
     ],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "E",
+        "file": "/charts/solid-rock-E.pdf"
+      },
+      "congregational": {
+        "key": "E",
+        "file": "/charts/solid-rock-E.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
