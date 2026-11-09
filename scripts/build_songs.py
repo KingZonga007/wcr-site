@@ -81,7 +81,9 @@ for r in rows:
         "writers": WRITERS.get(canonical),
         "themes": THEMES.get(canonical, []),
         "ccli": None,
-        "charts": [],
+        # Two core charts per song: recording key and congregational key.
+        # Each: {"key": "G", "file": "/charts/<slug>-recording.pdf"}; extras: lead sheet, capo, ChordPro.
+        "charts": {"recording": None, "congregational": None, "extras": []},
         "lyrics": None,
         "story": None,
         "youtubeId": None,

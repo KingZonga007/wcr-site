@@ -6,7 +6,8 @@ import { SITE, href } from '../lib/site.js';
 import songs from '../data/songs.json';
 import episodes from '../data/episodes.json';
 
-const featuredSlugs = ['behold-our-god', 'all-creatures-of-our-god-and-king', 'come-you-saints', 'in-you-is-mercy', 'solid-rock', 'have-you-been-to-jesus'];
+// Most popular first (Ryan's order)
+const featuredSlugs = ['behold-our-god', 'all-creatures-of-our-god-and-king', 'the-sparrow', 'before-my-knees-could-reach-the-ground', 'in-you-is-mercy', 'solid-rock'];
 const featured = featuredSlugs.map((s) => songs.find((x) => x.slug === s)).filter(Boolean);
 const latest = songs[0];
 const ep = episodes[0];
@@ -84,14 +85,14 @@ const STORE_ON = false; // switched on in phase 3
         <div>
           <p class="eyebrow">For worship leaders</p>
           <h2>Free charts for every song</h2>
-          <p class="lead">Chord charts in the recorded key, capo versions and lead sheets. Free for your church, always.</p>
+          <p class="lead">Every song has two free chord charts: one in the recording key and one in a congregational key that's easier to sing. Free for your church, always.</p>
         </div>
         <div class="photo" style="max-height:260px"><img src="/img/elec-close-up-800.webp" alt="Close-up of hands playing an electric guitar" loading="lazy" /></div>
       </div>
       <div class="grid three">
         {featured.map((s) => (
           <a class="card song-card" href={href(`/songs/${s.slug}`)}>
-            <span class="badge">{s.charts.length ? 'Free charts' : 'Charts coming'}</span>
+            <span class="badge">{s.charts.recording ? 'Free charts' : 'Charts coming'}</span>
             <h3>{s.title}</h3>
             <span class="meta">{s.key ? `Key of ${s.key} · ` : ''}{s.year}</span>
           </a>

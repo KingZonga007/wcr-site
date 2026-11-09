@@ -3,34 +3,28 @@ import Base from '../../layouts/Base.astro';
 import { href } from '../../lib/site.js';
 import songs from '../../data/songs.json';
 
-const eras = [
-  { key: 'all', label: 'All' },
-  { key: 'new', label: '2019 to now' },
-  { key: '2015', label: 'Some Bright Golden Morning era' },
-  { key: 'sgm', label: 'Sovereign Grace' },
-  { key: 'early', label: '2003 to 2008' },
+const sorts = [
+  { key: 'newest', label: 'Newest' },
+  { key: 'oldest', label: 'Oldest' },
+  { key: 'az', label: 'A to Z' },
+  { key: 'za', label: 'Z to A' },
 ];
-function era(s) {
-  if (s.year >= 2019) return 'new';
-  if (s.publisher === 'Sovereign Grace Music') return 'sgm';
-  if (s.year >= 2013) return '2015';
-  return 'early';
-}
 ---
-<Base title="Songs and Free Chord Charts" description="Every West Coast Revival song with free chord charts, lead sheets, lyrics and streaming links." current="songs">
+<Base title="Songs and Free Chord Charts" description="Every West Coast Revival song with free chord charts in the recording key and a congregational key, plus lyrics and streaming links." current="songs">
   <section class="section">
     <div class="wrap">
       <p class="eyebrow">Songs</p>
       <h1>Songs and free charts</h1>
-      <p class="lead">Every West Coast Revival song, with free charts for your church, the story behind it, and where to listen.</p>
-      <div class="filters" role="search">
+      <p class="lead">Every West Coast Revival song, with two free charts (recording key and congregational key), the story behind it, and where to listen.</p>
+      <div class="filters">
         <input type="search" id="q" placeholder="Search songs" aria-label="Search songs" />
-        {eras.map((e, i) => <button type="button" data-era={e.key} aria-pressed={i === 0 ? 'true' : 'false'}>{e.label}</button>)}
+        <span class="muted" style="align-self:center;font-size:.9rem">Sort:</span>
+        {sorts.map((o, i) => <button type="button" data-sort={o.key} aria-pressed={i === 0 ? 'true' : 'false'}>{o.label}</button>)}
       </div>
       <div class="grid three" id="list">
         {songs.map((s) => (
-          <a class="card song-card" href={href(`/songs/${s.slug}`)} data-title={s.title.toLowerCase()} data-era={era(s)}>
-            <span class="badge">{s.charts.length ? 'Free charts' : 'Charts coming'}</span>
+          <a class="card song-card" href={href(`/songs/${s.slug}`)} data-title={s.title.toLowerCase()} data-year={s.year}>
+            <span class="badge">{s.charts.recording ? 'Free charts' : 'Charts coming'}</span>
             <h3>{s.title}</h3>
             <span class="meta">{s.year}{s.recordings.length > 1 ? ` · ${s.recordings.length} recordings` : ''}{s.key ? ` · Key of ${s.key}` : ''}</span>
           </a>
@@ -41,23 +35,24 @@ function era(s) {
   </section>
   <script is:inline>
     (function () {
-      var q = document.getElementById('q'), era = 'all';
-      var cards = [].slice.call(document.querySelectorAll('#list .song-card'));
-      function apply() {
+      var q = document.getElementById('q'), list = document.getElementById('list');
+      var cards = [].slice.call(list.querySelectorAll('.song-card'));
+      var sorters = {
+        newest: function (a, b) { return b.dataset.year - a.dataset.year || a.dataset.title.localeCompare(b.dataset.title); },
+        oldest: function (a, b) { return a.dataset.year - b.dataset.year || a.dataset.title.localeCompare(b.dataset.title); },
+        az: function (a, b) { return a.dataset.title.localeCompare(b.dataset.title); },
+        za: function (a, b) { return b.dataset.title.localeCompare(a.dataset.title); },
+      };
+      function filter() {
         var t = q.value.trim().toLowerCase(), n = 0;
-        cards.forEach(function (c) {
-          var show = (!t || c.dataset.title.indexOf(t) > -1) && (era === 'all' || c.dataset.era === era);
-          c.hidden = !show; if (show) n++;
-        });
+        cards.forEach(function (c) { var show = !t || c.dataset.title.indexOf(t) > -1; c.hidden = !show; if (show) n++; });
         document.getElementById('empty').hidden = n > 0;
       }
-      q.addEventListener('input', apply);
-      document.querySelectorAll('[data-era]').forEach(function (b) {
-        if (b.tagName !== 'BUTTON') return;
+      q.addEventListener('input', filter);
+      document.querySelectorAll('button[data-sort]').forEach(function (b) {
         b.addEventListener('click', function () {
-          era = b.dataset.era;
-          document.querySelectorAll('button[data-era]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-          apply();
+          cards.sort(sorters[b.dataset.sort]).forEach(function (c) { list.appendChild(c); });
+          document.querySelectorAll('button[data-sort]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
         });
       });
     })();

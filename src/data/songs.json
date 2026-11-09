@@ -6,7 +6,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -40,7 +44,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -76,7 +84,11 @@
       "Hymn"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -110,7 +122,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -144,7 +160,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -180,7 +200,11 @@
       "The cross"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -216,7 +240,11 @@
       "Matthew 13"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -250,7 +278,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -284,7 +316,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -321,7 +357,11 @@
       "Ephesians 6"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -357,7 +397,11 @@
       "Christmas"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -394,7 +438,11 @@
       "Isaiah 40"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -440,7 +488,11 @@
       "Hope of heaven"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -477,7 +529,11 @@
       "Mercy"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -511,7 +567,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -545,7 +605,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -579,7 +643,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -613,7 +681,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -649,7 +721,11 @@
       "Hope of heaven"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -683,7 +759,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -717,7 +797,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -751,7 +835,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -785,7 +873,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -829,7 +921,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -863,7 +959,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -900,7 +1000,11 @@
       "Creation"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -936,7 +1040,11 @@
       "Hymn"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -970,7 +1078,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1004,7 +1116,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1038,7 +1154,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1075,7 +1195,11 @@
       "Isaiah 53"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1112,7 +1236,11 @@
       "Luke 15"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1146,7 +1274,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1180,7 +1312,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1214,7 +1350,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1248,7 +1388,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1282,7 +1426,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1316,7 +1464,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1350,7 +1502,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1384,7 +1540,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1418,7 +1578,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1452,7 +1616,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1486,7 +1654,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1520,7 +1692,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1554,7 +1730,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1588,7 +1768,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1622,7 +1806,11 @@
     "writers": "Jonathan Baird, Ryan Baird",
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1656,7 +1844,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1693,7 +1885,11 @@
       "Love of Christ"
     ],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1727,7 +1923,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,
@@ -1761,7 +1961,11 @@
     "writers": null,
     "themes": [],
     "ccli": null,
-    "charts": [],
+    "charts": {
+      "recording": null,
+      "congregational": null,
+      "extras": []
+    },
     "lyrics": null,
     "story": null,
     "youtubeId": null,

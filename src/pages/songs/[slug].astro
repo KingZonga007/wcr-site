@@ -42,13 +42,30 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
     <div class="wrap grid two" style="align-items:start">
       <div>
         <h2>Free charts</h2>
-        {song.charts.length ? (
-          <div class="grid" id="charts">
-            {song.charts.map((c) => (
-              <button class="btn ghost chart-dl" type="button" data-file={c.file} data-song={song.slug}>Download {c.label}</button>
+        <div class="grid two" style="gap:16px;margin-bottom:20px">
+          {[['recording', 'Recording key', 'Matches the recording'], ['congregational', 'Congregational key', 'Easier for most congregations to sing']].map(([k, label, note]) => {
+            const c = song.charts[k];
+            return (
+              <div class="card">
+                <h3>{label}{c?.key ? `: ${c.key}` : ''}</h3>
+                <p class="muted" style="margin-top:0">{note}</p>
+                {c ? (
+                  <button class="btn primary chart-dl" type="button" data-file={c.file} data-song={song.slug} data-chart={k}>Download PDF</button>
+                ) : (
+                  <span class="badge">Coming soon</span>
+                )}
+              </div>
+            );
+          })}
+        </div>
+        {song.charts.extras.length > 0 && (
+          <div class="btn-row" style="margin-bottom:20px">
+            {song.charts.extras.map((c) => (
+              <button class="btn ghost chart-dl" type="button" data-file={c.file} data-song={song.slug} data-chart={c.label}>{c.label}</button>
             ))}
           </div>
-        ) : (
+        )}
+        {!song.charts.recording && (
           <div class="card">
             <p><strong>Charts for this song are on the way.</strong> Leave your email and we'll send them the day they're posted, plus every new chart after that.</p>
             <EmailForm source={`chart-waitlist:${song.slug}`} event="chart_signup" song={song.slug} cta="Send me the charts" musicianOption thanks="Got it. We'll email the charts as soon as they're posted." />
@@ -107,7 +124,7 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
     (function () {
       var gate = document.getElementById('chart-gate'), pending = null;
       function download(file, slug) {
-        window.wcrTrack('chart_download', { song: slug, file: file });
+        window.wcrTrack('chart_download', { song: slug, file: file, chart: (pending && pending.dataset.chart) || undefined });
         var a = document.createElement('a'); a.href = file; a.download = ''; document.body.appendChild(a); a.click(); a.remove();
       }
       document.querySelectorAll('.chart-dl').forEach(function (b) {
