@@ -493,15 +493,21 @@
   {
     "slug": "we-three-kings",
     "title": "We Three Kings",
-    "key": null,
+    "key": "E",
     "writers": null,
     "themes": [
       "Christmas"
     ],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "E",
+        "file": "/charts/we-three-kings-E.pdf"
+      },
+      "congregational": {
+        "key": "E",
+        "file": "/charts/we-three-kings-E.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
@@ -1226,13 +1232,19 @@
   {
     "slug": "oh-to-see-you",
     "title": "Oh to See You",
-    "key": null,
+    "key": "C",
     "writers": null,
     "themes": [],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "C",
+        "file": "/charts/oh-to-see-you-C.pdf"
+      },
+      "congregational": {
+        "key": "C",
+        "file": "/charts/oh-to-see-you-C.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
