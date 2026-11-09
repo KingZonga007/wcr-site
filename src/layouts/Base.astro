@@ -3,7 +3,7 @@ import '../styles/global.css';
 import { SITE, href } from '../lib/site.js';
 import EmailForm from '../components/EmailForm.astro';
 
-const { title, description = SITE.mission, image = '/img/cover-1-1600.webp', schema = [], current = '' } = Astro.props;
+const { title, description = SITE.mission, image = '/img/band-best-1600.webp', schema = [], current = '' } = Astro.props;
 const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} | ${SITE.tagline}`;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const orgSchema = {
