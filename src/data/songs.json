@@ -999,7 +999,7 @@
   {
     "slug": "all-creatures-of-our-god-and-king",
     "title": "All Creatures of Our God and King",
-    "key": null,
+    "key": "A",
     "writers": "Jonathan Baird, Ryan Baird (new music and arrangement)",
     "themes": [
       "Hymn",
@@ -1007,8 +1007,14 @@
     ],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "A",
+        "file": "/charts/all-creatures-of-our-god-and-king-A.pdf"
+      },
+      "congregational": {
+        "key": "C",
+        "file": "/charts/all-creatures-of-our-god-and-king-C.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
