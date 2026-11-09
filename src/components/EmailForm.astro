@@ -1,0 +1,57 @@
+---
+// One email field + optional "I lead worship" tag. Posts to Netlify Forms in production
+// (and later to the WCR email tool). Remembers the subscriber in the browser.
+import { PREVIEW, href } from '../lib/site.js';
+const {
+  source = 'unknown',
+  cta = 'Sign up',
+  musicianOption = false,
+  compact = false,
+  event = 'sign_up',
+  thanks = "You're in. Check your inbox for a welcome from Jonathan and Ryan.",
+  note = 'About twice a month. Unsubscribe anytime.',
+  song = '',
+} = Astro.props;
+---
+<form class="form email-form" name="signup" method="POST" data-netlify="true" netlify-honeypot="company"
+  data-source={source} data-event={event} data-song={song} data-preview={PREVIEW ? '1' : '0'}>
+  <input type="hidden" name="form-name" value="signup" />
+  <input type="hidden" name="source" value={source} />
+  <input type="hidden" name="song" value={song} />
+  <p hidden><label>Leave blank <input name="company" /></label></p>
+  <div class="fields">
+    <div class="row">
+      <input id={`email-${source}`} type="email" name="email" required placeholder="Your email address" autocomplete="email" aria-label="Email address" />
+      <button class="btn primary" type="submit">{cta}</button>
+    </div>
+    {musicianOption && (
+      <label class="check"><input type="checkbox" name="musician" value="yes" /> I lead worship or play in a band</label>
+    )}
+    {!compact && <p class="fine">{note} See our <a href={href('/privacy')}>privacy policy</a>.</p>}
+  </div>
+  <p class="thanks" role="status">{thanks}</p>
+</form>
+
+<script is:inline>
+  (function () {
+    document.querySelectorAll('form.email-form:not([data-bound])').forEach(function (f) {
+      f.setAttribute('data-bound', '1');
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var data = new FormData(f);
+        ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+          try { var v = sessionStorage.getItem(k); if (v) data.append(k, v); } catch (err) {}
+        });
+        var done = function () {
+          f.classList.add('done');
+          window.wcrStore.set('wcr_subscribed', '1');
+          window.wcrTrack(f.dataset.event, { source: f.dataset.source, song: f.dataset.song || undefined, musician: data.get('musician') === 'yes' });
+          f.dispatchEvent(new CustomEvent('wcr:subscribed', { bubbles: true }));
+        };
+        if (f.dataset.preview === '1') return done();
+        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() })
+          .then(done).catch(done);
+      });
+    });
+  })();
+</script>

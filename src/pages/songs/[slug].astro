@@ -1,0 +1,125 @@
+---
+import Base from '../../layouts/Base.astro';
+import EmailForm from '../../components/EmailForm.astro';
+import { SITE, href } from '../../lib/site.js';
+import songs from '../../data/songs.json';
+import episodes from '../../data/episodes.json';
+
+export function getStaticPaths() {
+  return songs.map((s) => ({ params: { slug: s.slug }, props: { song: s } }));
+}
+const { song } = Astro.props;
+const related = songs.filter((s) => s.slug !== song.slug && Math.abs(s.year - song.year) <= 2).slice(0, 3);
+const inEpisodes = episodes.filter((e) => e.songs.includes(song.slug));
+const isSGM = song.recordings.some((r) => r.publisher === 'Sovereign Grace Music');
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'MusicRecording',
+  name: song.title,
+  url: `${SITE.url}/songs/${song.slug}`,
+  byArtist: { '@id': `${SITE.url}/#artist` },
+  datePublished: String(song.year),
+  ...(song.writers ? { recordingOf: { '@type': 'MusicComposition', name: song.title, composer: song.writers } } : {}),
+}];
+const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet, lyrics and where to listen.`;
+---
+<Base title={`${song.title} Chords and Lyrics (Free PDF)`} description={desc} image="/img/img-8084-1600.webp" schema={schema} current="songs">
+  <section class="section" style="padding-bottom:40px; background: linear-gradient(rgba(10,12,22,.8), var(--bg)), url('/img/img-8084-1600.webp') center/cover">
+    <div class="wrap">
+      <p class="eyebrow"><a href={href('/songs')} style="color:inherit;text-decoration:none">Songs</a> / {song.year}</p>
+      <h1>{song.title}</h1>
+      <p class="lead">{song.writers ? `Written by ${song.writers}` : 'West Coast Revival'}</p>
+      <div class="listen-row" style="margin-top:18px">
+        <a class="btn primary" href={song.listen.spotify} data-out="spotify">Spotify</a>
+        <a class="btn ghost" href={song.listen.apple} data-out="apple_music">Apple Music</a>
+        <a class="btn ghost" href={song.listen.youtube} data-out="youtube">YouTube</a>
+        <a class="btn ghost" href={song.listen.amazon} data-out="amazon">Amazon Music</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:20px">
+    <div class="wrap grid two" style="align-items:start">
+      <div>
+        <h2>Free charts</h2>
+        {song.charts.length ? (
+          <div class="grid" id="charts">
+            {song.charts.map((c) => (
+              <button class="btn ghost chart-dl" type="button" data-file={c.file} data-song={song.slug}>Download {c.label}</button>
+            ))}
+          </div>
+        ) : (
+          <div class="card">
+            <p><strong>Charts for this song are on the way.</strong> Leave your email and we'll send them the day they're posted, plus every new chart after that.</p>
+            <EmailForm source={`chart-waitlist:${song.slug}`} event="chart_signup" song={song.slug} cta="Send me the charts" musicianOption thanks="Got it. We'll email the charts as soon as they're posted." />
+          </div>
+        )}
+
+        <h2 style="margin-top:48px">Lyrics</h2>
+        {song.lyrics ? <div class="prose" set:html={song.lyrics} /> : <p class="muted">Lyrics coming soon.</p>}
+
+        {song.story && (<><h2 style="margin-top:48px">The story behind the song</h2><div class="prose"><p>{song.story}</p></div></>)}
+      </div>
+
+      <aside class="card">
+        <h3>Song details</h3>
+        <dl class="facts">
+          {song.key && (<><dt>Key</dt><dd>{song.key}</dd></>)}
+          {song.ccli && (<><dt>CCLI</dt><dd>{song.ccli}</dd></>)}
+          {song.themes.length > 0 && (<><dt>Themes</dt><dd>{song.themes.join(', ')}</dd></>)}
+          <dt>Recordings</dt>
+          <dd>{song.recordings.map((r) => <div>{r.year} · {r.album.title}{r.version ? ` (${r.version})` : ''}</div>)}</dd>
+        </dl>
+        {isSGM && <p class="muted" style="font-size:.85rem;margin-top:14px">Originally released with Sovereign Grace Music.</p>}
+        {inEpisodes.length > 0 && (
+          <>
+            <h3 style="margin-top:22px">On Worship Is Warfare</h3>
+            {inEpisodes.map((e) => <p><a href={href(`/worship-is-warfare/${e.slug}`)}>#{e.number} {e.title}</a></p>)}
+          </>
+        )}
+        <h3 style="margin-top:22px">Lead this at your church?</h3>
+        <p class="muted">Jonathan and Ryan lead worship and teach at churches and conferences.</p>
+        <a class="btn ghost" href={href('/invite')}>Invite us</a>
+      </aside>
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section class="section alt">
+      <div class="wrap">
+        <h2>More songs</h2>
+        <div class="grid three">
+          {related.map((s) => (
+            <a class="card song-card" href={href(`/songs/${s.slug}`)}><h3>{s.title}</h3><span class="meta">{s.year}</span></a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <dialog id="chart-gate" aria-labelledby="gate-title">
+    <h3 id="gate-title">Your chart is ready</h3>
+    <p class="muted">Where should we send new charts? You'll only be asked once.</p>
+    <EmailForm source={`chart-gate:${song.slug}`} event="chart_signup" song={song.slug} cta="Download" musicianOption thanks="Thanks! Your download is starting." />
+  </dialog>
+
+  <script is:inline>
+    (function () {
+      var gate = document.getElementById('chart-gate'), pending = null;
+      function download(file, slug) {
+        window.wcrTrack('chart_download', { song: slug, file: file });
+        var a = document.createElement('a'); a.href = file; a.download = ''; document.body.appendChild(a); a.click(); a.remove();
+      }
+      document.querySelectorAll('.chart-dl').forEach(function (b) {
+        b.addEventListener('click', function () {
+          if (window.wcrStore.get('wcr_subscribed')) return download(b.dataset.file, b.dataset.song);
+          pending = b; gate.showModal();
+        });
+      });
+      gate.addEventListener('wcr:subscribed', function () {
+        if (pending) download(pending.dataset.file, pending.dataset.song);
+        setTimeout(function () { gate.close(); }, 1200);
+      });
+    })();
+  </script>
+</Base>

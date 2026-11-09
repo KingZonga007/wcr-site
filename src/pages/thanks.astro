@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/site.js';
+---
+<Base title="Thank you" current="invite">
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Inquiry sent</p>
+      <h1>Thank you</h1>
+      <p class="lead">We've got your request and will reply within a few days. While you wait, catch the next Worship Is Warfare live stream.</p>
+      <div class="btn-row"><a class="btn primary" href={href('/worship-is-warfare')}>Worship Is Warfare</a><a class="btn ghost" href={href('/songs')}>Songs and charts</a></div>
+    </div>
+  </section>
+</Base>

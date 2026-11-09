@@ -1,0 +1,83 @@
+---
+import Base from '../../layouts/Base.astro';
+import EmailForm from '../../components/EmailForm.astro';
+import LiveStatus from '../../components/LiveStatus.astro';
+import { SITE, href } from '../../lib/site.js';
+import episodes from '../../data/episodes.json';
+import songs from '../../data/songs.json';
+
+const latest = episodes[0];
+const fmt = (d) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const songTitle = (slug) => songs.find((s) => s.slug === slug)?.title;
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'PodcastSeries',
+  name: 'Worship Is Warfare',
+  url: `${SITE.url}/worship-is-warfare`,
+  webFeed: SITE.social.podcastRss,
+  author: { '@id': `${SITE.url}/#artist` },
+  description: 'Every morning the war for allegiance begins. Who will you serve? Worship and encouragement from the Word, live Tuesdays and Thursdays.',
+}];
+---
+<Base title="Worship Is Warfare: Live Worship and Podcast" description="Worship Is Warfare from West Coast Revival: live on YouTube Tuesdays and Thursdays at 6am MST, and on Apple Podcasts, Spotify and Amazon Music." image="/img/wiw-live-graphic-1600.webp" schema={schema} current="wiw">
+  <section class="hero" style="min-height:min(78vh,720px)">
+    <img class="bg" src="/img/ryan-worship-1600.webp" alt="" />
+    <div class="wrap">
+      <p class="eyebrow">Live {SITE.wiw.label}</p>
+      <h1>Worship Is Warfare</h1>
+      <LiveStatus />
+      <div class="btn-row" style="margin-top:22px">
+        <a class="btn primary" href={SITE.social.youtube} data-out="youtube">Watch on YouTube</a>
+        <a class="btn ghost" href={SITE.social.applePodcasts} data-out="apple_podcasts">Apple Podcasts</a>
+        <a class="btn ghost" href={SITE.social.spotify} data-out="spotify">Spotify</a>
+        <a class="btn ghost" href="https://music.amazon.com/search/Worship%20is%20Warfare%20West%20Coast%20Revival" data-out="amazon">Amazon Music</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid two" style="align-items:start">
+      <div class="prose">
+        <p class="eyebrow">Why we do this</p>
+        <h2>Every morning the war for allegiance begins</h2>
+        <p class="lead">Who will you serve? Will the day be decided by what is screaming the loudest and demanding your attention, or will you be about the business of your King?</p>
+        <p>Worship is spiritual warfare: the fight to make Christ our greatest delight and treasure. Each episode pairs worship songs with an exhortation from Scripture, to help you start the day lifting your eyes above earthly concerns, setting your face to see the glory of God, and putting your first steps of the day on holy ground.</p>
+      </div>
+      <div>
+        <blockquote class="spurgeon">
+          He who rushes from his bed to his business and waits not to worship is as foolish as though he had not put on his clothes or cleansed his face, and as unwise as though he dashed into battle without arms or armor.
+          <cite>Charles Spurgeon, on Psalm 119</cite>
+        </blockquote>
+        <p style="margin-top:24px">That's what we're after: to help you strap on your spiritual armor every morning, and to put on Christ by worshiping Christ.</p>
+        <div class="card" style="margin-top:24px">
+          <h3>Never miss a live stream</h3>
+          <p class="muted">We'll email you before each one.</p>
+          <EmailForm source="wiw-hub" event="reminder_signup" cta="Remind me" thanks="Done. We'll email you before each live stream." />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="grid two" style="align-items:center">
+      <div class="photo"><img src="/img/wiw-live-graphic-800.webp" alt="Worship Is Warfare: join us live 6am MST Tuesday and Thursday" loading="lazy" /></div>
+      <div>
+      <p class="eyebrow">Latest episode</p>
+      <h2><a href={href(`/worship-is-warfare/${latest.slug}`)} style="text-decoration:none">#{latest.number} {latest.title}</a></h2>
+      <p class="muted">{fmt(latest.date)}{latest.scripture ? ` · ${latest.scripture}` : ''}</p>
+      <a class="btn primary" href={href(`/worship-is-warfare/${latest.slug}`)}>Watch episode</a>
+      </div>
+      </div>
+      <h3 style="margin-top:48px">All episodes</h3>
+      <div>
+        {episodes.map((e) => (
+          <a class="episode" href={href(`/worship-is-warfare/${e.slug}`)}>
+            <span class="num">#{e.number}</span>
+            <span><strong>{e.title}</strong><br /><span class="muted">{fmt(e.date)}{e.songs.length ? ` · Song: ${e.songs.map(songTitle).join(', ')}` : ''}</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, href } from '../lib/site.js';
+const bios = {
+  short: 'West Coast Revival is brothers Jonathan and Ryan Baird, writers of "Behold Our God" and a widely sung adaptation of "All Creatures of Our God and King." They write songs that marry timeless truth with untamed affection, and host the live show and podcast Worship Is Warfare.',
+  medium: 'West Coast Revival is brothers Jonathan and Ryan Baird. Since forming the band in 2003, they have released the FUSE EP (2005) and several albums with and alongside Sovereign Grace Music, and co-wrote "Behold Our God" (2011), now sung in churches around the world. Since 2019 they have released a steady run of singles, including "Solid Rock," "In You Is Mercy" and "Have You Been to Jesus." They host Worship Is Warfare, a live show and podcast that pairs worship with an exhortation from Scripture. Their aim: to magnify Jesus Christ through songs that marry timeless truth with untamed affection.',
+};
+const photos = [
+  { f: 'brothers-portrait', alt: 'Jonathan and Ryan Baird, portrait' },
+  { f: 'cover-1', alt: 'Live, full stage' },
+  { f: 'band-best', alt: 'Live, band' },
+  { f: 'jon-best', alt: 'Jonathan Baird live' },
+  { f: 'ryan-3', alt: 'Ryan Baird live' },
+  { f: 'img-8305', alt: 'Jonathan Baird, portrait orientation' },
+];
+---
+<Base title="Press Kit" description="West Coast Revival press kit: bios, photos, highlights and booking contact." image="/img/brothers-portrait-800.webp">
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Press kit</p>
+      <h1>West Coast Revival</h1>
+      <p class="lead">{SITE.credential}</p>
+      <div class="btn-row"><a class="btn primary" href={href('/invite')}>Booking inquiry</a></div>
+    </div>
+  </section>
+  <section class="section alt">
+    <div class="wrap grid two" style="align-items:start">
+      <div class="prose">
+        <h2>Bios</h2>
+        <h3>Short</h3><p>{bios.short}</p>
+        <h3>Medium</h3><p>{bios.medium}</p>
+        <h3>Long</h3><p>See <a href={href('/about')}>About</a>.</p>
+      </div>
+      <div class="card">
+        <h2>Highlights</h2>
+        <ul>
+          <li>Co-writers of "Behold Our God" (Sovereign Grace Music, 2011)</li>
+          <li>New music and arrangement for "All Creatures of Our God and King"</li>
+          <li>Recording since 2005, with Sovereign Grace Music and independently</li>
+          <li>Host Worship Is Warfare, 100+ episodes</li>
+        </ul>
+        <h3 style="margin-top:20px">Contact</h3>
+        <p class="muted">Booking and press: <a href={href('/invite')}>inquiry form</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <h2>Photos</h2>
+      <p class="muted">Free to use for promoting West Coast Revival. High-resolution versions coming soon.</p>
+      <div class="grid three">
+        {photos.map((p) => (
+          <a class="photo" href={`/img/${p.f}-1600.webp`} download><img src={`/img/${p.f}-800.webp`} alt={p.alt} loading="lazy" style="aspect-ratio:4/3" /></a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

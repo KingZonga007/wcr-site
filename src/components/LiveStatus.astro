@@ -1,0 +1,35 @@
+---
+// Shows LIVE NOW during the stream window, otherwise a countdown to the next one.
+// Schedule: Tue + Thu, 6:00 to 7:00 America/Phoenix (UTC-7 all year).
+// At launch, live status will come from the YouTube API instead of the clock.
+import { SITE } from '../lib/site.js';
+---
+<div class="wiw-status" data-days={SITE.wiw.days.join(',')} data-hour={SITE.wiw.hour}>
+  <span class="badge live" hidden data-live>Live now</span>
+  <span data-next>Next live stream: <span class="countdown" data-count>{SITE.wiw.label}</span></span>
+</div>
+<script is:inline>
+  (function () {
+    document.querySelectorAll('.wiw-status').forEach(function (el) {
+      var days = el.dataset.days.split(',').map(Number), hour = Number(el.dataset.hour);
+      var OFFSET = 7 * 3600e3; // MST = UTC-7
+      function tick() {
+        var now = Date.now(), az = new Date(now - OFFSET);
+        var live = days.indexOf(az.getUTCDay()) > -1 && az.getUTCHours() === hour;
+        el.querySelector('[data-live]').hidden = !live;
+        el.querySelector('[data-next]').hidden = live;
+        if (live) return;
+        for (var i = 0; i < 8; i++) {
+          var d = new Date(Date.UTC(az.getUTCFullYear(), az.getUTCMonth(), az.getUTCDate() + i, hour));
+          if (days.indexOf(d.getUTCDay()) > -1 && d.getTime() > az.getTime()) {
+            var ms = d.getTime() - az.getTime(), h = Math.floor(ms / 3600e3), m = Math.floor((ms % 3600e3) / 60e3);
+            var day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][d.getUTCDay()];
+            el.querySelector('[data-count]').textContent = day + ' 6am MST (in ' + (h >= 24 ? Math.floor(h / 24) + 'd ' + (h % 24) + 'h' : h + 'h ' + m + 'm') + ')';
+            break;
+          }
+        }
+      }
+      tick(); setInterval(tick, 30000);
+    });
+  })();
+</script>

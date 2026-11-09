@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import EmailForm from '../components/EmailForm.astro';
+---
+<Base title="Give" description="Support West Coast Revival, a 501(c)(3) nonprofit ministry. Gifts fund new recordings, free chord charts for churches and Worship Is Warfare." image="/img/atmosphere-1600.webp">
+  <section class="hero" style="min-height:60vh">
+    <img class="bg" src="/img/atmosphere-1600.webp" alt="" />
+    <div class="wrap">
+      <p class="eyebrow">Partner with us</p>
+      <h1>Keep the songs free</h1>
+      <p class="lead" style="color:var(--ink)">West Coast Revival is a 501(c)(3) nonprofit ministry. Every gift is tax-deductible as allowed by law.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap grid three">
+      <div class="card"><h3>New songs</h3><p class="muted">Writing, recording and releasing songs that magnify Christ.</p></div>
+      <div class="card"><h3>Free charts</h3><p class="muted">Chord charts and lead sheets for every song, free for any church.</p></div>
+      <div class="card"><h3>Worship Is Warfare</h3><p class="muted">The live show and podcast, every Tuesday and Thursday morning.</p></div>
+    </div>
+    <div class="wrap" style="margin-top:40px">
+      <div class="card" style="max-width:640px">
+        <h2>Give online</h2>
+        <p class="muted">Secure online giving, including monthly giving, opens here soon.</p>
+        <p class="muted" style="font-size:.85rem">(Preview note: the giving button connects once a donation provider is chosen.)</p>
+        <h3 style="margin-top:20px">Get notified when giving opens</h3>
+        <EmailForm source="give" cta="Notify me" compact />
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import { href, PREVIEW } from '../lib/site.js';
+const services = [
+  { t: 'Speaking and teaching', d: 'Worship theology, the place of song in the life of the church, and songwriting rooted in Scripture.', img: 'ryan-worship' },
+  { t: 'Workshops and seminars', d: 'Training for worship teams and songwriters: arranging, leading, and writing songs for congregations.', img: 'img-8324' },
+  { t: 'Concerts and worship nights', d: 'An evening of West Coast Revival songs and hymns, with Scripture woven through.', img: 'img-8084' },
+  { t: 'Conference worship leading', d: 'Leading a conference in congregational worship across sessions, with a set built around your theme.', img: 'band-best' },
+];
+---
+<Base title="Invite West Coast Revival" description="Invite Jonathan and Ryan Baird of West Coast Revival to lead worship, teach, or hold a workshop at your church or conference." image="/img/band-best-1600.webp" current="invite">
+  <section class="section" style="padding-bottom:40px">
+    <div class="wrap">
+      <p class="eyebrow">Invite us</p>
+      <h1>Bring West Coast Revival to your church or conference</h1>
+      <p class="lead">Jonathan and Ryan Baird have led worship and written songs for the church for more than two decades, including "Behold Our God" with Sovereign Grace Music.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="wrap grid two">
+      {services.map((s) => (
+        <div class="card" style="padding:0;overflow:hidden">
+          <img src={`/img/${s.img}-800.webp`} alt="" loading="lazy" style="aspect-ratio:3/2;object-fit:cover;width:100%" />
+          <div style="padding:22px"><h3>{s.t}</h3><p class="muted" style="margin:0">{s.d}</p></div>
+        </div>
+      ))}
+    </div>
+  </section>
+  <section class="section alt" id="inquiry">
+    <div class="wrap grid two" style="align-items:start">
+      <div>
+        <h2>Send an inquiry</h2>
+        <p class="lead">Tell us about your event. We'll reply within a few days.</p>
+        <p class="muted">Want the details first? See the <a href={href('/press')}>press kit</a>.</p>
+      </div>
+      <form class="form" name="booking" method="POST" data-netlify="true" action={href('/thanks')} id="booking-form" data-preview={PREVIEW ? '1' : '0'}>
+        <input type="hidden" name="form-name" value="booking" />
+        <div class="field"><label for="b-name">Name</label><input id="b-name" type="text" name="name" required autocomplete="name" /></div>
+        <div class="field"><label for="b-email">Email</label><input id="b-email" type="email" name="email" required autocomplete="email" /></div>
+        <div class="field"><label for="b-org">Church or organization</label><input id="b-org" type="text" name="organization" required /></div>
+        <div class="field"><label for="b-type">Type of request</label>
+          <select id="b-type" name="type" required>
+            <option value="">Choose one</option><option>Speaking or teaching</option><option>Workshop or seminar</option><option>Concert or worship night</option><option>Conference worship leading</option><option>Other</option>
+          </select></div>
+        <div class="field"><label for="b-date">Event date (or "flexible")</label><input id="b-date" type="text" name="date" /></div>
+        <div class="field"><label for="b-city">City and state</label><input id="b-city" type="text" name="city" required /></div>
+        <div class="field"><label for="b-size">Expected attendance</label>
+          <select id="b-size" name="attendance"><option value="">Choose one</option><option>Under 100</option><option>100 to 300</option><option>300 to 1,000</option><option>1,000+</option></select></div>
+        <div class="field"><label for="b-details">Details</label><textarea id="b-details" name="details"></textarea></div>
+        <label class="check"><input type="checkbox" name="list" value="yes" /> Add me to the West Coast Revival email list</label>
+        <button class="btn primary" type="submit">Send inquiry</button>
+      </form>
+    </div>
+  </section>
+  <script is:inline>
+    (function () {
+      var f = document.getElementById('booking-form');
+      f.addEventListener('submit', function (e) {
+        window.wcrTrack('booking_submit', { type: f.type.value });
+        if (f.dataset.preview === '1') { e.preventDefault(); location.href = f.getAttribute('action'); }
+      });
+    })();
+  </script>
+</Base>

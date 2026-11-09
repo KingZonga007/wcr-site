@@ -1,0 +1,127 @@
+---
+import '../styles/global.css';
+import { SITE, href } from '../lib/site.js';
+import EmailForm from '../components/EmailForm.astro';
+
+const { title, description = SITE.mission, image = '/img/cover-1-1600.webp', schema = [], current = '' } = Astro.props;
+const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} | ${SITE.tagline}`;
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicGroup',
+  '@id': `${SITE.url}/#artist`,
+  name: SITE.name,
+  description: SITE.mission,
+  url: SITE.url,
+  genre: ['Worship', 'Christian'],
+  member: [
+    { '@type': 'Person', name: 'Jonathan Baird' },
+    { '@type': 'Person', name: 'Ryan Baird' },
+  ],
+  sameAs: [SITE.social.spotify, SITE.social.applePodcasts],
+};
+const nav = [
+  { label: 'Songs', path: '/songs', key: 'songs' },
+  { label: 'Worship Is Warfare', path: '/worship-is-warfare', key: 'wiw' },
+  { label: 'Invite us', path: '/invite', key: 'invite' },
+  { label: 'About', path: '/about', key: 'about' },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, SITE.url).href} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0a0c16" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json" set:html={JSON.stringify([orgSchema, ...schema])} />
+    <script is:inline>
+      // Tracking plan: every event goes to the dataLayer. GTM (with consent mode) is added at launch.
+      window.dataLayer = window.dataLayer || [];
+      window.wcrTrack = function (event, params) { window.dataLayer.push(Object.assign({ event: event }, params || {})); };
+      window.wcrStore = {
+        get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+        set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} },
+      };
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href={href('/')}>West Coast Revival</a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+        <nav id="nav" class="nav" aria-label="Main">
+          {nav.map((n) => (
+            <a href={href(n.path)} aria-current={current === n.key ? 'page' : undefined}>{n.label}</a>
+          ))}
+          <a class="btn primary" href={href('/give')}>Give</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main"><slot /></main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="cols">
+          <div>
+            <p class="eyebrow">Join the list</p>
+            <h3>New songs and free charts, first.</h3>
+            <EmailForm source="footer" cta="Join" compact />
+          </div>
+          <div>
+            <p class="eyebrow">Explore</p>
+            <ul>
+              <li><a href={href('/songs')}>Songs and free charts</a></li>
+              <li><a href={href('/worship-is-warfare')}>Worship Is Warfare</a></li>
+              <li><a href={href('/invite')}>Invite us</a></li>
+              <li><a href={href('/about')}>About</a></li>
+              <li><a href={href('/press')}>Press kit</a></li>
+              <li><a href={href('/give')}>Give</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="eyebrow">Listen</p>
+            <ul>
+              <li><a href={SITE.social.spotify} data-out="spotify">Spotify</a></li>
+              <li><a href={SITE.social.applePodcasts} data-out="apple_podcasts">Apple Podcasts</a></li>
+              <li><a href={SITE.social.youtube} data-out="youtube">YouTube</a></li>
+              <li><a href={href('/links')}>All links</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="legal">
+          <p>West Coast Revival is a 501(c)(3) nonprofit ministry. Gifts are tax-deductible as allowed by law. Mailing address and EIN: to be added.</p>
+          <p>&copy; {new Date().getFullYear()} West Coast Revival · <a href={href('/privacy')}>Privacy</a> · <a href={href('/terms')}>Terms</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script is:inline>
+      (function () {
+        var t = document.querySelector('.menu-toggle'), n = document.getElementById('nav');
+        if (t && n) t.addEventListener('click', function () {
+          var open = n.classList.toggle('open'); t.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        document.addEventListener('click', function (e) {
+          var a = e.target.closest && e.target.closest('a[data-out]');
+          if (a) window.wcrTrack('outbound_listen', { platform: a.getAttribute('data-out'), page: location.pathname });
+        });
+        // Remember UTM tags for attribution on signups.
+        try {
+          var p = new URLSearchParams(location.search);
+          ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) { if (p.get(k)) sessionStorage.setItem(k, p.get(k)); });
+        } catch (e) {}
+      })();
+    </script>
+  </body>
+</html>

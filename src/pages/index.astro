@@ -1,0 +1,163 @@
+---
+import Base from '../layouts/Base.astro';
+import EmailForm from '../components/EmailForm.astro';
+import LiveStatus from '../components/LiveStatus.astro';
+import { SITE, href } from '../lib/site.js';
+import songs from '../data/songs.json';
+import episodes from '../data/episodes.json';
+
+const featuredSlugs = ['behold-our-god', 'all-creatures-of-our-god-and-king', 'come-you-saints', 'in-you-is-mercy', 'solid-rock', 'have-you-been-to-jesus'];
+const featured = featuredSlugs.map((s) => songs.find((x) => x.slug === s)).filter(Boolean);
+const latest = songs[0];
+const ep = episodes[0];
+const STORE_ON = false; // switched on in phase 3
+---
+<Base current="home">
+  <!-- 1. Hero -->
+  <section class="hero">
+    <picture>
+      <source media="(max-width: 700px)" srcset="/img/img-8140-800.webp" />
+      <img class="bg" src="/img/cover-1-1600.webp" alt="Jonathan and Ryan Baird leading worship on a blue-lit stage, congregation in silhouette" fetchpriority="high" />
+    </picture>
+    <div class="wrap">
+      <p class="eyebrow">West Coast Revival</p>
+      <h1>Timeless truth. Untamed affection.</h1>
+      <p class="lead" style="color: var(--ink)">Songs that magnify Jesus Christ, from the writers of "Behold Our God."</p>
+      <div class="btn-row" style="margin: 22px 0 28px">
+        <a class="btn ghost" href="#listen">Listen</a>
+        <a class="btn ghost" href={href('/songs')}>Free charts</a>
+      </div>
+      <p style="font-weight:600;margin-bottom:8px">Get new songs and free charts first</p>
+      <EmailForm source="hero" cta="Sign up" musicianOption compact />
+    </div>
+  </section>
+
+  <!-- 2. Proof strip -->
+  <section class="proof" aria-label="About West Coast Revival at a glance">
+    <ul class="wrap">
+      <li>Behold Our God<span>Written by the Bairds, sung by churches worldwide</span></li>
+      <li>Sovereign Grace Music<span>Contributing songwriters since 2005</span></li>
+      <li>100+ episodes<span>Worship Is Warfare, live twice a week</span></li>
+      <li>{songs.length} songs<span>Free chord charts for every one</span></li>
+    </ul>
+  </section>
+
+  <!-- 3. Worship Is Warfare -->
+  <section class="section" id="worship-is-warfare">
+    <div class="wrap grid two">
+      <div class="photo"><img src="/img/img-8165-1600.webp" alt="Ryan Baird with hand raised in worship, Psalm 150 projected behind him" loading="lazy" /></div>
+      <div>
+        <p class="eyebrow">Live {SITE.wiw.label}</p>
+        <h2>Worship Is Warfare</h2>
+        <LiveStatus />
+        <p class="lead" style="margin-top:16px">Every morning the war for allegiance begins. Who will you serve? Start your day lifting your eyes above earthly concerns, with worship and encouragement from the Word.</p>
+        <p class="muted">Latest: <a href={href(`/worship-is-warfare/${ep.slug}`)}>#{ep.number} {ep.title}</a></p>
+        <div class="btn-row" style="margin:18px 0 24px">
+          <a class="btn primary" href={href('/worship-is-warfare')}>Watch and listen</a>
+          <a class="btn ghost" href={SITE.social.youtube} data-out="youtube">Subscribe on YouTube</a>
+        </div>
+        <p style="font-weight:600;margin-bottom:8px">Get a reminder before each live stream</p>
+        <EmailForm source="wiw-home" event="reminder_signup" cta="Remind me" compact thanks="Done. We'll email you before each live stream." />
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Latest release -->
+  <section class="section alt" style="background: linear-gradient(rgba(10,12,22,.82), rgba(10,12,22,.92)), url('/img/f-img-8420-1600.webp') center/cover">
+    <div class="wrap">
+      <p class="eyebrow">Latest release · {latest.year}</p>
+      <h2>{latest.title}</h2>
+      <div class="listen-row" style="margin:18px 0">
+        <a class="btn primary" href={latest.listen.spotify} data-out="spotify">Spotify</a>
+        <a class="btn ghost" href={latest.listen.apple} data-out="apple_music">Apple Music</a>
+        <a class="btn ghost" href={latest.listen.youtube} data-out="youtube">YouTube</a>
+        <a class="btn ghost" href={latest.listen.amazon} data-out="amazon">Amazon Music</a>
+      </div>
+      <a href={href(`/songs/${latest.slug}`)}>Get the charts and the story behind the song</a>
+    </div>
+  </section>
+
+  <!-- 5. Free charts -->
+  <section class="section">
+    <div class="wrap">
+      <div class="grid two" style="align-items:end;margin-bottom:28px">
+        <div>
+          <p class="eyebrow">For worship leaders</p>
+          <h2>Free charts for every song</h2>
+          <p class="lead">Chord charts in the recorded key, capo versions and lead sheets. Free for your church, always.</p>
+        </div>
+        <div class="photo" style="max-height:260px"><img src="/img/elec-close-up-800.webp" alt="Close-up of hands playing an electric guitar" loading="lazy" /></div>
+      </div>
+      <div class="grid three">
+        {featured.map((s) => (
+          <a class="card song-card" href={href(`/songs/${s.slug}`)}>
+            <span class="badge">{s.charts.length ? 'Free charts' : 'Charts coming'}</span>
+            <h3>{s.title}</h3>
+            <span class="meta">{s.key ? `Key of ${s.key} · ` : ''}{s.year}</span>
+          </a>
+        ))}
+      </div>
+      <p style="margin-top:24px"><a class="btn ghost" href={href('/songs')}>See all {songs.length} songs</a></p>
+    </div>
+  </section>
+
+  <!-- 6. Listen and watch -->
+  <section class="section alt" id="listen">
+    <div class="wrap grid two">
+      <div>
+        <p class="eyebrow">Listen and watch</p>
+        <h2>Hear the songs</h2>
+        <p class="lead">Every West Coast Revival song is on all major streaming services.</p>
+        <div class="listen-row" style="margin-top:18px">
+          <a class="btn primary" href={SITE.social.spotify} data-out="spotify">Follow on Spotify</a>
+          <a class="btn ghost" href={SITE.social.youtube} data-out="youtube">Subscribe on YouTube</a>
+        </div>
+      </div>
+      <div class="embed" style="aspect-ratio:auto;height:352px">
+        <iframe title="West Coast Revival on Spotify" src="https://open.spotify.com/embed/artist/5K4EsfuyB0ltAeK7GmxLT5?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Who we are -->
+  <section class="section">
+    <div class="wrap grid two">
+      <div class="photo"><img src="/img/brothers-portrait-800.webp" alt="Brothers Ryan and Jonathan Baird" loading="lazy" /></div>
+      <div>
+        <p class="eyebrow">Who we are</p>
+        <h2>Two brothers, one aim</h2>
+        <p class="lead">{SITE.mission}</p>
+        <p>Our goal is to plug a cord into the Bible, put the other end in an amplifier and dial it up to 11. There are no songs creative or loud enough to be worthy of the greatness of God, but we're going to give it our best.</p>
+        <a class="btn ghost" href={href('/about')}>Our story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Invite us -->
+  <section class="section alt">
+    <div class="wrap">
+      <p class="eyebrow">Invite us</p>
+      <h2>Bring West Coast Revival to your church</h2>
+      <div class="grid four" style="margin-top:24px">
+        <a class="tile" href={href('/invite')}><img src="/img/band-best-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Conference worship leading</h3></div></a>
+        <a class="tile" href={href('/invite')}><img src="/img/img-8084-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Concerts and worship nights</h3></div></a>
+        <a class="tile" href={href('/invite')}><img src="/img/ryan-worship-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Speaking and teaching</h3></div></a>
+        <a class="tile" href={href('/invite')}><img src="/img/img-8324-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Workshops and seminars</h3></div></a>
+      </div>
+      <p style="margin-top:24px"><a class="btn primary" href={href('/invite')}>Send an inquiry</a></p>
+    </div>
+  </section>
+
+  <!-- 9. Store teaser (off until phase 3) -->
+  {STORE_ON && <section class="section"><div class="wrap"><h2>Store</h2></div></section>}
+
+  <!-- 10. Give -->
+  <section class="section" style="background: linear-gradient(rgba(10,12,22,.78), rgba(10,12,22,.9)), url('/img/atmosphere-1600.webp') center/cover">
+    <div class="wrap">
+      <p class="eyebrow">Partner with us</p>
+      <h2>Keep the songs free</h2>
+      <p class="lead">Gifts fund new recordings, free charts for churches and Worship Is Warfare. West Coast Revival is a 501(c)(3) nonprofit.</p>
+      <a class="btn primary" href={href('/give')}>Give</a>
+    </div>
+  </section>
+</Base>

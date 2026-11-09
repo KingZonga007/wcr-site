@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/site.js';
+---
+<Base title="Page not found">
+  <section class="section"><div class="wrap">
+    <h1>Page not found</h1>
+    <p class="lead">That page isn't here. Try the songs and charts, or the latest Worship Is Warfare.</p>
+    <div class="btn-row"><a class="btn primary" href={href('/songs')}>Songs and charts</a><a class="btn ghost" href={href('/worship-is-warfare')}>Worship Is Warfare</a></div>
+  </div></section>
+</Base>

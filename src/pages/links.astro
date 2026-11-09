@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import EmailForm from '../components/EmailForm.astro';
+import { SITE, href } from '../lib/site.js';
+import songs from '../data/songs.json';
+const latest = songs[0];
+---
+<Base title="Links" description="West Coast Revival: latest release, Worship Is Warfare, free charts and more.">
+  <section class="section" style="padding-top:48px">
+    <div class="wrap" style="max-width:560px">
+      <img src="/img/brothers-portrait-800.webp" alt="Jonathan and Ryan Baird" style="width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:top;margin:0 auto 16px" />
+      <h1 style="font-size:2.2rem;text-align:center">West Coast Revival</h1>
+      <p class="muted" style="text-align:center">{SITE.tagline}</p>
+      <div class="card" style="margin:20px 0"><p style="font-weight:600;margin-top:0">Get new songs and free charts first</p><EmailForm source="links" cta="Join" compact /></div>
+      <div class="grid" style="gap:12px">
+        <a class="btn primary" href={href(`/songs/${latest.slug}`)}>New: {latest.title}</a>
+        <a class="btn ghost" href={href('/worship-is-warfare')}>Worship Is Warfare (live Tue and Thu)</a>
+        <a class="btn ghost" href={SITE.social.spotify} data-out="spotify">Spotify</a>
+        <a class="btn ghost" href={SITE.social.youtube} data-out="youtube">YouTube</a>
+        <a class="btn ghost" href={href('/songs')}>Free chord charts</a>
+        <a class="btn ghost" href={href('/invite')}>Invite us</a>
+        <a class="btn ghost" href={href('/give')}>Give</a>
+      </div>
+    </div>
+  </section>
+</Base>
