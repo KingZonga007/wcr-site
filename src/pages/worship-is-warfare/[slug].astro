@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import EmailForm from '../../components/EmailForm.astro';
-import { SITE, href } from '../../lib/site.js';
+import { SITE, href, PREVIEW } from '../../lib/site.js';
 import episodes from '../../data/episodes.json';
 import songs from '../../data/songs.json';
 
@@ -11,6 +11,9 @@ export function getStaticPaths() {
 const { ep } = Astro.props;
 const date = new Date(ep.date + 'T12:00:00Z').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const epSongs = ep.songs.map((s) => songs.find((x) => x.slug === s)).filter(Boolean);
+const watch = `https://www.youtube.com/watch?v=${ep.youtubeId}`;
+const k = (t) => t.toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]/g, '').replace(/^the/, '');
+const findSong = (name) => epSongs.find((x) => { const a = k(x.title), b = k(name); return a === b || (Math.min(a.length, b.length) >= 6 && (a.startsWith(b) || b.startsWith(a))); });
 const schema = [{
   '@context': 'https://schema.org',
   '@type': 'PodcastEpisode',
@@ -18,35 +21,45 @@ const schema = [{
   episodeNumber: ep.number,
   datePublished: ep.date,
   url: `${SITE.url}/worship-is-warfare/${ep.slug}`,
+  video: { '@type': 'VideoObject', name: ep.title, embedUrl: `https://www.youtube.com/embed/${ep.youtubeId}`, uploadDate: ep.date, thumbnailUrl: `https://i.ytimg.com/vi/${ep.youtubeId}/hqdefault.jpg`, description: `Worship Is Warfare #${ep.number}: ${ep.title}` },
   partOfSeries: { '@type': 'PodcastSeries', name: 'Worship Is Warfare', url: `${SITE.url}/worship-is-warfare` },
 }];
 ---
-<Base title={`${ep.title} | Worship Is Warfare #${ep.number}`} description={`Worship Is Warfare #${ep.number}: ${ep.title}. Worship and encouragement from the Word with West Coast Revival.`} image="/img/wiw-live-graphic-1600.webp" schema={schema} current="wiw">
+<Base title={`${ep.title} | Worship Is Warfare #${ep.number}`} description={`Worship Is Warfare #${ep.number}: ${ep.title}.${ep.scripture.length ? ' Scripture: ' + ep.scripture.join(', ') + '.' : ''} Worship and encouragement from the Word with West Coast Revival.`} image="/img/wiw-live-graphic-1600.webp" schema={schema} current="wiw">
   <section class="section">
     <div class="wrap">
-      <p class="eyebrow"><a href={href('/worship-is-warfare')} style="color:inherit;text-decoration:none">Worship Is Warfare</a> / #{ep.number}</p>
+      <p class="eyebrow"><a href={href('/worship-is-warfare')} style="color:inherit;text-decoration:none">Worship Is Warfare</a> / #{ep.number}{ep.kind === 'Friday Deep Dive' ? ' · Friday Deep Dive' : ''}</p>
       <h1 style="font-size:clamp(2.2rem,5vw,3.8rem)">{ep.title}</h1>
-      <p class="muted">{date}{ep.scripture ? ` · ${ep.scripture}` : ''}</p>
+      <p class="muted">{date}</p>
       <div class="grid two" style="align-items:start;margin-top:28px">
         <div>
-          <div class="embed"><img src="/img/wiw-live-graphic-1600.webp" alt="Worship Is Warfare episode artwork" style="width:100%;height:100%;object-fit:cover" /></div>
-          <p class="muted" style="font-size:.85rem">The YouTube video and audio player load here automatically once the site is connected to the channel and podcast feed.</p>
+          {PREVIEW ? (
+            <a class="embed" href={watch} data-out="youtube" style="display:block"><img src="/img/wiw-live-graphic-800.webp" alt={`Watch ${ep.title} on YouTube`} style="width:100%;height:100%;object-fit:cover" /></a>
+          ) : (
+            <div class="embed"><iframe src={`https://www.youtube-nocookie.com/embed/${ep.youtubeId}`} title={ep.title} loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          )}
           <div class="btn-row" style="margin-top:16px">
-            <a class="btn primary" href={SITE.social.youtube} data-out="youtube">Watch on YouTube</a>
+            <a class="btn primary" href={watch} data-out="youtube">Watch on YouTube</a>
             <a class="btn ghost" href={SITE.social.applePodcasts} data-out="apple_podcasts">Apple Podcasts</a>
             <a class="btn ghost" href={SITE.social.spotify} data-out="spotify">Spotify</a>
           </div>
-          <h2 style="margin-top:40px">Transcript</h2>
-          <p class="muted">Transcripts are added automatically for each episode.</p>
+          {ep.summary && <p style="margin-top:24px">{ep.summary}</p>}
         </div>
         <aside class="card">
-          {epSongs.length > 0 && (
+          {ep.scripture.length > 0 && (<><h3>Scripture</h3>{ep.scripture.map((r) => <p style="margin:4px 0">{r}</p>)}</>)}
+          {ep.sung.length > 0 && (
             <>
-              <h3>Songs in this episode</h3>
-              {epSongs.map((s) => <p><a href={href(`/songs/${s.slug}`)}>{s.title}</a> · free charts</p>)}
+              <h3 style="margin-top:20px">Songs</h3>
+              {ep.sung.map((name) => {
+                const s = findSong(name);
+                return <p style="margin:4px 0">{s ? <><a href={href(`/songs/${s.slug}`)}>{name}</a> <span class="muted">· free charts</span></> : name}</p>;
+              })}
             </>
           )}
-          <h3 style={epSongs.length ? 'margin-top:20px' : ''}>Get a reminder before each live stream</h3>
+          {ep.sung.length === 0 && epSongs.length > 0 && (
+            <><h3>The song</h3>{epSongs.map((s) => <p><a href={href(`/songs/${s.slug}`)}>{s.title}</a> · free charts</p>)}</>
+          )}
+          <h3 style="margin-top:20px">Get a reminder before each live stream</h3>
           <EmailForm source={`wiw-episode:${ep.number}`} event="reminder_signup" cta="Remind me" compact thanks="Done. We'll email you before each live stream." />
         </aside>
       </div>

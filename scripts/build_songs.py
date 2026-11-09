@@ -108,6 +108,24 @@ for s in songs.values():
         "exact": False,
     }
 
+# Keep what was added after the CSV import (exact links, charts, lyrics, stories,
+# songs found automatically by scripts/update-content.mjs).
+import os
+if os.path.exists(OUT):
+    prev = {x["slug"]: x for x in json.load(open(OUT, encoding="utf-8"))}
+    for slug, s in songs.items():
+        p = prev.get(slug)
+        if not p:
+            continue
+        for k in ("charts", "lyrics", "story", "ccli", "youtubeId", "writers", "key"):
+            if p.get(k):
+                s[k] = p[k]
+        if p.get("listen", {}).get("exact"):
+            s["listen"] = p["listen"]
+    for slug, p in prev.items():
+        if slug not in songs and p.get("source") == "auto":
+            songs[slug] = p
+
 out = sorted(songs.values(), key=lambda s: (-s["year"], s["title"]))
 json.dump(out, open(OUT, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 print(len(out), "songs written")

@@ -77,7 +77,9 @@ h3 { font-size: 1.35rem; font-weight: 500; }
 .hero img.bg { object-fit: cover; }
 .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,12,22,.7) 0%, rgba(10,12,22,.25) 45%, transparent 70%), linear-gradient(180deg, rgba(10,12,22,.15) 0%, rgba(10,12,22,.55) 55%, var(--bg) 100%); }
 .hero .wrap { position: relative; z-index: 1; padding-bottom: clamp(48px, 8vw, 96px); }
-.hero h1 { max-width: 14ch; }
+.hero-title span { display: block; white-space: nowrap; }
+.hero-title { font-size: clamp(2.3rem, 7.2vw, 5.4rem); }
+@media (max-width: 700px) { .hero img.bg { object-position: 60% top !important; } }
 
 /* Proof strip */
 .proof { border-block: 1px solid var(--line); background: var(--bg-2); }

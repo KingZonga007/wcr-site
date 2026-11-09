@@ -1,13 +1,514 @@
 [
-  {"number": 107, "slug": "107-are-you-a-godless-christian", "title": "Are you a Godless Christian?", "date": "2026-07-15", "songs": [], "scripture": null},
-  {"number": 106, "slug": "106-this-is-my-fathers-world", "title": "This Is My Father's World", "date": "2026-07-14", "songs": [], "scripture": "Hebrews 11:3"},
-  {"number": 105, "slug": "105-fight-with-confidence", "title": "Fight With Confidence", "date": "2026-07-09", "songs": [], "scripture": "2 Timothy 1:7"},
-  {"number": 104, "slug": "104-good-to-me", "title": "Good to Me", "date": "2026-07-08", "songs": [], "scripture": null},
-  {"number": 93, "slug": "93-pride-the-destroyer-christ-the-redeemer", "title": "Pride the Destroyer, Christ the Redeemer", "date": "2026-06-11", "songs": [], "scripture": null},
-  {"number": 92, "slug": "92-you-do-nothing", "title": "You. Do. Nothing.", "date": "2026-06-10", "songs": [], "scripture": null},
-  {"number": 91, "slug": "91-god-is-a-refuge", "title": "God Is a Refuge", "date": "2026-06-09", "songs": [], "scripture": null},
-  {"number": 90, "slug": "90-always-forgiven", "title": "Always Forgiven", "date": "2026-06-03", "songs": ["always-forgiven"], "scripture": null},
-  {"number": 64, "slug": "64-plead-for-me", "title": "Plead For Me", "date": "2026-04-09", "songs": ["plead-for-me"], "scripture": null},
-  {"number": 63, "slug": "63-in-you-is-mercy", "title": "In You Is Mercy", "date": "2026-04-08", "songs": ["in-you-is-mercy"], "scripture": null},
-  {"number": 61, "slug": "61-behold-the-lamb", "title": "Behold the Lamb", "date": "2026-04-02", "songs": ["behold-the-lamb"], "scripture": null}
+  {
+    "number": 150,
+    "slug": "150-ill-fly-away",
+    "title": "I’ll Fly Away",
+    "date": "2026-11-03",
+    "youtubeId": "E6XwOHtZR2M",
+    "kind": "Live",
+    "scripture": [
+      "John 1:1-5",
+      "Colossians 1:15-20"
+    ],
+    "sung": [
+      "I’ll Fly Away",
+      "In the beginning"
+    ],
+    "songs": [
+      "in-the-beginning"
+    ],
+    "summary": null
+  },
+  {
+    "number": 149,
+    "slug": "149-inside-out",
+    "title": "Inside out",
+    "date": "2026-10-28",
+    "youtubeId": "6PIFUcWrQ1I",
+    "kind": "Live",
+    "scripture": [
+      "1 John 1:5-10",
+      "1 John 2:28-29"
+    ],
+    "sung": [
+      "Inside Out",
+      "Here With Christ"
+    ],
+    "songs": [
+      "here-with-christ"
+    ],
+    "summary": null
+  },
+  {
+    "number": 148,
+    "slug": "148-take-my-life-and-let-it-be",
+    "title": "Take My Life and Let it Be",
+    "date": "2026-10-27",
+    "youtubeId": "BzQTZsP4RxE",
+    "kind": "Live",
+    "scripture": [
+      "Romans 12:1",
+      "Psalm 51:15"
+    ],
+    "sung": [
+      "Plead for me",
+      "Take My Life and Let it Be"
+    ],
+    "songs": [
+      "plead-for-me"
+    ],
+    "summary": null
+  },
+  {
+    "number": 147,
+    "slug": "147-there-is-a-day",
+    "title": "There is a day",
+    "date": "2026-10-22",
+    "youtubeId": "WIw1kxuJu6A",
+    "kind": "Live",
+    "scripture": [
+      "Revelation 22",
+      "2 Thessalonians 3:5"
+    ],
+    "sung": [
+      "Oh To See You",
+      "There is a day"
+    ],
+    "songs": [
+      "oh-to-see-you"
+    ],
+    "summary": null
+  },
+  {
+    "number": 146,
+    "slug": "146-and-can-it-be",
+    "title": "And Can it Be",
+    "date": "2026-10-21",
+    "youtubeId": "kI_n0k9MPjw",
+    "kind": "Live",
+    "scripture": [
+      "Matthew 10:34-38",
+      "1 Corinthians 2:2-5"
+    ],
+    "sung": [
+      "And Can it Be",
+      "As Long As You Are Glorified"
+    ],
+    "songs": [],
+    "summary": null
+  },
+  {
+    "number": 145,
+    "slug": "145-the-old-rugged-cross",
+    "title": "The Old Rugged Cross",
+    "date": "2026-10-20",
+    "youtubeId": "hB1-dbfc-c0",
+    "kind": "Live",
+    "scripture": [
+      "1 Corinthians 2:1-2",
+      "Hebrews 12:1-2"
+    ],
+    "sung": [
+      "The Old Rugged Cross",
+      "My Savior's Precious Blood"
+    ],
+    "songs": [
+      "my-saviors-precious-blood"
+    ],
+    "summary": null
+  },
+  {
+    "number": 144,
+    "slug": "144-sooner-count-the-stars",
+    "title": "Sooner Count The Stars",
+    "date": "2026-10-15",
+    "youtubeId": "qBirc50QOy4",
+    "kind": "Live",
+    "scripture": [
+      "Colossians 1:16",
+      "Ephesians 1:7-9"
+    ],
+    "sung": [
+      "This is My Fathers World",
+      "Sooner Count The Stars"
+    ],
+    "songs": [],
+    "summary": null
+  },
+  {
+    "number": 143,
+    "slug": "143-all-creatures",
+    "title": "All Creatures",
+    "date": "2026-10-14",
+    "youtubeId": "MTvg-4DeAYg",
+    "kind": "Live",
+    "scripture": [
+      "Hebrews 11:1-3",
+      "Psalm 27:13-14"
+    ],
+    "sung": [
+      "All Creatures",
+      "Christ Is Mine Forevermore"
+    ],
+    "songs": [
+      "all-creatures-of-our-god-and-king"
+    ],
+    "summary": null
+  },
+  {
+    "number": 142,
+    "slug": "142-rejoice-in-the-lord",
+    "title": "Rejoice in the Lord",
+    "date": "2026-10-13",
+    "youtubeId": "mY7Bu6KeNx0",
+    "kind": "Live",
+    "scripture": [
+      "Philippians 4:4",
+      "Psalm 5:11"
+    ],
+    "sung": [
+      "Praise to the Lord",
+      "To know You Lord"
+    ],
+    "songs": [
+      "to-know-you"
+    ],
+    "summary": null
+  },
+  {
+    "number": 139,
+    "slug": "139-all-that-thrills-my-soul",
+    "title": "All that thrills my soul",
+    "date": "2026-10-02",
+    "youtubeId": "WUFxICPX_GU",
+    "kind": "Friday Deep Dive",
+    "scripture": [],
+    "sung": [],
+    "songs": [
+      "all-that-thrills-my-soul"
+    ],
+    "summary": "The story of the song All that thrills my soul."
+  },
+  {
+    "number": 138,
+    "slug": "138-renew-my-life",
+    "title": "Renew my life",
+    "date": "2026-10-01",
+    "youtubeId": "RfKJK67tSeI",
+    "kind": "Live",
+    "scripture": [
+      "Luke 11:9-13",
+      "Psalm 23:1-3"
+    ],
+    "sung": [
+      "Come Spirit of God",
+      "Renew My Life"
+    ],
+    "songs": [
+      "come-spirit-of-god"
+    ],
+    "summary": null
+  },
+  {
+    "number": 137,
+    "slug": "137-treasures-in-jars-of-clay",
+    "title": "Treasures in jars of clay",
+    "date": "2026-09-30",
+    "youtubeId": "y8_SaOky5wE",
+    "kind": "Live",
+    "scripture": [
+      "2 Corinthians 4:5-6",
+      "Jude 1:24-25"
+    ],
+    "sung": [
+      "Day After Day I’ll Search to find you",
+      "All that thrills my soul"
+    ],
+    "songs": [
+      "day-after-day",
+      "all-that-thrills-my-soul"
+    ],
+    "summary": null
+  },
+  {
+    "number": 136,
+    "slug": "136-the-old-is-gone-the-new-has-come",
+    "title": "The old is gone the new has come",
+    "date": "2026-09-29",
+    "youtubeId": "D3CdRXmYUUc",
+    "kind": "Live",
+    "scripture": [
+      "John 14:1-6",
+      "John 14:12-14"
+    ],
+    "sung": [
+      "Abide",
+      "Completely Done"
+    ],
+    "songs": [],
+    "summary": null
+  },
+  {
+    "number": 135,
+    "slug": "135-the-wonders-of-jesus-crucified",
+    "title": "The Wonders of Jesus Crucified",
+    "date": "2026-09-25",
+    "youtubeId": "fteJpTm64oY",
+    "kind": "Friday Deep Dive",
+    "scripture": [],
+    "sung": [],
+    "songs": [
+      "wonders-of-jesus-crucified"
+    ],
+    "summary": "New Attitude conferences, CJ Mahaney, and writing as a band. The story behind the song the Wonders of Jesus Crucified."
+  },
+  {
+    "number": 134,
+    "slug": "134-let-us-go-to-the-house-of-the-lord",
+    "title": "Let us go to the house of the Lord",
+    "date": "2026-09-24",
+    "youtubeId": "oiTighdFvOA",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 122:1",
+      "Psalm 84:10-12"
+    ],
+    "sung": [
+      "Better Is One Day",
+      "House Of The Lord"
+    ],
+    "songs": [
+      "house-of-the-lord"
+    ],
+    "summary": null
+  },
+  {
+    "number": 133,
+    "slug": "133-the-wonders-of-jesus-crucified",
+    "title": "The Wonders of Jesus Crucified",
+    "date": "2026-09-23",
+    "youtubeId": "gSY-HT6npSs",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 139:17",
+      "Philippians 2:5-11"
+    ],
+    "sung": [
+      "O for a thousands tongues",
+      "The Wonders of Jesus Crucified"
+    ],
+    "songs": [
+      "wonders-of-jesus-crucified"
+    ],
+    "summary": null
+  },
+  {
+    "number": 132,
+    "slug": "132-as-the-deer",
+    "title": "As the Deer",
+    "date": "2026-09-22",
+    "youtubeId": "rWAAcN4L4s8",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 42:1-4",
+      "1 Corinthians 13:12"
+    ],
+    "sung": [
+      "As the Deer",
+      "Oh The Deep"
+    ],
+    "songs": [
+      "oh-the-deep"
+    ],
+    "summary": null
+  },
+  {
+    "number": 131,
+    "slug": "131-i-could-sing-of-your-love-forever",
+    "title": "I Could Sing Of Your Love Forever",
+    "date": "2026-09-16",
+    "youtubeId": "x2LM22T5pVw",
+    "kind": "Live",
+    "scripture": [
+      "Romans 5:6-11",
+      "Jeremiah 31:3"
+    ],
+    "sung": [
+      "I Could Sing Of Your Love Forever",
+      "Before My Knees Could Reach The Ground"
+    ],
+    "songs": [
+      "before-my-knees-could-reach-the-ground"
+    ],
+    "summary": null
+  },
+  {
+    "number": 130,
+    "slug": "130-out-of-the-depths",
+    "title": "Out of the Depths",
+    "date": "2026-09-15",
+    "youtubeId": "98LTVxL2p70",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 128:1-6",
+      "Isaiah 42:3"
+    ],
+    "sung": [
+      "Out of the Depths",
+      "Behold Our God"
+    ],
+    "songs": [
+      "behold-our-god"
+    ],
+    "summary": null
+  },
+  {
+    "number": 129,
+    "slug": "129-flesh-and-blood",
+    "title": "Flesh and Blood",
+    "date": "2026-09-11",
+    "youtubeId": "hhjsRhAe5-g",
+    "kind": "Friday Deep Dive",
+    "scripture": [],
+    "sung": [],
+    "songs": [
+      "flesh-and-blood"
+    ],
+    "summary": "The writing, history, and story behind the song Flesh and Blood."
+  },
+  {
+    "number": 128,
+    "slug": "128-man-of-sorrows",
+    "title": "Man of Sorrows",
+    "date": "2026-09-10",
+    "youtubeId": "0FZqhAB8XvI",
+    "kind": "Live",
+    "scripture": [
+      "1 Peter 2:24-25",
+      "1 Timothy 2:5-6"
+    ],
+    "sung": [
+      "Man of Sorrows",
+      "Undying Love"
+    ],
+    "songs": [
+      "undying-love"
+    ],
+    "summary": null
+  },
+  {
+    "number": 127,
+    "slug": "127-of-first-importance",
+    "title": "Of first importance",
+    "date": "2026-09-09",
+    "youtubeId": "4A1TiiIRLJs",
+    "kind": "Live",
+    "scripture": [
+      "1 Corinthians 15:3-4",
+      "2 Corinthians 5:21"
+    ],
+    "sung": [
+      "Flesh and Blood",
+      "King of Kings"
+    ],
+    "songs": [
+      "flesh-and-blood"
+    ],
+    "summary": null
+  },
+  {
+    "number": 126,
+    "slug": "126-he-is-faithful-and-just-to-forgive",
+    "title": "He is faithful and just to forgive",
+    "date": "2026-09-08",
+    "youtubeId": "yIIF4rOIz6Q",
+    "kind": "Live",
+    "scripture": [
+      "1 John 1:8-10",
+      "John 3:16-17"
+    ],
+    "sung": [
+      "Depth of Mercy",
+      "Jesus Paid It All"
+    ],
+    "songs": [
+      "depth-of-mercy"
+    ],
+    "summary": null
+  },
+  {
+    "number": 125,
+    "slug": "125-isaiah-53",
+    "title": "Isaiah 53",
+    "date": "2026-09-04",
+    "youtubeId": "QkWIO-USFvw",
+    "kind": "Friday Deep Dive",
+    "scripture": [],
+    "sung": [],
+    "songs": [
+      "isaiah-53"
+    ],
+    "summary": "The story and meaning behind the song Isaiah 53."
+  },
+  {
+    "number": 123,
+    "slug": "123-forever",
+    "title": "Forever",
+    "date": "2026-10-29",
+    "youtubeId": "dwp2Nebdpg4",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 118:1-4",
+      "Psalm 73:25"
+    ],
+    "sung": [
+      "Forever",
+      "Some Come Through Fire"
+    ],
+    "songs": [
+      "forever",
+      "some-come-through-fire"
+    ],
+    "summary": null
+  },
+  {
+    "number": 122,
+    "slug": "122-isaiah-53",
+    "title": "Isaiah 53",
+    "date": "2026-10-23",
+    "youtubeId": "FV-Eb5tIIjw",
+    "kind": "Live",
+    "scripture": [
+      "Hebrews 12:24",
+      "2 Corinthians 5:21"
+    ],
+    "sung": [
+      "Isaiah 53",
+      "Jesus Thank You"
+    ],
+    "songs": [
+      "isaiah-53"
+    ],
+    "summary": null
+  },
+  {
+    "number": 120,
+    "slug": "120-tis-so-sweet-to-trust-in-jesus",
+    "title": "'Tis so sweet to trust in Jesus",
+    "date": "2026-10-16",
+    "youtubeId": "cognQha_X0o",
+    "kind": "Live",
+    "scripture": [
+      "Jeremiah 36:22-26",
+      "Joel 2:12-13"
+    ],
+    "sung": [
+      "'Tis so sweet to trust in Jesus",
+      "Undivided Heart"
+    ],
+    "songs": [
+      "undivided-heart"
+    ],
+    "summary": null
+  }
 ]

@@ -1,0 +1,35 @@
+name: Update releases and episodes
+
+on:
+  schedule:
+    # Every 2 hours, plus right after Worship Is Warfare goes live (Tue/Thu ~6:30 and 7:15am MST).
+    - cron: '0 */2 * * *'
+    - cron: '30 13 * * 2,4'
+    - cron: '15 14 * * 2,4'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check YouTube, Apple Music and Spotify for new content
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+        run: node scripts/update-content.mjs
+      - name: Commit changes (triggers a Netlify rebuild)
+        run: |
+          if [ -n "$(git status --porcelain src/data)" ]; then
+            git config user.name "wcr-content-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add src/data
+            git commit -m "Auto-update releases and episodes"
+            git push
+          fi

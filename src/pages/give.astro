@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import EmailForm from '../components/EmailForm.astro';
+import { SITE } from '../lib/site.js';
 ---
 <Base title="Give" description="Support West Coast Revival, a 501(c)(3) nonprofit ministry. Gifts fund new recordings, free chord charts for churches and Worship Is Warfare." image="/img/atmosphere-1600.webp">
   <section class="hero" style="min-height:60vh">
@@ -20,11 +20,12 @@ import EmailForm from '../components/EmailForm.astro';
     <div class="wrap" style="margin-top:40px">
       <div class="card" style="max-width:640px">
         <h2>Give online</h2>
-        <p class="muted">Secure online giving, including monthly giving, opens here soon.</p>
-        <p class="muted" style="font-size:.85rem">(Preview note: the giving button connects once a donation provider is chosen.)</p>
-        <h3 style="margin-top:20px">Get notified when giving opens</h3>
-        <EmailForm source="give" cta="Notify me" compact />
+        <p class="muted">Giving is handled securely through the National Christian Foundation (NCF).</p>
+        <a class="btn primary" href={SITE.give} data-out="give_ncf" id="give-btn">Give securely through NCF</a>
       </div>
     </div>
   </section>
+  <script is:inline>
+    document.getElementById('give-btn').addEventListener('click', function () { window.wcrTrack('donation_click', { provider: 'ncf' }); });
+  </script>
 </Base>

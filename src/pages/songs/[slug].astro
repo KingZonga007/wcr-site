@@ -67,8 +67,8 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
         )}
         {!song.charts.recording && (
           <div class="card">
-            <p><strong>Charts for this song are on the way.</strong> Leave your email and we'll send them the day they're posted, plus every new chart after that.</p>
-            <EmailForm source={`chart-waitlist:${song.slug}`} event="chart_signup" song={song.slug} cta="Send me the charts" musicianOption thanks="Got it. We'll email the charts as soon as they're posted." />
+            <p><strong>Charts for this song are coming soon.</strong> Join the list and we'll let you know when they're posted. Your email also unlocks every free chart on the site.</p>
+            <EmailForm source={`chart-waitlist:${song.slug}`} event="chart_signup" song={song.slug} cta="Send me the charts" musicianOption thanks="You're in. Every chart on the site is now unlocked, and we'll let you know when this one is posted." />
           </div>
         )}
 
@@ -115,9 +115,9 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
   )}
 
   <dialog id="chart-gate" aria-labelledby="gate-title">
-    <h3 id="gate-title">Your chart is ready</h3>
-    <p class="muted">Where should we send new charts? You'll only be asked once.</p>
-    <EmailForm source={`chart-gate:${song.slug}`} event="chart_signup" song={song.slug} cta="Download" musicianOption thanks="Thanks! Your download is starting." />
+    <h3 id="gate-title">Unlock all free charts</h3>
+    <p class="muted">Enter your email once and every chart on the site is yours to download, free.</p>
+    <EmailForm source={`chart-gate:${song.slug}`} event="chart_signup" song={song.slug} cta="Unlock downloads" musicianOption thanks="Unlocked. Your download is starting." />
   </dialog>
 
   <script is:inline>

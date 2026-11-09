@@ -26,7 +26,7 @@ const sorts = [
           <a class="card song-card" href={href(`/songs/${s.slug}`)} data-title={s.title.toLowerCase()} data-year={s.year}>
             <span class="badge">{s.charts.recording ? 'Free charts' : 'Charts coming'}</span>
             <h3>{s.title}</h3>
-            <span class="meta">{s.year}{s.recordings.length > 1 ? ` · ${s.recordings.length} recordings` : ''}{s.key ? ` · Key of ${s.key}` : ''}</span>
+            {(s.key || s.recordings.length > 1) && <span class="meta">{[s.recordings.length > 1 ? `${s.recordings.length} recordings` : '', s.key ? `Key of ${s.key}` : ''].filter(Boolean).join(' · ')}</span>}
           </a>
         ))}
       </div>

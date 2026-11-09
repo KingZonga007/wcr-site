@@ -2,13 +2,15 @@
 import Base from '../../layouts/Base.astro';
 import EmailForm from '../../components/EmailForm.astro';
 import LiveStatus from '../../components/LiveStatus.astro';
-import { SITE, href } from '../../lib/site.js';
+import { SITE, href, PREVIEW } from '../../lib/site.js';
 import episodes from '../../data/episodes.json';
 import songs from '../../data/songs.json';
 
+// episodes.json is kept current by scripts/update-content.mjs (YouTube channel feed).
 const latest = episodes[0];
 const fmt = (d) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const songTitle = (slug) => songs.find((s) => s.slug === slug)?.title;
+const yt = (id) => `https://www.youtube.com/watch?v=${id}`;
 const schema = [{
   '@context': 'https://schema.org',
   '@type': 'PodcastSeries',
@@ -27,10 +29,32 @@ const schema = [{
       <h1>Worship Is Warfare</h1>
       <LiveStatus />
       <div class="btn-row" style="margin-top:22px">
-        <a class="btn primary" href={SITE.social.youtube} data-out="youtube">Watch on YouTube</a>
+        <a class="btn primary" href={SITE.social.youtubeLive} data-out="youtube">Watch on YouTube</a>
         <a class="btn ghost" href={SITE.social.applePodcasts} data-out="apple_podcasts">Apple Podcasts</a>
         <a class="btn ghost" href={SITE.social.spotify} data-out="spotify">Spotify</a>
         <a class="btn ghost" href="https://music.amazon.com/search/Worship%20is%20Warfare%20West%20Coast%20Revival" data-out="amazon">Amazon Music</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="latest">
+    <div class="wrap grid two" style="align-items:center">
+      <div>
+        {PREVIEW ? (
+          <a class="embed" href={yt(latest.youtubeId)} data-out="youtube" style="display:block"><img src="/img/wiw-live-graphic-800.webp" alt={`Watch ${latest.title} on YouTube`} style="width:100%;height:100%;object-fit:cover" /></a>
+        ) : (
+          <div class="embed"><iframe src={`https://www.youtube-nocookie.com/embed/${latest.youtubeId}`} title={latest.title} loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        )}
+      </div>
+      <div>
+        <p class="eyebrow">Latest episode · #{latest.number} · {fmt(latest.date)}</p>
+        <h2>{latest.title}</h2>
+        {latest.scripture.length > 0 && <p class="muted">Scripture: {latest.scripture.join(' · ')}</p>}
+        {latest.sung.length > 0 && <p class="muted">Songs: {latest.sung.join(' · ')}</p>}
+        <div class="btn-row" style="margin-top:16px">
+          <a class="btn primary" href={yt(latest.youtubeId)} data-out="youtube">Watch on YouTube</a>
+          <a class="btn ghost" href={href(`/worship-is-warfare/${latest.slug}`)}>Episode notes</a>
+        </div>
       </div>
     </div>
   </section>
@@ -60,24 +84,16 @@ const schema = [{
 
   <section class="section alt">
     <div class="wrap">
-      <div class="grid two" style="align-items:center">
-      <div class="photo"><img src="/img/wiw-live-graphic-800.webp" alt="Worship Is Warfare: join us live 6am MST Tuesday and Thursday" loading="lazy" /></div>
-      <div>
-      <p class="eyebrow">Latest episode</p>
-      <h2><a href={href(`/worship-is-warfare/${latest.slug}`)} style="text-decoration:none">#{latest.number} {latest.title}</a></h2>
-      <p class="muted">{fmt(latest.date)}{latest.scripture ? ` · ${latest.scripture}` : ''}</p>
-      <a class="btn primary" href={href(`/worship-is-warfare/${latest.slug}`)}>Watch episode</a>
-      </div>
-      </div>
-      <h3 style="margin-top:48px">All episodes</h3>
+      <h2>Recent episodes</h2>
       <div>
         {episodes.map((e) => (
           <a class="episode" href={href(`/worship-is-warfare/${e.slug}`)}>
             <span class="num">#{e.number}</span>
-            <span><strong>{e.title}</strong><br /><span class="muted">{fmt(e.date)}{e.songs.length ? ` · Song: ${e.songs.map(songTitle).join(', ')}` : ''}</span></span>
+            <span><strong>{e.kind === 'Friday Deep Dive' ? 'Deep Dive: ' : ''}{e.title}</strong><br /><span class="muted">{fmt(e.date)}{e.scripture.length ? ` · ${e.scripture[0]}` : ''}{e.songs.length ? ` · ${e.songs.map(songTitle).join(', ')}` : ''}</span></span>
           </a>
         ))}
       </div>
+      <p style="margin-top:24px"><a class="btn ghost" href={SITE.social.youtubeLive} data-out="youtube">All {latest.number}+ episodes on YouTube</a></p>
     </div>
   </section>
 </Base>
