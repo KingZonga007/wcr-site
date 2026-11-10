@@ -19,3 +19,20 @@ Deploys on Netlify from the main branch. Design spec: see the WCR Website Design
 - Files live in `public/charts/` as `<slug>-<KEY>.pdf` (guitar: `<slug>-<KEY>-capo-<N>.pdf`).
 - Unreleased songs: set `"unreleased": true` and `"source": "manual"` in songs.json. Charts are downloadable; listen buttons show "coming soon" until the release script finds the song.
 - Featured order (Songs page default view and the home page's first six) is `src/data/featured.json`.
+
+## Email list
+
+Build spec: `docs/emailer-v1-spec.md`. Signup capture and sending live in `netlify/functions/`, `email/`, and `scripts/email/`. Campaigns and sequence content are markdown files in `emails/campaigns/` and `emails/sequences/`.
+
+Needs `DATABASE_URL`, `EMAIL_API_KEY`, `TOKEN_SECRET`, `WEBHOOK_SECRET` set locally (and on Netlify / in GitHub secrets) to run. Admin commands, run locally:
+
+```bash
+node scripts/email/stats.mjs                  # subscriber counts by status and tag
+node scripts/email/export.mjs [path.csv]       # CSV of active subscribers
+node scripts/email/send-test.mjs <campaign-id> # send one campaign to TEST_RECIPIENTS now
+node scripts/email/cancel.mjs <campaign-id>    # cancel a scheduled campaign
+node scripts/email/delete.mjs <email>          # remove a subscriber and their history
+node scripts/email/send-due.mjs --dry-run      # preview what the campaign cron would send
+```
+
+`scripts/email/import-netlify-forms.mjs` is a one-time script to pull old Netlify Forms "signup" submissions in as pending subscribers (needs a `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID`, see the script's header comment).

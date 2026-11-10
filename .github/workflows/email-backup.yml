@@ -1,0 +1,26 @@
+name: Weekly email database backup
+
+on:
+  schedule:
+    - cron: '0 10 * * 0'
+  workflow_dispatch: {}
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump the database
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          docker run --rm -e PGCONNECT_TIMEOUT=30 postgres:16-alpine \
+            pg_dump "$DATABASE_URL" | gzip > wcr-emailer-backup.sql.gz
+      # Not the repo: this uploads to this workflow run's private GitHub Actions
+      # artifact storage, visible only to people with access to this repo, and
+      # kept for 90 days. Swap for S3/Backblaze later if longer retention matters.
+      - name: Upload backup
+        uses: actions/upload-artifact@v4
+        with:
+          name: wcr-emailer-backup-${{ github.run_id }}
+          path: wcr-emailer-backup.sql.gz
+          retention-days: 90

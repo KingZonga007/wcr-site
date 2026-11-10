@@ -1,0 +1,26 @@
+name: Send due welcome-sequence emails
+
+on:
+  schedule:
+    # Once a day. Day 0 of the welcome sequence actually goes out right when
+    # someone confirms (see netlify/functions/confirm.mjs); this is the
+    # catch-up run for day 3, day 7, and anything a confirm-time send missed.
+    - cron: '0 15 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: Send due sequence steps
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          EMAIL_API_KEY: ${{ secrets.EMAIL_API_KEY }}
+          TOKEN_SECRET: ${{ secrets.TOKEN_SECRET }}
+          SITE_URL: https://westcoastrevival.org
+        run: node scripts/email/send-sequences.mjs

@@ -1,3 +1,17 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Functions that read email content from the repo at runtime need those
+# markdown files included in their deploy bundle (esbuild only bundles JS).
+[functions.confirm]
+  included_files = ["emails/sequences/**"]
