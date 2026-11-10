@@ -14,6 +14,7 @@ const featuredSlugs = featuredList.slice(0, 6);
 const featured = featuredSlugs.map((s) => songs.find((x) => x.slug === s)).filter(Boolean);
 // Latest release: kept current by scripts/update-content.mjs; falls back to the newest song.
 const latestRel = releases.latest;
+const chartCount = songs.filter((s) => s.charts.recording || s.charts.congregational).length;
 const released = songs.filter((s) => !s.unreleased);
 const latest = latestRel ? (songs.find((s) => s.title.toLowerCase() === latestRel.title.toLowerCase()) || released[0]) : released[0];
 const latestLinks = latestRel ? { spotify: latestRel.spotify || latest.listen.spotify, apple: latestRel.apple || latest.listen.apple, youtube: latestRel.youtube || latest.listen.youtube, amazon: latestRel.amazon || latest.listen.amazon } : latest.listen;
@@ -47,7 +48,7 @@ const STORE_ON = false; // switched on in phase 3
       <li>Behold Our God<span>Written by the Bairds, sung by churches worldwide</span></li>
       <li>Sovereign Grace Music<span>Contributing songwriters and artists since 2005</span></li>
       <li>Worship Is Warfare Livestream<span>100+ episodes available, live twice a week</span></li>
-      <li>{songs.length} songs<span>Free chord charts for every one</span></li>
+      <li>{chartCount} free chord charts<span>Recording and congregational keys, with more added regularly</span></li>
     </ul>
   </section>
 
@@ -92,15 +93,15 @@ const STORE_ON = false; // switched on in phase 3
       <div class="grid two" style="align-items:end;margin-bottom:28px">
         <div>
           <p class="eyebrow">For worship leaders</p>
-          <h2>Free charts for every song</h2>
-          <p class="lead">Every song has two free chord charts: one in the recording key and one in a congregational key that's easier to sing. Free for your church, always.</p>
+          <h2>Free chord charts for your church</h2>
+          <p class="lead">Our charts come in two keys: the recording key, and a congregational key that's easier for most churches to sing. Free for your church, always, with new charts added regularly.</p>
         </div>
         <div class="photo" style="max-height:260px"><img src="/img/elec-close-up-800.webp" alt="Close-up of hands playing an electric guitar" loading="lazy" /></div>
       </div>
       <div class="grid three">
         {featured.map((s) => (
           <a class="card song-card" href={href(`/songs/${s.slug}`)}>
-            <span class="badge">{(s.charts.recording || s.charts.congregational) ? 'Free charts' : 'Charts coming'}</span>
+            {(s.charts.recording || s.charts.congregational) && <span class="badge">Free charts</span>}
             <h3>{s.title}</h3>
             {s.key && <span class="meta">Key of {s.key}</span>}
           </a>

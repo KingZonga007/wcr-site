@@ -26,13 +26,13 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
 <Base title={`${song.title} Chords and Lyrics (Free PDF)`} description={desc} image="/img/img-8084-1600.webp" schema={schema} current="songs">
   <section class="section" style="padding-bottom:40px; background: linear-gradient(rgba(10,12,22,.8), var(--bg)), url('/img/img-8084-1600.webp') center/cover">
     <div class="wrap">
-      <p class="eyebrow"><a href={href('/songs')} style="color:inherit;text-decoration:none">Songs</a> / {song.unreleased ? 'Coming soon' : song.year}</p>
+      <p class="eyebrow"><a href={href('/songs')} style="color:inherit;text-decoration:none">Songs</a> / {song.unreleased ? 'Releasing soon' : song.year}</p>
       <h1>{song.title}</h1>
       <p class="lead">{song.writers ? `Written by ${song.writers}` : 'West Coast Revival'}</p>
       {song.unreleased ? (
         <>
           <div class="listen-row" style="margin-top:18px">
-            {['Spotify', 'Apple Music', 'YouTube', 'Amazon Music'].map((n) => <span class="btn ghost soon" aria-disabled="true">{n}: coming soon</span>)}
+            {['Spotify', 'Apple Music', 'YouTube', 'Amazon Music'].map((n) => <span class="btn ghost soon" aria-disabled="true">{n}: on release</span>)}
           </div>
           <p class="muted" style="margin-top:12px">This song hasn't been released yet. The charts are free now, and listening links will appear here when it comes out.</p>
         </>
@@ -51,6 +51,7 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
     <div class="wrap grid two" style="align-items:start">
       <div>
         <h2>Free charts</h2>
+        {(song.charts.recording || song.charts.congregational) && (
         <div class="grid two" style="gap:16px;margin-bottom:20px">
           {[['recording', 'Recording key', 'Matches the recording'], ['congregational', 'Congregational key', 'Easier for most congregations to sing']].map(([k, label, note]) => {
             const c = song.charts[k];
@@ -61,12 +62,13 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
                 {c ? (
                   <button class="btn primary chart-dl" type="button" data-file={c.file} data-song={song.slug} data-chart={k}>Download PDF</button>
                 ) : (
-                  <span class="badge">Coming soon</span>
+                  <span class="badge">Not posted yet</span>
                 )}
               </div>
             );
           })}
         </div>
+        )}
         {song.charts.extras.length > 0 && (
           <div class="btn-row" style="margin-bottom:20px">
             {song.charts.extras.map((c) => (
@@ -76,13 +78,12 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
         )}
         {!song.charts.recording && !song.charts.congregational && (
           <div class="card">
-            <p><strong>Charts for this song are coming soon.</strong> Join the list and we'll let you know when they're posted. Your email also unlocks every free chart on the site.</p>
+            <p><strong>Want the charts for {song.title}?</strong> We post new charts regularly. Join the list and we'll email you when this one is ready. Your email also unlocks every free chart already on the site.</p>
             <EmailForm source={`chart-waitlist:${song.slug}`} event="chart_signup" song={song.slug} cta="Send me the charts" musicianOption thanks="You're in. Every chart on the site is now unlocked, and we'll let you know when this one is posted." />
           </div>
         )}
 
-        <h2 style="margin-top:48px">Lyrics</h2>
-        {song.lyrics ? <div class="prose" set:html={song.lyrics} /> : <p class="muted">Lyrics coming soon.</p>}
+        {song.lyrics && (<><h2 style="margin-top:48px">Lyrics</h2><div class="prose" set:html={song.lyrics} /></>)}
 
         {song.story && (<><h2 style="margin-top:48px">The story behind the song</h2><div class="prose"><p>{song.story}</p></div></>)}
       </div>
@@ -94,7 +95,7 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
           {song.ccli && (<><dt>CCLI</dt><dd>{song.ccli}</dd></>)}
           {song.themes.length > 0 && (<><dt>Themes</dt><dd>{song.themes.join(', ')}</dd></>)}
           <dt>Recordings</dt>
-          <dd>{song.unreleased && song.recordings.length === 0 && <div>Coming soon</div>}{song.recordings.map((r) => <div>{r.year} · {r.album.title}{r.version ? ` (${r.version})` : ''}</div>)}</dd>
+          <dd>{song.unreleased && song.recordings.length === 0 && <div>Releasing soon</div>}{song.recordings.map((r) => <div>{r.year} · {r.album.title}{r.version ? ` (${r.version})` : ''}</div>)}</dd>
         </dl>
         {isSGM && <p class="muted" style="font-size:.85rem;margin-top:14px">Originally released with Sovereign Grace Music.</p>}
         {inEpisodes.length > 0 && (
@@ -116,7 +117,7 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
         <h2>More songs</h2>
         <div class="grid three">
           {related.map((s) => (
-            <a class="card song-card" href={href(`/songs/${s.slug}`)}><h3>{s.title}</h3><span class="meta">{s.unreleased ? 'Coming soon' : s.year}</span></a>
+            <a class="card song-card" href={href(`/songs/${s.slug}`)}><h3>{s.title}</h3><span class="meta">{s.unreleased ? 'Releasing soon' : s.year}</span></a>
           ))}
         </div>
       </div>

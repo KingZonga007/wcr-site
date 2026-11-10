@@ -16,7 +16,11 @@ export const SITE = {
   tagline: 'Timeless truth. Untamed affection.',
   credential: 'The writers of "Behold Our God" and the popular adaptation of "All Creatures of Our God and King."',
   give: 'https://secure.ncfgiving.com/GXDonateNow?id=a0UVx000007gBnqMAE', // National Christian Foundation
-  email: 'info@westcoastrevival.org', // placeholder until the domain's mailbox exists
+  email: 'info@westcoastrevival.org', // forwards via Porkbun
+  // Legal identity shown in the footer, Give and Contact pages. Fill in from the IRS determination letter.
+  legalName: 'West Coast Revival',
+  ein: null, // e.g. '12-3456789'
+  address: null, // e.g. 'PO Box 123, Gilbert, AZ 85299'
   social: {
     spotify: 'https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5',
     applePodcasts: 'https://podcasts.apple.com/podcast/id1864799495',

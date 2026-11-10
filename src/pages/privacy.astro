@@ -1,15 +1,33 @@
 ---
 import Base from '../layouts/Base.astro';
+import { SITE, href } from '../lib/site.js';
 ---
-<Base title="Privacy Policy">
+<Base title="Privacy Policy" description="How West Coast Revival collects, uses and protects your information.">
   <section class="section"><div class="wrap prose">
     <h1>Privacy policy</h1>
-    <p class="muted">Draft for review before launch.</p>
+    <p class="muted">Effective November 9, 2026</p>
+    <p>{SITE.legalName} ("we") is a 501(c)(3) nonprofit ministry. This policy explains what information we collect on westcoastrevival.org and how we use it.</p>
     <h2>What we collect</h2>
-    <p>When you sign up for emails, download a chart or send an inquiry, we collect what you enter (such as your name and email address) and which page you signed up from. We also use analytics and advertising tools (Google Analytics, Google Ads and Meta) to understand how the site is used, only with your consent where required.</p>
+    <p><strong>Information you give us.</strong> When you join our email list, unlock chord charts or send an inquiry, we collect what you enter, such as your name, email address, church and message, along with the page you signed up from.</p>
+    <p><strong>Usage information.</strong> We use analytics and advertising tools, such as Google Analytics and Google Ads, to understand how visitors find and use the site. These tools may use cookies and collect information like pages visited, device type and approximate location.</p>
     <h2>How we use it</h2>
-    <p>To send the emails you asked for, reply to inquiries, and improve the site and our ministry. We never sell your information.</p>
+    <ul>
+      <li>To send the emails you asked for, such as new songs, new charts and live stream reminders.</li>
+      <li>To reply to booking and other inquiries.</li>
+      <li>To improve the site and measure how well our outreach is working.</li>
+    </ul>
+    <p>We never sell or rent your information.</p>
+    <h2>Who we share it with</h2>
+    <p>We share information only with service providers that help us run the site, such as our web host (Netlify) and email provider, and only so they can provide those services. Gifts are processed by the National Christian Foundation (NCF) under its own privacy policy. We may also disclose information when required by law.</p>
     <h2>Your choices</h2>
-    <p>Every email has an unsubscribe link. To have your information removed, contact us through the inquiry form.</p>
+    <ul>
+      <li>Every email includes an unsubscribe link.</li>
+      <li>You can ask us to see, correct or delete your information at any time.</li>
+      <li>You can block or delete cookies in your browser settings.</li>
+    </ul>
+    <h2>Children</h2>
+    <p>This site is not directed to children under 13, and we do not knowingly collect their information.</p>
+    <h2>Contact</h2>
+    <p>Questions or requests: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. See also our <a href={href('/terms')}>terms of use</a>.</p>
   </div></section>
 </Base>

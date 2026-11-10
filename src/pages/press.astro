@@ -47,7 +47,7 @@ const photos = [
   <section class="section">
     <div class="wrap">
       <h2>Photos</h2>
-      <p class="muted">Free to use for promoting West Coast Revival. High-resolution versions coming soon.</p>
+      <p class="muted">Free to use for promoting West Coast Revival. For high-resolution files, email {SITE.email}.</p>
       <div class="grid three">
         {photos.map((p) => (
           <a class="photo" href={`/img/${p.f}-1600.webp`} download><img src={`/img/${p.f}-800.webp`} alt={p.alt} loading="lazy" style="aspect-ratio:4/3" /></a>

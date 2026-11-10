@@ -87,6 +87,7 @@ const nav = [
               <li><a href={href('/about')}>About</a></li>
               <li><a href={href('/press')}>Press kit</a></li>
               <li><a href={href('/give')}>Give</a></li>
+              <li><a href={href('/contact')}>Contact</a></li>
             </ul>
           </div>
           <div>
@@ -100,7 +101,7 @@ const nav = [
           </div>
         </div>
         <div class="legal">
-          <p>West Coast Revival is a 501(c)(3) nonprofit ministry. Gifts are tax-deductible as allowed by law. Mailing address and EIN: to be added.</p>
+          <p>{SITE.legalName} is a 501(c)(3) nonprofit ministry.{SITE.ein && ` EIN ${SITE.ein}.`} Gifts are tax-deductible as allowed by law.{SITE.address && ` ${SITE.address}.`} Contact: <a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
           <p>&copy; {new Date().getFullYear()} West Coast Revival · <a href={href('/privacy')}>Privacy</a> · <a href={href('/terms')}>Terms</a></p>
         </div>
       </div>
