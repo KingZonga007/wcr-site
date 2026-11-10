@@ -95,7 +95,9 @@ def main(src, dst, frm, to, *flags):
         for ws in lines.values():
             t = [w[4] for w in ws]
             if len(t) >= 3 and t[0] == 'Key' and t[1] == '-':
-                hdr = ws[2]
+                # Rewrite the rest of the header line so a wider key can't overlap "| Tempo".
+                rest = ws[2:]
+                hdr = (rest[0][0], rest[0][1], rest[-1][2], rest[-1][3], ' '.join([to] + [w[4] for w in rest[1:]]))
         spans = [sp for bl in page.get_text('dict')['blocks'] for l in bl.get('lines', []) for sp in l['spans'] if sp['text'].strip('\u200b ')]
 
         def baseline_and_size(w):
@@ -110,7 +112,7 @@ def main(src, dst, frm, to, *flags):
         if '--clean' in flags:
             clean(page)
         if hdr:
-            info.append((hdr, to, *baseline_and_size(hdr)))
+            info.append((hdr, hdr[4], *baseline_and_size(hdr)))
         for w, new, y, size, *_ in info:
             # Tight box around the glyphs only, so lyrics above/below are untouched.
             page.add_redact_annot(fitz.Rect(w[0] + 0.5, y - size * 0.7, w[2] - 0.5, y - size * 0.05), fill=(1, 1, 1))

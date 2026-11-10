@@ -382,14 +382,26 @@
   {
     "slug": "the-sparrow",
     "title": "The Sparrow",
-    "key": null,
+    "key": "Bb",
     "writers": null,
     "themes": [],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
+      "recording": {
+        "key": "Bb",
+        "file": "/charts/the-sparrow-Bb.pdf"
+      },
+      "congregational": {
+        "key": "A",
+        "file": "/charts/the-sparrow-A.pdf"
+      },
+      "extras": [
+        {
+          "label": "Guitar chart (G, capo 3)",
+          "key": "G",
+          "file": "/charts/the-sparrow-G-capo-3.pdf"
+        }
+      ]
     },
     "lyrics": null,
     "story": null,
@@ -887,13 +899,19 @@
   {
     "slug": "some-come-through-fire",
     "title": "Some Come Through Fire",
-    "key": null,
+    "key": "C",
     "writers": null,
     "themes": [],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "C",
+        "file": "/charts/some-come-through-fire-C.pdf"
+      },
+      "congregational": {
+        "key": "C",
+        "file": "/charts/some-come-through-fire-C.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
@@ -1385,7 +1403,7 @@
   {
     "slug": "the-prodigal",
     "title": "The Prodigal",
-    "key": "C",
+    "key": "F",
     "writers": null,
     "themes": [
       "Grace",
@@ -1393,8 +1411,14 @@
     ],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "F",
+        "file": "/charts/the-prodigal-F.pdf"
+      },
+      "congregational": {
+        "key": "F",
+        "file": "/charts/the-prodigal-F.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
