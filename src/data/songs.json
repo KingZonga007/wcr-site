@@ -1628,13 +1628,19 @@
   {
     "slug": "house-of-the-lord",
     "title": "House of the Lord",
-    "key": null,
+    "key": "B",
     "writers": null,
     "themes": [],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "B",
+        "file": "/charts/house-of-the-lord-B.pdf"
+      },
+      "congregational": {
+        "key": "G",
+        "file": "/charts/house-of-the-lord-G.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
