@@ -1,1 +1,606 @@
-{ "appleArtistId": null, "releases": [], "latest": null, "checkedAt": null }
+{
+  "appleArtistId": 189482804,
+  "releases": [
+    {
+      "title": "Have You Been To Jesus",
+      "fullTitle": "Have You Been To Jesus",
+      "album": "Have You Been To Jesus - Single",
+      "date": "2025-10-14",
+      "apple": "https://music.apple.com/us/album/have-you-been-to-jesus/1844481334?i=1844481335&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4b/4a/ea/4b4aeaed-9a3f-d6d9-586b-682299bd7e96/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "Solid Rock",
+      "fullTitle": "Solid Rock",
+      "album": "Solid Rock - Single",
+      "date": "2025-06-09",
+      "apple": "https://music.apple.com/us/album/solid-rock/1818898142?i=1818898143&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d1/55/53/d1555394-cc9b-de58-07c2-dbc9c435ba35/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "In You Is Mercy",
+      "fullTitle": "In You Is Mercy",
+      "album": "In You Is Mercy - Single",
+      "date": "2025-06-09",
+      "apple": "https://music.apple.com/us/album/in-you-is-mercy/1817697164?i=1817697165&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ef/73/7d/ef737d54-1011-f7be-2460-e45d7503d4c1/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "Before My Knees Could Reach the Ground",
+      "fullTitle": "Before My Knees Could Reach the Ground",
+      "album": "Before My Knees Could Reach the Ground - Single",
+      "date": "2022-02-18",
+      "apple": "https://music.apple.com/us/album/before-my-knees-could-reach-the-ground/1606479204?i=1606479205&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/74/66/89/746689d1-7cab-9db7-5f3d-c23fb3e46c50/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "Grace (A Christmas Lullaby)",
+      "fullTitle": "Grace (A Christmas Lullaby)",
+      "album": "Grace (A Christmas Lullaby) - Single",
+      "date": "2021-12-10",
+      "apple": "https://music.apple.com/us/album/grace-a-christmas-lullaby/1599332761?i=1599332763&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/8b/bc/3d/8bbc3de3-3bc2-60e0-9860-e354dd23df0d/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "Come Spirit of God (Live in Orlando)",
+      "fullTitle": "Come Spirit of God (Live in Orlando)",
+      "album": "Oh the Deep",
+      "date": "2021-10-29",
+      "apple": "https://music.apple.com/us/album/come-spirit-of-god-live-in-orlando/1591747988?i=1591747994&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f7/4e/d3/f74ed388-25ba-be49-066e-e4967a73a38a/artwork.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Come Spirit of God",
+      "fullTitle": "Come Spirit of God",
+      "album": "Oh the Deep",
+      "date": "2021-10-29",
+      "apple": "https://music.apple.com/us/album/come-spirit-of-god/1591747988?i=1591747993&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f7/4e/d3/f74ed388-25ba-be49-066e-e4967a73a38a/artwork.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Oh the Deep",
+      "fullTitle": "Oh the Deep",
+      "album": "Oh the Deep",
+      "date": "2021-10-29",
+      "apple": "https://music.apple.com/us/album/oh-the-deep/1591747988?i=1591747992&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f7/4e/d3/f74ed388-25ba-be49-066e-e4967a73a38a/artwork.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "My Savior's Precious Blood",
+      "fullTitle": "My Savior's Precious Blood",
+      "album": "Oh the Deep",
+      "date": "2021-10-29",
+      "apple": "https://music.apple.com/us/album/my-saviors-precious-blood/1591747988?i=1591747991&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f7/4e/d3/f74ed388-25ba-be49-066e-e4967a73a38a/artwork.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Only You",
+      "fullTitle": "Only You",
+      "album": "Oh the Deep",
+      "date": "2021-10-29",
+      "apple": "https://music.apple.com/us/album/only-you/1591747988?i=1591747990&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f7/4e/d3/f74ed388-25ba-be49-066e-e4967a73a38a/artwork.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Come You Saints",
+      "fullTitle": "Come You Saints",
+      "album": "Oh the Deep",
+      "date": "2021-10-29",
+      "apple": "https://music.apple.com/us/album/come-you-saints/1591747988?i=1591747989&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f7/4e/d3/f74ed388-25ba-be49-066e-e4967a73a38a/artwork.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "The Pearl of Great Price",
+      "fullTitle": "The Pearl of Great Price",
+      "album": "The Pearl of Great Price - Single",
+      "date": "2021-07-23",
+      "apple": "https://music.apple.com/us/album/the-pearl-of-great-price/1577034449?i=1577034450&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/95/35/62/95356252-cde2-f44b-02d2-4da1e533e328/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "Behold the Lamb",
+      "fullTitle": "Behold the Lamb",
+      "album": "Behold the Lamb - Single",
+      "date": "2021-05-28",
+      "apple": "https://music.apple.com/us/album/behold-the-lamb/1569510327?i=1569510328&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/7e/3a/a9/7e3aa93c-ea9b-0332-5e27-dda405de7404/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "The Sparrow",
+      "fullTitle": "The Sparrow",
+      "album": "The Sparrow - Single",
+      "date": "2021-03-26",
+      "apple": "https://music.apple.com/us/album/the-sparrow/1556993803?i=1556993806&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f8/28/9b/f8289bbb-ba36-5816-3f77-0c9a95b9d49c/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "We Three Kings",
+      "fullTitle": "We Three Kings",
+      "album": "We Three Kings - Single",
+      "date": "2020-11-27",
+      "apple": "https://music.apple.com/us/album/we-three-kings/1541956448?i=1541956449&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e4/20/79/e4207924-0004-2763-fc95-2df11f65cd3c/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "The Armor",
+      "fullTitle": "The Armor",
+      "album": "The Armor - Single",
+      "date": "2020-10-30",
+      "apple": "https://music.apple.com/us/album/the-armor/1537222624?i=1537222625&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/87/51/5f/87515f56-adcd-0705-c8f4-31ef27433eb4/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "Flesh and Blood",
+      "fullTitle": "Flesh and Blood",
+      "album": "Flesh and Blood - Single",
+      "date": "2020-04-09",
+      "apple": "https://music.apple.com/us/album/flesh-and-blood/1507537130?i=1507537131&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/5e/7c/66/5e7c6617-4670-d002-fb90-749bcc769685/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "Behold Our God (Almost Acoustic)",
+      "fullTitle": "Behold Our God (Almost Acoustic)",
+      "album": "Behold Our God (Almost Acoustic) - Single",
+      "date": "2019-10-20",
+      "apple": "https://music.apple.com/us/album/behold-our-god-almost-acoustic/1484243041?i=1484243045&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/f0/e9/40/f0e9409c-42dd-7b8b-dc4c-63a92340b173/artwork.jpg/600x600bb.jpg",
+      "single": true,
+      "spotify": null
+    },
+    {
+      "title": "Some Bright Golden Morning",
+      "fullTitle": "Some Bright Golden Morning",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/some-bright-golden-morning/1259515796?i=1259516046&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "To Know You",
+      "fullTitle": "To Know You",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/to-know-you/1259515796?i=1259516045&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Undivided Heart",
+      "fullTitle": "Undivided Heart",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/undivided-heart/1259515796?i=1259516044&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Killing My Demons",
+      "fullTitle": "Killing My Demons",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/killing-my-demons/1259515796?i=1259516043&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Take It from Me",
+      "fullTitle": "Take It from Me",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/take-it-from-me/1259515796?i=1259516042&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Depth of Mercy",
+      "fullTitle": "Depth of Mercy",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/depth-of-mercy/1259515796?i=1259516041&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Sing Your Mercies New",
+      "fullTitle": "Sing Your Mercies New",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/sing-your-mercies-new/1259515796?i=1259516040&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "The Gathering",
+      "fullTitle": "The Gathering",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/the-gathering/1259515796?i=1259516008&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Cross over Jordan",
+      "fullTitle": "Cross over Jordan",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/cross-over-jordan/1259515796?i=1259515890&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Some Come Through Fire",
+      "fullTitle": "Some Come Through Fire",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/some-come-through-fire/1259515796?i=1259515889&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "I Want to Wake Up",
+      "fullTitle": "I Want to Wake Up",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/i-want-to-wake-up/1259515796?i=1259515887&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Not Backing Down",
+      "fullTitle": "Not Backing Down",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/not-backing-down/1259515796?i=1259515883&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Time Keeps Slippin' Away",
+      "fullTitle": "Time Keeps Slippin' Away",
+      "album": "Some Bright Golden Morning",
+      "date": "2015-07-12",
+      "apple": "https://music.apple.com/us/album/time-keeps-slippin-away/1259515796?i=1259515881&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/2f/4b/44/2f4b44f3-47c9-cfec-1128-2d2032a5e9e4/889326311133.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Time Keeps Slippin' Away",
+      "fullTitle": "Time Keeps Slippin' Away",
+      "album": "All That Thrills My Soul - EP",
+      "date": "2013-01-08",
+      "apple": "https://music.apple.com/us/album/time-keeps-slippin-away/1791325714?i=1791325720&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/d9/62/90d9622d-dff5-8025-41fd-62427b622f90/0845350080650.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Oh, to See You",
+      "fullTitle": "Oh, to See You",
+      "album": "All That Thrills My Soul - EP",
+      "date": "2013-01-08",
+      "apple": "https://music.apple.com/us/album/oh-to-see-you/1791325714?i=1791325719&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/d9/62/90d9622d-dff5-8025-41fd-62427b622f90/0845350080650.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Plead for Me",
+      "fullTitle": "Plead for Me",
+      "album": "All That Thrills My Soul - EP",
+      "date": "2013-01-08",
+      "apple": "https://music.apple.com/us/album/plead-for-me/1791325714?i=1791325718&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/d9/62/90d9622d-dff5-8025-41fd-62427b622f90/0845350080650.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "In the Beginning",
+      "fullTitle": "In the Beginning",
+      "album": "All That Thrills My Soul - EP",
+      "date": "2013-01-08",
+      "apple": "https://music.apple.com/us/album/in-the-beginning/1791325714?i=1791325717&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/d9/62/90d9622d-dff5-8025-41fd-62427b622f90/0845350080650.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "All That Thrills My Soul",
+      "fullTitle": "All That Thrills My Soul",
+      "album": "All That Thrills My Soul - EP",
+      "date": "2013-01-08",
+      "apple": "https://music.apple.com/us/album/all-that-thrills-my-soul/1791325714?i=1791325716&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/d9/62/90d9622d-dff5-8025-41fd-62427b622f90/0845350080650.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "All Creatures of Our God and King",
+      "fullTitle": "All Creatures of Our God and King",
+      "album": "All That Thrills My Soul - EP",
+      "date": "2013-01-08",
+      "apple": "https://music.apple.com/us/album/all-creatures-of-our-god-and-king/1791325714?i=1791325715&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/d9/62/90d9622d-dff5-8025-41fd-62427b622f90/0845350080650.png/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Rising Sun",
+      "fullTitle": "Rising Sun",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/rising-sun/261915915?i=261919769&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "You Were Always There",
+      "fullTitle": "You Were Always There",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/you-were-always-there/261915915?i=261919383&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Wonders of Jesus Crucified",
+      "fullTitle": "Wonders of Jesus Crucified",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/wonders-of-jesus-crucified/261915915?i=261919147&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Only for You",
+      "fullTitle": "Only for You",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/only-for-you/261915915?i=261918912&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Refugee",
+      "fullTitle": "Refugee",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/refugee/261915915?i=261918494&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "House of the Lord",
+      "fullTitle": "House of the Lord",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/house-of-the-lord/261915915?i=261918223&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Goodbye",
+      "fullTitle": "Goodbye",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/goodbye/261915915?i=261917905&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Simple Fix",
+      "fullTitle": "Simple Fix",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/simple-fix/261915915?i=261917619&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Here With Christ",
+      "fullTitle": "Here With Christ",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/here-with-christ/261915915?i=261916684&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Forever",
+      "fullTitle": "Forever",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/forever/261915915?i=261916420&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Won't Let Me Fall Away",
+      "fullTitle": "Won't Let Me Fall Away",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/wont-let-me-fall-away/261915915?i=261916323&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Day After Day",
+      "fullTitle": "Day After Day",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/day-after-day/261915915?i=261916189&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Intro",
+      "fullTitle": "Intro",
+      "album": "West Coast Revival",
+      "date": "2007-08-08",
+      "apple": "https://music.apple.com/us/album/intro/261915915?i=261915928&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music/6d/7a/19/mzi.eqkghrir.tif/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Familiar Places",
+      "fullTitle": "Familiar Places",
+      "album": "West Coast Revival",
+      "date": "1977-01-01",
+      "apple": "https://music.apple.com/us/album/familiar-places/1871373384?i=1871373753&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e9/7f/94/e97f9474-987a-2111-e770-ce981d266f75/5063907684976_cover.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "My Mind Is At Ease",
+      "fullTitle": "My Mind Is At Ease",
+      "album": "West Coast Revival",
+      "date": "1977-01-01",
+      "apple": "https://music.apple.com/us/album/my-mind-is-at-ease/1871373384?i=1871373752&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e9/7f/94/e97f9474-987a-2111-e770-ce981d266f75/5063907684976_cover.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Free",
+      "fullTitle": "Free",
+      "album": "West Coast Revival",
+      "date": "1977-01-01",
+      "apple": "https://music.apple.com/us/album/free/1871373384?i=1871373751&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e9/7f/94/e97f9474-987a-2111-e770-ce981d266f75/5063907684976_cover.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "The Family Was Right",
+      "fullTitle": "The Family Was Right",
+      "album": "West Coast Revival",
+      "date": "1977-01-01",
+      "apple": "https://music.apple.com/us/album/the-family-was-right/1871373384?i=1871373750&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e9/7f/94/e97f9474-987a-2111-e770-ce981d266f75/5063907684976_cover.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Talkin' Bout Love",
+      "fullTitle": "Talkin' Bout Love",
+      "album": "West Coast Revival",
+      "date": "1977-01-01",
+      "apple": "https://music.apple.com/us/album/talkin-bout-love/1871373384?i=1871373749&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e9/7f/94/e97f9474-987a-2111-e770-ce981d266f75/5063907684976_cover.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Love Of My Life",
+      "fullTitle": "Love Of My Life",
+      "album": "West Coast Revival",
+      "date": "1977-01-01",
+      "apple": "https://music.apple.com/us/album/love-of-my-life/1871373384?i=1871373748&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e9/7f/94/e97f9474-987a-2111-e770-ce981d266f75/5063907684976_cover.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "Feelin' Alright",
+      "fullTitle": "Feelin' Alright",
+      "album": "West Coast Revival",
+      "date": "1977-01-01",
+      "apple": "https://music.apple.com/us/album/feelin-alright/1871373384?i=1871373387&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e9/7f/94/e97f9474-987a-2111-e770-ce981d266f75/5063907684976_cover.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "So Far Away",
+      "fullTitle": "So Far Away",
+      "album": "West Coast Revival",
+      "date": "1977-01-01",
+      "apple": "https://music.apple.com/us/album/so-far-away/1871373384?i=1871373386&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e9/7f/94/e97f9474-987a-2111-e770-ce981d266f75/5063907684976_cover.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    },
+    {
+      "title": "It's Gonna Be Hard",
+      "fullTitle": "It's Gonna Be Hard",
+      "album": "West Coast Revival",
+      "date": "1977-01-01",
+      "apple": "https://music.apple.com/us/album/its-gonna-be-hard/1871373384?i=1871373385&uo=4",
+      "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e9/7f/94/e97f9474-987a-2111-e770-ce981d266f75/5063907684976_cover.jpg/600x600bb.jpg",
+      "single": false,
+      "spotify": null
+    }
+  ],
+  "latest": {
+    "title": "Have You Been To Jesus",
+    "fullTitle": "Have You Been To Jesus",
+    "album": "Have You Been To Jesus - Single",
+    "date": "2025-10-14",
+    "apple": "https://music.apple.com/us/album/have-you-been-to-jesus/1844481334?i=1844481335&uo=4",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4b/4a/ea/4b4aeaed-9a3f-d6d9-586b-682299bd7e96/artwork.jpg/600x600bb.jpg",
+    "single": true,
+    "spotify": null
+  },
+  "checkedAt": "2026-11-10T12:25:46.263Z"
+}
