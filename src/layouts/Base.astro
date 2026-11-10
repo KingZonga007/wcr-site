@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { SITE, href } from '../lib/site.js';
+import { SITE, href, PREVIEW } from '../lib/site.js';
 import EmailForm from '../components/EmailForm.astro';
 
 const { title, description = SITE.mission, image = '/img/band-best-1600.webp', schema = [], current = '' } = Astro.props;
@@ -47,10 +47,19 @@ const nav = [
     <meta name="theme-color" content="#0a0c16" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script type="application/ld+json" set:html={JSON.stringify([orgSchema, ...schema])} />
-    <script is:inline>
-      // Tracking plan: every event goes to the dataLayer. GTM (with consent mode) is added at launch.
+    {!PREVIEW && SITE.gaId && <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}`}></script>}
+    <script is:inline define:vars={{ gaId: PREVIEW ? null : SITE.gaId }}>
+      // Google Analytics 4. Every site event goes through wcrTrack. Sign-ups and booking requests
+      // also send GA4's recommended generate_lead event, which is marked as a key event (conversion).
       window.dataLayer = window.dataLayer || [];
-      window.wcrTrack = function (event, params) { window.dataLayer.push(Object.assign({ event: event }, params || {})); };
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      if (gaId) { window.gtag('js', new Date()); window.gtag('config', gaId); }
+      var LEADS = ['sign_up', 'chart_signup', 'reminder_signup', 'booking_submit'];
+      window.wcrTrack = function (event, params) {
+        params = params || {};
+        window.gtag('event', event, params);
+        if (LEADS.indexOf(event) > -1) window.gtag('event', 'generate_lead', { lead_source: event, form_source: params.source || params.type || '' });
+      };
       window.wcrStore = {
         get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
         set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} },

@@ -17,6 +17,7 @@ export const SITE = {
   credential: 'The writers of "Behold Our God" and the popular adaptation of "All Creatures of Our God and King."',
   give: 'https://secure.ncfgiving.com/GXDonateNow?id=a0UVx000007gBnqMAE', // National Christian Foundation
   email: 'info@westcoastrevival.org', // forwards via Porkbun
+  gaId: 'G-GT6LKH05SW', // Google Analytics 4 (owner: westcoastrevival@gmail.com)
   // Legal identity shown in the footer, Give and Contact pages.
   // Matches the IRS record (Pub 78) and the Arizona Corporation Commission filing (entity 23831063).
   legalName: 'West Coast Revival',
