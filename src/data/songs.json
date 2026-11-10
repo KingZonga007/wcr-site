@@ -220,13 +220,19 @@
   {
     "slug": "before-my-knees-could-reach-the-ground",
     "title": "Before My Knees Could Reach the Ground",
-    "key": null,
+    "key": "G",
     "writers": null,
     "themes": [],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "G",
+        "file": "/charts/before-my-knees-could-reach-the-ground-G.pdf"
+      },
+      "congregational": {
+        "key": "G",
+        "file": "/charts/before-my-knees-could-reach-the-ground-G.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
