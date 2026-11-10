@@ -296,15 +296,21 @@
   {
     "slug": "behold-the-lamb",
     "title": "Behold the Lamb",
-    "key": null,
+    "key": "E",
     "writers": null,
     "themes": [
       "The cross"
     ],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "E",
+        "file": "/charts/behold-the-lamb-E.pdf"
+      },
+      "congregational": {
+        "key": "E",
+        "file": "/charts/behold-the-lamb-E.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
@@ -414,13 +420,19 @@
   {
     "slug": "flesh-and-blood",
     "title": "Flesh and Blood",
-    "key": null,
+    "key": "C",
     "writers": null,
     "themes": [],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "C",
+        "file": "/charts/flesh-and-blood-C.pdf"
+      },
+      "congregational": {
+        "key": "C",
+        "file": "/charts/flesh-and-blood-C.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
@@ -452,7 +464,7 @@
   {
     "slug": "the-armor",
     "title": "The Armor",
-    "key": null,
+    "key": "A",
     "writers": null,
     "themes": [
       "Spiritual warfare",
@@ -460,8 +472,14 @@
     ],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "A",
+        "file": "/charts/the-armor-A.pdf"
+      },
+      "congregational": {
+        "key": "A",
+        "file": "/charts/the-armor-A.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
@@ -1282,13 +1300,19 @@
   {
     "slug": "plead-for-me",
     "title": "Plead For Me",
-    "key": null,
+    "key": "A",
     "writers": null,
     "themes": [],
     "ccli": null,
     "charts": {
-      "recording": null,
-      "congregational": null,
+      "recording": {
+        "key": "A",
+        "file": "/charts/plead-for-me-A.pdf"
+      },
+      "congregational": {
+        "key": "A",
+        "file": "/charts/plead-for-me-A.pdf"
+      },
       "extras": []
     },
     "lyrics": null,
