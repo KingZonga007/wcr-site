@@ -18,7 +18,11 @@ const orgSchema = {
     { '@type': 'Person', name: 'Jonathan Baird' },
     { '@type': 'Person', name: 'Ryan Baird' },
   ],
-  sameAs: [SITE.social.spotify, SITE.social.applePodcasts],
+  sameAs: [SITE.social.spotify, SITE.social.applePodcasts, SITE.social.youtube],
+  legalName: SITE.legalName,
+  email: SITE.email,
+  ...(SITE.ein ? { taxID: SITE.ein } : {}),
+  ...(SITE.addressParts ? { address: { '@type': 'PostalAddress', streetAddress: SITE.addressParts.street, addressLocality: SITE.addressParts.city, addressRegion: SITE.addressParts.region, postalCode: SITE.addressParts.postal, addressCountry: SITE.addressParts.country } } : {}),
 };
 const nav = [
   { label: 'Songs', path: '/songs', key: 'songs' },
