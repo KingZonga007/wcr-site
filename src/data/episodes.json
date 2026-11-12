@@ -1,5 +1,25 @@
 [
   {
+    "number": 152,
+    "slug": "152-i-shall-dwell-in-the-house-of-the-lord-forever",
+    "title": "I shall dwell in the house of the Lord forever",
+    "date": "2026-11-12",
+    "youtubeId": "x5wmrbgpWpU",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 23:6",
+      "Isaiah 25:8-9"
+    ],
+    "sung": [
+      "Absent From Flesh",
+      "Oh To See You"
+    ],
+    "songs": [
+      "oh-to-see-you"
+    ],
+    "summary": null
+  },
+  {
     "number": 151,
     "slug": "151-oh-lord-hear-my-voice",
     "title": "Oh Lord, hear my voice",
