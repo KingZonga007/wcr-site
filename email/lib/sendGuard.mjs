@@ -28,10 +28,12 @@ export async function reserveSend({ subscriberId, campaignId = null, sequenceSte
   return rows[0]?.id || null;
 }
 
-export async function finishSend(sendId, subscriberId, result) {
+// countsTowardCadence: false for opt-in streams (WIW episodes, the weekly
+// digest, video alerts) so they don't hold back regular campaigns.
+export async function finishSend(sendId, subscriberId, result, { countsTowardCadence = true } = {}) {
   if (result.ok) {
     await query(`update sends set status = 'sent', sent_at = now(), provider_message_id = $2 where id = $1`, [sendId, result.messageId || null]);
-    await query(`update subscribers set last_sent_at = now() where id = $1`, [subscriberId]);
+    if (countsTowardCadence) await query(`update subscribers set last_sent_at = now() where id = $1`, [subscriberId]);
   } else {
     await query(`update sends set status = 'failed' where id = $1`, [sendId]);
   }

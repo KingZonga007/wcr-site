@@ -25,6 +25,9 @@ export const CONFIG = {
   fromName: 'West Coast Revival',
   replyTo: process.env.REPLY_TO || 'info@westcoastrevival.org',
   address: '264 S Port Dr, Gilbert, AZ 85233',
+  youtubeChannelId: 'UCn1AwCv0hHtSCm_ThfT8LQw',
+  youtubeChannel: 'https://www.youtube.com/@westcoastrevival',
+  applePodcasts: 'https://podcasts.apple.com/podcast/id1864799495',
   social: [
     { name: 'YouTube', icon: 'icon-youtube.png', url: 'https://www.youtube.com/@westcoastrevival' },
     { name: 'Spotify', icon: 'icon-spotify.png', url: 'https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5' },

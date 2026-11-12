@@ -34,6 +34,14 @@ create table if not exists campaigns (
   sent_at timestamptz
 );
 
+-- kind: campaign | release (from markdown files) | wiw_episode | wiw_digest | video (automatic).
+-- ref: what an automatic email is about (episode number, video id, digest week).
+alter table campaigns add column if not exists kind text not null default 'campaign';
+alter table campaigns add column if not exists ref text;
+-- Automatic emails have no markdown file, so their rendered body and
+-- frontmatter are stored here; a retry after a crash resends the same email.
+alter table campaigns add column if not exists content jsonb;
+
 create table if not exists sends (
   id uuid primary key default gen_random_uuid(),
   campaign_id text references campaigns(id),

@@ -8,6 +8,7 @@ import { sendEmail } from '../../email/lib/send.mjs';
 import { CONFIG } from '../../email/lib/config.mjs';
 import { sleep } from '../../email/lib/sendGuard.mjs';
 import { closePool } from '../../email/lib/db.mjs';
+import { hasUnfilledMarkers } from '../../email/lib/fill.mjs';
 
 const campaignId = process.argv[2];
 
@@ -25,6 +26,11 @@ async function main() {
   }
   if (!CONFIG.testRecipients.length) {
     console.error('TEST_RECIPIENTS is empty. Set it before sending a test.');
+    process.exitCode = 1;
+    return;
+  }
+  if (hasUnfilledMarkers(`${file.subject}\n${file.body}`)) {
+    console.error(`${campaignId} still has [WRITE: ...] or {{...}} placeholders. Fill them in first.`);
     process.exitCode = 1;
     return;
   }
