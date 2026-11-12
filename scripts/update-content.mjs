@@ -137,6 +137,7 @@ export async function updateReleases(songs) {
   const state = readJSON(relFile, { appleArtistId: null, releases: [] });
   const tracks = await appleCatalog(state);
   const sp = await spotifyReleases();
+  const before = JSON.stringify([state.releases, state.latest]);
   const known = new Map(state.releases.map((r) => [norm(r.title) + r.date, r]));
   for (const t of tracks) {
     const key = norm(t.title) + t.date;
@@ -148,7 +149,9 @@ export async function updateReleases(songs) {
   }
   state.releases = [...known.values()].sort((a, b) => b.date.localeCompare(a.date));
   state.latest = state.releases.find((r) => r.single) || state.releases[0] || null;
-  state.checkedAt = new Date().toISOString();
+  // Only touch checkedAt when something real changed: a timestamp-only commit would trigger a
+  // Netlify deploy (15 credits) every run and use up the free plan.
+  if (JSON.stringify([state.releases, state.latest]) !== before) state.checkedAt = new Date().toISOString();
 
   // Apply exact links to songs; add any song not on the site yet.
   for (const r of [...state.releases].reverse()) {
