@@ -161,3 +161,32 @@ dialog::backdrop { background: rgba(0,0,0,.65); }
 .skip:focus { left: 12px; top: 12px; z-index: 100; background: var(--accent); color: var(--accent-ink); padding: 10px 14px; border-radius: 8px; }
 .prose p { max-width: 46rem; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .tile img { transition: none; } }
+
+/* Christmas season (shown only inside SITE.season.christmas) */
+:root { --xmas-red: #b3262e; --xmas-green: #1d5c3f; --xmas-gold: #e8c26a; }
+.xmas-hero {
+  padding: clamp(96px, 14vw, 170px) 0 clamp(64px, 9vw, 110px);
+  background:
+    radial-gradient(circle at 18% 22%, rgba(232,194,106,.35) 0 2px, transparent 3px),
+    radial-gradient(circle at 72% 14%, rgba(255,255,255,.5) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle at 86% 46%, rgba(232,194,106,.4) 0 2px, transparent 3px),
+    radial-gradient(circle at 40% 70%, rgba(255,255,255,.35) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle at 62% 84%, rgba(232,194,106,.3) 0 2px, transparent 3px),
+    radial-gradient(ellipse at 80% 0%, rgba(232,194,106,.28), transparent 55%),
+    linear-gradient(135deg, #5c1016 0%, #2a0d14 45%, #0f2b1f 100%);
+  border-bottom: 3px solid var(--xmas-gold);
+}
+.xmas-eyebrow { color: var(--xmas-gold); }
+.xmas-title { font-family: var(--head); text-transform: uppercase; font-size: clamp(3rem, 9vw, 6.5rem); line-height: .95; letter-spacing: .01em; }
+.xmas-sub { font-family: var(--head); text-transform: uppercase; color: var(--xmas-gold); font-size: clamp(1.1rem, 2.6vw, 1.6rem); letter-spacing: .08em; margin: 8px 0 18px; }
+.btn.xmas-btn { background: var(--xmas-gold); color: #2a0d14; border-color: var(--xmas-gold); }
+.btn.xmas-btn:hover { filter: brightness(1.08); }
+.xmas-card { border-top: 3px solid var(--xmas-red); }
+.xmas-set { margin: 18px 0; padding-left: 1.2em; display: grid; gap: 12px; }
+.xmas-set a { font-weight: 600; color: var(--ink); }
+.xmas-set span { display: block; color: var(--muted); font-size: .95rem; }
+.nav a.nav-xmas { color: var(--xmas-gold); }
+.xmas-band { background: linear-gradient(90deg, #5c1016, #2a0d14 50%, #0f2b1f); border-top: 2px solid var(--xmas-gold); border-bottom: 2px solid var(--xmas-gold); padding: 28px 0; }
+.xmas-band .wrap { display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; justify-content: space-between; }
+.xmas-band h2 { font-family: var(--head); text-transform: uppercase; margin: 0; font-size: clamp(1.5rem, 3.5vw, 2.2rem); }
+.xmas-band p { margin: 4px 0 0; color: var(--ink); }

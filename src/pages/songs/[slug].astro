@@ -50,7 +50,7 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
   <section class="section" style="padding-top:20px">
     <div class="wrap grid two" style="align-items:start">
       <div>
-        <h2>Free charts</h2>
+        <h2 id="charts">Free charts</h2>
         {(song.charts.recording || song.charts.congregational) && (
         <div class="grid two" style="gap:16px;margin-bottom:20px">
           {[['recording', 'Recording key', 'Matches the recording'], ['congregational', 'Congregational key', 'Easier for most congregations to sing']].map(([k, label, note]) => {

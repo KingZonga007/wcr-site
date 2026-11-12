@@ -1,0 +1,83 @@
+---
+import Base from '../layouts/Base.astro';
+import EmailForm from '../components/EmailForm.astro';
+import songs from '../data/songs.json';
+import { SITE, href } from '../lib/site.js';
+
+const kings = songs.find((s) => s.slug === 'we-three-kings');
+const grace = songs.find((s) => s.slug === 'grace-a-christmas-lullaby');
+const behold = songs.find((s) => s.slug === 'behold-our-god');
+const hasCharts = (s) => !!(s && (s.charts.recording || s.charts.congregational));
+
+const schema = [{
+  '@context': 'https://schema.org',
+  '@type': 'MusicRecording',
+  name: 'We Three Kings',
+  byArtist: { '@id': `${SITE.url}/#artist` },
+  url: `${SITE.url}/songs/we-three-kings`,
+  datePublished: String(kings.year),
+}];
+---
+<Base title="We Three Kings Chords and Free Christmas Worship Charts" current="christmas" schema={schema}
+  description="West Coast Revival's We Three Kings with a free chord chart for your church, plus a Christmas set and our Christmas lullaby, Grace.">
+  <section class="xmas-hero">
+    <div class="wrap">
+      <p class="eyebrow xmas-eyebrow">Christmas with West Coast Revival</p>
+      <h1 class="xmas-title">We Three Kings</h1>
+      <p class="xmas-sub">Free chord chart for your church</p>
+      <p class="lead" style="color:var(--ink)">Our arrangement of the Christmas carol, with a free chord chart in E for your worship team. Plus a Christmas worship set built from our songs.</p>
+      <div class="btn-row" style="margin-top:24px">
+        {hasCharts(kings) && <a class="btn xmas-btn" href={href('/songs/we-three-kings') + '#charts'}>Get the free chart</a>}
+        <a class="btn ghost" href={kings.listen.apple} data-out="apple_music">Listen on Apple Music</a>
+        <a class="btn ghost" href={kings.listen.spotify} data-out="spotify">Spotify</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid two" style="align-items:start">
+        <div class="card xmas-card">
+          <p class="eyebrow xmas-eyebrow">For your worship team</p>
+          <h2>A Christmas worship set for your church</h2>
+          <p class="muted">Three songs that move from the wonder of Christ's birth to the worship He deserves.</p>
+          <ol class="xmas-set">
+            <li><a href={href('/songs/we-three-kings')}>We Three Kings</a><span>Open with the carol. The wise men's journey sets the theme: we come to worship.</span></li>
+            <li><a href={href('/songs/grace-a-christmas-lullaby')}>Grace (A Christmas Lullaby)</a><span>A quiet moment at the manger.</span></li>
+            <li><a href={href('/songs/behold-our-god')}>Behold Our God</a><span>The child in the manger is the King on the throne. Close with a full declaration.</span></li>
+          </ol>
+          <p class="fine">Free charts are on each song's page. Charts we haven't posted yet come to email subscribers first.</p>
+        </div>
+        <div class="card xmas-card">
+          <p class="eyebrow xmas-eyebrow">Free Christmas charts</p>
+          <h2>Free Christmas chord charts</h2>
+          <p class="muted">Join the list and your email unlocks every free chart on the site, including We Three Kings. We'll send new Christmas charts as they're ready.</p>
+          <EmailForm source="christmas" event="chart_signup" cta="Send me the charts" musicianOption />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap grid two">
+      <div>
+        <p class="eyebrow xmas-eyebrow">Also for Christmas</p>
+        <h2>Grace (A Christmas Lullaby)</h2>
+        <p class="muted">Our Christmas lullaby, released in {grace.year}.</p>
+        <div class="btn-row" style="margin-top:18px">
+          <a class="btn ghost" href={grace.listen.apple} data-out="apple_music">Listen on Apple Music</a>
+          <a class="btn ghost" href={href('/songs/grace-a-christmas-lullaby')}>{hasCharts(grace) ? 'Free chart' : 'Song page'}</a>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow xmas-eyebrow">Worship Is Warfare</p>
+        <h2>Worship with us this Advent</h2>
+        <p class="muted">Start your mornings with worship and Scripture, live every Tuesday and Thursday at 6am MST.</p>
+        <div class="btn-row" style="margin-top:18px">
+          <a class="btn ghost" href={href('/worship-is-warfare')}>Worship Is Warfare</a>
+          <a class="btn ghost" href={href('/invite')}>Invite us for a Christmas service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

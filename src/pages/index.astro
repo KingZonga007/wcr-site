@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import EmailForm from '../components/EmailForm.astro';
 import LiveStatus from '../components/LiveStatus.astro';
-import { SITE, href } from '../lib/site.js';
+import { SITE, href, inSeason } from '../lib/site.js';
 import featuredList from '../data/featured.json';
 import songs from '../data/songs.json';
 import episodes from '../data/episodes.json';
@@ -41,6 +41,22 @@ const STORE_ON = false; // switched on in phase 3
       <EmailForm source="hero" cta="Sign up" musicianOption compact />
     </div>
   </section>
+
+  {inSeason('christmas') && (
+    <section class="xmas-band" data-season-end={SITE.season.christmas.to} aria-label="Christmas">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow xmas-eyebrow" style="margin:0">Christmas with West Coast Revival</p>
+          <h2>We Three Kings</h2>
+          <p>Free chord chart for your church, plus a Christmas worship set.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn xmas-btn" href={href('/christmas')}>Christmas charts</a>
+          <a class="btn ghost" href={href('/songs/we-three-kings')}>Listen</a>
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- 2. Proof strip -->
   <section class="proof" aria-label="About West Coast Revival at a glance">
