@@ -47,7 +47,7 @@ async function sendTestCampaign(campaign, file) {
   // Test sends aren't tied to a real subscriber, so there's no valid unsubscribe
   // token to give them; the link just shows the "expired" fallback page.
   const unsubscribeUrl = `${CONFIG.siteUrl}/api/unsubscribe?token=test-send-not-a-real-subscriber`;
-  const { html, text } = renderEmail({ campaignId: campaign.id, bodyMarkdown: file.body, preheader: file.preheader, unsubscribeUrl });
+  const { html, text } = renderEmail({ campaignId: campaign.id, bodyMarkdown: file.body, meta: file.meta, unsubscribeUrl });
   let sentCount = 0;
   for (const to of CONFIG.testRecipients) {
     try {
@@ -72,7 +72,7 @@ async function sendRealCampaign(campaign, file) {
 
     const unsubscribeToken = makeToken(subscriber.id, 'unsubscribe', 3650);
     const unsubscribeUrl = `${CONFIG.siteUrl}/api/unsubscribe?token=${encodeURIComponent(unsubscribeToken)}`;
-    const { html, text } = renderEmail({ campaignId: campaign.id, bodyMarkdown: file.body, preheader: file.preheader, unsubscribeUrl });
+    const { html, text } = renderEmail({ campaignId: campaign.id, bodyMarkdown: file.body, meta: file.meta, unsubscribeUrl });
 
     try {
       const result = await sendEmail({ to: subscriber.email, subject: campaign.subject, html, text, unsubscribeUrl });
@@ -109,7 +109,7 @@ async function main() {
 
     if (DRY_RUN) {
       const recipients = campaign.segment === 'test' ? CONFIG.testRecipients : await subscribersInSegment(campaign.segment);
-      const { html } = renderEmail({ campaignId: campaign.id, bodyMarkdown: file.body, preheader: file.preheader, unsubscribeUrl: `${CONFIG.siteUrl}/api/unsubscribe?token=PREVIEW` });
+      const { html } = renderEmail({ campaignId: campaign.id, bodyMarkdown: file.body, meta: file.meta, unsubscribeUrl: `${CONFIG.siteUrl}/api/unsubscribe?token=PREVIEW` });
       console.log(`--- DRY RUN: ${campaign.id} (segment: ${campaign.segment}, recipients: ${recipients.length}) ---`);
       console.log(`Subject: ${campaign.subject}`);
       console.log(html);

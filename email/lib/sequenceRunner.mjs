@@ -31,7 +31,7 @@ export async function sendDueSequenceSteps(subscriberId) {
 
     const unsubscribeToken = makeToken(subscriber.id, 'unsubscribe', UNSUBSCRIBE_TOKEN_TTL_DAYS);
     const unsubscribeUrl = `${CONFIG.siteUrl}/api/unsubscribe?token=${encodeURIComponent(unsubscribeToken)}`;
-    const { html, text } = renderEmail({ campaignId: step.step, bodyMarkdown: step.body, preheader: step.preheader, unsubscribeUrl });
+    const { html, text } = renderEmail({ campaignId: step.step, bodyMarkdown: step.body, meta: step.meta, unsubscribeUrl });
 
     try {
       const result = await sendEmail({ to: subscriber.email, subject: step.subject, html, text, unsubscribeUrl });

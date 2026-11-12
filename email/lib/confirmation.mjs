@@ -13,7 +13,7 @@ export async function sendConfirmationEmail(subscriber) {
   const confirmUrl = `${CONFIG.siteUrl}/api/confirm?token=${encodeURIComponent(token)}`;
   const { html, text } = renderEmail({
     campaignId: 'confirm',
-    bodyMarkdown: `# Confirm your email\n\n${CONFIRM_NOTE}\n\n[Confirm my email](${confirmUrl})\n\nIf you didn't sign up for this, you can ignore this email.`,
+    bodyMarkdown: `## Confirm your email\n\n${CONFIRM_NOTE}\n\n[Confirm my email](${confirmUrl}){button}\n\nIf you didn't sign up for this, you can ignore this email.`,
   });
   try {
     const { messageId } = await sendEmail({ to: subscriber.email, subject: 'Confirm your email — West Coast Revival', html, text });

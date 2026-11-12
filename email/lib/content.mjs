@@ -21,10 +21,17 @@ export function loadSequenceSteps(name) {
         delayDays: Number(data.delay_days ?? 0),
         subject: data.subject,
         preheader: data.preheader || '',
+        meta: data,
         body: content.trim(),
       };
     })
     .sort((a, b) => a.delayDays - b.delayDays);
+}
+
+// Any single email file (campaign, sequence step or example), for previews.
+export function loadEmailFile(filePath) {
+  const { data, content } = matter(fs.readFileSync(filePath, 'utf8'));
+  return { id: path.basename(filePath, '.md'), subject: data.subject, meta: data, body: content.trim() };
 }
 
 export function loadCampaignFiles() {
@@ -39,6 +46,7 @@ export function loadCampaignFiles() {
       preheader: data.preheader || '',
       segment: data.segment || 'all',
       sendAt: data.send_at,
+      meta: data,
       body: content.trim(),
     };
   });

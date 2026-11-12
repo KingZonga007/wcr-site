@@ -30,7 +30,7 @@ async function main() {
   }
 
   const unsubscribeUrl = `${CONFIG.siteUrl}/api/unsubscribe?token=test-send-not-a-real-subscriber`;
-  const { html, text } = renderEmail({ campaignId: file.id, bodyMarkdown: file.body, preheader: file.preheader, unsubscribeUrl });
+  const { html, text } = renderEmail({ campaignId: file.id, bodyMarkdown: file.body, meta: file.meta, unsubscribeUrl });
 
   for (const to of CONFIG.testRecipients) {
     await sendEmail({ to, subject: `[TEST] ${file.subject}`, html, text, unsubscribeUrl });

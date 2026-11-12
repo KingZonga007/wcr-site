@@ -35,4 +35,39 @@ node scripts/email/delete.mjs <email>          # remove a subscriber and their h
 node scripts/email/send-due.mjs --dry-run      # preview what the campaign cron would send
 ```
 
+### Writing an email
+
+Plain Markdown plus a few extras. `emails/examples/formatting-example.md` shows every option.
+
+```markdown
+---
+subject: "New single: Solid Rock"
+preheader: "Free chord charts in two keys"
+eyebrow: "New music"                 # small label above the body
+hero: /img/email/band.jpg            # full-width photo at the top (optional)
+hero_alt: "West Coast Revival live"
+hero_link: https://westcoastrevival.org/songs
+segment: test                        # all | musician | wiw_reminders | chart_waitlist | test
+send_at: 2026-12-01T09:00:00-07:00
+---
+Paragraphs, **bold**, *italics*, [links](https://westcoastrevival.org), ## headings, lists, ---
+
+[![Alt text](/img/email/wiw-live.jpg)](https://westcoastrevival.org/worship-is-warfare)
+![Portrait](/img/email/brothers.jpg "medium")     # or "small"; default is full width
+
+[Get the charts](https://westcoastrevival.org/songs){button}   # one line: centered button
+[Watch live](https://...){button}                               # 2+ lines in a row: button grid
+[Listen](https://...){button}
+
+::: note
+A dark panel: headings, text, links and buttons all work inside.
+:::
+
+::: verse
+Scripture, centered in italics.
+:::
+```
+
+Photos for email must be JPGs in `public/img/email/` (Outlook can't show .webp): `python3 scripts/email/prep_image.py public/img/band-best-1600.webp band`. Preview before sending: `node scripts/email/preview.mjs <file.md> --screenshot` (writes HTML, text and PNGs to a temp folder and prints the paths).
+
 `scripts/email/import-netlify-forms.mjs` is a one-time script to pull old Netlify Forms "signup" submissions in as pending subscribers (needs a `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID`, see the script's header comment).
