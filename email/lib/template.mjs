@@ -68,7 +68,7 @@ function absolute(src, assetBase) {
 function buttonHtml(text, href, full = false) {
   return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"${full ? ' width="100%"' : ''} style="margin:0 auto"><tr>
 <td align="center" bgcolor="${C.accent}" style="border-radius:999px;background:${C.accent}">
-<a href="${esc(href)}" style="display:${full ? 'block' : 'inline-block'};padding:14px 30px;font-family:${HEAD};font-size:16px;font-weight:600;letter-spacing:1px;text-transform:uppercase;line-height:1.2;color:${C.accentInk};text-decoration:none;border-radius:999px">${esc(text)}</a>
+<a href="${esc(href)}" style="display:${full ? 'block' : 'inline-block'};padding:${full ? '14px 16px' : '14px 30px'};font-family:${HEAD};font-size:16px;font-weight:600;letter-spacing:1px;text-transform:uppercase;line-height:1.2;color:${C.accentInk};text-decoration:none;border-radius:999px">${esc(text)}</a>
 </td></tr></table>`;
 }
 
