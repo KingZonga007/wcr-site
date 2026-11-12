@@ -1,6 +1,7 @@
 ---
-// One email field + optional "I lead worship" tag. Posts to Netlify Forms in production
-// (and later to the WCR email tool). Remembers the subscriber in the browser.
+// One email field + optional "I lead worship" tag. Posts to /api/subscribe (double
+// opt-in: a confirmation email goes out before the subscriber is active).
+// Remembers the subscriber in the browser right away so chart downloads unlock.
 import { PREVIEW, href } from '../lib/site.js';
 const {
   source = 'unknown',
@@ -8,16 +9,17 @@ const {
   musicianOption = false,
   compact = false,
   event = 'sign_up',
-  thanks = "You're in. Thanks for joining us. We'll email you when new songs and charts are out.",
-  note = 'About twice a month. Unsubscribe anytime.',
+  thanks = "Almost done. Check your inbox to confirm.",
+  note = 'About once a week: new songs, free charts and Worship Is Warfare. Unsubscribe anytime.',
   song = '',
 } = Astro.props;
 ---
-<form class="form email-form" name="signup" method="POST" data-netlify="true" netlify-honeypot="company"
+<form class="form email-form" name="signup" method="POST"
   data-source={source} data-event={event} data-song={song} data-preview={PREVIEW ? '1' : '0'}>
-  <input type="hidden" name="form-name" value="signup" />
   <input type="hidden" name="source" value={source} />
   <input type="hidden" name="song" value={song} />
+  <input type="hidden" name="event" value={event} />
+  <input type="hidden" name="consent_text" value={note} />
   <p hidden><label>Leave blank <input name="company" /></label></p>
   <div class="fields">
     <div class="row">
@@ -49,7 +51,7 @@ const {
           f.dispatchEvent(new CustomEvent('wcr:subscribed', { bubbles: true }));
         };
         if (f.dataset.preview === '1') return done();
-        fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() })
+        fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() })
           .then(done).catch(done);
       });
     });

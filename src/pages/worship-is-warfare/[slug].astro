@@ -70,8 +70,8 @@ const schema = [{
           {ep.sung.length === 0 && epSongs.length > 0 && (
             <><h3>The song</h3>{epSongs.map((s) => <p><a href={href(`/songs/${s.slug}`)}>{s.title}</a>{(s.charts.recording || s.charts.congregational) && ' · free charts'}</p>)}</>
           )}
-          <h3 style="margin-top:20px">Get a reminder before each live stream</h3>
-          <EmailForm source={`wiw-episode:${ep.number}`} event="reminder_signup" cta="Remind me" compact thanks="Done. We'll email you before each live stream." />
+          <h3 style="margin-top:20px">Get each new episode by email</h3>
+          <EmailForm source={`wiw-episode:${ep.number}`} event="reminder_signup" cta="Remind me" compact thanks="Done. We'll email you each new episode once the replay is up." />
         </aside>
       </div>
     </div>
