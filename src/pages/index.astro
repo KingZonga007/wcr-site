@@ -54,7 +54,7 @@ const STORE_ON = false; // switched on in phase 3
       <h1 class="hero-title"><span>Timeless truth.</span><span>Untamed affection.</span></h1>
       <p class="lead" style="color: var(--ink)">Songs that magnify Jesus Christ, with free chord charts for every church. From the writers of "Behold Our God."</p>
       <div class="btn-row" style="margin: 22px 0 28px">
-        <a class="btn ghost" href="#listen">Listen</a>
+        <a class="btn ghost" href={href('/worship-is-warfare')}>Worship with us live</a>
         <a class="btn ghost" href={href('/songs')}>Free charts</a>
       </div>
       <p style="font-weight:600;margin-bottom:8px">Get new songs and free charts first</p>
@@ -134,13 +134,10 @@ const STORE_ON = false; // switched on in phase 3
     <div class="wrap">
       <p class="eyebrow">Newest song for churches · {latestYear}</p>
       <h2>{latest.title}</h2>
-      <div class="listen-row" style="margin:18px 0">
-        <a class="btn primary" href={latestLinks.spotify} data-out="spotify">Spotify</a>
-        <a class="btn ghost" href={latestLinks.apple} data-out="apple_music">Apple Music</a>
-        {!latestLinks.youtube.includes('/results?') && <a class="btn ghost" href={latestLinks.youtube} data-out="youtube">YouTube</a>}
-        {!latestLinks.amazon.includes('/search/') && <a class="btn ghost" href={latestLinks.amazon} data-out="amazon">Amazon Music</a>}
+      <p class="lead">Lyrics and notes on keys and chords for leading it with your congregation.</p>
+      <div class="btn-row" style="margin:18px 0">
+        <a class="btn primary" href={href(songUrl(latest))}>{hasPage(latest) && (latest.charts.recording || latest.charts.congregational) ? 'Get the free chord charts' : 'See the song'}</a>
       </div>
-      <a href={href(songUrl(latest))}>{hasPage(latest) ? 'Get the free chord charts' : 'See all songs and charts'}</a>
     </div>
   </section>
 
@@ -168,25 +165,23 @@ const STORE_ON = false; // switched on in phase 3
     </div>
   </section>
 
-  <!-- 6. Listen and watch -->
+  <!-- 6. Learn the songs -->
   <section class="section alt" id="listen">
     <div class="wrap grid two">
       <div>
-        <p class="eyebrow">Worship at church and at home</p>
-        <h2>Learn the songs</h2>
-        <p class="lead">Every West Coast Revival song is on all major streaming services, so worship teams can learn them and families can worship with them at home.</p>
-        <div class="listen-row" style="margin-top:18px">
-          <a class="btn primary" href={SITE.social.spotify} data-out="spotify">Follow on Spotify</a>
-          <a class="btn ghost" href={SITE.social.youtubeSubscribe} data-out="youtube">Subscribe on YouTube</a>
+        <p class="eyebrow">For worship teams</p>
+        <h2>Learn the songs with your team</h2>
+        <p class="lead">Every song page has the lyrics, a free chord chart where one is ready, and notes on keys and chords so your team can learn it and lead your congregation in it.</p>
+        <div class="btn-row" style="margin-top:18px">
+          <a class="btn primary" href={href('/songs/behold-our-god')}>Start with "Behold Our God"</a>
+          <a class="btn ghost" href={href('/songs')}>Browse all songs</a>
         </div>
       </div>
       <div class="card">
-        <h3>Where to start</h3>
-        <p class="muted">Start with "Behold Our God," then the newest songs.</p>
+        <h3>Need a different key?</h3>
+        <p class="muted">Tell us the song and the key your congregation sings best in, and we'll do our best to prepare a chart.</p>
         <div class="btn-row" style="margin-top:12px">
-          <a class="btn ghost" href={SITE.social.spotify} data-out="spotify">Spotify</a>
-          <a class="btn ghost" href="https://music.apple.com/us/artist/west-coast-revival/189482804" data-out="apple_music">Apple Music</a>
-          <a class="btn ghost" href={SITE.social.youtube} data-out="youtube">YouTube</a>
+          <a class="btn ghost" href={href('/contact')}>Ask for a chart</a>
         </div>
       </div>
     </div>

@@ -101,7 +101,7 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
                 <h3>{label}{c?.key ? `: ${c.key}` : ''}</h3>
                 <p class="muted" style="margin-top:0">{note}</p>
                 {c ? (
-                  <button class="btn primary chart-dl" type="button" data-file={c.file} data-song={song.slug} data-chart={k}>Download PDF</button>
+                  <a class="btn primary chart-dl" href={c.file} download data-song={song.slug} data-chart={k}>Download PDF</a>
                 ) : (
                   <p class="muted" style="margin:0">Use the {k === 'recording' ? 'congregational' : 'recording'} chart for now.</p>
                 )}
@@ -113,14 +113,14 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
         {song.charts.extras.length > 0 && (
           <div class="btn-row" style="margin-bottom:20px">
             {song.charts.extras.map((c) => (
-              <button class="btn ghost chart-dl" type="button" data-file={c.file} data-song={song.slug} data-chart={c.label}>{c.label}</button>
+              <a class="btn ghost chart-dl" href={c.file} download data-song={song.slug} data-chart={c.label}>{c.label}</a>
             ))}
           </div>
         )}
         {!song.charts.recording && !song.charts.congregational && (
           <div class="card">
-            <p><strong>Want the charts for {song.title}?</strong> We post new charts regularly. Join the list and we'll email you when this one is ready. Your email also unlocks every free chart already on the site.</p>
-            <EmailForm source={`chart-waitlist:${song.slug}`} event="chart_signup" song={song.slug} cta="Send me the charts" musicianOption thanks="You're in. Every chart on the site is now unlocked, and we'll let you know when this one is posted." />
+            <p><strong>Want the charts for {song.title}?</strong> We post new charts regularly. Join the list and we'll email you when this one is ready. Every chart already on the site downloads free, no signup needed.</p>
+            <EmailForm source={`chart-waitlist:${song.slug}`} event="chart_signup" song={song.slug} cta="Send me the charts" musicianOption thanks="You're in. We'll let you know when this one is posted." />
           </div>
         )}
 
@@ -171,29 +171,11 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
     </section>
   )}
 
-  <dialog id="chart-gate" aria-labelledby="gate-title">
-    <h3 id="gate-title">Unlock all free charts</h3>
-    <p class="muted">Enter your email once and every chart on the site is yours to download, free.</p>
-    <EmailForm source={`chart-gate:${song.slug}`} event="chart_signup" song={song.slug} cta="Unlock downloads" musicianOption thanks="Unlocked. Your download is starting." />
-  </dialog>
-
   <script is:inline>
-    (function () {
-      var gate = document.getElementById('chart-gate'), pending = null;
-      function download(file, slug) {
-        window.wcrTrack('chart_download', { song: slug, file: file, chart: (pending && pending.dataset.chart) || undefined });
-        var a = document.createElement('a'); a.href = file; a.download = ''; document.body.appendChild(a); a.click(); a.remove();
-      }
-      document.querySelectorAll('.chart-dl').forEach(function (b) {
-        b.addEventListener('click', function () {
-          if (window.wcrStore.get('wcr_subscribed')) return download(b.dataset.file, b.dataset.song);
-          pending = b; gate.showModal();
-        });
+    document.querySelectorAll('.chart-dl').forEach(function (a) {
+      a.addEventListener('click', function () {
+        window.wcrTrack('chart_download', { song: a.dataset.song, file: a.getAttribute('href'), chart: a.dataset.chart });
       });
-      gate.addEventListener('wcr:subscribed', function () {
-        if (pending) download(pending.dataset.file, pending.dataset.song);
-        setTimeout(function () { gate.close(); }, 1200);
-      });
-    })();
+    });
   </script>
 </Base>
