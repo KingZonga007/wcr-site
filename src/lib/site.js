@@ -14,6 +14,9 @@ export const SITE = {
   mission:
     'West Coast Revival (Jonathan and Ryan Baird) exists to magnify Jesus Christ through songs that marry timeless truth with untamed affection.',
   tagline: 'Timeless truth. Untamed affection.',
+  homeTitle: 'West Coast Revival | Nonprofit Worship Ministry',
+  description:
+    'West Coast Revival is a 501(c)(3) nonprofit worship ministry serving churches with free chord charts, worship songs and Worship Is Warfare, a live show and podcast on Scripture and worship.',
   credential: 'The writers of "Behold Our God" and the popular adaptation of "All Creatures of Our God and King."',
   give: 'https://secure.ncfgiving.com/GXDonateNow?id=a0UVx000007gBnqMAE', // National Christian Foundation
   email: 'info@westcoastrevival.org', // forwards via Porkbun

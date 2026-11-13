@@ -7,18 +7,22 @@ import inter400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
 import inter600 from '@fontsource/inter/files/inter-latin-600-normal.woff2?url';
 import oswald500 from '@fontsource/oswald/files/oswald-latin-500-normal.woff2?url';
 
-const { title, description = SITE.mission, image = '/img/band-best-1600.webp', schema = [], current = '' } = Astro.props;
-const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} | ${SITE.tagline}`;
+const { title, description = SITE.description, image = '/img/band-best-1600.webp', schema = [], current = '' } = Astro.props;
+const fullTitle = title ? `${title} | ${SITE.name}` : SITE.homeTitle;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const orgSchema = {
   '@context': 'https://schema.org',
-  '@type': 'MusicGroup',
+  '@type': 'NGO',
   '@id': `${SITE.url}/#artist`,
   name: SITE.name,
-  description: SITE.mission,
+  description: SITE.description,
+  slogan: SITE.tagline,
   url: SITE.url,
-  genre: ['Worship', 'Christian'],
-  member: [
+  logo: `${SITE.url}/favicon.svg`,
+  nonprofitStatus: 'Nonprofit501c3',
+  areaServed: 'US',
+  knowsAbout: ['Christian worship', 'Church worship resources', 'Bible teaching'],
+  founder: [
     { '@type': 'Person', name: 'Jonathan Baird' },
     { '@type': 'Person', name: 'Ryan Baird' },
   ],

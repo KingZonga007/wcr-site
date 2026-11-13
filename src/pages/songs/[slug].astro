@@ -46,7 +46,7 @@ const playing = [
       : `The free chord chart for ${song.title} is in the key of ${chartKey}, a comfortable range for most congregations.`,
   ci.tempo ? `It is played at ${ci.tempo} beats per minute${ci.time ? ` in ${ci.time} time` : ''}.` : '',
   chords.length > 1 ? `In ${chartKey} the song uses ${chords.length} chords: ${list(chords)}${slash.length ? `, with ${slash.length === 1 ? 'one slash chord' : 'slash chords'} (${list(slash)}) for the bass movement` : ''}.` : '',
-  numbers.length > 1 ? `If your band reads numbers, those are the ${list(numbers)} chords${minorKey ? `, counting from ${Object.keys(NOTES).find((k) => NOTES[k] === tonic)}, the relative major` : ''}.` : '',
+  numbers.length > 1 ? `If your worship team reads numbers, those are the ${list(numbers)} chords${minorKey ? `, counting from ${Object.keys(NOTES).find((k) => NOTES[k] === tonic)}, the relative major` : ''}.` : '',
   sections.length > 2 ? `The chart follows this order: ${sections.join(', ')}.` : '',
   capo && !song.charts.extras.length ? (capo.fret === 0 ? `On guitar the key of ${chartKey} plays in open ${capo.n} shapes with no capo.` : `On guitar, put a capo on fret ${capo.fret} and play ${capo.n} shapes to stay in ${chartKey} with open chords.`) : '',
   song.charts.extras.length ? `Guitarists can also use the capo chart (${list(song.charts.extras.map((e) => e.label.replace(/^Guitar chart \(|\)$/g, '')))}) to play open chord shapes.` : '',
