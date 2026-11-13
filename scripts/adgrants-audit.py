@@ -209,6 +209,11 @@ dates=[datetime.date.fromisoformat(d) for d in re.findall(r'datetime="(\d{4}-\d\
 if not dates or (today-max(d for d in dates if d<=today)).days>60: fail('G3 dated content from the last 60 days on home', f'newest {max(dates) if dates else None}')
 if str(today.year) not in ' '.join(pages['/'].all[-200:]): fail('G4 footer year is current', 'year missing')
 
+ok('C9 no buttons that open a search-results page')
+for u,p in pages.items():
+    for h,_,_,_ in p.links:
+        if 'results?search_query' in h or 'music.amazon.com/search' in h: fail('C9 no buttons that open a search-results page', f'{u} {h[:60]}')
+
 # --- H. Licensed text
 for c in ['H1 ESV verses quoted site-wide stay under 450 (Crossway allows 500)','H2 every episode reading has its ESV text and notice']: ok(c)
 src=os.path.join(os.path.dirname(DIST.rstrip('/')) or '.','src','data')
