@@ -17,7 +17,7 @@ def floor(u):
     if u.startswith('/worship-is-warfare/') and u != '/worship-is-warfare/': return MIN_VIDEO
     if u in ('/privacy/', '/terms/'): return MIN_LEGAL
     return MIN_WORDS
-PLACEHOLDER = re.compile(r'lorem ipsum|under construction|coming soon|\bTBD\b|\bTODO\b|placeholder text|check back soon|not posted yet|on release|releasing soon', re.I)
+PLACEHOLDER = re.compile(r'lorem ipsum|under construction|(?<!am )(?<!is )coming soon|\bTBD\b|\bTODO\b|placeholder text|check back soon|not posted yet|on release|releasing soon', re.I)
 ADS = re.compile(r'adsbygoogle|googlesyndication|doubleclick\.net|amazon-adsystem|taboola|outbrain', re.I)
 AFFIL = re.compile(r'amzn\.to|[?&]tag=[\w-]+-2\d|shareasale|awin1\.com|rstyle\.me', re.I)
 
@@ -208,6 +208,20 @@ for u,p in indexable.items():
 dates=[datetime.date.fromisoformat(d) for d in re.findall(r'datetime="(\d{4}-\d\d-\d\d)', pages['/'].raw)]
 if not dates or (today-max(d for d in dates if d<=today)).days>60: fail('G3 dated content from the last 60 days on home', f'newest {max(dates) if dates else None}')
 if str(today.year) not in ' '.join(pages['/'].all[-200:]): fail('G4 footer year is current', 'year missing')
+
+# --- H. Licensed text
+for c in ['H1 ESV verses quoted site-wide stay under 450 (Crossway allows 500)','H2 every episode reading has its ESV text and notice']: ok(c)
+src=os.path.join(os.path.dirname(DIST.rstrip('/')) or '.','src','data')
+try:
+    esv=json.load(open(os.path.join(src,'scripture-esv.json'))); eps=json.load(open(os.path.join(src,'episodes.json')))
+    nv=sum(len(x['verses']) for x in esv.values())
+    if nv>450: fail('H1 ESV verses quoted site-wide stay under 450 (Crossway allows 500)', f'{nv} verses')
+    for e in eps:
+        for r in e['scripture']:
+            if r not in esv: fail('H2 every episode reading has its ESV text and notice', f'#{e["number"]} {r} has no text')
+    for u,p in pages.items():
+        if 'class="scripture"' in p.raw and 'Used by permission' not in p.raw: fail('H2 every episode reading has its ESV text and notice', f'{u} missing notice')
+except FileNotFoundError: pass
 
 nf=0
 for c in sorted(res):

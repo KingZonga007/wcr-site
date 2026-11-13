@@ -6,7 +6,8 @@ import { SITE, href, PREVIEW } from '../../lib/site.js';
 import episodes from '../../data/episodes.json';
 import songs from '../../data/songs.json';
 import { hasPage, songUrl } from '../../lib/songs.js';
-import { passage } from '../../lib/scripture.js';
+import { passage, ESV_NOTICE } from '../../lib/scripture.js';
+import recaps from '../../data/episode-recaps.json';
 
 export function getStaticPaths() {
   return episodes.map((e) => ({ params: { slug: e.slug }, props: { ep: e } }));
@@ -24,6 +25,7 @@ const chartSongs = epSongs.filter(hasPage);
 const keysOf = (x) => [...new Set([x.charts.recording?.key, x.charts.congregational?.key].filter(Boolean))].join(' and ');
 // Scripture text: the listed readings, or the title when the title is itself a reference ("Isaiah 53").
 const readings = (ep.scripture.length ? ep.scripture : [ep.title]).map(passage).filter(Boolean);
+const recap = recaps[String(ep.number)];
 const deep = ep.kind === 'Friday Deep Dive';
 const intro = [
   `${deep ? 'In this Friday Deep Dive' : `In episode ${ep.number} of Worship Is Warfare`}, streamed ${date}`,
@@ -65,12 +67,13 @@ const schema = [{
           <div class="prose" style="margin-top:24px">
             {ep.summary ? <p>{ep.summary}</p> : <p>{intro}</p>}
             {deep && <p>Friday Deep Dive is the Worship Is Warfare episode where Jonathan and Ryan tell the story behind one song: how it was written and what it means.</p>}
+            {recap && <p>{recap}</p>}
             {readings.map((r) => (
               <>
                 <h2 style="font-size:1.4rem;margin-top:28px">{r.ref}</h2>
                 <blockquote class="scripture">
                   {r.verses.map((v) => <p><sup>{v.n}</sup> {v.text}</p>)}
-                  <footer>{r.ref}{r.more ? ` (the reading continues through verse ${r.more})` : ''}, King James Version</footer>
+                  <footer>{r.ref}{r.more ? ` (the reading continues through verse ${r.more})` : ''} (<a href="https://www.esv.org" rel="noopener">ESV</a>)</footer>
                 </blockquote>
               </>
             ))}
@@ -103,6 +106,7 @@ const schema = [{
           <EmailForm source={`wiw-episode:${ep.number}`} event="reminder_signup" cta="Remind me" compact thanks="Done. We'll email you before each live stream." />
         </aside>
       </div>
+      {readings.length > 0 && <p class="muted" style="font-size:.8rem;margin-top:28px;max-width:820px">{ESV_NOTICE}</p>}
       <div class="ep-nav">
         {prev ? <a href={href(`/worship-is-warfare/${prev.slug}`)}>Previous: #{prev.number} {prev.title}</a> : <span></span>}
         {next ? <a href={href(`/worship-is-warfare/${next.slug}`)}>Next: #{next.number} {next.title}</a> : <span></span>}

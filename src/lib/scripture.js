@@ -1,25 +1,14 @@
-// Scripture text for episode pages. King James Version (public domain), read at build time only.
-import verses from 'es-kjv/json/verses-1769.js';
+// Scripture text for episode pages, from the ESV (src/data/scripture-esv.json).
+// Quoted under Crossway's standard use guidelines: 500 verses at most across the site,
+// with the copyright notice below. The audit fails at 450 verses so there is room to act.
+// When a new episode has a reading that is not in the file, the page shows the reference only.
+import esv from '../data/scripture-esv.json';
 
-const BOOK = { Psalm: 'Psalms', 'Song of Songs': 'Song of Solomon' };
-const clean = (t) => t.replace(/^#\s*/, '').replace(/[\[\]]/g, '').replace(/<<[^>]*>>\s*/g, '').trim();
-const MAX = 12;
+export const ESV_NOTICE =
+  'Scripture quotations are from the ESV® Bible (The Holy Bible, English Standard Version®), © 2001 by Crossway, a publishing ministry of Good News Publishers. ESV Text Edition: 2025. The ESV text may not be quoted in any publication made available to the public by a Creative Commons license. The ESV may not be translated in whole or in part into any other language. Used by permission. All rights reserved.';
 
-// "John 3:16-17", "Psalm 130", "Isaiah 42:3" -> { ref, verses: [{n, text}], more }
+// "John 3:16-17", "Psalm 130" -> { ref, verses: [{n, text}], more } or null
 export function passage(ref) {
-  const m = ref.trim().match(/^((?:[1-3] )?[A-Za-z ]+?) (\d+)(?::(\d+)(?:-(\d+))?)?$/);
-  if (!m) return null;
-  const book = BOOK[m[1]] || m[1];
-  const ch = m[2];
-  let from = m[3] ? +m[3] : 1;
-  let to = m[4] ? +m[4] : m[3] ? +m[3] : 200;
-  const out = [];
-  for (let v = from; v <= to; v++) {
-    const t = verses[`${book} ${ch}:${v}`];
-    if (!t) break;
-    out.push({ n: v, text: clean(t) });
-  }
-  if (!out.length) return null;
-  const more = out.length > MAX ? out[out.length - 1].n : 0;
-  return { ref, verses: out.slice(0, MAX), more };
+  const p = esv[ref.trim()];
+  return p ? { ref: ref.trim(), verses: p.verses, more: p.more || 0 } : null;
 }

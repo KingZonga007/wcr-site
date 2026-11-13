@@ -4,7 +4,7 @@ Google's Ad Grants website policy gives no numbers. This protocol turns each pol
 point into a pass/fail check with a bar set above what Google asks. Run it before every
 Ad Grants submission and after any large site change.
 
-    npm run build && npm run audit        # 36 automated checks, exit code 1 on any failure
+    npm run build && npm run audit        # 38 automated checks, exit code 1 on any failure
 
 ## Automated checks (scripts/adgrants-audit.py)
 
@@ -17,6 +17,8 @@ Ad Grants submission and after any large site change.
 | E. Security | HTTPS everywhere | No http:// links or resources anywhere. |
 | F. Commercial | Limited commercial activity; no ads | No ad networks, no affiliate links, no store or prices. Donation link is HTTPS. |
 | G. Action and freshness | Calls to action; up-to-date content | A button-style call to action on every page. Dated content from the last 60 days on the home page. Current year in the footer. |
+
+| H. Licensed text | (not a Google rule) | ESV verses quoted across the site stay under 450 (Crossway allows 500 without written permission). Every reading has its text and the ESV notice. |
 
 ## Manual checks
 
@@ -36,3 +38,6 @@ Ad Grants submission and after any large site change.
   and writes the key facts (tempo, chords, song order) and, for songs West Coast Revival
   publishes, the lyrics into songs.json. Check the lyrics on the page afterward.
 - No "coming soon" buttons or empty sections. If something isn't ready, leave it out.
+- Episode readings are ESV, stored in src/data/scripture-esv.json. Each new episode needs its
+  passage added there and a recap added to src/data/episode-recaps.json. When the verse count
+  nears 450, ask Crossway for written permission (crossway.org/permissions) before adding more.

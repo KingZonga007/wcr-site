@@ -1,4 +1,5 @@
 ---
+import { ESV_NOTICE } from '../lib/scripture.js';
 import Base from '../layouts/Base.astro';
 import { SITE, href } from '../lib/site.js';
 ---
@@ -13,6 +14,8 @@ import { SITE, href } from '../lib/site.js';
     <p>Songs, recordings, photos and text on this site remain the property of their copyright holders. Songs first released with Sovereign Grace Music are credited on their song pages.</p>
     <h2>Giving</h2>
     <p>Gifts are made through the National Christian Foundation (NCF) and are tax-deductible as allowed by law. See our <a href={href('/give')}>Give page</a> for details.</p>
+    <h2>Scripture quotations</h2>
+    <p>{ESV_NOTICE}</p>
     <h2>Other websites</h2>
     <p>We link to services such as Spotify, Apple Music, YouTube and NCF. Those sites have their own terms and privacy policies.</p>
     <h2>Changes and contact</h2>
