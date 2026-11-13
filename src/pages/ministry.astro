@@ -1,0 +1,84 @@
+---
+import Base from '../layouts/Base.astro';
+import songs from '../data/songs.json';
+import episodes from '../data/episodes.json';
+import { SITE, href } from '../lib/site.js';
+
+const chartCount = songs.filter((s) => s.charts.recording || s.charts.congregational).length;
+const releasedCount = songs.filter((s) => !s.unreleased).length;
+const latestEpisode = Math.max(...episodes.map((e) => e.number));
+---
+<Base title="Our Ministry: Mission, Programs and Financial Transparency" current="ministry"
+  description="West Coast Revival is a 501(c)(3) nonprofit worship ministry. Our mission, our programs (free chord charts, Worship Is Warfare, songwriting, serving churches) and how we are funded.">
+  <section class="section">
+    <div class="wrap" style="max-width:860px">
+      <p class="eyebrow">Our ministry</p>
+      <h1>A nonprofit worship ministry serving the church</h1>
+      <p class="lead">{SITE.mission}</p>
+      <p>West Coast Revival is an Arizona nonprofit corporation recognized by the IRS as a 501(c)(3) tax-exempt organization (EIN {SITE.ein}). Everything we make for churches is free: our chord charts, our live show and podcast, and our music on every major streaming service.</p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <p class="eyebrow">What we do</p>
+      <h2>Our programs</h2>
+      <div class="grid" style="margin-top:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px">
+        <div class="card">
+          <h3>Songwriting and recording</h3>
+          <p>Since 2003 we have written and recorded congregational worship songs and hymn arrangements rooted in Scripture. We began as contributing songwriters and artists with Sovereign Grace Music in 2005 and co-wrote "Behold Our God" (2011), now sung by churches around the world. We release new songs as singles so churches can learn them as soon as they are ready.</p>
+          <p class="muted">{releasedCount} songs released so far.</p>
+          <a class="btn ghost" href={href('/songs')}>Browse the songs</a>
+        </div>
+        <div class="card">
+          <h3>Free chord charts for churches</h3>
+          <p>We give churches chord charts in two keys: the key we recorded in, and a congregational key that is easier for most people to sing. Worship leaders, church musicians and small groups download them at no cost, and we add new charts regularly.</p>
+          <p class="muted">{chartCount} songs with free charts, and growing.</p>
+          <a class="btn ghost" href={href('/songs')}>Get free charts</a>
+        </div>
+        <div class="card">
+          <h3>Worship Is Warfare</h3>
+          <p>Every Tuesday and Thursday at 6am MST we go live on YouTube with worship songs, Scripture reading and encouragement to begin the day focused on Christ. Each stream is also published as a podcast on Apple Podcasts, Spotify and Amazon Music.</p>
+          <p class="muted">{latestEpisode} episodes and counting, free to watch or listen.</p>
+          <a class="btn ghost" href={href('/worship-is-warfare')}>Watch or listen</a>
+        </div>
+        <div class="card">
+          <h3>Serving local churches</h3>
+          <p>We lead worship at churches, conferences and worship nights, teach on the place of song in the life of the church, and help worship teams and songwriters with arranging, leading and writing songs for congregations.</p>
+          <p class="muted">Churches can invite us through our website.</p>
+          <a class="btn ghost" href={href('/invite')}>Invite us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid two" style="align-items:start">
+      <div>
+        <p class="eyebrow">Who we serve</p>
+        <h2>The local church</h2>
+        <p>Our work serves local churches, worship leaders, church musicians and anyone looking for Christ-centered worship music and daily encouragement from the Bible. Because our songs, charts and episodes are free, any church can use them, whatever its size or budget.</p>
+        <p>The ministry is led by brothers Jonathan and Ryan Baird. Ryan serves as President. <a href={href('/about')}>Read our story</a>.</p>
+      </div>
+      <div class="card">
+        <p class="eyebrow">Financial transparency</p>
+        <h2>How we are funded</h2>
+        <ul class="plain-list">
+          <li>West Coast Revival is supported by charitable gifts. We do not sell products on this website.</li>
+          <li>Gifts fund new songs, free resources for churches and the weekly production of Worship Is Warfare.</li>
+          <li>Online gifts are processed securely by the National Christian Foundation (NCF), and are tax-deductible as allowed by law.</li>
+          <li>Our 501(c)(3) status can be confirmed in the <a href="https://apps.irs.gov/app/eos/" rel="noopener">IRS Tax Exempt Organization Search</a> (EIN {SITE.ein}).</li>
+          <li>Financial information is available on request at <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</li>
+        </ul>
+        <a class="btn primary" href={href('/give')}>Give</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap" style="max-width:860px">
+      <h2>Contact</h2>
+      <p>{SITE.legalName}, {SITE.address}. Email <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. More ways to reach us are on our <a href={href('/contact')}>contact page</a>.</p>
+    </div>
+  </section>
+</Base>

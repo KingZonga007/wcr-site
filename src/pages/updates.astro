@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import EmailForm from '../components/EmailForm.astro';
+import { updates, fmtDate } from '../lib/updates.js';
+import { href } from '../lib/site.js';
+const items = updates(40);
+---
+<Base title="Updates: New Episodes, Releases and Charts" current="updates" description="What's new from West Coast Revival: the latest Worship Is Warfare episodes, new song releases and free chord charts.">
+  <section class="section">
+    <div class="wrap" style="max-width:860px">
+      <p class="eyebrow">What's new</p>
+      <h1>Updates</h1>
+      <p class="lead">New Worship Is Warfare episodes every Tuesday and Thursday, plus new songs and free chord charts as they're ready. Last updated {fmtDate(items[0].date)}.</p>
+      <ol class="updates">
+        {items.map((u) => (
+          <li>
+            <p class="eyebrow" style="margin:0">{u.kind} · {fmtDate(u.date)}</p>
+            <h3><a href={href(u.href)}>{u.title}</a></h3>
+            {u.text && <p class="muted">{u.text}</p>}
+          </li>
+        ))}
+      </ol>
+      <div class="card" style="margin-top:40px">
+        <h2>Get updates by email</h2>
+        <p class="muted">New songs and free charts, about twice a month.</p>
+        <EmailForm source="updates" musicianOption />
+      </div>
+    </div>
+  </section>
+</Base>

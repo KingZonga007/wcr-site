@@ -6,6 +6,7 @@ import { SITE, href, inSeason } from '../lib/site.js';
 import featuredList from '../data/featured.json';
 import songs from '../data/songs.json';
 import episodes from '../data/episodes.json';
+import { updates, fmtDate } from '../lib/updates.js';
 import releases from '../data/releases.json';
 
 // Most popular first (Ryan's order)
@@ -14,6 +15,8 @@ const featuredSlugs = featuredList.slice(0, 6);
 const featured = featuredSlugs.map((s) => songs.find((x) => x.slug === s)).filter(Boolean);
 // Latest release: kept current by scripts/update-content.mjs; falls back to the newest song.
 const latestRel = releases.latest;
+const episodeCount = Math.max(...episodes.map((e) => e.number));
+const latestUpdates = updates(4);
 const chartCount = songs.filter((s) => s.charts.recording || s.charts.congregational).length;
 const released = songs.filter((s) => !s.unreleased);
 const latest = latestRel ? (songs.find((s) => s.title.toLowerCase() === latestRel.title.toLowerCase()) || released[0]) : released[0];
@@ -55,6 +58,43 @@ const STORE_ON = false; // switched on in phase 3
       </div>
       <p style="font-weight:600;margin-bottom:8px">Get new songs and free charts first</p>
       <EmailForm source="hero" cta="Sign up" musicianOption compact />
+    </div>
+  </section>
+
+  <!-- 1b. Mission -->
+  <section class="section mission-band" aria-label="Our mission">
+    <div class="wrap grid two" style="align-items:center">
+      <div>
+        <p class="eyebrow">A 501(c)(3) nonprofit worship ministry</p>
+        <h2>Our mission</h2>
+        <p class="lead">{SITE.mission}</p>
+        <p>Everything we make for the church is free: chord charts for worship teams, a twice-weekly live show of worship and Scripture, and our songs on every major streaming service.</p>
+        <a class="btn ghost" href={href('/ministry')}>Our ministry and programs</a>
+      </div>
+      <ul class="programs">
+        <li><a href={href('/songs')}><strong>Free chord charts</strong><span>{chartCount} songs in recording and congregational keys, free for any church</span></a></li>
+        <li><a href={href('/worship-is-warfare')}><strong>Worship Is Warfare</strong><span>Live worship and Scripture every Tuesday and Thursday, {episodeCount} episodes and counting</span></a></li>
+        <li><a href={href('/songs')}><strong>Songwriting and recording</strong><span>Congregational songs and hymn arrangements since 2003, including "Behold Our God"</span></a></li>
+        <li><a href={href('/invite')}><strong>Serving local churches</strong><span>Worship nights, conferences and help for worship teams</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 1c. Latest updates -->
+  <section class="section" aria-label="Latest updates">
+    <div class="wrap">
+      <p class="eyebrow">What's new</p>
+      <h2>Latest updates</h2>
+      <ol class="updates">
+        {latestUpdates.map((u) => (
+          <li>
+            <p class="eyebrow" style="margin:0">{u.kind} · {fmtDate(u.date)}</p>
+            <h3><a href={href(u.href)}>{u.title}</a></h3>
+            {u.text && <p class="muted">{u.text}</p>}
+          </li>
+        ))}
+      </ol>
+      <a class="btn ghost" href={href('/updates')} style="margin-top:16px">All updates</a>
     </div>
   </section>
 
@@ -139,8 +179,14 @@ const STORE_ON = false; // switched on in phase 3
           <a class="btn ghost" href={SITE.social.youtubeSubscribe} data-out="youtube">Subscribe on YouTube</a>
         </div>
       </div>
-      <div class="embed" style="aspect-ratio:auto;height:352px">
-        <iframe title="West Coast Revival on Spotify" src="https://open.spotify.com/embed/artist/5K4EsfuyB0ltAeK7GmxLT5?utm_source=generator&theme=0" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <div class="card">
+        <h3>Listen free</h3>
+        <p class="muted">Start with "Behold Our God," then the newest singles.</p>
+        <div class="btn-row" style="margin-top:12px">
+          <a class="btn ghost" href={SITE.social.spotify} data-out="spotify">Spotify</a>
+          <a class="btn ghost" href="https://music.apple.com/us/artist/west-coast-revival/189482804" data-out="apple_music">Apple Music</a>
+          <a class="btn ghost" href={SITE.social.youtube} data-out="youtube">YouTube</a>
+        </div>
       </div>
     </div>
   </section>

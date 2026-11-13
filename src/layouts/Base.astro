@@ -27,8 +27,9 @@ const orgSchema = {
 const christmas = inSeason('christmas');
 const nav = [
   ...(christmas ? [{ label: 'Christmas', path: '/christmas', key: 'christmas', season: SITE.season.christmas.to }] : []),
-  { label: 'Songs', path: '/songs', key: 'songs' },
+  { label: 'Songs & charts', path: '/songs', key: 'songs' },
   { label: 'Worship Is Warfare', path: '/worship-is-warfare', key: 'wiw' },
+  { label: 'Our ministry', path: '/ministry', key: 'ministry' },
   { label: 'Invite us', path: '/invite', key: 'invite' },
   { label: 'About', path: '/about', key: 'about' },
 ];
@@ -90,6 +91,20 @@ const nav = [
 
     <main id="main"><slot /></main>
 
+    {!['give', 'thanks'].includes(current) && (
+      <section class="involve" aria-label="Get involved">
+        <div class="wrap">
+          <p class="eyebrow">Get involved</p>
+          <h2>Join what God is doing through song</h2>
+          <div class="grid">
+            <a class="card" href={href('/songs')}><strong>Get free charts</strong><span>Chord charts in two keys for your worship team</span></a>
+            <a class="card" href={href('/worship-is-warfare')}><strong>Worship with us live</strong><span>Tuesdays and Thursdays, 6am MST</span></a>
+            <a class="card" href={href('/invite')}><strong>Invite us</strong><span>Worship nights, services and workshops</span></a>
+            <a class="card" href={href('/give')}><strong>Give</strong><span>Keep the songs and charts free for every church</span></a>
+          </div>
+        </div>
+      </section>
+    )}
     <footer class="site-footer">
       <div class="wrap">
         <div class="cols">
@@ -106,6 +121,8 @@ const nav = [
               <li><a href={href('/invite')}>Invite us</a></li>
               <li><a href={href('/about')}>About</a></li>
               <li><a href={href('/press')}>Press kit</a></li>
+              <li><a href={href('/ministry')}>Our ministry</a></li>
+              <li><a href={href('/updates')}>Updates</a></li>
               <li><a href={href('/give')}>Give</a></li>
               <li><a href={href('/contact')}>Contact</a></li>
             </ul>
@@ -116,7 +133,6 @@ const nav = [
               <li><a href={SITE.social.spotify} data-out="spotify">Spotify</a></li>
               <li><a href={SITE.social.applePodcasts} data-out="apple_podcasts">Apple Podcasts</a></li>
               <li><a href={SITE.social.youtube} data-out="youtube">YouTube</a></li>
-              <li><a href={href('/links')}>All links</a></li>
             </ul>
           </div>
         </div>
