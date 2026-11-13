@@ -58,7 +58,12 @@ const nav = [
     <meta name="theme-color" content="#0a0c16" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script type="application/ld+json" set:html={JSON.stringify([orgSchema, ...schema])} />
-    {!PREVIEW && SITE.gaId && <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}`}></script>}
+    {!PREVIEW && SITE.gaId && <script is:inline define:vars={{ gaSrc: `https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}` }}>
+      // Load analytics after the page has finished loading so it never slows the first paint.
+      window.addEventListener('load', function () {
+        setTimeout(function () { var s = document.createElement('script'); s.async = true; s.src = gaSrc; document.head.appendChild(s); }, 1200);
+      });
+    </script>}
     <script is:inline define:vars={{ gaId: PREVIEW ? null : SITE.gaId }}>
       // Google Analytics 4. Every site event goes through wcrTrack. Sign-ups and booking requests
       // also send GA4's recommended generate_lead event, which is marked as a key event (conversion).

@@ -6,7 +6,7 @@ const preview = process.env.PUBLIC_PREVIEW === '1';
 export default defineConfig({
   site: 'https://westcoastrevival.org',
   // Preview builds use flat .html files so they work on any static host.
-  build: { format: preview ? 'file' : 'directory' },
+  build: { format: preview ? 'file' : 'directory', inlineStylesheets: 'always' },
   trailingSlash: 'ignore',
   integrations: preview ? [] : [sitemap({ filter: (page) => !/\/(thanks|404|links)\/?$/.test(page) })],
 });
