@@ -2,17 +2,27 @@
 import Base from '../layouts/Base.astro';
 import { SITE, href } from '../lib/site.js';
 ---
-<Base title="Contact" description="Contact West Coast Revival for booking, press, chord charts or general questions.">
+<Base title="Contact" description="Contact West Coast Revival about chord charts, inviting Jonathan and Ryan Baird to your church, press, giving, or general questions. Email, mailing address and EIN.">
   <section class="section"><div class="wrap">
     <p class="eyebrow">Contact</p>
     <h1>Get in touch</h1>
     <p class="lead" style="max-width:640px">We'd love to hear from you. Email us anytime at <a href={`mailto:${SITE.email}`}>{SITE.email}</a> and Jonathan or Ryan will get back to you.</p>
+    <h2 class="sr-only">Ways to reach us</h2>
     <div class="grid three" style="margin-top:32px">
       <div class="card"><h3>Invite us</h3><p class="muted">Concerts and worship nights, conference worship leading, teaching and songwriting workshops.</p><a class="btn primary" href={href('/invite')}>Send an inquiry</a></div>
       <div class="card"><h3>Press and media</h3><p class="muted">Bios, photos and highlights for promoters and press.</p><a class="btn ghost" href={href('/press')}>Press kit</a></div>
       <div class="card"><h3>Giving</h3><p class="muted">Support new songs, free charts and Worship Is Warfare.</p><a class="btn ghost" href={href('/give')}>Give</a></div>
     </div>
     <div class="prose" style="margin-top:40px">
+      <h2>What to email us about</h2>
+      <ul>
+        <li><strong>Chord charts.</strong> Ask for a song in a different key, report a mistake in a chart, or request a chart for a song that isn't posted yet. Include the song title and the key you need.</li>
+        <li><strong>Using our songs.</strong> Questions about using West Coast Revival songs in your church's services, livestreams or recordings.</li>
+        <li><strong>Events.</strong> For worship nights, conferences, teaching and workshops, the <a href={href('/invite')}>inquiry form</a> gets us the details we need to answer quickly.</li>
+        <li><strong>Giving.</strong> Questions about a gift, a receipt, or how donations are used. See also <a href={href('/give')}>how giving works</a>.</li>
+        <li><strong>Worship Is Warfare.</strong> Prayer requests, Scripture or song suggestions for an episode, and feedback on the show.</li>
+      </ul>
+      <p>We are a small ministry run by two brothers, and we read every message ourselves.</p>
       <h2>Organization details</h2>
       <p>{SITE.legalName} is a 501(c)(3) nonprofit ministry.{SITE.ein && ` EIN ${SITE.ein}.`}</p>
       {SITE.address && <p>Mailing address: {SITE.address}</p>}

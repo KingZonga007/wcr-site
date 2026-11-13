@@ -4,12 +4,13 @@ import EmailForm from '../../components/EmailForm.astro';
 import { SITE, href } from '../../lib/site.js';
 import songs from '../../data/songs.json';
 import episodes from '../../data/episodes.json';
+import { paged } from '../../lib/songs.js';
 
 export function getStaticPaths() {
-  return songs.map((s) => ({ params: { slug: s.slug }, props: { song: s } }));
+  return paged.map((s) => ({ params: { slug: s.slug }, props: { song: s } }));
 }
 const { song } = Astro.props;
-const related = songs.filter((s) => s.slug !== song.slug && Math.abs(s.year - song.year) <= 2).slice(0, 3);
+const related = paged.filter((s) => s.slug !== song.slug && Math.abs(s.year - song.year) <= 2).slice(0, 3);
 const inEpisodes = episodes.filter((e) => e.songs.includes(song.slug));
 const isSGM = song.recordings.some((r) => r.publisher === 'Sovereign Grace Music');
 const schema = [{
@@ -21,27 +22,66 @@ const schema = [{
   ...(song.unreleased ? {} : { datePublished: String(song.year) }),
   ...(song.writers ? { recordingOf: { '@type': 'MusicComposition', name: song.title, composer: song.writers } } : {}),
 }];
-const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet, lyrics and where to listen.`;
+const ci = song.chartInfo || {};
+const keys = [...new Set([song.charts.recording?.key, song.charts.congregational?.key, ...song.charts.extras.map((e) => e.key)].filter(Boolean))];
+const list = (a) => (a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1]);
+const sameChart = song.charts.recording && song.charts.congregational && song.charts.recording.file === song.charts.congregational.file;
+const sections = (ci.sections || []).filter((x, i, a) => a.indexOf(x) === i);
+const chords = (ci.chords || []).filter((c) => !c.includes('/'));
+const slash = (ci.chords || []).filter((c) => c.includes('/'));
+const chartKey = (song.charts.congregational || song.charts.recording)?.key;
+// Number-system degrees and capo suggestion, worked out from the chart key.
+const NOTES = { C: 0, 'C#': 1, Db: 1, D: 2, 'D#': 3, Eb: 3, E: 4, F: 5, 'F#': 6, Gb: 6, G: 7, 'G#': 8, Ab: 8, A: 9, 'A#': 10, Bb: 10, B: 11 };
+const minorKey = /m$/.test(chartKey || '');
+const tonic = chartKey ? (NOTES[chartKey.replace(/m$/, '')] + (minorKey ? 3 : 0)) % 12 : null;
+const DEG = { 0: '1', 2: '2m', 4: '3m', 5: '4', 7: '5', 9: '6m', 11: '7dim', 10: 'flat 7', 3: 'flat 3', 8: 'flat 6' };
+const numbers = tonic === null ? [] : [...new Set(chords.map((c) => { const m = c.match(/^([A-G][#b]?)(m(?!aj))?/); if (!m) return null; const d = (NOTES[m[1]] - tonic + 12) % 12; const base = { 0: '1', 2: '2', 4: '3', 5: '4', 7: '5', 9: '6', 11: '7', 10: 'flat 7', 3: 'flat 3', 8: 'flat 6', 1: 'flat 2', 6: 'sharp 4' }[d]; return base + (m[2] ? 'm' : ''); }).filter(Boolean))];
+const shapes = [['G', 7], ['C', 0], ['D', 2], ['A', 9], ['E', 4]];
+const capo = tonic === null ? null : shapes.map(([n, v]) => ({ n, fret: (tonic - v + 12) % 12 })).sort((a, b) => a.fret - b.fret)[0];
+const playing = [
+  sameChart
+    ? `The free chord chart for ${song.title} is in the key of ${song.charts.recording.key}, which is both the recording key and the key we recommend for congregations.`
+    : song.charts.recording && song.charts.congregational
+      ? `${song.title} has two free chord charts: the key of ${song.charts.recording.key} to match the recording, and the key of ${song.charts.congregational.key}, which sits in an easier range for most congregations.`
+      : `The free chord chart for ${song.title} is in the key of ${chartKey}, a comfortable range for most congregations.`,
+  ci.tempo ? `It is played at ${ci.tempo} beats per minute${ci.time ? ` in ${ci.time} time` : ''}.` : '',
+  chords.length > 1 ? `In ${chartKey} the song uses ${chords.length} chords: ${list(chords)}${slash.length ? `, with ${slash.length === 1 ? 'one slash chord' : 'slash chords'} (${list(slash)}) for the bass movement` : ''}.` : '',
+  numbers.length > 1 ? `If your band reads numbers, those are the ${list(numbers)} chords${minorKey ? `, counting from ${Object.keys(NOTES).find((k) => NOTES[k] === tonic)}, the relative major` : ''}.` : '',
+  sections.length > 2 ? `The chart follows this order: ${sections.join(', ')}.` : '',
+  capo && !song.charts.extras.length ? (capo.fret === 0 ? `On guitar the key of ${chartKey} plays in open ${capo.n} shapes with no capo.` : `On guitar, put a capo on fret ${capo.fret} and play ${capo.n} shapes to stay in ${chartKey} with open chords.`) : '',
+  song.charts.extras.length ? `Guitarists can also use the capo chart (${list(song.charts.extras.map((e) => e.label.replace(/^Guitar chart \(|\)$/g, '')))}) to play open chord shapes.` : '',
+].filter(Boolean);
+const rec = song.recordings[0];
+const albumName = rec && rec.album.confidence !== 'inferred' && !/^(single|sovereign grace music release)$/i.test(rec.album.title) ? rec.album.title : null;
+const about = [
+  song.unreleased
+    ? `${song.title} is a West Coast Revival arrangement that has not been released as a recording yet. We are sharing the chart early so churches can start singing it.`
+    : `${song.title} was ${song.recordings.length > 1 ? 'first released' : 'released'} in ${song.firstYear || song.year}${albumName ? ` on ${albumName}` : ''}${isSGM ? ' with Sovereign Grace Music' : ' by West Coast Revival'}.`,
+  song.writers ? `It was written by ${song.writers}.` : '',
+  song.recordings.length > 1 && Math.max(...song.recordings.map((r) => r.year)) > (song.firstYear || song.year) ? `There are ${song.recordings.length} recordings of it, the most recent from ${Math.max(...song.recordings.map((r) => r.year))}.` : '',
+  song.themes.includes('Hymn') ? 'It is a hymn arrangement.' : '',
+  song.themes.filter((t) => t !== 'Hymn').length ? `Its themes are ${list(song.themes.filter((t) => t !== 'Hymn').map((t) => (/^[A-Z][a-z]+$/.test(t) && t !== 'Christmas' ? t.toLowerCase() : t)))}.` : '',
+  inEpisodes.length ? `We ${inEpisodes.length > 1 ? `have sung or talked about it on ${inEpisodes.length} episodes` : 'sang or talked about it on an episode'} of Worship Is Warfare, most recently #${inEpisodes[0].number}.` : '',
+].filter(Boolean);
+const hasLyrics = !!song.lyrics;
+const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the keys of ' + list(keys) : 'the key of ' + keys[0]}${hasLyrics ? ', with lyrics' : ''}${ci.tempo ? `, ${ci.tempo} bpm` : ''}. From West Coast Revival, free for your church.`;
 ---
-<Base title={`${song.title} Chords and Lyrics (Free PDF)`} description={desc} image="/img/img-8084-1600.webp" schema={schema} current="songs">
+<Base title={`${song.title} ${hasLyrics ? 'Chords and Lyrics' : 'Chords'} (Free PDF Chart)`} description={desc} image="/img/img-8084-1600.webp" schema={schema} current="songs">
   <section class="section" style="padding-bottom:40px; background: linear-gradient(rgba(10,12,22,.8), var(--bg)), url('/img/img-8084-1600.webp') center/cover">
     <div class="wrap">
-      <p class="eyebrow"><a href={href('/songs')} style="color:inherit;text-decoration:none">Songs</a> / {song.unreleased ? 'Releasing soon' : song.year}</p>
+      <p class="eyebrow"><a href={href('/songs')} style="color:inherit;text-decoration:none">Songs</a> / {song.unreleased ? 'Unreleased' : song.year}</p>
       <h1>{song.title}</h1>
       <p class="lead">{song.writers ? `Written by ${song.writers}` : 'West Coast Revival'}</p>
       {song.unreleased ? (
         <>
-          <div class="listen-row" style="margin-top:18px">
-            {['Spotify', 'Apple Music', 'YouTube', 'Amazon Music'].map((n) => <span class="btn ghost soon" aria-disabled="true">{n}: on release</span>)}
-          </div>
-          <p class="muted" style="margin-top:12px">This song hasn't been released yet. The charts are free now, and listening links will appear here when it comes out.</p>
+          <p class="muted" style="margin-top:12px">The recording of this song has not been released yet. The chord charts below are free to use now.</p>
         </>
       ) : (
         <div class="listen-row" style="margin-top:18px">
           <a class="btn primary" href={song.listen.spotify} data-out="spotify">Spotify</a>
           <a class="btn ghost" href={song.listen.apple} data-out="apple_music">Apple Music</a>
-          <a class="btn ghost" href={song.listen.youtube} data-out="youtube">YouTube</a>
-          <a class="btn ghost" href={song.listen.amazon} data-out="amazon">Amazon Music</a>
+          {!song.listen.youtube.includes('/results?') && <a class="btn ghost" href={song.listen.youtube} data-out="youtube">YouTube</a>}
+          {!song.listen.amazon.includes('/search/') && <a class="btn ghost" href={song.listen.amazon} data-out="amazon">Amazon Music</a>}
         </div>
       )}
     </div>
@@ -51,6 +91,7 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
     <div class="wrap grid two" style="align-items:start">
       <div>
         <h2 id="charts">Free charts</h2>
+        <p class="muted" style="margin-top:0">Each chart is a printable PDF with the chords written above the lyrics.</p>
         {(song.charts.recording || song.charts.congregational) && (
         <div class="grid two" style="gap:16px;margin-bottom:20px">
           {[['recording', 'Recording key', 'Matches the recording'], ['congregational', 'Congregational key', 'Easier for most congregations to sing']].map(([k, label, note]) => {
@@ -62,7 +103,7 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
                 {c ? (
                   <button class="btn primary chart-dl" type="button" data-file={c.file} data-song={song.slug} data-chart={k}>Download PDF</button>
                 ) : (
-                  <span class="badge">Not posted yet</span>
+                  <p class="muted" style="margin:0">Use the {k === 'recording' ? 'congregational' : 'recording'} chart for now.</p>
                 )}
               </div>
             );
@@ -83,19 +124,25 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
           </div>
         )}
 
-        {song.lyrics && (<><h2 style="margin-top:48px">Lyrics</h2><div class="prose" set:html={song.lyrics} /></>)}
+        <h2 style="margin-top:40px">Playing {song.title}</h2>
+        <div class="prose">{playing.map((t) => <p>{t}</p>)}</div>
+        <h2 style="margin-top:40px">About the song</h2>
+        <div class="prose"><p>{about.join(' ')}</p>{song.story && <p>{song.story}</p>}</div>
 
-        {song.story && (<><h2 style="margin-top:48px">The story behind the song</h2><div class="prose"><p>{song.story}</p></div></>)}
+        {song.lyrics && (<><h2 style="margin-top:48px">{song.title} lyrics</h2><div class="prose lyrics" set:html={song.lyrics} /><p class="muted" style="font-size:.85rem">{song.writers ? `Words and music: ${song.writers}. ` : ''}© West Coast Revival. Free for use in your church's worship.</p></>)}
+
       </div>
 
       <aside class="card">
         <h3>Song details</h3>
         <dl class="facts">
-          {song.key && (<><dt>Key</dt><dd>{song.key}</dd></>)}
+          {keys.length > 0 && (<><dt>Chart {keys.length > 1 ? 'keys' : 'key'}</dt><dd>{keys.join(', ')}</dd></>)}
+          {ci.tempo && (<><dt>Tempo</dt><dd>{ci.tempo} bpm</dd></>)}
+          {ci.time && (<><dt>Time</dt><dd>{ci.time}</dd></>)}
           {song.ccli && (<><dt>CCLI</dt><dd>{song.ccli}</dd></>)}
           {song.themes.length > 0 && (<><dt>Themes</dt><dd>{song.themes.join(', ')}</dd></>)}
           <dt>Recordings</dt>
-          <dd>{song.unreleased && song.recordings.length === 0 && <div>Releasing soon</div>}{song.recordings.map((r) => <div>{r.year} · {r.album.title}{r.version ? ` (${r.version})` : ''}</div>)}</dd>
+          <dd>{song.unreleased && song.recordings.length === 0 && <div>Not yet released</div>}{song.recordings.map((r) => <div>{r.year} · {r.album.title}{r.version ? ` (${r.version})` : ''}</div>)}</dd>
         </dl>
         {isSGM && <p class="muted" style="font-size:.85rem;margin-top:14px">Originally released with Sovereign Grace Music.</p>}
         {inEpisodes.length > 0 && (
@@ -117,7 +164,7 @@ const desc = `${song.title} by West Coast Revival: free chord charts, lead sheet
         <h2>More songs</h2>
         <div class="grid three">
           {related.map((s) => (
-            <a class="card song-card" href={href(`/songs/${s.slug}`)}><h3>{s.title}</h3><span class="meta">{s.unreleased ? 'Releasing soon' : s.year}</span></a>
+            <a class="card song-card" href={href(`/songs/${s.slug}`)}><h3>{s.title}</h3><span class="meta">{s.unreleased ? 'Unreleased' : s.year}</span></a>
           ))}
         </div>
       </div>

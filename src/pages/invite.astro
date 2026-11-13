@@ -17,13 +17,25 @@ const services = [
     </div>
   </section>
   <section class="section" style="padding-top:0">
+    <div class="wrap"><h2 class="sr-only">What we do</h2></div>
     <div class="wrap grid two">
       {services.map((s) => (
         <div class="card" style="padding:0;overflow:hidden">
-          <img src={`/img/${s.img}-800.webp`} alt="" loading="lazy" style="aspect-ratio:3/2;object-fit:cover;width:100%" />
+          <img width="800" height="533" src={`/img/${s.img}-800.webp`} alt="" loading="lazy" style="aspect-ratio:3/2;object-fit:cover;width:100%" />
           <div style="padding:22px"><h3>{s.t}</h3><p class="muted" style="margin:0">{s.d}</p></div>
         </div>
       ))}
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="wrap prose" style="max-width:820px">
+      <h2>How an invitation works</h2>
+      <ol>
+        <li><strong>Send the inquiry form below.</strong> Tell us the date, the city, the kind of event and about how many people you expect.</li>
+        <li><strong>We talk it through.</strong> Jonathan or Ryan replies by email, and we set up a call to hear what your church or conference is hoping for.</li>
+        <li><strong>We plan it with you.</strong> We build the songs, Scripture readings and any teaching around your theme, and we send chord charts ahead of time if your own musicians are joining us.</li>
+      </ol>
+      <p>West Coast Revival is a 501(c)(3) nonprofit ministry. We can come as the two of us with piano and guitar, or with a full band, depending on the room and the event. Every song we lead has a free chord chart on this site, so your team can keep using the songs after we leave.</p>
     </div>
   </section>
   <section class="section alt" id="inquiry">

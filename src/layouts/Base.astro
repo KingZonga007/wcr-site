@@ -2,6 +2,10 @@
 import '../styles/global.css';
 import { SITE, href, PREVIEW, inSeason } from '../lib/site.js';
 import EmailForm from '../components/EmailForm.astro';
+import oswald600 from '@fontsource/oswald/files/oswald-latin-600-normal.woff2?url';
+import inter400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
+import inter600 from '@fontsource/inter/files/inter-latin-600-normal.woff2?url';
+import oswald500 from '@fontsource/oswald/files/oswald-latin-500-normal.woff2?url';
 
 const { title, description = SITE.mission, image = '/img/band-best-1600.webp', schema = [], current = '' } = Astro.props;
 const fullTitle = title ? `${title} | ${SITE.name}` : `${SITE.name} | ${SITE.tagline}`;
@@ -39,6 +43,10 @@ const nav = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href={oswald600} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={inter600} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={oswald500} as="font" type="font/woff2" crossorigin />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />

@@ -5,6 +5,8 @@ import EmailForm from '../../components/EmailForm.astro';
 import { SITE, href, PREVIEW } from '../../lib/site.js';
 import episodes from '../../data/episodes.json';
 import songs from '../../data/songs.json';
+import { hasPage, songUrl } from '../../lib/songs.js';
+import { passage } from '../../lib/scripture.js';
 
 export function getStaticPaths() {
   return episodes.map((e) => ({ params: { slug: e.slug }, props: { ep: e } }));
@@ -14,6 +16,14 @@ const date = new Date(ep.date + 'T12:00:00Z').toLocaleDateString('en-US', { week
 const epSongs = ep.songs.map((s) => songs.find((x) => x.slug === s)).filter(Boolean);
 const watch = `https://www.youtube.com/watch?v=${ep.youtubeId}`;
 const list = (a) => (a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1]);
+const idx = episodes.findIndex((e) => e.slug === ep.slug);
+const byDate = [...episodes].sort((a, b) => a.date.localeCompare(b.date) || a.number - b.number);
+const pos = byDate.findIndex((e) => e.slug === ep.slug);
+const prev = byDate[pos - 1], next = byDate[pos + 1];
+const chartSongs = epSongs.filter(hasPage);
+const keysOf = (x) => [...new Set([x.charts.recording?.key, x.charts.congregational?.key].filter(Boolean))].join(' and ');
+// Scripture text: the listed readings, or the title when the title is itself a reference ("Isaiah 53").
+const readings = (ep.scripture.length ? ep.scripture : [ep.title]).map(passage).filter(Boolean);
 const deep = ep.kind === 'Friday Deep Dive';
 const intro = [
   `${deep ? 'In this Friday Deep Dive' : `In episode ${ep.number} of Worship Is Warfare`}, streamed ${date}`,
@@ -43,7 +53,7 @@ const schema = [{
       <div class="grid two" style="align-items:start;margin-top:28px">
         <div>
           {PREVIEW ? (
-            <a class="embed" href={watch} data-out="youtube" style="display:block"><img src="/img/wiw-live-graphic-800.webp" alt={`Watch ${ep.title} on YouTube`} style="width:100%;height:100%;object-fit:cover" /></a>
+            <a class="embed" href={watch} data-out="youtube" style="display:block"><img width="800" height="500" src="/img/wiw-live-graphic-800.webp" alt={`Watch ${ep.title} on YouTube`} style="width:100%;height:100%;object-fit:cover" /></a>
           ) : (
             <YouTube id={ep.youtubeId} title={ep.title} />
           )}
@@ -54,7 +64,25 @@ const schema = [{
           </div>
           <div class="prose" style="margin-top:24px">
             {ep.summary ? <p>{ep.summary}</p> : <p>{intro}</p>}
-            <p>Worship Is Warfare is West Coast Revival's live show and podcast: worship, Scripture and encouragement to start your day. We go live on YouTube {SITE.wiw.label}, and every episode is also on Apple Podcasts and Spotify. <a href={href('/worship-is-warfare')}>See all episodes</a>.</p>
+            {deep && <p>Friday Deep Dive is the Worship Is Warfare episode where Jonathan and Ryan tell the story behind one song: how it was written and what it means.</p>}
+            {readings.map((r) => (
+              <>
+                <h2 style="font-size:1.4rem;margin-top:28px">{r.ref}</h2>
+                <blockquote class="scripture">
+                  {r.verses.map((v) => <p><sup>{v.n}</sup> {v.text}</p>)}
+                  <footer>{r.ref}{r.more ? ` (the reading continues through verse ${r.more})` : ''}, King James Version</footer>
+                </blockquote>
+              </>
+            ))}
+            {chartSongs.length > 0 && (
+              <>
+                <h2 style="font-size:1.4rem;margin-top:28px">Play the songs from this episode</h2>
+                <ul>
+                  {chartSongs.map((x) => <li><a href={href(songUrl(x))}>{x.title} chords</a>: free chart in {keysOf(x)}{x.chartInfo?.tempo ? `, ${x.chartInfo.tempo} bpm` : ''}{x.lyrics ? ', with lyrics' : ''}.</li>)}
+                </ul>
+              </>
+            )}
+            <p class="muted">Worship Is Warfare goes live on YouTube {SITE.wiw.label}. <a href={href('/worship-is-warfare')}>See all episodes</a>.</p>
           </div>
         </div>
         <aside class="card">
@@ -64,16 +92,20 @@ const schema = [{
               <h3 style="margin-top:20px">Songs</h3>
               {ep.sung.map((name) => {
                 const s = findSong(name);
-                return <p style="margin:4px 0">{s ? <><a href={href(`/songs/${s.slug}`)}>{name}</a>{(s.charts.recording || s.charts.congregational) && <span class="muted"> · free charts</span>}</> : name}</p>;
+                return <p style="margin:4px 0">{s ? <><a href={href(songUrl(s))}>{name}</a>{(s.charts.recording || s.charts.congregational) && <span class="muted"> · free charts</span>}</> : name}</p>;
               })}
             </>
           )}
           {ep.sung.length === 0 && epSongs.length > 0 && (
-            <><h3>The song</h3>{epSongs.map((s) => <p><a href={href(`/songs/${s.slug}`)}>{s.title}</a>{(s.charts.recording || s.charts.congregational) && ' · free charts'}</p>)}</>
+            <><h3>The song</h3>{epSongs.map((s) => <p><a href={href(songUrl(s))}>{s.title}</a>{(s.charts.recording || s.charts.congregational) && ' · free charts'}</p>)}</>
           )}
           <h3 style="margin-top:20px">Get a reminder before each live stream</h3>
           <EmailForm source={`wiw-episode:${ep.number}`} event="reminder_signup" cta="Remind me" compact thanks="Done. We'll email you before each live stream." />
         </aside>
+      </div>
+      <div class="ep-nav">
+        {prev ? <a href={href(`/worship-is-warfare/${prev.slug}`)}>Previous: #{prev.number} {prev.title}</a> : <span></span>}
+        {next ? <a href={href(`/worship-is-warfare/${next.slug}`)}>Next: #{next.number} {next.title}</a> : <span></span>}
       </div>
     </div>
   </section>

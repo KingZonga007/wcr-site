@@ -1,4 +1,5 @@
 ---
+import { songUrl, songUrlBySlug, hasPage } from '../lib/songs.js';
 import Base from '../layouts/Base.astro';
 import EmailForm from '../components/EmailForm.astro';
 import LiveStatus from '../components/LiveStatus.astro';
@@ -46,7 +47,7 @@ const STORE_ON = false; // switched on in phase 3
   <section class="hero">
     <picture>
       <source media="(max-width: 700px)" srcset="/img/jon-best-800.webp" />
-      <img class="bg" src="/img/jon-best-1600.webp" alt="Jonathan Baird leading worship on guitar" fetchpriority="high" style="object-position:70% 15%" />
+      <img width="1200" height="800" class="bg" src="/img/jon-best-1600.webp" alt="Jonathan Baird leading worship on guitar" fetchpriority="high" style="object-position:70% 15%" />
     </picture>
     <div class="wrap">
       <p class="eyebrow">West Coast Revival</p>
@@ -88,7 +89,7 @@ const STORE_ON = false; // switched on in phase 3
       <ol class="updates">
         {latestUpdates.map((u) => (
           <li>
-            <p class="eyebrow" style="margin:0">{u.kind} · {fmtDate(u.date)}</p>
+            <p class="eyebrow" style="margin:0">{u.kind} · <time datetime={u.date}>{fmtDate(u.date)}</time></p>
             <h3><a href={href(u.href)}>{u.title}</a></h3>
             {u.text && <p class="muted">{u.text}</p>}
           </li>
@@ -111,7 +112,7 @@ const STORE_ON = false; // switched on in phase 3
   <!-- 3. Worship Is Warfare -->
   <section class="section" id="worship-is-warfare">
     <div class="wrap grid two">
-      <div class="photo"><img src="/img/img-8165-1600.webp" alt="Ryan Baird with hand raised in worship, Psalm 150 projected behind him" loading="lazy" /></div>
+      <div class="photo"><img width="1200" height="800" src="/img/img-8165-1600.webp" alt="Ryan Baird with hand raised in worship, Psalm 150 projected behind him" loading="lazy" /></div>
       <div>
         <p class="eyebrow">Live {SITE.wiw.label}</p>
         <h2>Worship Is Warfare</h2>
@@ -139,7 +140,7 @@ const STORE_ON = false; // switched on in phase 3
         <a class="btn ghost" href={latestLinks.youtube} data-out="youtube">YouTube</a>
         <a class="btn ghost" href={latestLinks.amazon} data-out="amazon">Amazon Music</a>
       </div>
-      <a href={href(`/songs/${latest.slug}`)}>Get the charts and the story behind the song</a>
+      <a href={href(songUrl(latest))}>{hasPage(latest) ? 'Get the free chord charts' : 'See all songs and charts'}</a>
     </div>
   </section>
 
@@ -152,11 +153,11 @@ const STORE_ON = false; // switched on in phase 3
           <h2>Free chord charts for your church</h2>
           <p class="lead">Our charts come in two keys: the recording key, and a congregational key that's easier for most churches to sing. Free for your church, always, with new charts added regularly.</p>
         </div>
-        <div class="photo" style="max-height:260px"><img src="/img/elec-close-up-800.webp" alt="Close-up of hands playing an electric guitar" loading="lazy" /></div>
+        <div class="photo" style="max-height:260px"><img width="800" height="533" src="/img/elec-close-up-800.webp" alt="Close-up of hands playing an electric guitar" loading="lazy" /></div>
       </div>
       <div class="grid three">
         {featured.map((s) => (
-          <a class="card song-card" href={href(`/songs/${s.slug}`)}>
+          <a class="card song-card" href={href(songUrl(s))}>
             {(s.charts.recording || s.charts.congregational) && <span class="badge">Free charts</span>}
             <h3>{s.title}</h3>
             {s.key && <span class="meta">Key of {s.key}</span>}
@@ -194,7 +195,7 @@ const STORE_ON = false; // switched on in phase 3
   <!-- 7. Who we are -->
   <section class="section">
     <div class="wrap grid two">
-      <div class="photo"><img src="/img/brothers-portrait-800.webp" alt="Brothers Ryan and Jonathan Baird" loading="lazy" /></div>
+      <div class="photo"><img width="800" height="832" src="/img/brothers-portrait-800.webp" alt="Brothers Ryan and Jonathan Baird" loading="lazy" /></div>
       <div>
         <p class="eyebrow">Who we are</p>
         <h2>Two brothers, one aim</h2>
@@ -211,10 +212,10 @@ const STORE_ON = false; // switched on in phase 3
       <p class="eyebrow">Invite us</p>
       <h2>Bring West Coast Revival to your church</h2>
       <div class="grid four" style="margin-top:24px">
-        <a class="tile" href={href('/invite')}><img src="/img/band-best-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Conference worship leading</h3></div></a>
-        <a class="tile" href={href('/invite')}><img src="/img/img-8084-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Concerts and worship nights</h3></div></a>
-        <a class="tile" href={href('/invite')}><img src="/img/ryan-worship-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Speaking and teaching</h3></div></a>
-        <a class="tile" href={href('/invite')}><img src="/img/img-8324-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Workshops and seminars</h3></div></a>
+        <a class="tile" href={href('/invite')}><img width="800" height="533" src="/img/band-best-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Conference worship leading</h3></div></a>
+        <a class="tile" href={href('/invite')}><img width="800" height="533" src="/img/img-8084-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Concerts and worship nights</h3></div></a>
+        <a class="tile" href={href('/invite')}><img width="800" height="533" src="/img/ryan-worship-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Speaking and teaching</h3></div></a>
+        <a class="tile" href={href('/invite')}><img width="800" height="533" src="/img/img-8324-800.webp" alt="" loading="lazy" /><div class="tile-body"><h3>Workshops and seminars</h3></div></a>
       </div>
       <p style="margin-top:24px"><a class="btn primary" href={href('/invite')}>Send an inquiry</a></p>
     </div>

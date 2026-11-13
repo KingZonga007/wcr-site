@@ -50,7 +50,7 @@ const photos = [
       <p class="muted">Free to use for promoting West Coast Revival. For high-resolution files, email {SITE.email}.</p>
       <div class="grid three">
         {photos.map((p) => (
-          <a class="photo" href={`/img/${p.f}-1600.webp`} download><img src={`/img/${p.f}-800.webp`} alt={p.alt} loading="lazy" style="aspect-ratio:4/3" /></a>
+          <a class="photo" href={`/img/${p.f}-1600.webp`} download><img width="800" height="600" src={`/img/${p.f}-800.webp`} alt={p.alt} loading="lazy" style="aspect-ratio:4/3" /></a>
         ))}
       </div>
     </div>

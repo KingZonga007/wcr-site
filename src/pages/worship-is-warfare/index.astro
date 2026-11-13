@@ -24,7 +24,7 @@ const schema = [{
 ---
 <Base title="Worship Is Warfare: Live Worship and Podcast" description="Worship Is Warfare from West Coast Revival: live on YouTube Tuesdays and Thursdays at 6am MST, and on Apple Podcasts, Spotify and Amazon Music." image="/img/wiw-live-graphic-1600.webp" schema={schema} current="wiw">
   <section class="hero" style="min-height:min(78vh,720px)">
-    <img class="bg" src="/img/ryan-worship-1600.webp" alt="" />
+    <img width="1200" height="800" class="bg" src="/img/ryan-worship-1600.webp" alt="" />
     <div class="wrap">
       <p class="eyebrow">Live {SITE.wiw.label}</p>
       <h1>Worship Is Warfare</h1>
@@ -42,7 +42,7 @@ const schema = [{
     <div class="wrap grid two" style="align-items:center">
       <div>
         {PREVIEW ? (
-          <a class="embed" href={yt(latest.youtubeId)} data-out="youtube" style="display:block"><img src="/img/wiw-live-graphic-800.webp" alt={`Watch ${latest.title} on YouTube`} style="width:100%;height:100%;object-fit:cover" /></a>
+          <a class="embed" href={yt(latest.youtubeId)} data-out="youtube" style="display:block"><img width="800" height="500" src="/img/wiw-live-graphic-800.webp" alt={`Watch ${latest.title} on YouTube`} style="width:100%;height:100%;object-fit:cover" /></a>
         ) : (
           <YouTube id={latest.youtubeId} title={latest.title} />
         )}

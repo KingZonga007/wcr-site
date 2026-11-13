@@ -1,8 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { href } from '../../lib/site.js';
+import { SITE, href } from '../../lib/site.js';
 import songs from '../../data/songs.json';
 import featured from '../../data/featured.json';
+import { paged, listed } from '../../lib/songs.js';
+const disco = [...listed].sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
 
 const sorts = [
   { key: 'featured', label: 'Featured' },
@@ -12,28 +14,54 @@ const sorts = [
   { key: 'za', label: 'Z to A' },
 ];
 ---
-<Base title="Songs and Free Chord Charts" description="Every West Coast Revival song with free chord charts in the recording key and a congregational key, plus lyrics and streaming links." current="songs">
+<Base title="Songs and Free Chord Charts" description={`Free chord charts for ${paged.length} West Coast Revival songs and hymn arrangements, in the recording key and a congregational key, plus the full discography.`} current="songs">
   <section class="section">
     <div class="wrap">
       <p class="eyebrow">Songs</p>
       <h1>Songs and free charts</h1>
-      <p class="lead">Every West Coast Revival song, with two free charts (recording key and congregational key), the story behind it, and where to listen.</p>
+      <p class="lead">Free chord charts for {paged.length} West Coast Revival songs and hymn arrangements. Each chart is a one or two page PDF with chords over the lyrics, ready to print or load on a tablet.</p>
+      <div class="prose" style="max-width:760px;margin-bottom:8px">
+        <p>Most songs come in two keys. The <strong>recording key</strong> matches what you hear on the track, so your band can play along. The <strong>congregational key</strong> moves the melody into a range most people in the room can sing. When one chart covers both, we say so on the song page. Songs with a capo chart list the capo position for guitar.</p>
+        <p>The charts are free for any church to use in worship. Enter your email once and every chart on the site unlocks. If you need a song in a different key, <a href={href('/contact')}>email us</a> and tell us which one.</p>
+      </div>
       <div class="filters">
         <input type="search" id="q" placeholder="Search songs" aria-label="Search songs" />
         <span class="muted" style="align-self:center;font-size:.9rem">Sort:</span>
         {sorts.map((o, i) => <button type="button" data-sort={o.key} aria-pressed={i === 0 ? 'true' : 'false'}>{o.label}</button>)}
       </div>
+      <h2 class="sr-only">Songs with free chord charts</h2>
       <div class="grid three" id="list">
-        {[...songs].sort((a, b) => { const fa = featured.indexOf(a.slug), fb = featured.indexOf(b.slug); return (fa < 0) - (fb < 0) || fa - fb; }).map((s) => (
+        {[...paged].sort((a, b) => { const fa = featured.indexOf(a.slug), fb = featured.indexOf(b.slug); return (fa < 0) - (fb < 0) || fa - fb; }).map((s) => (
           <a class="card song-card" href={href(`/songs/${s.slug}`)} data-title={s.title.toLowerCase()} data-year={s.year} data-feat={featured.indexOf(s.slug)} hidden={!featured.includes(s.slug)}>
             {(s.charts.recording || s.charts.congregational) && <span class="badge">Free charts</span>}
             <h3>{s.title}</h3>
-            {(s.unreleased || s.key || s.recordings.length > 1) && <span class="meta">{[s.unreleased ? 'Releasing soon' : '', s.recordings.length > 1 ? `${s.recordings.length} recordings` : '', s.key ? `Key of ${s.key}` : ''].filter(Boolean).join(' · ')}</span>}
+            {(s.unreleased || s.key || s.recordings.length > 1) && <span class="meta">{[s.unreleased ? 'Unreleased' : '', s.recordings.length > 1 ? `${s.recordings.length} recordings` : '', s.key ? `Key of ${s.key}` : ''].filter(Boolean).join(' · ')}</span>}
           </a>
         ))}
       </div>
       <p id="empty" class="muted" hidden>No songs match that search.</p>
-      <p class="muted" id="more" style="margin-top:20px">Showing featured songs. Choose Newest or A to Z to see all {songs.length}.</p>
+      <p class="muted" id="more" style="margin-top:20px">Showing featured songs. Choose Newest or A to Z to see all {paged.length} songs with charts.</p>
+    </div>
+  </section>
+  <section class="section alt" id="discography">
+    <div class="wrap">
+      <p class="eyebrow">Discography</p>
+      <h2>More West Coast Revival songs</h2>
+      <p class="lead" style="max-width:760px">These {disco.length} songs are recorded and streaming, and their charts are not on the site yet. We add charts as we finish them. To ask for one, <a href={href('/contact')}>email us</a> with the song title. You can hear all of them on <a href={SITE.social.spotify} data-out="spotify">Spotify</a> or <a href={SITE.social.youtube} data-out="youtube">YouTube</a>.</p>
+      <div class="table-wrap">
+        <table class="disco">
+          <thead><tr><th scope="col">Song</th><th scope="col">Year</th><th scope="col">Released by</th></tr></thead>
+          <tbody>
+            {disco.map((s) => (
+              <tr id={s.slug}>
+                <th scope="row">{s.title}</th>
+                <td>{s.year}</td>
+                <td>{s.publisher}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
   <script is:inline>

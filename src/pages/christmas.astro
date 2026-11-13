@@ -1,4 +1,5 @@
 ---
+import { songUrlBySlug } from '../lib/songs.js';
 import Base from '../layouts/Base.astro';
 import EmailForm from '../components/EmailForm.astro';
 import songs from '../data/songs.json';
@@ -43,7 +44,7 @@ const schema = [{
           <p class="muted">Three songs that move from the wonder of Christ's birth to the worship He deserves.</p>
           <ol class="xmas-set">
             <li><a href={href('/songs/we-three-kings')}>We Three Kings</a><span>Open with the carol. The wise men's journey sets the theme: we come to worship.</span></li>
-            <li><a href={href('/songs/grace-a-christmas-lullaby')}>Grace (A Christmas Lullaby)</a><span>A quiet moment at the manger.</span></li>
+            <li><a href={href(songUrlBySlug('grace-a-christmas-lullaby'))}>Grace (A Christmas Lullaby)</a><span>A quiet moment at the manger.</span></li>
             <li><a href={href('/songs/behold-our-god')}>Behold Our God</a><span>The child in the manger is the King on the throne. Close with a full declaration.</span></li>
           </ol>
           <p class="fine">Free charts are on each song's page. Charts we haven't posted yet come to email subscribers first.</p>
@@ -66,7 +67,7 @@ const schema = [{
         <p class="muted">Our Christmas lullaby, released in {grace.year}.</p>
         <div class="btn-row" style="margin-top:18px">
           <a class="btn ghost" href={grace.listen.apple} data-out="apple_music">Listen on Apple Music</a>
-          <a class="btn ghost" href={href('/songs/grace-a-christmas-lullaby')}>{hasCharts(grace) ? 'Free chart' : 'Song page'}</a>
+          <a class="btn ghost" href={href(songUrlBySlug('grace-a-christmas-lullaby'))}>{hasCharts(grace) ? 'Free chart' : 'Where to listen'}</a>
         </div>
       </div>
       <div>

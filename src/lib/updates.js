@@ -2,11 +2,12 @@
 import episodes from '../data/episodes.json';
 import releases from '../data/releases.json';
 import songs from '../data/songs.json';
+import { songUrl } from './songs.js';
 
 const slugFor = (title) => {
   const n = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '');
   const s = songs.find((x) => n(x.title) === n(title));
-  return s ? `/songs/${s.slug}` : null;
+  return s ? songUrl(s) : null;
 };
 
 export function updates(limit = 30) {
@@ -21,7 +22,7 @@ export function updates(limit = 30) {
   const rel = (releases.releases || [])
     .filter((r) => r.single && r.date >= '2019')
     .filter((r) => (seen.has(r.title) ? false : seen.add(r.title)))
-    .map((r) => ({ date: r.date, kind: 'New release', title: r.title, text: 'Out now on Spotify, Apple Music, YouTube and Amazon Music.', href: slugFor(r.title) || '/songs' }));
+    .map((r) => ({ date: r.date, kind: 'New release', title: r.title, text: 'Out now on Spotify, Apple Music, YouTube and Amazon Music.', href: slugFor(r.title) || '/songs#discography' }));
   return [...eps, ...rel].sort((a, b) => b.date.localeCompare(a.date)).slice(0, limit);
 }
 

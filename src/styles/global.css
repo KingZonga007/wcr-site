@@ -16,8 +16,8 @@
   --blue: #3a55ff;
   --max: 1160px;
   --radius: 10px;
-  --head: 'Oswald', 'Arial Narrow', sans-serif;
-  --body: 'Inter', system-ui, sans-serif;
+  --head: 'Oswald', 'Oswald Fallback', 'Arial Narrow', sans-serif;
+  --body: 'Inter', 'Inter Fallback', system-ui, sans-serif;
   --serif: 'Source Serif 4', Georgia, serif;
 }
 
@@ -25,7 +25,7 @@
 [hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: var(--ink); }
 a:hover { color: var(--accent); }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
@@ -220,3 +220,23 @@ dialog::backdrop { background: rgba(0,0,0,.65); }
 .involve a.card:hover { border-color: var(--accent); }
 .involve strong { display: block; font-family: var(--head); text-transform: uppercase; font-size: 1.1rem; }
 .involve span { color: var(--muted); font-size: .95rem; }
+
+/* Discography table and lyrics */
+.table-wrap{overflow-x:auto;margin-top:20px}
+.disco{width:100%;border-collapse:collapse;font-size:.98rem}
+.disco th,.disco td{text-align:left;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.1)}
+.disco thead th{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.disco tbody th{font-weight:600}
+.lyrics h3{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin:22px 0 6px}
+.lyrics p{margin:0;line-height:1.75}
+.ep-nav{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
+.scripture{margin:10px 0 0;padding:4px 0 4px 18px;border-left:3px solid var(--accent,#c9a45c)}
+.scripture p{margin:0 0 8px;line-height:1.7}
+.scripture sup{opacity:.6;font-size:.7em;margin-right:2px}
+.scripture footer{font-size:.85rem;opacity:.7;margin-top:8px}
+
+/* Fallback metrics close to Oswald so headings don't shift when the web font loads */
+@font-face{font-family:'Oswald Fallback';src:local('Arial Narrow'),local('Arial');size-adjust:82%;ascent-override:145%;descent-override:35%;line-gap-override:0%}
+.form .check input[type=checkbox]{width:24px;height:24px;flex:none}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:107%;ascent-override:90%;descent-override:22.4%;line-gap-override:0%}

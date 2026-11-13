@@ -11,10 +11,11 @@ const items = updates(40);
       <p class="eyebrow">What's new</p>
       <h1>Updates</h1>
       <p class="lead">New Worship Is Warfare episodes every Tuesday and Thursday, plus new songs and free chord charts as they're ready. Last updated {fmtDate(items[0].date)}.</p>
+      <h2 class="sr-only">All updates, newest first</h2>
       <ol class="updates">
         {items.map((u) => (
           <li>
-            <p class="eyebrow" style="margin:0">{u.kind} · {fmtDate(u.date)}</p>
+            <p class="eyebrow" style="margin:0">{u.kind} · <time datetime={u.date}>{fmtDate(u.date)}</time></p>
             <h3><a href={href(u.href)}>{u.title}</a></h3>
             {u.text && <p class="muted">{u.text}</p>}
           </li>

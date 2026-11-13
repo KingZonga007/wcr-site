@@ -1,4 +1,5 @@
 ---
+import { songUrl, songUrlBySlug, hasPage } from '../lib/songs.js';
 import Base from '../layouts/Base.astro';
 import { SITE, href } from '../lib/site.js';
 import releases from '../data/releases.json';
@@ -11,7 +12,7 @@ const latestDate = releases.latest?.date ? new Date(releases.latest.date + 'T12:
 const latestSlug = songs.find((x) => x.title.toLowerCase() === (latestTitle || '').toLowerCase())?.slug;
 const showLatest = latestTitle && !singlesLine.toLowerCase().includes(latestTitle.toLowerCase());
 ---
-<Base title="About" description={SITE.mission} image="/img/brothers-portrait-800.webp" current="about">
+<Base title="About" description="About West Coast Revival: brothers Jonathan and Ryan Baird, the songs they write for the church, and the nonprofit ministry behind them." image="/img/brothers-portrait-800.webp" current="about">
   <section class="section">
     <div class="wrap grid two" style="align-items:center">
       <div>
@@ -19,7 +20,7 @@ const showLatest = latestTitle && !singlesLine.toLowerCase().includes(latestTitl
         <h1>Timeless truth. Untamed affection.</h1>
         <p class="lead">{SITE.mission}</p>
       </div>
-      <div class="photo"><img src="/img/brothers-portrait-800.webp" alt="Brothers Ryan and Jonathan Baird" /></div>
+      <div class="photo"><img width="800" height="832" src="/img/brothers-portrait-800.webp" alt="Brothers Ryan and Jonathan Baird" /></div>
     </div>
   </section>
 
@@ -40,13 +41,13 @@ const showLatest = latestTitle && !singlesLine.toLowerCase().includes(latestTitl
         <p>After contributing as writers to Sovereign Grace Music projects, including "Behold Our God" in 2011, and joined by their sister Meghan Baird, they returned with another EP, <em>All That Thrills My Soul</em>, followed by the full-length <em>Some Bright Golden Morning</em> in 2015.</p>
         <p set:html={singlesLine} />
         {showLatest && (
-          <p>Their newest release is {latestSlug ? <a href={href(`/songs/${latestSlug}`)}>"{latestTitle}"</a> : `"${latestTitle}"`}{latestDate ? `, out ${latestDate}` : ''}.</p>
+          <p>Their newest release is {latestSlug ? <a href={href(songUrlBySlug(latestSlug))}>"{latestTitle}"</a> : `"${latestTitle}"`}{latestDate ? `, out ${latestDate}` : ''}.</p>
         )}
         <p>The best place to find new music and teaching from West Coast Revival is <a href={href('/worship-is-warfare')}>Worship Is Warfare</a>, live every Tuesday and Thursday at 6am MST. It's a live show and podcast on worship as spiritual warfare: the fight to make Christ our greatest delight.</p>
       </div>
       <div class="grid" style="gap:16px">
-        <div class="photo"><img src="/img/jon-worship-800.webp" alt="Jonathan Baird in worship" loading="lazy" /></div>
-        <div class="photo"><img src="/img/ryan-best-800.webp" alt="Ryan Baird singing at the keys" loading="lazy" /></div>
+        <div class="photo"><img width="800" height="1200" src="/img/jon-worship-800.webp" alt="Jonathan Baird in worship" loading="lazy" /></div>
+        <div class="photo"><img width="800" height="533" src="/img/ryan-best-800.webp" alt="Ryan Baird singing at the keys" loading="lazy" /></div>
       </div>
     </div>
   </section>

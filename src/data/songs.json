@@ -1,2477 +1,2844 @@
 [
-  {
-    "slug": "and-can-it-be",
-    "title": "And Can It Be",
+ {
+  "slug": "and-can-it-be",
+  "title": "And Can It Be",
+  "key": "G",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
     "key": "G",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "G",
-        "file": "/charts/and-can-it-be-G.pdf"
-      },
-      "congregational": {
-        "key": "E",
-        "file": "/charts/and-can-it-be-E.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [],
-    "year": 2026,
-    "firstYear": 2026,
-    "publisher": "West Coast Revival",
-    "listen": null,
-    "unreleased": true,
-    "source": "manual"
-  },
-  {
-    "slug": "have-you-been-to-jesus",
-    "title": "Have You Been to Jesus",
-    "key": "A",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "A",
-        "file": "/charts/have-you-been-to-jesus-A.pdf"
-      },
-      "congregational": {
-        "key": "G",
-        "file": "/charts/have-you-been-to-jesus-G.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2026,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      },
-      {
-        "year": 2025,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2026,
-    "firstYear": 2026,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/have-you-been-to-jesus/1844481334?i=1844481335&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Have%20You%20Been%20to%20Jesus",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Have%20You%20Been%20to%20Jesus",
-      "exact": true
-    }
-  },
-  {
-    "slug": "i-give-you-all",
-    "title": "I Give You All",
-    "key": "G",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "G",
-        "file": "/charts/i-give-you-all-G.pdf"
-      },
-      "congregational": {
-        "key": "E",
-        "file": "/charts/i-give-you-all-E.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [],
-    "year": 2026,
-    "firstYear": 2026,
-    "publisher": "West Coast Revival",
-    "listen": null,
-    "unreleased": true,
-    "source": "manual"
-  },
-  {
-    "slug": "o-for-a-thousand-tongues-to-sing",
-    "title": "O For a Thousand Tongues to Sing",
+    "file": "/charts/and-can-it-be-G.pdf"
+   },
+   "congregational": {
     "key": "E",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": {
-        "key": "E",
-        "file": "/charts/o-for-a-thousand-tongues-to-sing-E.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [],
-    "year": 2026,
-    "firstYear": 2026,
-    "publisher": "West Coast Revival",
-    "listen": null,
-    "unreleased": true,
-    "source": "manual"
+    "file": "/charts/and-can-it-be-E.pdf"
+   },
+   "extras": []
   },
-  {
-    "slug": "in-you-is-mercy",
-    "title": "In You Is Mercy",
-    "key": "C",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "C",
-        "file": "/charts/in-you-is-mercy-C.pdf"
-      },
-      "congregational": {
-        "key": "C",
-        "file": "/charts/in-you-is-mercy-C.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2025,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      }
-    ],
-    "year": 2025,
-    "firstYear": 2025,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/in-you-is-mercy/1817697164?i=1817697165&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20In%20You%20Is%20Mercy",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20In%20You%20Is%20Mercy",
-      "exact": true
-    }
-  },
-  {
-    "slug": "solid-rock",
-    "title": "Solid Rock",
-    "key": "E",
-    "writers": null,
-    "themes": [
-      "Hymn"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "E",
-        "file": "/charts/solid-rock-E.pdf"
-      },
-      "congregational": {
-        "key": "E",
-        "file": "/charts/solid-rock-E.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2025,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      }
-    ],
-    "year": 2025,
-    "firstYear": 2025,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/solid-rock/1818898142?i=1818898143&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Solid%20Rock",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Solid%20Rock",
-      "exact": true
-    }
-  },
-  {
-    "slug": "before-my-knees-could-reach-the-ground",
-    "title": "Before My Knees Could Reach the Ground",
-    "key": "G",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "G",
-        "file": "/charts/before-my-knees-could-reach-the-ground-G.pdf"
-      },
-      "congregational": {
-        "key": "G",
-        "file": "/charts/before-my-knees-could-reach-the-ground-G.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2022,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2022,
-    "firstYear": 2022,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/before-my-knees-could-reach-the-ground/1606479204?i=1606479205&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Before%20My%20Knees%20Could%20Reach%20the%20Ground",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Before%20My%20Knees%20Could%20Reach%20the%20Ground",
-      "exact": true
-    }
-  },
-  {
-    "slug": "grace",
-    "title": "Grace",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2022,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2022,
-    "firstYear": 2022,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Grace",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Grace",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Grace",
-      "exact": false
-    }
-  },
-  {
-    "slug": "behold-the-lamb",
-    "title": "Behold the Lamb",
-    "key": "E",
-    "writers": null,
-    "themes": [
-      "The cross"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "E",
-        "file": "/charts/behold-the-lamb-E.pdf"
-      },
-      "congregational": {
-        "key": "E",
-        "file": "/charts/behold-the-lamb-E.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2021,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2021,
-    "firstYear": 2021,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/behold-the-lamb/1569510327?i=1569510328&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Behold%20the%20Lamb",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Behold%20the%20Lamb",
-      "exact": true
-    }
-  },
-  {
-    "slug": "come-spirit-of-god",
-    "title": "Come Spirit of God",
-    "key": "B",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2005,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "FUSE (EP)",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": "Slow"
-      },
-      {
-        "year": 2021,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Oh the Deep",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2021,
-    "firstYear": 2005,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/come-spirit-of-god-live-in-orlando/1591747988?i=1591747994&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Come%20Spirit%20of%20God",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Come%20Spirit%20of%20God",
-      "exact": true
-    }
-  },
-  {
-    "slug": "come-you-saints",
-    "title": "Come You Saints",
-    "key": null,
-    "writers": "Jonathan Baird, Ryan Baird",
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2005,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "FUSE (EP)",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": "Medium"
-      },
-      {
-        "year": 2021,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Oh the Deep",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2021,
-    "firstYear": 2005,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/come-you-saints/1591747988?i=1591747989&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Come%20You%20Saints",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Come%20You%20Saints",
-      "exact": true
-    }
-  },
-  {
-    "slug": "grace-a-christmas-lullaby",
-    "title": "Grace (A Christmas Lullaby)",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2021,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2021,
-    "firstYear": 2021,
-    "publisher": "West Coast Revival",
-    "source": "auto",
-    "listen": {
-      "apple": "https://music.apple.com/us/album/grace-a-christmas-lullaby/1599332761?i=1599332763&uo=4",
-      "exact": true
-    }
-  },
-  {
-    "slug": "my-saviors-precious-blood",
-    "title": "My Savior's Precious Blood",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2005,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "FUSE (EP)",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": "Medium"
-      },
-      {
-        "year": 2021,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Oh the Deep",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2021,
-    "firstYear": 2005,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/my-saviors-precious-blood/1591747988?i=1591747991&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20My%20Savior%27s%20Precious%20Blood",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20My%20Savior%27s%20Precious%20Blood",
-      "exact": true
-    }
-  },
-  {
-    "slug": "oh-the-deep",
-    "title": "Oh the Deep",
-    "key": "B",
-    "writers": null,
-    "themes": [
-      "Hymn",
-      "Love of Christ"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2005,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "FUSE (EP)",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": "Slow"
-      },
-      {
-        "year": 2021,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Oh the Deep",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2021,
-    "firstYear": 2005,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/oh-the-deep/1591747988?i=1591747992&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Oh%20the%20Deep",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Oh%20the%20Deep",
-      "exact": true
-    }
-  },
-  {
-    "slug": "only-you",
-    "title": "Only You",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2005,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "FUSE (EP)",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": "Fast"
-      },
-      {
-        "year": 2021,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Oh the Deep",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2021,
-    "firstYear": 2005,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/only-you/1591747988?i=1591747990&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Only%20You",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Only%20You",
-      "exact": true
-    }
-  },
-  {
-    "slug": "the-pearl-of-great-price",
-    "title": "The Pearl of Great Price",
-    "key": null,
-    "writers": null,
-    "themes": [
-      "Matthew 13"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2021,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      }
-    ],
-    "year": 2021,
-    "firstYear": 2021,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/the-pearl-of-great-price/1577034449?i=1577034450&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Pearl%20of%20Great%20Price",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Pearl%20of%20Great%20Price",
-      "exact": true
-    }
-  },
-  {
-    "slug": "the-sparrow",
-    "title": "The Sparrow",
-    "key": "Bb",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "Bb",
-        "file": "/charts/the-sparrow-Bb.pdf"
-      },
-      "congregational": {
-        "key": "A",
-        "file": "/charts/the-sparrow-A.pdf"
-      },
-      "extras": [
-        {
-          "label": "Guitar chart (G, capo 3)",
-          "key": "G",
-          "file": "/charts/the-sparrow-G-capo-3.pdf"
-        }
-      ]
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2021,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      }
-    ],
-    "year": 2021,
-    "firstYear": 2021,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/the-sparrow/1556993803?i=1556993806&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Sparrow",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Sparrow",
-      "exact": true
-    }
-  },
-  {
-    "slug": "flesh-and-blood",
-    "title": "Flesh and Blood",
-    "key": "C",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "C",
-        "file": "/charts/flesh-and-blood-C.pdf"
-      },
-      "congregational": {
-        "key": "C",
-        "file": "/charts/flesh-and-blood-C.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2020,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2020,
-    "firstYear": 2020,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/flesh-and-blood/1507537130?i=1507537131&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Flesh%20and%20Blood",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Flesh%20and%20Blood",
-      "exact": true
-    }
-  },
-  {
-    "slug": "the-armor",
-    "title": "The Armor",
-    "key": "A",
-    "writers": null,
-    "themes": [
-      "Spiritual warfare",
-      "Ephesians 6"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "A",
-        "file": "/charts/the-armor-A.pdf"
-      },
-      "congregational": {
-        "key": "A",
-        "file": "/charts/the-armor-A.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2020,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      }
-    ],
-    "year": 2020,
-    "firstYear": 2020,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/the-armor/1537222624?i=1537222625&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Armor",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Armor",
-      "exact": true
-    }
-  },
-  {
-    "slug": "we-three-kings",
-    "title": "We Three Kings",
-    "key": "E",
-    "writers": null,
-    "themes": [
-      "Christmas"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "E",
-        "file": "/charts/we-three-kings-E.pdf"
-      },
-      "congregational": {
-        "key": "E",
-        "file": "/charts/we-three-kings-E.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2020,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      }
-    ],
-    "year": 2020,
-    "firstYear": 2020,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/we-three-kings/1541956448?i=1541956449&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20We%20Three%20Kings",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20We%20Three%20Kings",
-      "exact": true
-    }
-  },
-  {
-    "slug": "behold-our-god",
-    "title": "Behold Our God",
-    "key": "C",
-    "writers": "Jonathan Baird, Meghan Baird, Ryan Baird, Stephen Altrogge",
-    "themes": [
-      "God's greatness",
-      "Isaiah 40"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "C",
-        "file": "/charts/behold-our-god-C.pdf"
-      },
-      "congregational": {
-        "key": "C",
-        "file": "/charts/behold-our-god-C.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2011,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "Sovereign Grace Music release",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      },
-      {
-        "year": 2019,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Single",
-          "confidence": "inferred"
-        },
-        "version": "Almost Acoustic",
-        "tempo": "Medium"
-      }
-    ],
-    "year": 2019,
-    "firstYear": 2011,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/behold-our-god-almost-acoustic/1484243041?i=1484243045&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Behold%20Our%20God",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Behold%20Our%20God",
-      "exact": true
-    }
-  },
-  {
-    "slug": "cross-over-jordan",
-    "title": "Cross over Jordan",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "source": "auto",
-    "listen": {
-      "apple": "https://music.apple.com/us/album/cross-over-jordan/1259515796?i=1259515890&uo=4",
-      "exact": true
-    }
-  },
-  {
-    "slug": "cross-the-jordan",
-    "title": "Cross the Jordan",
-    "key": null,
-    "writers": null,
-    "themes": [
-      "Hope of heaven"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Cross%20the%20Jordan",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Cross%20the%20Jordan",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Cross%20the%20Jordan",
-      "exact": false
-    }
-  },
-  {
-    "slug": "depth-of-mercy",
-    "title": "Depth of Mercy",
-    "key": null,
-    "writers": null,
-    "themes": [
-      "Hymn",
-      "Mercy"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/depth-of-mercy/1259515796?i=1259516041&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Depth%20of%20Mercy",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Depth%20of%20Mercy",
-      "exact": true
-    }
-  },
-  {
-    "slug": "i-want-to-wake-up",
-    "title": "I Want to Wake Up",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/i-want-to-wake-up/1259515796?i=1259515887&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20I%20Want%20to%20Wake%20Up",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20I%20Want%20to%20Wake%20Up",
-      "exact": true
-    }
-  },
-  {
-    "slug": "killing-my-demons",
-    "title": "Killing My Demons",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/killing-my-demons/1259515796?i=1259516043&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Killing%20My%20Demons",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Killing%20My%20Demons",
-      "exact": true
-    }
-  },
-  {
-    "slug": "not-backing-down",
-    "title": "Not Backing Down",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/not-backing-down/1259515796?i=1259515883&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Not%20Backing%20Down",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Not%20Backing%20Down",
-      "exact": true
-    }
-  },
-  {
-    "slug": "sing-your-mercies-new",
-    "title": "Sing Your Mercies New",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/sing-your-mercies-new/1259515796?i=1259516040&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Sing%20Your%20Mercies%20New",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Sing%20Your%20Mercies%20New",
-      "exact": true
-    }
-  },
-  {
-    "slug": "some-bright-golden-morning",
-    "title": "Some Bright Golden Morning",
-    "key": null,
-    "writers": null,
-    "themes": [
-      "Hope of heaven"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/some-bright-golden-morning/1259515796?i=1259516046&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Some%20Bright%20Golden%20Morning",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Some%20Bright%20Golden%20Morning",
-      "exact": true
-    }
-  },
-  {
-    "slug": "some-come-through-fire",
-    "title": "Some Come Through Fire",
-    "key": "C",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "C",
-        "file": "/charts/some-come-through-fire-C.pdf"
-      },
-      "congregational": {
-        "key": "C",
-        "file": "/charts/some-come-through-fire-C.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/some-come-through-fire/1259515796?i=1259515889&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Some%20Come%20Through%20Fire",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Some%20Come%20Through%20Fire",
-      "exact": true
-    }
-  },
-  {
-    "slug": "take-it-from-me",
-    "title": "Take It From Me",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/take-it-from-me/1259515796?i=1259516042&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Take%20It%20From%20Me",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Take%20It%20From%20Me",
-      "exact": true
-    }
-  },
-  {
-    "slug": "the-gathering",
-    "title": "The Gathering",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/the-gathering/1259515796?i=1259516008&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Gathering",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Gathering",
-      "exact": true
-    }
-  },
-  {
-    "slug": "time-keeps-slippin-away",
-    "title": "Time Keeps Slippin' Away",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2013,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "All That Thrills My Soul (EP)",
-          "confidence": "inferred"
-        },
-        "version": "Sovereign Grace recording",
-        "tempo": "Medium"
-      },
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2013,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/time-keeps-slippin-away/1259515796?i=1259515881&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Time%20Keeps%20Slippin%27%20Away",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Time%20Keeps%20Slippin%27%20Away",
-      "exact": true
-    }
-  },
-  {
-    "slug": "to-know-you",
-    "title": "To Know You",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/to-know-you/1259515796?i=1259516045&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20To%20Know%20You",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20To%20Know%20You",
-      "exact": true
-    }
-  },
-  {
-    "slug": "undivided-heart",
-    "title": "Undivided Heart",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2015,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "Some Bright Golden Morning",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2015,
-    "firstYear": 2015,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/undivided-heart/1259515796?i=1259516044&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Undivided%20Heart",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Undivided%20Heart",
-      "exact": true
-    }
-  },
-  {
-    "slug": "all-creatures-of-our-god-and-king",
-    "title": "All Creatures of Our God and King",
-    "key": "A",
-    "writers": "Jonathan Baird, Ryan Baird (new music and arrangement)",
-    "themes": [
-      "Hymn",
-      "Creation"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "A",
-        "file": "/charts/all-creatures-of-our-god-and-king-A.pdf"
-      },
-      "congregational": {
-        "key": "C",
-        "file": "/charts/all-creatures-of-our-god-and-king-C.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2013,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "All That Thrills My Soul (EP)",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      }
-    ],
-    "year": 2013,
-    "firstYear": 2013,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/all-creatures-of-our-god-and-king/1791325714?i=1791325715&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20All%20Creatures%20of%20Our%20God%20and%20King",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20All%20Creatures%20of%20Our%20God%20and%20King",
-      "exact": true
-    }
-  },
-  {
-    "slug": "all-that-thrills-my-soul",
-    "title": "All That Thrills My Soul",
-    "key": "Am",
-    "writers": null,
-    "themes": [
-      "Hymn"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "Am",
-        "file": "/charts/all-that-thrills-my-soul-Am.pdf"
-      },
-      "congregational": {
-        "key": "Am",
-        "file": "/charts/all-that-thrills-my-soul-Am.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2013,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "All That Thrills My Soul (EP)",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      }
-    ],
-    "year": 2013,
-    "firstYear": 2013,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/all-that-thrills-my-soul/1791325714?i=1791325716&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20All%20That%20Thrills%20My%20Soul",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20All%20That%20Thrills%20My%20Soul",
-      "exact": true
-    }
-  },
-  {
-    "slug": "in-the-beginning",
-    "title": "In the Beginning",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2013,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "All That Thrills My Soul (EP)",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2013,
-    "firstYear": 2013,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/in-the-beginning/1791325714?i=1791325717&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20In%20the%20Beginning",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20In%20the%20Beginning",
-      "exact": true
-    }
-  },
-  {
-    "slug": "oh-to-see-you",
-    "title": "Oh to See You",
-    "key": "C",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "C",
-        "file": "/charts/oh-to-see-you-C.pdf"
-      },
-      "congregational": {
-        "key": "C",
-        "file": "/charts/oh-to-see-you-C.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2013,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "All That Thrills My Soul (EP)",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2013,
-    "firstYear": 2013,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/oh-to-see-you/1791325714?i=1791325719&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Oh%20to%20See%20You",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Oh%20to%20See%20You",
-      "exact": true
-    }
-  },
-  {
-    "slug": "plead-for-me",
-    "title": "Plead For Me",
-    "key": "A",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "A",
-        "file": "/charts/plead-for-me-A.pdf"
-      },
-      "congregational": {
-        "key": "A",
-        "file": "/charts/plead-for-me-A.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2013,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "All That Thrills My Soul (EP)",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2013,
-    "firstYear": 2013,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/plead-for-me/1791325714?i=1791325718&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Plead%20For%20Me",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Plead%20For%20Me",
-      "exact": true
-    }
-  },
-  {
-    "slug": "isaiah-53",
-    "title": "Isaiah 53",
-    "key": null,
-    "writers": null,
-    "themes": [
-      "The cross",
-      "Isaiah 53"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2011,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "Sovereign Grace Music release",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      }
-    ],
-    "year": 2011,
-    "firstYear": 2011,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Isaiah%2053",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Isaiah%2053",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Isaiah%2053",
-      "exact": false
-    }
-  },
-  {
-    "slug": "the-prodigal",
-    "title": "The Prodigal",
-    "key": "F",
-    "writers": null,
-    "themes": [
-      "Grace",
-      "Luke 15"
-    ],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "F",
-        "file": "/charts/the-prodigal-F.pdf"
-      },
-      "congregational": {
-        "key": "F",
-        "file": "/charts/the-prodigal-F.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2009,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "Sovereign Grace Music release",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2009,
-    "firstYear": 2009,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20The%20Prodigal",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Prodigal",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Prodigal",
-      "exact": false
-    }
-  },
-  {
-    "slug": "undying-love",
-    "title": "Undying Love",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2009,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "Sovereign Grace Music release",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2009,
-    "firstYear": 2009,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Undying%20Love",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Undying%20Love",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Undying%20Love",
-      "exact": false
-    }
-  },
-  {
-    "slug": "day-after-day",
-    "title": "Day After Day",
-    "key": "B",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "B",
-        "file": "/charts/day-after-day-B.pdf"
-      },
-      "congregational": {
-        "key": "B",
-        "file": "/charts/day-after-day-B.pdf"
-      },
-      "extras": [
-        {
-          "label": "Guitar chart (G, capo 4)",
-          "key": "G",
-          "file": "/charts/day-after-day-G-capo-4.pdf"
-        }
-      ]
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2008,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      },
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2008,
-    "firstYear": 2008,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/day-after-day/261915915?i=261916189&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Day%20After%20Day",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Day%20After%20Day",
-      "exact": true
-    }
-  },
-  {
-    "slug": "forever",
-    "title": "Forever",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2008,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      },
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2008,
-    "firstYear": 2008,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/forever/261915915?i=261916420&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Forever",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Forever",
-      "exact": true
-    }
-  },
-  {
-    "slug": "goodbye",
-    "title": "Goodbye",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2008,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      },
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2008,
-    "firstYear": 2008,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/goodbye/261915915?i=261917905&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Goodbye",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Goodbye",
-      "exact": true
-    }
-  },
-  {
-    "slug": "here-with-christ",
-    "title": "Here With Christ",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2008,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      },
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2008,
-    "firstYear": 2008,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/here-with-christ/261915915?i=261916684&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Here%20With%20Christ",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Here%20With%20Christ",
-      "exact": true
-    }
-  },
-  {
-    "slug": "house-of-the-lord",
-    "title": "House of the Lord",
-    "key": "B",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": {
-        "key": "B",
-        "file": "/charts/house-of-the-lord-B.pdf"
-      },
-      "congregational": {
-        "key": "G",
-        "file": "/charts/house-of-the-lord-G.pdf"
-      },
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2008,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      },
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2008,
-    "firstYear": 2008,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/house-of-the-lord/261915915?i=261918223&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20House%20of%20the%20Lord",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20House%20of%20the%20Lord",
-      "exact": true
-    }
-  },
-  {
-    "slug": "only-for-you",
-    "title": "Only for You",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2008,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      },
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2008,
-    "firstYear": 2008,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/only-for-you/261915915?i=261918912&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Only%20for%20You",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Only%20for%20You",
-      "exact": true
-    }
-  },
-  {
-    "slug": "refugee",
-    "title": "Refugee",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2008,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      },
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2008,
-    "firstYear": 2008,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/refugee/261915915?i=261918494&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Refugee",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Refugee",
-      "exact": true
-    }
-  },
-  {
-    "slug": "rising-sun",
-    "title": "Rising Sun",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2008,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Medium"
-      },
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2008,
-    "firstYear": 2008,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/rising-sun/261915915?i=261919769&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Rising%20Sun",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Rising%20Sun",
-      "exact": true
-    }
-  },
-  {
-    "slug": "simple-fix",
-    "title": "Simple Fix",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2008,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      },
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2008,
-    "firstYear": 2008,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/simple-fix/261915915?i=261917619&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Simple%20Fix",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Simple%20Fix",
-      "exact": true
-    }
-  },
-  {
-    "slug": "wont-let-me-fall-away",
-    "title": "Won't Let Me Fall Away",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2008,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      },
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2008,
-    "firstYear": 2008,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/wont-let-me-fall-away/261915915?i=261916323&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Won%27t%20Let%20Me%20Fall%20Away",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Won%27t%20Let%20Me%20Fall%20Away",
-      "exact": true
-    }
-  },
-  {
-    "slug": "wonders-of-jesus-crucified",
-    "title": "Wonders of Jesus Crucified",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2008,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Fast"
-      },
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2008,
-    "firstYear": 2008,
-    "publisher": "West Coast Revival",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/album/wonders-of-jesus-crucified/261915915?i=261919147&uo=4",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Wonders%20of%20Jesus%20Crucified",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Wonders%20of%20Jesus%20Crucified",
-      "exact": true
-    }
-  },
-  {
-    "slug": "you-were-always-there",
-    "title": "You Were Always There",
-    "key": null,
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2007,
-        "publisher": "West Coast Revival",
-        "album": {
-          "title": "West Coast Revival",
-          "confidence": "confirmed"
-        },
-        "version": null,
-        "tempo": ""
-      }
-    ],
-    "year": 2007,
-    "firstYear": 2007,
-    "publisher": "West Coast Revival",
-    "source": "auto",
-    "listen": {
-      "apple": "https://music.apple.com/us/album/you-were-always-there/261915915?i=261919383&uo=4",
-      "exact": true
-    }
-  },
-  {
-    "slug": "always-forgiven",
-    "title": "Always Forgiven",
-    "key": "E",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2005,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "Sovereign Grace Music release",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2005,
-    "firstYear": 2005,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Always%20Forgiven",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Always%20Forgiven",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Always%20Forgiven",
-      "exact": false
-    }
-  },
-  {
-    "slug": "your-beauty-and-your-majesty",
-    "title": "Your Beauty and Your Majesty",
-    "key": "E",
-    "writers": null,
-    "themes": [],
-    "ccli": null,
-    "charts": {
-      "recording": null,
-      "congregational": null,
-      "extras": []
-    },
-    "lyrics": null,
-    "story": null,
-    "youtubeId": null,
-    "recordings": [
-      {
-        "year": 2003,
-        "publisher": "Sovereign Grace Music",
-        "album": {
-          "title": "Sovereign Grace Music release",
-          "confidence": "inferred"
-        },
-        "version": null,
-        "tempo": "Slow"
-      }
-    ],
-    "year": 2003,
-    "firstYear": 2003,
-    "publisher": "Sovereign Grace Music",
-    "listen": {
-      "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
-      "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Your%20Beauty%20and%20Your%20Majesty",
-      "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Your%20Beauty%20and%20Your%20Majesty",
-      "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Your%20Beauty%20and%20Your%20Majesty",
-      "exact": false
-    }
+  "lyrics": "<h3>Verse 1</h3><p>And can it be that I should gain<br>An interest in the Savior&#x27;s blood<br>Died He for me, who caused His pain<br>For me who Him to death pursued<br>Amazing love how can it be<br>That Thou my God should die for me</p><h3>Chorus</h3><p>Amazing love how can it be<br>That Thou, my God, should die for me</p><h3>Verse 2</h3><p>He left His Father&#x27;s throne above<br>So free so infinite His grace<br>Emptied Himself of all but love<br>And bled for Adam&#x27;s helpless race<br>&#x27;Tis mercy all, immense and free<br>For O my God it found out me</p><h3>Verse 3</h3><p>Long my imprisoned spirit lay<br>Fast bound in sin and nature&#x27;s night<br>Thine eye diffused a quick&#x27;ning ray<br>I woke the dungeon flamed with light<br>My chains fell off my heart was free<br>I rose went forth and followed Thee</p><h3>Verse 4</h3><p>No condemnation now I dread<br>Jesus and all in Him is mine<br>Alive in Him my living Head<br>And clothed in righteousness divine<br>Bold I approach the eternal throne<br>And claim the crown through Christ my own</p><h3>Chorus/Ending</h3><p>Amazing love how can it be<br>That Thou, my God, should die for me<br>Oh rise my soul you’ve been set free<br>My life my all is Christ the King</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [],
+  "year": 2026,
+  "firstYear": 2026,
+  "publisher": "West Coast Revival",
+  "listen": null,
+  "unreleased": true,
+  "source": "manual",
+  "chartInfo": {
+   "sections": [
+    "Intro",
+    "Verse 1",
+    "Chorus",
+    "Interlude",
+    "Verse 2",
+    "Chorus 2",
+    "Interlude 2",
+    "Chorus 3",
+    "Interlude 3",
+    "Verse 4",
+    "Chorus 4",
+    "Chorus/Ending"
+   ],
+   "chords": [
+    "C#m",
+    "A",
+    "E",
+    "Esus",
+    "B",
+    "F#m",
+    "E/G#"
+   ]
   }
+ },
+ {
+  "slug": "have-you-been-to-jesus",
+  "title": "Have You Been to Jesus",
+  "key": "A",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "A",
+    "file": "/charts/have-you-been-to-jesus-A.pdf"
+   },
+   "congregational": {
+    "key": "G",
+    "file": "/charts/have-you-been-to-jesus-G.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2026,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   },
+   {
+    "year": 2025,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2026,
+  "firstYear": 2026,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/have-you-been-to-jesus/1844481334?i=1844481335&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Have%20You%20Been%20to%20Jesus",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Have%20You%20Been%20to%20Jesus",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Intro",
+    "Verse 1",
+    "Verse 2",
+    "Verse 3 Tag",
+    "Ending"
+   ],
+   "chords": [
+    "G",
+    "D",
+    "Em",
+    "C",
+    "Am",
+    "D/G",
+    "Em/G",
+    "C/G",
+    "D/F#",
+    "D/A",
+    "Em/B",
+    "Eb/B"
+   ],
+   "tempo": 88,
+   "time": "4/4"
+  }
+ },
+ {
+  "slug": "i-give-you-all",
+  "title": "I Give You All",
+  "key": "G",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "G",
+    "file": "/charts/i-give-you-all-G.pdf"
+   },
+   "congregational": {
+    "key": "E",
+    "file": "/charts/i-give-you-all-E.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": "<h3>Verse 1</h3><p>Here at the cross I kneel in the dust broken undone<br>The feet of my savior pierced for my sin<br>The crown of my shame has been placed upon him<br>What can a sinner give to this King<br>When all I can offer is the guilt that I bring</p><h3>Chorus</h3><p>I sing to you O God and I fall down on my knees<br>I bring to you O God my humble offering<br>Lord I give you all of me</p><h3>Verse 2</h3><p>I give you all all that I have all that I am<br>I give you my worship I give you my love<br>I give you my life Lord my heart and my all<br>What can a servant give to his King<br>When all I can offer is what you’ve given me</p><h3>Bridge</h3><p>What can I offer you when all the best I do<br>Is filled with sin and pride<br>Lord hear my spirits cry<br>Though I am weak and poor and I have nothing more<br>Than this poor sinners praise<br>A song that must be raised</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [],
+  "year": 2026,
+  "firstYear": 2026,
+  "publisher": "West Coast Revival",
+  "listen": null,
+  "unreleased": true,
+  "source": "manual",
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Interlude",
+    "Verse 2",
+    "Bridge"
+   ],
+   "chords": [
+    "E",
+    "B",
+    "A",
+    "C#m"
+   ]
+  }
+ },
+ {
+  "slug": "o-for-a-thousand-tongues-to-sing",
+  "title": "O For a Thousand Tongues to Sing",
+  "key": "E",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": {
+    "key": "E",
+    "file": "/charts/o-for-a-thousand-tongues-to-sing-E.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": "<h3>Verse 1</h3><p>O for a thousand tongues to sing<br>My great Redeemer&#x27;s praise<br>The glories of my God and King<br>The triumphs of His grace</p><h3>Verse 2</h3><p>My gracious Master and my God<br>Assist me to proclaim<br>To spread thru all the earth abroad<br>The honors of Thy name</p><h3>Verse 3</h3><p>Jesus the name that calms our fears<br>That bids our sorrows cease<br>&#x27;Tis music in the sinner&#x27;s ears<br>&#x27;Tis life and health and peace</p><h3>Verse 4</h3><p>He breaks the pow&#x27;r of canceled sin<br>He sets the pris&#x27;ner free<br>His blood can make the foulest clean<br>His blood availed for me</p><h3>Verse 5</h3><p>Glory to God and praise and love<br>Be ever ever giv&#x27;n<br>By saints below and saints above<br>The Church in earth and heav&#x27;n</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [],
+  "year": 2026,
+  "firstYear": 2026,
+  "publisher": "West Coast Revival",
+  "listen": null,
+  "unreleased": true,
+  "source": "manual",
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Verse 2",
+    "Verse 3",
+    "Verse 4",
+    "Verse 5",
+    "Verse 1"
+   ],
+   "chords": [
+    "E",
+    "B/D#",
+    "A",
+    "B",
+    "C#m"
+   ]
+  }
+ },
+ {
+  "slug": "in-you-is-mercy",
+  "title": "In You Is Mercy",
+  "key": "C",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "C",
+    "file": "/charts/in-you-is-mercy-C.pdf"
+   },
+   "congregational": {
+    "key": "C",
+    "file": "/charts/in-you-is-mercy-C.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": "<h3>Verse 1</h3><p>In You is mercy grace to forgive<br>Where even the worst of sinners can live<br>Now through the cross you’ve washed away<br>The sin the shame the hurt the blame<br>All the wrath that we deserved was place on Christ<br>We will ever praise you for the death You died</p><h3>Chorus</h3><p>So great in love you gave Your only Son<br>That we could come before the throne of god</p><h3>Verse 2</h3><p>In you is power over the grave<br>Death is defeated sinners are raised<br>Now through the Spirit we have received<br>Your hope your power your grace your peace<br>All the righteousness of Christ was placed on us<br>Now you see us through the work that he has done</p><h3>Bridge</h3><p>Standing in wonder<br>In awe of your goodness<br>Standing in wonder<br>In awe of your goodness</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2025,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   }
+  ],
+  "year": 2025,
+  "firstYear": 2025,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/in-you-is-mercy/1817697164?i=1817697165&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20In%20You%20Is%20Mercy",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20In%20You%20Is%20Mercy",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Verse 2",
+    "Interlude",
+    "Bridge"
+   ],
+   "chords": [
+    "C",
+    "Am",
+    "Em",
+    "G",
+    "B",
+    "D"
+   ],
+   "tempo": 140,
+   "time": "4/4"
+  }
+ },
+ {
+  "slug": "solid-rock",
+  "title": "Solid Rock",
+  "key": "E",
+  "writers": null,
+  "themes": [
+   "Hymn"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "E",
+    "file": "/charts/solid-rock-E.pdf"
+   },
+   "congregational": {
+    "key": "E",
+    "file": "/charts/solid-rock-E.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": "<h3>Verse 1</h3><p>My hope is built on nothing less<br>Than Jesus’ blood and righteousness<br>I dare not trust the sweetest frame<br>But wholly trust in Jesus’ Name</p><h3>Chorus</h3><p>On Christ the solid Rock I stand<br>All other ground is sinking sand</p><h3>Verse 2</h3><p>His oath, His covenant, His blood<br>Support me in the whelming flood<br>When all around my soul gives way<br>He then is all my Hope and Stay</p><h3>Verse 3</h3><p>When He shall come with trumpet sound<br>Oh may I then in Him be found<br>Dressed in His righteousness alone<br>Faultless to stand before the throne</p><h3>Bridge</h3><p>On Christ, on Christ we will stand<br>On Christ, on Christ we will stand</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2025,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   }
+  ],
+  "year": 2025,
+  "firstYear": 2025,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/solid-rock/1818898142?i=1818898143&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Solid%20Rock",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Solid%20Rock",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Verse 2",
+    "Verse 3",
+    "Bridge"
+   ],
+   "chords": [
+    "E",
+    "G",
+    "D",
+    "A"
+   ]
+  }
+ },
+ {
+  "slug": "before-my-knees-could-reach-the-ground",
+  "title": "Before My Knees Could Reach the Ground",
+  "key": "G",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "G",
+    "file": "/charts/before-my-knees-could-reach-the-ground-G.pdf"
+   },
+   "congregational": {
+    "key": "G",
+    "file": "/charts/before-my-knees-could-reach-the-ground-G.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": "<h3>Verse 1</h3><p>How oh Lord could You forgive<br>A heart that’s cold and hard<br>I squandered all You gave to me<br>Lord have I gone too far</p><h3>Chorus</h3><p>Before my knees could reach the ground<br>Before my cry had made a sound<br>Before the words could pass my lips<br>You came quickly<br>In the moment I was caught<br>Before my mind could form the thought<br>Before my heart was taught to praise<br>It was your plan to show me grace<br>Oh how merciful you are<br>Oh how wonderful is your steadfast love</p><h3>Verse 2</h3><p>I thought in pride that I knew best<br>And wandered far from you<br>I woke ashamed a sinful mess<br>And there I longed for you</p><h3>Bridge</h3><p>Can I look to the one I have pierced?<br>Could it be my redemption is near?<br>Can I turn while my hand stills holds the spear?<br>Can it be my forgiveness is here?</p><h3>Tag</h3><p>You saw me from afar<br>You came running You came running!</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2022,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2022,
+  "firstYear": 2022,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/before-my-knees-could-reach-the-ground/1606479204?i=1606479205&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Before%20My%20Knees%20Could%20Reach%20the%20Ground",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Before%20My%20Knees%20Could%20Reach%20the%20Ground",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Verse 2",
+    "Bridge",
+    "Tag"
+   ],
+   "chords": [
+    "Em",
+    "D",
+    "C",
+    "G",
+    "Am",
+    "Dsus",
+    "Gsus"
+   ],
+   "tempo": 72,
+   "time": "4/4"
+  }
+ },
+ {
+  "slug": "grace",
+  "title": "Grace",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2022,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2022,
+  "firstYear": 2022,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Grace",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Grace",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Grace",
+   "exact": false
+  }
+ },
+ {
+  "slug": "behold-the-lamb",
+  "title": "Behold the Lamb",
+  "key": "E",
+  "writers": null,
+  "themes": [
+   "The cross"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "E",
+    "file": "/charts/behold-the-lamb-E.pdf"
+   },
+   "congregational": {
+    "key": "E",
+    "file": "/charts/behold-the-lamb-E.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": "<h3>Verse 1</h3><p>Jesus holy and anointed one<br>A voice cries out in the wilderness<br>Make way the Savior of the world<br>Oh the heavens above are opened up<br>The spirit descending as a Dove<br>The father’s He speak beloved Son<br>In whom I am pleased</p><h3>Chorus</h3><p>Behold the Lamb<br>Who takes away to sin of the world and stands<br>Mighty in His power to save<br>Behold the King<br>The Lion who has triumphed over the grave<br>Given the name above all names</p><h3>Verse 2</h3><p>Savior exalted over sin and death<br>The grave breaks before your righteousness<br>And now ascending in the clouds<br>Oh the heavens above are opened wide<br>The spirit descends in tongues of fire<br>Awakening hearts to know your love<br>Boldness to speak</p><h3>Bridge</h3><p>Awestruck in the moment speechless as he comes<br>Weeping or rejoicing all will see he’s Lord of Lords<br>Oh the heavens above are torn in two<br>In righteousness rides the Son of truth<br>Heaven and earth will bow down low<br>All will proclaim</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2021,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2021,
+  "firstYear": 2021,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/behold-the-lamb/1569510327?i=1569510328&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Behold%20the%20Lamb",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Behold%20the%20Lamb",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Interlude To Bridge",
+    "Verse 2",
+    "Bridge"
+   ],
+   "chords": [
+    "A",
+    "C#m",
+    "B",
+    "F#m",
+    "Bsus",
+    "E"
+   ],
+   "tempo": 80,
+   "time": "4/4"
+  }
+ },
+ {
+  "slug": "come-spirit-of-god",
+  "title": "Come Spirit of God",
+  "key": "B",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2005,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "FUSE (EP)",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": "Slow"
+   },
+   {
+    "year": 2021,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Oh the Deep",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2021,
+  "firstYear": 2005,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/come-spirit-of-god-live-in-orlando/1591747988?i=1591747994&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Come%20Spirit%20of%20God",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Come%20Spirit%20of%20God",
+   "exact": true
+  }
+ },
+ {
+  "slug": "come-you-saints",
+  "title": "Come You Saints",
+  "key": null,
+  "writers": "Jonathan Baird, Ryan Baird",
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2005,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "FUSE (EP)",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": "Medium"
+   },
+   {
+    "year": 2021,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Oh the Deep",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2021,
+  "firstYear": 2005,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/come-you-saints/1591747988?i=1591747989&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Come%20You%20Saints",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Come%20You%20Saints",
+   "exact": true
+  }
+ },
+ {
+  "slug": "grace-a-christmas-lullaby",
+  "title": "Grace (A Christmas Lullaby)",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2021,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2021,
+  "firstYear": 2021,
+  "publisher": "West Coast Revival",
+  "source": "auto",
+  "listen": {
+   "apple": "https://music.apple.com/us/album/grace-a-christmas-lullaby/1599332761?i=1599332763&uo=4",
+   "exact": true
+  }
+ },
+ {
+  "slug": "my-saviors-precious-blood",
+  "title": "My Savior's Precious Blood",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2005,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "FUSE (EP)",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": "Medium"
+   },
+   {
+    "year": 2021,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Oh the Deep",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2021,
+  "firstYear": 2005,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/my-saviors-precious-blood/1591747988?i=1591747991&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20My%20Savior%27s%20Precious%20Blood",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20My%20Savior%27s%20Precious%20Blood",
+   "exact": true
+  }
+ },
+ {
+  "slug": "oh-the-deep",
+  "title": "Oh the Deep",
+  "key": "B",
+  "writers": null,
+  "themes": [
+   "Hymn",
+   "Love of Christ"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2005,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "FUSE (EP)",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": "Slow"
+   },
+   {
+    "year": 2021,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Oh the Deep",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2021,
+  "firstYear": 2005,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/oh-the-deep/1591747988?i=1591747992&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Oh%20the%20Deep",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Oh%20the%20Deep",
+   "exact": true
+  }
+ },
+ {
+  "slug": "only-you",
+  "title": "Only You",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2005,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "FUSE (EP)",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": "Fast"
+   },
+   {
+    "year": 2021,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Oh the Deep",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2021,
+  "firstYear": 2005,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/only-you/1591747988?i=1591747990&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Only%20You",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Only%20You",
+   "exact": true
+  }
+ },
+ {
+  "slug": "the-pearl-of-great-price",
+  "title": "The Pearl of Great Price",
+  "key": null,
+  "writers": null,
+  "themes": [
+   "Matthew 13"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2021,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   }
+  ],
+  "year": 2021,
+  "firstYear": 2021,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/the-pearl-of-great-price/1577034449?i=1577034450&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Pearl%20of%20Great%20Price",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Pearl%20of%20Great%20Price",
+   "exact": true
+  }
+ },
+ {
+  "slug": "the-sparrow",
+  "title": "The Sparrow",
+  "key": "Bb",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "Bb",
+    "file": "/charts/the-sparrow-Bb.pdf"
+   },
+   "congregational": {
+    "key": "A",
+    "file": "/charts/the-sparrow-A.pdf"
+   },
+   "extras": [
+    {
+     "label": "Guitar chart (G, capo 3)",
+     "key": "G",
+     "file": "/charts/the-sparrow-G-capo-3.pdf"
+    }
+   ]
+  },
+  "lyrics": "<h3>Verse 1</h3><p>Oh child why do you worry<br>These fears they block your view<br>The Father full of mercy<br>He’s smiling over you</p><h3>Chorus</h3><p>His eye is on the Sparrow<br>His voice has calmed the sea<br>His heart it’s ever for you<br>He knows your every need</p><h3>Verse 2</h3><p>When storms and clouds surround you<br>The floods begin to rise<br>Remember Jesus found you<br>He’ll never leave your side</p><h3>Verse 3</h3><p>When your heart is darkened<br>And caged in by the night<br>Your soul the Spirit brightens<br>And sets your wings to flight</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2021,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   }
+  ],
+  "year": 2021,
+  "firstYear": 2021,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/the-sparrow/1556993803?i=1556993806&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Sparrow",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Sparrow",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Verse 2",
+    "Verse 3"
+   ],
+   "chords": [
+    "A",
+    "D",
+    "E",
+    "G"
+   ],
+   "tempo": 84,
+   "time": "4/4"
+  }
+ },
+ {
+  "slug": "flesh-and-blood",
+  "title": "Flesh and Blood",
+  "key": "C",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "C",
+    "file": "/charts/flesh-and-blood-C.pdf"
+   },
+   "congregational": {
+    "key": "C",
+    "file": "/charts/flesh-and-blood-C.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": "<h3>Verse 1</h3><p>Flesh and blood The Son of God has come<br>His glory set aside<br>In the dust Human just like us<br>Flesh and blood reaching out to touch<br>Our weaknesses to bear<br>In his hands holding every care<br>He felt the brokenness we feel but never broke<br>Every grief of ours he knows</p><h3>Chorus</h3><p>Who is like Him? Like our Savior?<br>Made low, the One Most High<br>Who is like Him, Like our Saviour?<br>The Life that lived to die Who can comprehend?</p><h3>Verse 2</h3><p>Flesh and Blood Broken on the cross<br>In death His glory hides<br>In the grave There his glory waits<br>Uncontainable, our Saviour is alive<br>Risen now to glorious light</p><h3>Tag</h3><p>Jesus, the Lamb for sinners slain now lifted to the highest place</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2020,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2020,
+  "firstYear": 2020,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/flesh-and-blood/1507537130?i=1507537131&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Flesh%20and%20Blood",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Flesh%20and%20Blood",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Verse 2",
+    "Tag"
+   ],
+   "chords": [
+    "Am",
+    "F",
+    "C",
+    "G",
+    "C/E",
+    "G/B",
+    "Am/G"
+   ]
+  }
+ },
+ {
+  "slug": "the-armor",
+  "title": "The Armor",
+  "key": "A",
+  "writers": null,
+  "themes": [
+   "Spiritual warfare",
+   "Ephesians 6"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "A",
+    "file": "/charts/the-armor-A.pdf"
+   },
+   "congregational": {
+    "key": "A",
+    "file": "/charts/the-armor-A.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": "<h3>Verse 1</h3><p>May my armor be the belt of your truth<br>That holds me to you in the battles to come<br>May my armor be your righteousness as<br>A breastplate put on by your mercy oh God<br>May my armor be the shoes for my feet<br>The readiness of your Gospel of peace</p><h3>Chorus</h3><p>That I may be found to stand and not turn back<br>That I may be found to stand until the end</p><h3>Verse 2</h3><p>May my armor be the shield of your faith<br>For the enemy comes with his arrows aflame<br>May my armor be the helmet of Grace<br>On my head it will rest your salvation my God<br>May my armor be the word that is drawn<br>The sword of the Spirit piercing the dark</p><h3>Verse 3</h3><p>May my armies be the prayers of the saints<br>Poured out in faith that rise to your throne<br>May my armies be the preachers who teach<br>The truth of your Word give them boldness to speak<br>May my armies be the fellowship of<br>The ones who hold fast when trials have come</p><h3>Chorus 2</h3><p>Let us be a church that stands and will not turn back<br>Let us be a church that stands until the end</p><h3>Verse 4</h3><p>May my armies be the great crowd of saints<br>Lining the way as we run in this race<br>May my armies be the angels of light<br>That stand by our side and assist in the fight<br>May my armies be the songs of the saved<br>That roar like a wave to break down the walls</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2020,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   }
+  ],
+  "year": 2020,
+  "firstYear": 2020,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/the-armor/1537222624?i=1537222625&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Armor",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Armor",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Verse 2",
+    "Verse 3",
+    "Chorus 2",
+    "Interlude",
+    "Verse 4"
+   ],
+   "chords": [
+    "A",
+    "D"
+   ]
+  }
+ },
+ {
+  "slug": "we-three-kings",
+  "title": "We Three Kings",
+  "key": "E",
+  "writers": null,
+  "themes": [
+   "Christmas"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "E",
+    "file": "/charts/we-three-kings-E.pdf"
+   },
+   "congregational": {
+    "key": "E",
+    "file": "/charts/we-three-kings-E.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": "<h3>Verse 1</h3><p>We three kings of Orient are<br>Bearing gifts we traverse afar<br>Field and fountain moor and mountain<br>Following yonder star</p><h3>Verse 2</h3><p>Born a King on Bethlehem&#x27;s plain<br>Gold I bring to crown Him again<br>King forever ceasing never<br>Over us all to reign</p><h3>Chorus</h3><p>Star of wonder star of night<br>Star with royal beauty bright<br>Westward leading still proceeding<br>Guide us to Thy perfect light</p><h3>Verse 3</h3><p>Frankincense to offer have I<br>Incense owns a Deity nigh<br>Prayer and praising all men raising<br>Worshiping God most high</p><h3>Verse 4</h3><p>Myrrh is mine its bitter perfume<br>Breathes a life of gathering gloom<br>Sorrowing sighing bleeding dying<br>Sealed in the stone-cold tomb</p><h3>Verse 5</h3><p>Glorious now behold Him arise<br>King and God and sacrifice<br>Alleluia Alleluia<br>Heaven to earth replies</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2020,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   }
+  ],
+  "year": 2020,
+  "firstYear": 2020,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/we-three-kings/1541956448?i=1541956449&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20We%20Three%20Kings",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20We%20Three%20Kings",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Verse 2",
+    "Chorus",
+    "Verse 3",
+    "Verse 4",
+    "Verse 5"
+   ],
+   "chords": [
+    "C#m",
+    "B",
+    "E",
+    "A",
+    "F#m",
+    "B/D#",
+    "E/G#"
+   ],
+   "tempo": 112,
+   "time": "4/4"
+  }
+ },
+ {
+  "slug": "behold-our-god",
+  "title": "Behold Our God",
+  "key": "C",
+  "writers": "Jonathan Baird, Meghan Baird, Ryan Baird, Stephen Altrogge",
+  "themes": [
+   "God's greatness",
+   "Isaiah 40"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "C",
+    "file": "/charts/behold-our-god-C.pdf"
+   },
+   "congregational": {
+    "key": "C",
+    "file": "/charts/behold-our-god-C.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2011,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "Sovereign Grace Music release",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   },
+   {
+    "year": 2019,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Single",
+     "confidence": "inferred"
+    },
+    "version": "Almost Acoustic",
+    "tempo": "Medium"
+   }
+  ],
+  "year": 2019,
+  "firstYear": 2011,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/behold-our-god-almost-acoustic/1484243041?i=1484243045&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Behold%20Our%20God",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Behold%20Our%20God",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Instrumental 1",
+    "Verse 2",
+    "Instrumental 2",
+    "Verse 3",
+    "Bridge"
+   ],
+   "chords": [
+    "C",
+    "Em",
+    "Em7",
+    "G",
+    "G/B",
+    "Am",
+    "F",
+    "F2",
+    "F/C",
+    "Am7"
+   ],
+   "tempo": 73,
+   "time": "4/4"
+  }
+ },
+ {
+  "slug": "cross-over-jordan",
+  "title": "Cross over Jordan",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "source": "auto",
+  "listen": {
+   "apple": "https://music.apple.com/us/album/cross-over-jordan/1259515796?i=1259515890&uo=4",
+   "exact": true
+  }
+ },
+ {
+  "slug": "cross-the-jordan",
+  "title": "Cross the Jordan",
+  "key": null,
+  "writers": null,
+  "themes": [
+   "Hope of heaven"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Cross%20the%20Jordan",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Cross%20the%20Jordan",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Cross%20the%20Jordan",
+   "exact": false
+  }
+ },
+ {
+  "slug": "depth-of-mercy",
+  "title": "Depth of Mercy",
+  "key": null,
+  "writers": null,
+  "themes": [
+   "Hymn",
+   "Mercy"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/depth-of-mercy/1259515796?i=1259516041&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Depth%20of%20Mercy",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Depth%20of%20Mercy",
+   "exact": true
+  }
+ },
+ {
+  "slug": "i-want-to-wake-up",
+  "title": "I Want to Wake Up",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/i-want-to-wake-up/1259515796?i=1259515887&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20I%20Want%20to%20Wake%20Up",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20I%20Want%20to%20Wake%20Up",
+   "exact": true
+  }
+ },
+ {
+  "slug": "killing-my-demons",
+  "title": "Killing My Demons",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/killing-my-demons/1259515796?i=1259516043&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Killing%20My%20Demons",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Killing%20My%20Demons",
+   "exact": true
+  }
+ },
+ {
+  "slug": "not-backing-down",
+  "title": "Not Backing Down",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/not-backing-down/1259515796?i=1259515883&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Not%20Backing%20Down",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Not%20Backing%20Down",
+   "exact": true
+  }
+ },
+ {
+  "slug": "sing-your-mercies-new",
+  "title": "Sing Your Mercies New",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/sing-your-mercies-new/1259515796?i=1259516040&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Sing%20Your%20Mercies%20New",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Sing%20Your%20Mercies%20New",
+   "exact": true
+  }
+ },
+ {
+  "slug": "some-bright-golden-morning",
+  "title": "Some Bright Golden Morning",
+  "key": null,
+  "writers": null,
+  "themes": [
+   "Hope of heaven"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/some-bright-golden-morning/1259515796?i=1259516046&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Some%20Bright%20Golden%20Morning",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Some%20Bright%20Golden%20Morning",
+   "exact": true
+  }
+ },
+ {
+  "slug": "some-come-through-fire",
+  "title": "Some Come Through Fire",
+  "key": "C",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "C",
+    "file": "/charts/some-come-through-fire-C.pdf"
+   },
+   "congregational": {
+    "key": "C",
+    "file": "/charts/some-come-through-fire-C.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": "<h3>Verse 1</h3><p>Come laying your guilt at his feet<br>Kindness you’ll meet mercy receive<br>There’s no need to hide or pretend<br>His welcome extends to the neediest man</p><h3>Chorus</h3><p>Some come through fire and some come through flood<br>Some through the desert but all through His blood<br>Some come rejoicing and some come in shame<br>Some with thanksgiving but all by His grace</p><h3>Verse 2</h3><p>It matters not from where you have come<br>But what he has done by giving his son<br>He loves you is that not enough<br>So feelings aside come boldly through Christ</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/some-come-through-fire/1259515796?i=1259515889&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Some%20Come%20Through%20Fire",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Some%20Come%20Through%20Fire",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Verse 2",
+    "Interlude"
+   ],
+   "chords": [
+    "C",
+    "Am",
+    "F",
+    "Dm"
+   ],
+   "tempo": 150,
+   "time": "6/8"
+  }
+ },
+ {
+  "slug": "take-it-from-me",
+  "title": "Take It From Me",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/take-it-from-me/1259515796?i=1259516042&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Take%20It%20From%20Me",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Take%20It%20From%20Me",
+   "exact": true
+  }
+ },
+ {
+  "slug": "the-gathering",
+  "title": "The Gathering",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/the-gathering/1259515796?i=1259516008&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Gathering",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Gathering",
+   "exact": true
+  }
+ },
+ {
+  "slug": "time-keeps-slippin-away",
+  "title": "Time Keeps Slippin' Away",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2013,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "All That Thrills My Soul (EP)",
+     "confidence": "inferred"
+    },
+    "version": "Sovereign Grace recording",
+    "tempo": "Medium"
+   },
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2013,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/time-keeps-slippin-away/1259515796?i=1259515881&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Time%20Keeps%20Slippin%27%20Away",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Time%20Keeps%20Slippin%27%20Away",
+   "exact": true
+  }
+ },
+ {
+  "slug": "to-know-you",
+  "title": "To Know You",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/to-know-you/1259515796?i=1259516045&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20To%20Know%20You",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20To%20Know%20You",
+   "exact": true
+  }
+ },
+ {
+  "slug": "undivided-heart",
+  "title": "Undivided Heart",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2015,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "Some Bright Golden Morning",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2015,
+  "firstYear": 2015,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/undivided-heart/1259515796?i=1259516044&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Undivided%20Heart",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Undivided%20Heart",
+   "exact": true
+  }
+ },
+ {
+  "slug": "all-creatures-of-our-god-and-king",
+  "title": "All Creatures of Our God and King",
+  "key": "A",
+  "writers": "Jonathan Baird, Ryan Baird (new music and arrangement)",
+  "themes": [
+   "Hymn",
+   "Creation"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "A",
+    "file": "/charts/all-creatures-of-our-god-and-king-A.pdf"
+   },
+   "congregational": {
+    "key": "C",
+    "file": "/charts/all-creatures-of-our-god-and-king-C.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2013,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "All That Thrills My Soul (EP)",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   }
+  ],
+  "year": 2013,
+  "firstYear": 2013,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/all-creatures-of-our-god-and-king/1791325714?i=1791325715&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20All%20Creatures%20of%20Our%20God%20and%20King",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20All%20Creatures%20of%20Our%20God%20and%20King",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Verse 2",
+    "Verse 3",
+    "Verse 4"
+   ],
+   "chords": [
+    "C",
+    "Am",
+    "F",
+    "C/G",
+    "G"
+   ],
+   "tempo": 78,
+   "time": "4/4"
+  }
+ },
+ {
+  "slug": "all-that-thrills-my-soul",
+  "title": "All That Thrills My Soul",
+  "key": "Am",
+  "writers": null,
+  "themes": [
+   "Hymn"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "Am",
+    "file": "/charts/all-that-thrills-my-soul-Am.pdf"
+   },
+   "congregational": {
+    "key": "Am",
+    "file": "/charts/all-that-thrills-my-soul-Am.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2013,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "All That Thrills My Soul (EP)",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   }
+  ],
+  "year": 2013,
+  "firstYear": 2013,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/all-that-thrills-my-soul/1791325714?i=1791325716&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20All%20That%20Thrills%20My%20Soul",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20All%20That%20Thrills%20My%20Soul",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Outro"
+   ],
+   "chords": [
+    "Am",
+    "F",
+    "C",
+    "G/B",
+    "G"
+   ]
+  }
+ },
+ {
+  "slug": "in-the-beginning",
+  "title": "In the Beginning",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2013,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "All That Thrills My Soul (EP)",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2013,
+  "firstYear": 2013,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/in-the-beginning/1791325714?i=1791325717&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20In%20the%20Beginning",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20In%20the%20Beginning",
+   "exact": true
+  }
+ },
+ {
+  "slug": "oh-to-see-you",
+  "title": "Oh to See You",
+  "key": "C",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "C",
+    "file": "/charts/oh-to-see-you-C.pdf"
+   },
+   "congregational": {
+    "key": "C",
+    "file": "/charts/oh-to-see-you-C.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2013,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "All That Thrills My Soul (EP)",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2013,
+  "firstYear": 2013,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/oh-to-see-you/1791325714?i=1791325719&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Oh%20to%20See%20You",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Oh%20to%20See%20You",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Intro",
+    "Verse 1",
+    "Interlude",
+    "Verse 2",
+    "Chorus 1",
+    "Verse 3",
+    "Verse 4",
+    "Chorus 3",
+    "Chorus Final"
+   ],
+   "chords": [
+    "C",
+    "G",
+    "Am",
+    "Em",
+    "F"
+   ]
+  }
+ },
+ {
+  "slug": "plead-for-me",
+  "title": "Plead For Me",
+  "key": "A",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "A",
+    "file": "/charts/plead-for-me-A.pdf"
+   },
+   "congregational": {
+    "key": "A",
+    "file": "/charts/plead-for-me-A.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2013,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "All That Thrills My Soul (EP)",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2013,
+  "firstYear": 2013,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/plead-for-me/1791325714?i=1791325718&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Plead%20For%20Me",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Plead%20For%20Me",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [],
+   "chords": [
+    "A",
+    "D",
+    "F#m",
+    "E",
+    "D/F#"
+   ]
+  }
+ },
+ {
+  "slug": "isaiah-53",
+  "title": "Isaiah 53",
+  "key": null,
+  "writers": null,
+  "themes": [
+   "The cross",
+   "Isaiah 53"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2011,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "Sovereign Grace Music release",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   }
+  ],
+  "year": 2011,
+  "firstYear": 2011,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Isaiah%2053",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Isaiah%2053",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Isaiah%2053",
+   "exact": false
+  }
+ },
+ {
+  "slug": "the-prodigal",
+  "title": "The Prodigal",
+  "key": "F",
+  "writers": null,
+  "themes": [
+   "Grace",
+   "Luke 15"
+  ],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "F",
+    "file": "/charts/the-prodigal-F.pdf"
+   },
+   "congregational": {
+    "key": "F",
+    "file": "/charts/the-prodigal-F.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2009,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "Sovereign Grace Music release",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2009,
+  "firstYear": 2009,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20The%20Prodigal",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Prodigal",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Prodigal",
+   "exact": false
+  },
+  "chartInfo": {
+   "sections": [],
+   "chords": [
+    "F",
+    "C",
+    "Dm",
+    "Bb",
+    "Gm7",
+    "F/C",
+    "C/E",
+    "F/A"
+   ]
+  }
+ },
+ {
+  "slug": "undying-love",
+  "title": "Undying Love",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2009,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "Sovereign Grace Music release",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2009,
+  "firstYear": 2009,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Undying%20Love",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Undying%20Love",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Undying%20Love",
+   "exact": false
+  }
+ },
+ {
+  "slug": "day-after-day",
+  "title": "Day After Day",
+  "key": "B",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "B",
+    "file": "/charts/day-after-day-B.pdf"
+   },
+   "congregational": {
+    "key": "B",
+    "file": "/charts/day-after-day-B.pdf"
+   },
+   "extras": [
+    {
+     "label": "Guitar chart (G, capo 4)",
+     "key": "G",
+     "file": "/charts/day-after-day-G-capo-4.pdf"
+    }
+   ]
+  },
+  "lyrics": "<h3>Verse 1</h3><p>Cast upon my savior’s cross are all my sins<br>And never will you choose Lord to remember them<br>Your cleansing blood has covered me and washed me clean<br>It will never fail</p><h3>Chorus</h3><p>Day after day you never change<br>Your power to save and strength to sustain<br>We praise yes we praise your name</p><h3>Verse 2</h3><p>Justified by what you’ve done at Calvary<br>Now living in the righteousness secured for me<br>For when you died and rose again you conquered death and<br>Defeated sin</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2008,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   },
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2008,
+  "firstYear": 2008,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/day-after-day/261915915?i=261916189&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Day%20After%20Day",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Day%20After%20Day",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Verse 2"
+   ],
+   "chords": [
+    "E",
+    "F#",
+    "G#m",
+    "B"
+   ]
+  }
+ },
+ {
+  "slug": "forever",
+  "title": "Forever",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2008,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   },
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2008,
+  "firstYear": 2008,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/forever/261915915?i=261916420&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Forever",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Forever",
+   "exact": true
+  }
+ },
+ {
+  "slug": "goodbye",
+  "title": "Goodbye",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2008,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   },
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2008,
+  "firstYear": 2008,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/goodbye/261915915?i=261917905&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Goodbye",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Goodbye",
+   "exact": true
+  }
+ },
+ {
+  "slug": "here-with-christ",
+  "title": "Here With Christ",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2008,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   },
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2008,
+  "firstYear": 2008,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/here-with-christ/261915915?i=261916684&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Here%20With%20Christ",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Here%20With%20Christ",
+   "exact": true
+  }
+ },
+ {
+  "slug": "house-of-the-lord",
+  "title": "House of the Lord",
+  "key": "B",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": {
+    "key": "B",
+    "file": "/charts/house-of-the-lord-B.pdf"
+   },
+   "congregational": {
+    "key": "G",
+    "file": "/charts/house-of-the-lord-G.pdf"
+   },
+   "extras": []
+  },
+  "lyrics": "<h3>Verse 1</h3><p>Jack started something big<br>When he showed his kids<br>The way they ought to live<br>He said money good and money fine<br>But it won&#x27;t stand the test of time<br>Come on kids I&#x27;ll show you where it&#x27;s at<br>Follow me and I&#x27;ll show you where it&#x27;s at</p><h3>Chorus</h3><p>Going to the house of the Lord<br>Going to the house of the Lord<br>Going to the house of the Lord<br>To worship God</p><h3>Verse 2</h3><p>Lynn he just couldn&#x27;t stay away<br>He said kids here&#x27;s the dearest place<br>And here I&#x27;ll be until I die because<br>I&#x27;m in love with Jesus Christ<br>Come on kids I&#x27;ll show you where it&#x27;s at<br>Follow me and I&#x27;ll show you where it&#x27;s at</p><h3>Verse 3</h3><p>Come here boy and I&#x27;ll tell you a secret<br>From now on it will be your job to keep it<br>I&#x27;ll pass the torch to keep it bright so<br>Spread the word and shine the light<br>Come on kids I&#x27;ll show you where it&#x27;s at<br>Follow me and I&#x27;ll show you where it&#x27;s at</p><h3>Verse 4</h3><p>Sons don&#x27;t let the church lose a generation<br>Let that fire inside you grow with greater passion<br>Strike the note loud and clear<br>The joy you&#x27;re looking for is here<br>Come on kids I&#x27;ll show you where it&#x27;s at<br>Follow me and I&#x27;ll show you where it&#x27;s at</p>",
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2008,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   },
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2008,
+  "firstYear": 2008,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/house-of-the-lord/261915915?i=261918223&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20House%20of%20the%20Lord",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20House%20of%20the%20Lord",
+   "exact": true
+  },
+  "chartInfo": {
+   "sections": [
+    "Verse 1",
+    "Chorus",
+    "Verse 2",
+    "Verse 3",
+    "Verse 4",
+    "Tag"
+   ],
+   "chords": [
+    "G",
+    "C",
+    "Am"
+   ],
+   "tempo": 100,
+   "time": "4/4"
+  }
+ },
+ {
+  "slug": "only-for-you",
+  "title": "Only for You",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2008,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   },
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2008,
+  "firstYear": 2008,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/only-for-you/261915915?i=261918912&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Only%20for%20You",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Only%20for%20You",
+   "exact": true
+  }
+ },
+ {
+  "slug": "refugee",
+  "title": "Refugee",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2008,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   },
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2008,
+  "firstYear": 2008,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/refugee/261915915?i=261918494&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Refugee",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Refugee",
+   "exact": true
+  }
+ },
+ {
+  "slug": "rising-sun",
+  "title": "Rising Sun",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2008,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Medium"
+   },
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2008,
+  "firstYear": 2008,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/rising-sun/261915915?i=261919769&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Rising%20Sun",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Rising%20Sun",
+   "exact": true
+  }
+ },
+ {
+  "slug": "simple-fix",
+  "title": "Simple Fix",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2008,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   },
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2008,
+  "firstYear": 2008,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/simple-fix/261915915?i=261917619&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Simple%20Fix",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Simple%20Fix",
+   "exact": true
+  }
+ },
+ {
+  "slug": "wont-let-me-fall-away",
+  "title": "Won't Let Me Fall Away",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2008,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   },
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2008,
+  "firstYear": 2008,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/wont-let-me-fall-away/261915915?i=261916323&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Won%27t%20Let%20Me%20Fall%20Away",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Won%27t%20Let%20Me%20Fall%20Away",
+   "exact": true
+  }
+ },
+ {
+  "slug": "wonders-of-jesus-crucified",
+  "title": "Wonders of Jesus Crucified",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2008,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Fast"
+   },
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2008,
+  "firstYear": 2008,
+  "publisher": "West Coast Revival",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/album/wonders-of-jesus-crucified/261915915?i=261919147&uo=4",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Wonders%20of%20Jesus%20Crucified",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Wonders%20of%20Jesus%20Crucified",
+   "exact": true
+  }
+ },
+ {
+  "slug": "you-were-always-there",
+  "title": "You Were Always There",
+  "key": null,
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2007,
+    "publisher": "West Coast Revival",
+    "album": {
+     "title": "West Coast Revival",
+     "confidence": "confirmed"
+    },
+    "version": null,
+    "tempo": ""
+   }
+  ],
+  "year": 2007,
+  "firstYear": 2007,
+  "publisher": "West Coast Revival",
+  "source": "auto",
+  "listen": {
+   "apple": "https://music.apple.com/us/album/you-were-always-there/261915915?i=261919383&uo=4",
+   "exact": true
+  }
+ },
+ {
+  "slug": "always-forgiven",
+  "title": "Always Forgiven",
+  "key": "E",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2005,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "Sovereign Grace Music release",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2005,
+  "firstYear": 2005,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Always%20Forgiven",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Always%20Forgiven",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Always%20Forgiven",
+   "exact": false
+  }
+ },
+ {
+  "slug": "your-beauty-and-your-majesty",
+  "title": "Your Beauty and Your Majesty",
+  "key": "E",
+  "writers": null,
+  "themes": [],
+  "ccli": null,
+  "charts": {
+   "recording": null,
+   "congregational": null,
+   "extras": []
+  },
+  "lyrics": null,
+  "story": null,
+  "youtubeId": null,
+  "recordings": [
+   {
+    "year": 2003,
+    "publisher": "Sovereign Grace Music",
+    "album": {
+     "title": "Sovereign Grace Music release",
+     "confidence": "inferred"
+    },
+    "version": null,
+    "tempo": "Slow"
+   }
+  ],
+  "year": 2003,
+  "firstYear": 2003,
+  "publisher": "Sovereign Grace Music",
+  "listen": {
+   "spotify": "https://open.spotify.com/artist/5K4EsfuyB0ltAeK7GmxLT5",
+   "apple": "https://music.apple.com/us/search?term=West%20Coast%20Revival%20Your%20Beauty%20and%20Your%20Majesty",
+   "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Your%20Beauty%20and%20Your%20Majesty",
+   "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Your%20Beauty%20and%20Your%20Majesty",
+   "exact": false
+  }
+ }
 ]
