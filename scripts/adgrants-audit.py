@@ -17,7 +17,7 @@ def floor(u):
     if u.startswith('/worship-is-warfare/') and u != '/worship-is-warfare/': return MIN_VIDEO
     if u in ('/privacy/', '/terms/'): return MIN_LEGAL
     return MIN_WORDS
-PLACEHOLDER = re.compile(r'lorem ipsum|under construction|(?<!am )(?<!is )coming soon|\bTBD\b|\bTODO\b|placeholder text|check back soon|not posted yet|on release|releasing soon', re.I)
+PLACEHOLDER = re.compile(r'lorem ipsum|under construction|(?<!am )(?<!is )coming soon(?! to )|\bTBD\b|\bTODO\b|placeholder text|check back soon|not posted yet|on release|releasing soon', re.I)
 ADS = re.compile(r'adsbygoogle|googlesyndication|doubleclick\.net|amazon-adsystem|taboola|outbrain', re.I)
 AFFIL = re.compile(r'amzn\.to|[?&]tag=[\w-]+-2\d|shareasale|awin1\.com|rstyle\.me', re.I)
 
