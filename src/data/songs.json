@@ -71,7 +71,7 @@
    },
    "extras": []
   },
-  "lyrics": null,
+  "lyrics": "<h3>Verse 1</h3><p>Have you been to Jesus, has your heart grown cold?<br>Friend have you forgotten, straying from the fold?<br>Remember how he loves you, that he came to die<br>How lowly He descended, that he might lift you high<br>Come and gaze at his Cross Oh how merciful!<br>Scan the depths of his love how unsearchable!<br>His affection for you so immovable!<br>Oh bring your heart to Jesus! Oh come and worship Jesus!</p><h3>Verse 2</h3><p>Have you been to Jesus? Hear him call your name<br>“Child my blood spoken” over all your shame<br>Are you trusting in him, for your every breath?<br>Have you known the healing, of his peace and rest?<br>Come and smile in the warmth of his brilliant love!<br>Have you tasted and seen oh how marvelous!<br>There is none to compare oh how glorious!<br>Oh, have you looked to Jesus? Oh, lift your eyes to Jesus!</p><h3>Verse 3</h3><p>Have you been to Jesus? Bring your sin torn soul<br>Come receive the comfort, from the one who knows<br>He is your defender, when you stand accused<br>Where sin has left you broken He can heal your wounds<br>He has conquered our sin He has paid our debt<br>Every charge Satan brings he has laid to rest!<br>We have nothing to fear let us come to him!<br>Oh bring your sin to Jesus! Oh come and worship Jesus<br>Have you laughed in surprise at his lavish gift<br>So determined his love oh how generous<br>How unsparing his grace that he gives and gives<br>Oh, who compares with Jesus? Oh, let us worship Jesus</p><h3>Tag</h3><p>Who compares, who compares<br>Who compares with Jesus</p><h3>Ending</h3><p>Come and gaze at his Cross Oh how merciful!<br>Scan the depths of his love how unsearchable<br>His affection for you so immovable!<br>Oh bring your heart to Jesus<br>Oh bring your heart to Jesus, Oh come and worship Jesus</p>",
   "story": null,
   "youtubeId": null,
   "recordings": [
@@ -130,7 +130,8 @@
    ],
    "tempo": 88,
    "time": "4/4"
-  }
+  },
+  "lyricsManual": true
  },
  {
   "slug": "i-give-you-all",
