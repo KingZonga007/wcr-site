@@ -1107,7 +1107,7 @@
    },
    "extras": []
   },
-  "lyrics": null,
+  "lyrics": "<h3>Verse 1</h3><p>Who has held the oceans in His hands<br>Who has numbered every grain of sand<br>Kings and nations tremble at His voice<br>All creation rises to rejoice</p><h3>Chorus</h3><p>Behold our God seated on His throne<br>Come let us adore Him<br>Behold our King nothing can compare<br>Come let us adore Him</p><h3>Verse 2</h3><p>Who has given counsel to the Lord<br>Who can question any of His words<br>Who can teach the One who knows all things<br>Who can fathom all His wondrous deeds</p><h3>Verse 3</h3><p>Who has felt the nails upon His hands<br>Bearing all the guilt of sinful man<br>God eternal humbled to the grave<br>Jesus Savior risen now to reign</p><h3>Bridge</h3><p>You will reign forever<br>(Let Your glory fill the earth)</p>",
   "story": null,
   "youtubeId": null,
   "recordings": [
@@ -1166,7 +1166,9 @@
    ],
    "tempo": 73,
    "time": "4/4"
-  }
+  },
+  "lyricsManual": true,
+  "lyricsCredit": "© 2011 Sovereign Grace Praise | Sovereign Grace Worship. Used by permission."
  },
  {
   "slug": "cross-over-jordan",
@@ -1758,7 +1760,7 @@
    },
    "extras": []
   },
-  "lyrics": null,
+  "lyrics": "<h3>Verse 1</h3><p>All creatures of our God and King<br>Lift up your voice and with us sing<br>Oh praise Him alleluia<br>Thou burning sun with golden beam<br>Thou silver moon with softer gleam<br>Oh praise Him oh praise Him<br>Alleluia alleluia alleluia</p><h3>Verse 2</h3><p>Let all things their Creator bless<br>And worship Him in humbleness<br>Oh praise Him alleluia<br>Praise praise the Father praise the Son<br>And praise the Spirit Three-in-One<br>Oh praise Him oh praise Him<br>Alleluia alleluia alleluia</p><h3>Verse 3</h3><p>All the redeemed washed by His blood<br>Come and rejoice in His great love<br>Oh praise Him alleluia<br>Christ has defeated every sin<br>Cast all your burdens now on Him<br>Oh praise Him oh praise Him<br>Alleluia alleluia alleluia</p><h3>Verse 4</h3><p>He shall return in pow&#x27;r to reign<br>Heaven and earth will join to say<br>Oh praise Him alleluia<br>Then who shall fall on bended knee<br>All creatures of our God and King<br>Oh praise Him oh praise Him<br>Alleluia alleluia alleluia</p>",
   "story": null,
   "youtubeId": null,
   "recordings": [
@@ -1799,7 +1801,9 @@
    ],
    "tempo": 78,
    "time": "4/4"
-  }
+  },
+  "lyricsManual": true,
+  "lyricsCredit": "© 2013 Sovereign Grace Praise. Used by permission."
  },
  {
   "slug": "all-that-thrills-my-soul",
@@ -1821,7 +1825,7 @@
    },
    "extras": []
   },
-  "lyrics": null,
+  "lyrics": "<h3>Verse 1</h3><p>Spirit of the living God, open up my eyes<br>Show me the pride that blinds me<br>Stoop to my weakness, mighty as You are<br>And show me Jesus as I ought to see Him<br>For when I see Him, truly see Him</p><h3>Chorus</h3><p>All that thrills my soul is Jesus<br>No greater joy can be<br>He bore all my sins and sorrows<br>His perfect love is all that I need</p><h3>Verse 2</h3><p>Father, may Your living Word penetrate my heart<br>And undo the lies that bind me<br>Shine in my darkness, mighty as You are<br>And make me know You as I ought to know You<br>For when I know You, truly know You</p><h3>Verse 3</h3><p>Jesus, still my wandering heart, tie me to the rock<br>That rests on Your work completed<br>Keep me from falling, mighty as You are<br>That I may love You as I ought to love You<br>For when I love You, truly love You</p>",
   "story": null,
   "youtubeId": null,
   "recordings": [
@@ -1857,7 +1861,9 @@
     "G/B",
     "G"
    ]
-  }
+  },
+  "lyricsManual": true,
+  "lyricsCredit": "Music and words by Jonathan Baird and Ryan Baird. © 2012 Sovereign Grace Worship (ASCAP). Used by permission."
  },
  {
   "slug": "in-the-beginning",
@@ -1979,7 +1985,7 @@
    },
    "extras": []
   },
-  "lyrics": null,
+  "lyrics": "<h3>Verse 1</h3><p>When I am weak I lift up my eyes<br>To see my Savior plead for me<br>When fear closes in and doubt sows a seed<br>I know my Savior pleads for me</p><h3>Chorus</h3><p>Of Your love there is no doubt<br>Of Your mercies I am sure<br>Jesus knows my need and for me intercedes<br>All my hope is Christ</p><h3>Verse 2</h3><p>When sin rises up I fall to my knees<br>To see my Savior pleads for me<br>Storms may rage on, but this is my peace:<br>I know my Savior pleads for me</p><h3>Tag</h3><p>Show Your power as we pray in Your Name</p>",
   "story": null,
   "youtubeId": null,
   "recordings": [
@@ -2013,7 +2019,9 @@
     "E",
     "D/F#"
    ]
-  }
+  },
+  "lyricsManual": true,
+  "lyricsCredit": "Music and words by Meghan Baird and Ryan Baird. © 2013 Sovereign Grace Worship (ASCAP). Used by permission."
  },
  {
   "slug": "isaiah-53",
@@ -2077,7 +2085,7 @@
    },
    "extras": []
   },
-  "lyrics": null,
+  "lyrics": "<h3>Verse 1</h3><p>You held out Your arms, I walked away<br>Insolent, I spurned Your face<br>Squandering the gifts You gave to me<br>Holding close forbidden things<br>Destitute, a rebel still, a fool in all my pride<br>The world I once enjoyed is death to me<br>No joy, no hope, no life</p><h3>Verse 2</h3><p>Where now are the friends that I had bought<br>Gone with every penny lost<br>What hope could there be for such as I<br>Sold out to a world of lies<br>Oh, to see Your face again, it seems so distant now<br>Could it be that You would take me back<br>A servant in Your house</p><h3>Verse 3</h3><p>You held out Your arms, I see them still<br>You never left, You never will<br>Running to embrace me, now I know<br>Your cords of love will always hold<br>Mercy’s robe, a ring of grace, such favor undeserved<br>You sing over me and celebrate<br>The rebel now Your child</p>",
   "story": null,
   "youtubeId": null,
   "recordings": [
@@ -2114,7 +2122,9 @@
     "C/E",
     "F/A"
    ]
-  }
+  },
+  "lyricsManual": true,
+  "lyricsCredit": "Words and music by Meghan Baird and Ryan Baird. © 2009 Sovereign Grace Worship (ASCAP). Used by permission."
  },
  {
   "slug": "undying-love",

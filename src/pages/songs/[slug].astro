@@ -129,7 +129,7 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
         <h2 style="margin-top:40px">About the song</h2>
         <div class="prose"><p>{about.join(' ')}</p>{song.story && <p>{song.story}</p>}</div>
 
-        {song.lyrics && (<><h2 style="margin-top:48px">{song.title} lyrics</h2><div class="prose lyrics" set:html={song.lyrics} /><p class="muted" style="font-size:.85rem">{song.writers ? `Words and music: ${song.writers}. ` : ''}© West Coast Revival. Free for use in your church's worship.</p></>)}
+        {song.lyrics && (<><h2 style="margin-top:48px">{song.title} lyrics</h2><div class="prose lyrics" set:html={song.lyrics} /><p class="muted" style="font-size:.85rem">{song.lyricsCredit ? song.lyricsCredit : `${song.writers ? `Words and music: ${song.writers}. ` : ''}© West Coast Revival. Free for use in your church's worship.`}</p></>)}
 
       </div>
 
