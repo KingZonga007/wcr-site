@@ -22,7 +22,7 @@ export function updates(limit = 30) {
   const rel = (releases.releases || [])
     .filter((r) => r.single && r.date >= '2019')
     .filter((r) => (seen.has(r.title) ? false : seen.add(r.title)))
-    .map((r) => ({ date: r.date, kind: 'New release', title: r.title, text: 'Out now on Spotify, Apple Music, YouTube and Amazon Music.', href: slugFor(r.title) || '/songs#discography' }));
+    .map((r) => ({ date: r.date, kind: 'New song', title: r.title, text: 'Free to hear on Spotify, Apple Music, YouTube and Amazon Music, and free for churches to sing.', href: slugFor(r.title) || '/songs#discography' }));
   return [...eps, ...rel].sort((a, b) => b.date.localeCompare(a.date)).slice(0, limit);
 }
 

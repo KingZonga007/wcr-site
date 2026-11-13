@@ -2,8 +2,8 @@
 import Base from '../layouts/Base.astro';
 import { SITE, href } from '../lib/site.js';
 const bios = {
-  short: 'West Coast Revival is brothers Jonathan and Ryan Baird, writers of "Behold Our God" and a widely sung adaptation of "All Creatures of Our God and King." They write songs that marry timeless truth with untamed affection, and host the live show and podcast Worship Is Warfare.',
-  medium: 'West Coast Revival is brothers Jonathan and Ryan Baird. Since founding West Coast Revival in 2003, they have released the FUSE EP (2005) and several albums with and alongside Sovereign Grace Music, and co-wrote "Behold Our God" (2011), now sung in churches around the world. Since 2019 they have released a steady run of singles, including "Solid Rock," "In You Is Mercy" and "Have You Been to Jesus." They host Worship Is Warfare, a live show and podcast that pairs worship with an exhortation from Scripture. Their aim: to magnify Jesus Christ through songs that marry timeless truth with untamed affection.',
+  short: 'West Coast Revival is a 501(c)(3) nonprofit worship ministry led by brothers Jonathan and Ryan Baird, writers of "Behold Our God" and a widely sung adaptation of "All Creatures of Our God and King." The ministry gives churches free songs and chord charts, serves worship teams, and hosts Worship Is Warfare, a live broadcast and podcast of worship and Scripture.',
+  medium: 'West Coast Revival is a 501(c)(3) nonprofit worship ministry led by brothers Jonathan and Ryan Baird. Since founding the ministry in 2003, they have written congregational songs with and alongside Sovereign Grace Music, and co-wrote "Behold Our God" (2011), now sung in churches around the world. Since 2019 they have shared a steady stream of new songs with churches, including "Solid Rock," "In You Is Mercy" and "Have You Been to Jesus." Every song comes with free chord charts for churches. They host Worship Is Warfare, a live broadcast and podcast that pairs worship with an exhortation from Scripture. Their aim: to magnify Jesus Christ through songs that marry timeless truth with untamed affection.',
 };
 const photos = [
   { f: 'brothers-portrait', alt: 'Jonathan and Ryan Baird, portrait' },
@@ -14,13 +14,13 @@ const photos = [
   { f: 'img-8305', alt: 'Jonathan Baird, portrait orientation' },
 ];
 ---
-<Base title="Press Kit" description="West Coast Revival press kit: bios, photos, highlights and booking contact." image="/img/brothers-portrait-800.webp">
+<Base title="Media Kit" description="West Coast Revival media kit: ministry overview, bios, photos and contact for churches, event hosts and media." image="/img/brothers-portrait-800.webp">
   <section class="section">
     <div class="wrap">
-      <p class="eyebrow">Press kit</p>
+      <p class="eyebrow">Media kit</p>
       <h1>West Coast Revival</h1>
       <p class="lead">{SITE.credential}</p>
-      <div class="btn-row"><a class="btn primary" href={href('/invite')}>Booking inquiry</a></div>
+      <div class="btn-row"><a class="btn primary" href={href('/invite')}>Invite us to your church</a></div>
     </div>
   </section>
   <section class="section alt">
@@ -35,19 +35,20 @@ const photos = [
         <h2>Highlights</h2>
         <ul>
           <li>Co-writers of "Behold Our God" (Sovereign Grace Music, 2011)</li>
-          <li>New music and arrangement for "All Creatures of Our God and King"</li>
-          <li>Recording since 2005, with Sovereign Grace Music and independently</li>
-          <li>Host Worship Is Warfare, 100+ episodes</li>
+          <li>Arrangement of "All Creatures of Our God and King" sung in churches</li>
+          <li>Free chord charts for churches in recording and congregational keys</li>
+          <li>Worship Is Warfare, 100+ episodes of worship and Scripture</li>
+          <li>501(c)(3) nonprofit ministry, EIN {SITE.ein}</li>
         </ul>
         <h3 style="margin-top:20px">Contact</h3>
-        <p class="muted">Booking and press: <a href={href('/invite')}>inquiry form</a></p>
+        <p class="muted">Church invitations and media: <a href={href('/invite')}>inquiry form</a></p>
       </div>
     </div>
   </section>
   <section class="section">
     <div class="wrap">
       <h2>Photos</h2>
-      <p class="muted">Free to use for promoting West Coast Revival. For high-resolution files, email {SITE.email}.</p>
+      <p class="muted">Free to use when announcing a West Coast Revival event or writing about the ministry. For high-resolution files, email {SITE.email}.</p>
       <div class="grid three">
         {photos.map((p) => (
           <a class="photo" href={`/img/${p.f}-1600.webp`} download><img width="800" height="600" src={`/img/${p.f}-800.webp`} alt={p.alt} loading="lazy" style="aspect-ratio:4/3" /></a>

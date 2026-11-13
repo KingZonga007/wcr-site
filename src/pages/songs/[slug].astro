@@ -142,7 +142,7 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
           {song.ccli && (<><dt>CCLI</dt><dd>{song.ccli}</dd></>)}
           {song.themes.length > 0 && (<><dt>Themes</dt><dd>{song.themes.join(', ')}</dd></>)}
           <dt>Recordings</dt>
-          <dd>{song.unreleased && song.recordings.length === 0 && <div>Not yet released</div>}{song.recordings.map((r) => <div>{r.year} · {r.album.title}{r.version ? ` (${r.version})` : ''}</div>)}</dd>
+          <dd>{song.unreleased && song.recordings.length === 0 && <div>Not yet released</div>}{song.recordings.map((r) => <div>{r.year} · {r.album.title.replace(/\s*\(EP\)$/, "")}{r.version ? ` (${r.version})` : ''}</div>)}</dd>
         </dl>
         {isSGM && <p class="muted" style="font-size:.85rem;margin-top:14px">Originally released with Sovereign Grace Music.</p>}
         {inEpisodes.length > 0 && (

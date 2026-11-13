@@ -16,7 +16,7 @@ const latestEpisode = Math.max(...episodes.map((e) => e.number));
       <h1>A nonprofit worship ministry serving the church</h1>
       <h2 style="margin-top:28px">Our mission</h2>
       <p class="lead">{SITE.mission}</p>
-      <p>West Coast Revival is an Arizona nonprofit corporation recognized by the IRS as a 501(c)(3) tax-exempt organization (EIN {SITE.ein}). Everything we make for churches is free: our chord charts, our live show and podcast, and our recorded songs on every major streaming service.</p>
+      <p>West Coast Revival is an Arizona nonprofit corporation recognized by the IRS as a 501(c)(3) tax-exempt organization (EIN {SITE.ein}). Everything we make for churches is free: our chord charts, our live broadcast and podcast, and our recorded songs on every major streaming service.</p>
     </div>
   </section>
 
@@ -27,8 +27,8 @@ const latestEpisode = Math.max(...episodes.map((e) => e.number));
       <div class="grid" style="margin-top:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px">
         <div class="card">
           <h3>Songwriting and recording</h3>
-          <p>Since 2003 we have written and recorded congregational worship songs and hymn arrangements rooted in Scripture. We began as contributing songwriters and artists with Sovereign Grace Music in 2005 and co-wrote "Behold Our God" (2011), now sung by churches around the world. We release new songs as singles so churches can learn them as soon as they are ready.</p>
-          <p class="muted">{releasedCount} songs released so far.</p>
+          <p>Since 2003 we have written and recorded congregational worship songs and hymn arrangements rooted in Scripture. We began as contributing songwriters with Sovereign Grace Music in 2005 and co-wrote "Behold Our God" (2011), now sung by churches around the world. We share new songs one at a time so churches can learn them as soon as they are ready.</p>
+          <p class="muted">{releasedCount} songs available to churches so far.</p>
           <a class="btn ghost" href={href('/songs')}>Browse the songs</a>
         </div>
         <div class="card">

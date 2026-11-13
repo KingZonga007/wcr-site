@@ -4,7 +4,7 @@ import { href, PREVIEW } from '../lib/site.js';
 const services = [
   { t: 'Speaking and teaching', d: 'Worship theology, the place of song in the life of the church, and songwriting rooted in Scripture.', img: 'ryan-worship' },
   { t: 'Workshops and seminars', d: 'Training for worship teams and songwriters: arranging, leading, and writing songs for congregations.', img: 'img-8324' },
-  { t: 'Worship nights', d: 'An evening of West Coast Revival songs and hymns, with Scripture woven through.', img: 'img-8084' },
+  { t: 'Worship nights', d: 'An evening of congregational worship for your church and community: hymns and West Coast Revival songs, with Scripture woven through.', img: 'img-8084' },
   { t: 'Conference worship leading', d: 'Leading a conference in congregational worship across sessions, with a set built around your theme.', img: 'band-best' },
 ];
 ---
@@ -43,7 +43,7 @@ const services = [
       <div>
         <h2>Send an inquiry</h2>
         <p class="lead">Tell us about your event. We'll reply within a few days.</p>
-        <p class="muted">Want the details first? See the <a href={href('/press')}>press kit</a>.</p>
+        <p class="muted">Want the details first? See the <a href={href('/press')}>media kit</a>.</p>
       </div>
       <form class="form" name="booking" method="POST" data-netlify="true" action={href('/thanks')} id="booking-form" data-preview={PREVIEW ? '1' : '0'}>
         <input type="hidden" name="form-name" value="booking" />
