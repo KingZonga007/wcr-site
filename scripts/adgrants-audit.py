@@ -123,7 +123,7 @@ for u in ['/','/about/','/ministry/','/contact/']:
     for label,rx in [('EIN','39-2579605'),('address','264 S Port'),('email','info@westcoastrevival.org')]:
         if rx not in t: fail('B2 EIN + address + email on home, about, ministry, contact', f'{u} missing {label}')
 mt=' '.join(pages.get('/ministry/',P()).all)
-for w in ['who we serve','program','financial']:
+for w in ['our mission','who we serve','program','financial']:
     if w not in mt.lower(): fail('B3 programs and who we serve described', f'/ministry/ missing "{w}"')
 gt=' '.join(pages['/give/'].all).lower()
 if 'how your gift' not in gt or 'tax' not in gt: fail('B4 financial transparency','/give/ missing gift-use or tax wording')
