@@ -239,4 +239,5 @@ dialog::backdrop { background: rgba(0,0,0,.65); }
 @font-face{font-family:'Oswald Fallback';src:local('Arial Narrow'),local('Arial');size-adjust:82%;ascent-override:145%;descent-override:35%;line-gap-override:0%}
 .form .check input[type=checkbox]{width:24px;height:24px;flex:none}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-@font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:107%;ascent-override:90%;descent-override:22.4%;line-gap-override:0%}
+@font-face{font-family:'Inter Fallback';font-weight:400;src:local('Arial'),local('Liberation Sans'),local('Roboto'),local('Helvetica');size-adjust:107%;ascent-override:90%;descent-override:22.4%;line-gap-override:0%}
+@font-face{font-family:'Inter Fallback';font-weight:600;src:local('Arial Bold'),local('Arial-BoldMT'),local('Liberation Sans Bold'),local('Roboto Bold'),local('Helvetica Bold');size-adjust:103%;ascent-override:90%;descent-override:22.4%;line-gap-override:0%}
