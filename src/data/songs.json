@@ -1921,7 +1921,7 @@
    },
    "extras": []
   },
-  "lyrics": null,
+  "lyrics": "<h3>Verse 1</h3><p>Christ the King of every age enthroned in light ere’ worlds were made<br>Come in mortal flesh divine into our dark came heaven’s light</p><h3>Verse 2</h3><p>Hanging on a cross of shame I see the wounds my hands have made<br>Forgive them Father, now he cries and with a breath my savior dies</p><h3>Chorus</h3><p>Oh to see you Jesus I can hardly wait<br>To behold your wounds of grace<br>To express my love and thank you face to face<br>My heart is yours for You I long</p><h3>Verse 3</h3><p>Look into his empty grave the bonds of death could not constrain<br>Sin and fear and death are dead for Christ arose and crushed their head</p><h3>Verse 4</h3><p>Coming soon to claim his Bride all the redeemed he’ll purify<br>We’ll need no sun or moon to shine for Christ the lamb will be our light!</p><h3>Final chorus</h3><p>Oh to see you Jesus I can hardly wait<br>To behold your wounds of grace<br>To express my love and thank you face to face<br>My heart is yours for You I long<br>My heart is yours for You I long</p>",
   "story": null,
   "youtubeId": null,
   "recordings": [
@@ -1965,7 +1965,9 @@
     "Em",
     "F"
    ]
-  }
+  },
+  "lyricsManual": true,
+  "lyricsCredit": "© 2013 Sovereign Grace Worship (ASCAP). Used by permission."
  },
  {
   "slug": "plead-for-me",
