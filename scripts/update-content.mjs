@@ -117,7 +117,7 @@ async function appleCatalog(state) {
   // Apple lists a different 1970s band under the same artist page: ignore anything before WCR's first release (2005),
   // and the album intro track.
   const keep = (t) => t.releaseDate && t.releaseDate.slice(0, 4) >= '2005' && !/^intro$/i.test(t.trackName || '');
-  return l.results.filter((t) => t.wrapperType === 'track').map((t) => ({
+  return l.results.filter((t) => t.wrapperType === 'track').filter(keep).map((t) => ({
     title: t.trackName.replace(/\s*\((?:live|feat\.[^)]*)\)\s*$/i, ''), fullTitle: t.trackName, album: t.collectionName,
     date: (t.releaseDate || '').slice(0, 10), apple: t.trackViewUrl, artwork: (t.artworkUrl100 || '').replace('100x100', '600x600'),
     single: t.trackCount === 1 || / - single$/i.test(t.collectionName),
