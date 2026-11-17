@@ -30,6 +30,9 @@ const sections = (ci.sections || []).filter((x, i, a) => a.indexOf(x) === i);
 const chords = (ci.chords || []).filter((c) => !c.includes('/'));
 const slash = (ci.chords || []).filter((c) => c.includes('/'));
 const chartKey = (song.charts.congregational || song.charts.recording)?.key;
+const capoExtras = song.charts.extras.filter((e) => /capo/i.test(e.label));
+const altCharts = song.charts.extras.filter((e) => e.description);
+const btnExtras = song.charts.extras.filter((e) => !e.description);
 // Number-system degrees and capo suggestion, worked out from the chart key.
 const NOTES = { C: 0, 'C#': 1, Db: 1, D: 2, 'D#': 3, Eb: 3, E: 4, F: 5, 'F#': 6, Gb: 6, G: 7, 'G#': 8, Ab: 8, A: 9, 'A#': 10, Bb: 10, B: 11 };
 const minorKey = /m$/.test(chartKey || '');
@@ -48,8 +51,9 @@ const playing = [
   chords.length > 1 ? `In ${chartKey} the song uses ${chords.length} chords: ${list(chords)}${slash.length ? `, with ${slash.length === 1 ? 'one slash chord' : 'slash chords'} (${list(slash)}) for the bass movement` : ''}.` : '',
   numbers.length > 1 ? `If your worship team reads numbers, those are the ${list(numbers)} chords${minorKey ? `, counting from ${Object.keys(NOTES).find((k) => NOTES[k] === tonic)}, the relative major` : ''}.` : '',
   sections.length > 2 ? `The chart follows this order: ${sections.join(', ')}.` : '',
-  capo && !song.charts.extras.length ? (capo.fret === 0 ? `On guitar the key of ${chartKey} plays in open ${capo.n} shapes with no capo.` : `On guitar, put a capo on fret ${capo.fret} and play ${capo.n} shapes to stay in ${chartKey} with open chords.`) : '',
-  song.charts.extras.length ? `Guitarists can also use the capo chart (${list(song.charts.extras.map((e) => e.label.replace(/^Guitar chart \(|\)$/g, '')))}) to play open chord shapes.` : '',
+  altCharts.length ? `There ${altCharts.length === 1 ? 'is also an alternate arrangement' : `are also ${altCharts.length} alternate arrangements`}: ${list(altCharts.map((e) => e.label.replace(/\s*\([^)]*\)$/, '').toLowerCase() + ` in ${e.key}`))}.` : '',
+  capo && !capoExtras.length ? (capo.fret === 0 ? `On guitar the key of ${chartKey} plays in open ${capo.n} shapes with no capo.` : `On guitar, put a capo on fret ${capo.fret} and play ${capo.n} shapes to stay in ${chartKey} with open chords.`) : '',
+  capoExtras.length ? `Guitarists can also use the capo chart (${list(capoExtras.map((e) => e.label.replace(/^Guitar chart \(|\)$/g, '')))}) to play open chord shapes.` : '',
 ].filter(Boolean);
 const rec = song.recordings[0];
 const albumName = rec && rec.album.confidence !== 'inferred' && !/^(single|sovereign grace music release)$/i.test(rec.album.title) ? rec.album.title : null;
@@ -110,9 +114,23 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
           })}
         </div>
         )}
-        {song.charts.extras.length > 0 && (
+        {altCharts.length > 0 && (
+          <>
+          <h3 style="margin-top:8px">Alternate arrangements</h3>
+          <div class="grid two" style="gap:16px;margin-bottom:20px">
+            {altCharts.map((c) => (
+              <div class="card">
+                <h3>{c.label}</h3>
+                <p class="muted" style="margin-top:0">{c.description}</p>
+                <a class="btn primary chart-dl" href={c.file} download data-song={song.slug} data-chart={c.label}>Download PDF</a>
+              </div>
+            ))}
+          </div>
+          </>
+        )}
+        {btnExtras.length > 0 && (
           <div class="btn-row" style="margin-bottom:20px">
-            {song.charts.extras.map((c) => (
+            {btnExtras.map((c) => (
               <a class="btn ghost chart-dl" href={c.file} download data-song={song.slug} data-chart={c.label}>{c.label}</a>
             ))}
           </div>

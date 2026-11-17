@@ -1105,7 +1105,20 @@
         "key": "C",
         "file": "/charts/behold-our-god-C.pdf"
       },
-      "extras": []
+      "extras": [
+        {
+          "label": "Orchestral arrangement (C)",
+          "key": "C",
+          "file": "/charts/behold-our-god-C-orchestral.pdf",
+          "description": "Follows the orchestral arrangement, with an interlude, a descending bass transition and a shortened bridge."
+        },
+        {
+          "label": "Acoustic, female lead (G)",
+          "key": "G",
+          "file": "/charts/behold-our-god-G-acoustic-female.pdf",
+          "description": "In G for a female lead vocal, with an acoustic feel and a shortened bridge."
+        }
+      ]
     },
     "lyrics": "<h3>Verse 1</h3><p>Who has held the oceans in His hands<br>Who has numbered every grain of sand<br>Kings and nations tremble at His voice<br>All creation rises to rejoice</p><h3>Chorus</h3><p>Behold our God seated on His throne<br>Come let us adore Him<br>Behold our King nothing can compare<br>Come let us adore Him</p><h3>Verse 2</h3><p>Who has given counsel to the Lord<br>Who can question any of His words<br>Who can teach the One who knows all things<br>Who can fathom all His wondrous deeds</p><h3>Verse 3</h3><p>Who has felt the nails upon His hands<br>Bearing all the guilt of sinful man<br>God eternal humbled to the grave<br>Jesus Savior risen now to reign</p><h3>Bridge</h3><p>You will reign forever<br>(Let Your glory fill the earth)</p>",
     "story": null,
@@ -1144,25 +1157,22 @@
     },
     "chartInfo": {
       "sections": [
+        "Intro",
         "Verse 1",
         "Chorus",
         "Instrumental 1",
         "Verse 2",
         "Instrumental 2",
         "Verse 3",
-        "Bridge"
+        "Tag"
       ],
       "chords": [
         "C",
         "Em",
-        "Em7",
         "G",
         "G/B",
         "Am",
-        "F",
-        "F2",
-        "F/C",
-        "Am7"
+        "F"
       ],
       "tempo": 73,
       "time": "4/4"
