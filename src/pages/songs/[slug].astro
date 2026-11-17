@@ -97,8 +97,8 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
         <h2 id="charts">Free charts</h2>
         <p class="muted" style="margin-top:0">Each chart is a printable PDF with the chords written above the lyrics.</p>
         {(song.charts.recording || song.charts.congregational) && (
-        <div class={song.charts.recording && song.charts.congregational ? 'grid two' : 'grid'} style="gap:16px;margin-bottom:20px">
-          {[['recording', 'Recording key', 'Matches the recording'], ['congregational', 'Congregational key', 'Easier for most congregations to sing']].filter(([k]) => song.charts[k]).map(([k, label, note]) => {
+        <div class={song.charts.recording && song.charts.congregational && !sameChart ? 'grid two' : 'grid'} style="gap:16px;margin-bottom:20px">
+          {[['recording', 'Recording key', 'Matches the recording'], ['congregational', 'Congregational key', 'Easier for most congregations to sing']].filter(([k]) => song.charts[k] && !(k === 'recording' && sameChart)).map(([k, label, note]) => {
             const c = song.charts[k];
             return (
               <div class="card">
