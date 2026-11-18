@@ -13,6 +13,8 @@ const { song } = Astro.props;
 const related = paged.filter((s) => s.slug !== song.slug && Math.abs(s.year - song.year) <= 2).slice(0, 3);
 const inEpisodes = episodes.filter((e) => e.songs.includes(song.slug));
 const isSGM = song.recordings.some((r) => r.publisher === 'Sovereign Grace Music');
+const releaseYear = song.recordings.length ? Math.min(...song.recordings.map((r) => r.year)) : song.firstYear || song.year;
+const wcrCredit = `© ${releaseYear} West Coast Revival Music (ASCAP). Administered worldwide by Songtrust. All rights reserved.`;
 const schema = [{
   '@context': 'https://schema.org',
   '@type': 'MusicRecording',
@@ -162,7 +164,8 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
         <h2 style="margin-top:40px">About the song</h2>
         <div class="prose"><p>{about.join(' ')}</p>{song.story && <p>{song.story}</p>}</div>
 
-        {song.lyrics && (<><h2 style="margin-top:48px">{song.title} lyrics</h2><div class="prose lyrics" set:html={song.lyrics} /><p class="muted" style="font-size:.85rem">{song.lyricsCredit ? song.lyricsCredit : `${song.writers ? `Words and music: ${song.writers}. ` : ''}© West Coast Revival. Free for use in your church's worship.`}</p></>)}
+        {song.lyrics && (<><h2 style="margin-top:48px">{song.title} lyrics</h2><div class="prose lyrics" set:html={song.lyrics} /><p class="muted" style="font-size:.85rem">{song.lyricsCredit ? song.lyricsCredit : `${song.writers ? `Words and music: ${song.writers}. ` : ''}${isSGM ? '© West Coast Revival.' : wcrCredit}`}</p></>)}
+        {!song.lyrics && !isSGM && <p class="muted" style="font-size:.85rem;margin-top:24px">{wcrCredit}</p>}
 
       </div>
 
