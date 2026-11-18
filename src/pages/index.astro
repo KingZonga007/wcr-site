@@ -1,5 +1,5 @@
 ---
-import { songUrl, songUrlBySlug, hasPage } from '../lib/songs.js';
+import { songUrl, songUrlBySlug, hasPage, keyLabel } from '../lib/songs.js';
 import Base from '../layouts/Base.astro';
 import EmailForm from '../components/EmailForm.astro';
 import LiveStatus from '../components/LiveStatus.astro';
@@ -159,7 +159,7 @@ const STORE_ON = false; // switched on in phase 3
           <a class="card song-card" href={href(songUrl(s))}>
             {(s.charts.recording || s.charts.congregational) && <span class="badge">Free charts</span>}
             <h3>{s.title}</h3>
-            {s.key && <span class="meta">Key of {s.key}</span>}
+            {keyLabel(s) && <span class="meta">{keyLabel(s)}</span>}
           </a>
         ))}
       </div>
