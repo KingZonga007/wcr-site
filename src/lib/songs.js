@@ -10,7 +10,9 @@ export const listed = songs.filter((s) => !hasPage(s));
 export const keyLabel = (s) => {
   const c = s.charts || {};
   const keys = [...new Set([c.recording?.key, c.congregational?.key, ...(c.extras || []).map((e) => e.key)].filter(Boolean))];
-  if (!keys.length) return s.key ? `Key of ${s.key}` : '';
-  if (keys.length === 1) return `Key of ${keys[0]}`;
-  return `Keys of ${keys.slice(0, -1).join(', ')} and ${keys[keys.length - 1]}`;
+  if (!keys.length) return s.key ? `Key of ${fk(s.key)}` : '';
+  if (keys.length === 1) return `Key of ${fk(keys[0])}`;
+  return `Keys of ${keys.slice(0, -1).map(fk).join(', ')} and ${fk(keys[keys.length - 1])}`;
 };
+// Show flats and sharps as symbols, e.g. "Bb" -> "B♭", "F#m" -> "F♯m". Survives uppercase headings.
+export const fk = (s) => String(s ?? '').replace(/\b([A-G])b(?![a-z])|\b([A-G])b(?=m\b|maj|sus|dim|aug|\d)/g, (m, x, y) => (x || y) + '\u266d').replace(/\b([A-G])#/g, '$1\u266f');

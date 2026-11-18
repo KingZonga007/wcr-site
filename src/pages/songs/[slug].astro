@@ -4,7 +4,7 @@ import EmailForm from '../../components/EmailForm.astro';
 import { SITE, href } from '../../lib/site.js';
 import songs from '../../data/songs.json';
 import episodes from '../../data/episodes.json';
-import { paged } from '../../lib/songs.js';
+import { paged, fk } from '../../lib/songs.js';
 
 export function getStaticPaths() {
   return paged.map((s) => ({ params: { slug: s.slug }, props: { song: s } }));
@@ -102,7 +102,7 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
             const c = song.charts[k];
             return (
               <div class="card">
-                <h3>{label}{c?.key ? `: ${c.key}${c.modulatesTo ? ` to ${c.modulatesTo}` : ''}` : ''}</h3>
+                <h3>{label}{c?.key ? `: ${fk(c.key)}${c.modulatesTo ? ` to ${fk(c.modulatesTo)}` : ''}` : ''}</h3>
                 <p class="muted" style="margin-top:0">{note}</p>
                 {c ? (
                   <a class="btn primary chart-dl" href={c.file} download data-song={song.slug} data-chart={k}>Download PDF</a>
@@ -120,7 +120,7 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
           <div class="grid two" style="gap:16px;margin-bottom:20px">
             {altCharts.map((c) => (
               <div class="card">
-                <h3>{c.label}</h3>
+                <h3>{fk(c.label)}</h3>
                 <p class="muted" style="margin-top:0">{c.description}</p>
                 <a class="btn primary chart-dl" href={c.file} download data-song={song.slug} data-chart={c.label}>Download PDF</a>
               </div>
@@ -131,7 +131,7 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
         {btnExtras.length > 0 && (
           <div class="btn-row" style="margin-bottom:20px">
             {btnExtras.map((c) => (
-              <a class="btn ghost chart-dl" href={c.file} download data-song={song.slug} data-chart={c.label}>{c.label}</a>
+              <a class="btn ghost chart-dl" href={c.file} download data-song={song.slug} data-chart={c.label}>{fk(c.label)}</a>
             ))}
           </div>
         )}
@@ -143,7 +143,7 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
         )}
 
         <h2 style="margin-top:40px">Playing {song.title}</h2>
-        <div class="prose">{playing.map((t) => <p>{t}</p>)}</div>
+        <div class="prose">{playing.map((t) => <p>{fk(t)}</p>)}</div>
         <h2 style="margin-top:40px">About the song</h2>
         <div class="prose"><p>{about.join(' ')}</p>{song.story && <p>{song.story}</p>}</div>
 
@@ -154,7 +154,7 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
       <aside class="card">
         <h3>Song details</h3>
         <dl class="facts">
-          {keys.length > 0 && (<><dt>Chart {keys.length > 1 ? 'keys' : 'key'}</dt><dd>{keys.join(', ')}</dd></>)}
+          {keys.length > 0 && (<><dt>Chart {keys.length > 1 ? 'keys' : 'key'}</dt><dd>{keys.map(fk).join(', ')}</dd></>)}
           {ci.tempo && (<><dt>Tempo</dt><dd>{ci.tempo} bpm</dd></>)}
           {ci.time && (<><dt>Time</dt><dd>{ci.time}</dd></>)}
           {song.ccli && (<><dt>CCLI</dt><dd>{song.ccli}</dd></>)}
