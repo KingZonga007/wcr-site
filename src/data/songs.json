@@ -334,6 +334,7 @@
     },
     "chartInfo": {
       "sections": [
+        "Intro",
         "Verse 1",
         "Chorus",
         "Verse 2",
@@ -345,7 +346,9 @@
         "G",
         "D",
         "A"
-      ]
+      ],
+      "tempo": 80,
+      "time": "4/4"
     }
   },
   {
