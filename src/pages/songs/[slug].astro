@@ -33,6 +33,17 @@ const chartKey = (song.charts.congregational || song.charts.recording)?.key;
 const capoExtras = song.charts.extras.filter((e) => /capo/i.test(e.label));
 const altCharts = song.charts.extras.filter((e) => e.description);
 const btnExtras = song.charts.extras.filter((e) => !e.description);
+const NAMES = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
+const SEMI = { C: 0, 'C#': 1, Db: 1, D: 2, 'D#': 3, Eb: 3, E: 4, F: 5, 'F#': 6, Gb: 6, G: 7, 'G#': 8, Ab: 8, A: 9, 'A#': 10, Bb: 10, B: 11 };
+const capoNote = (e) => {
+  const m = e.label.match(/capo (\d+)/i);
+  if (!m || SEMI[e.key] === undefined) return 'Open chord shapes for guitar.';
+  const fret = +m[1];
+  const sounds = NAMES[(SEMI[e.key] + fret) % 12];
+  const which = song.charts.recording && SEMI[song.charts.recording.key] === SEMI[sounds] ? ', the recording key' : song.charts.congregational && SEMI[song.charts.congregational.key] === SEMI[sounds] ? ', the congregational key' : '';
+  return `Play ${e.key} shapes with a capo on fret ${fret} to sound in ${sounds}${which}.`;
+};
+const hk = (s) => fk(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/([\u266d\u266f])/g, '<span class="acc">$1</span>');
 // Number-system degrees and capo suggestion, worked out from the chart key.
 const NOTES = { C: 0, 'C#': 1, Db: 1, D: 2, 'D#': 3, Eb: 3, E: 4, F: 5, 'F#': 6, Gb: 6, G: 7, 'G#': 8, Ab: 8, A: 9, 'A#': 10, Bb: 10, B: 11 };
 const minorKey = /m$/.test(chartKey || '');
@@ -102,7 +113,7 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
             const c = song.charts[k];
             return (
               <div class="card">
-                <h3>{label}{c?.key ? `: ${fk(c.key)}${c.modulatesTo ? ` to ${fk(c.modulatesTo)}` : ''}` : ''}</h3>
+                <h3 set:html={hk(`${label}${c?.key ? `: ${c.key}${c.modulatesTo ? ` to ${c.modulatesTo}` : ''}` : ''}`)} />
                 <p class="muted" style="margin-top:0">{note}</p>
                 {c ? (
                   <a class="btn primary chart-dl" href={c.file} download data-song={song.slug} data-chart={k}>Download PDF</a>
@@ -114,26 +125,30 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
           })}
         </div>
         )}
+        {btnExtras.length > 0 && (
+          <div class="grid" style="gap:16px;margin-bottom:20px">
+            {btnExtras.map((c) => (
+              <div class="card">
+                <h3 set:html={hk(c.label)} />
+                <p class="muted" style="margin-top:0">{fk(capoNote(c))}</p>
+                <a class="btn primary chart-dl" href={c.file} download data-song={song.slug} data-chart={c.label}>Download PDF</a>
+              </div>
+            ))}
+          </div>
+        )}
         {altCharts.length > 0 && (
           <>
           <h3 style="margin-top:8px">Alternate arrangements</h3>
-          <div class="grid two" style="gap:16px;margin-bottom:20px">
+          <div class="grid" style="gap:16px;margin-bottom:20px">
             {altCharts.map((c) => (
               <div class="card">
-                <h3>{fk(c.label)}</h3>
+                <h3 set:html={hk(c.label)} />
                 <p class="muted" style="margin-top:0">{c.description}</p>
                 <a class="btn primary chart-dl" href={c.file} download data-song={song.slug} data-chart={c.label}>Download PDF</a>
               </div>
             ))}
           </div>
           </>
-        )}
-        {btnExtras.length > 0 && (
-          <div class="btn-row" style="margin-bottom:20px">
-            {btnExtras.map((c) => (
-              <a class="btn ghost chart-dl" href={c.file} download data-song={song.slug} data-chart={c.label}>{fk(c.label)}</a>
-            ))}
-          </div>
         )}
         {!song.charts.recording && !song.charts.congregational && (
           <div class="card">
