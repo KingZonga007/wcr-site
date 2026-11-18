@@ -45,7 +45,7 @@ const playing = [
   sameChart
     ? `The free chord chart for ${song.title} is in the key of ${song.charts.recording.key}, which is both the recording key and the key we recommend for congregations.`
     : song.charts.recording && song.charts.congregational
-      ? `${song.title} has two free chord charts: the key of ${song.charts.recording.key} to match the recording, and the key of ${song.charts.congregational.key}, which sits in an easier range for most congregations.`
+      ? `${song.title} has two free chord charts: the key of ${song.charts.recording.key} to match the recording, and the key of ${song.charts.congregational.key}${song.charts.congregational.modulatesTo ? `, moving up to ${song.charts.congregational.modulatesTo} for the last verse` : ''}, which sits in an easier range for most congregations.`
       : `The free chord chart for ${song.title} is in the key of ${chartKey}, a comfortable range for most congregations.`,
   ci.tempo ? `It is played at ${ci.tempo} beats per minute${ci.time ? ` in ${ci.time} time` : ''}.` : '',
   chords.length > 1 ? `In ${chartKey} the song uses ${chords.length} chords: ${list(chords)}${slash.length ? `, with ${slash.length === 1 ? 'one slash chord' : 'slash chords'} (${list(slash)}) for the bass movement` : ''}.` : '',
@@ -102,7 +102,7 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
             const c = song.charts[k];
             return (
               <div class="card">
-                <h3>{label}{c?.key ? `: ${c.key}` : ''}</h3>
+                <h3>{label}{c?.key ? `: ${c.key}${c.modulatesTo ? ` to ${c.modulatesTo}` : ''}` : ''}</h3>
                 <p class="muted" style="margin-top:0">{note}</p>
                 {c ? (
                   <a class="btn primary chart-dl" href={c.file} download data-song={song.slug} data-chart={k}>Download PDF</a>

@@ -1762,9 +1762,23 @@
       },
       "congregational": {
         "key": "C",
-        "file": "/charts/all-creatures-of-our-god-and-king-C.pdf"
+        "file": "/charts/all-creatures-of-our-god-and-king-C.pdf",
+        "modulatesTo": "D"
       },
-      "extras": []
+      "extras": [
+        {
+          "label": "Live arrangement (C)",
+          "key": "C",
+          "file": "/charts/all-creatures-of-our-god-and-king-C-live.pdf",
+          "description": "The arrangement from our live album, Prayers of the Saints Live, played at 69 bpm with its own intro and outro."
+        },
+        {
+          "label": "Female lead (A to B)",
+          "key": "A",
+          "file": "/charts/all-creatures-of-our-god-and-king-A-female.pdf",
+          "description": "In A, moving up to B for the last verse, a good range for a female lead vocal."
+        }
+      ]
     },
     "lyrics": "<h3>Verse 1</h3><p>All creatures of our God and King<br>Lift up your voice and with us sing<br>Oh praise Him alleluia<br>Thou burning sun with golden beam<br>Thou silver moon with softer gleam<br>Oh praise Him oh praise Him<br>Alleluia alleluia alleluia</p><h3>Verse 2</h3><p>Let all things their Creator bless<br>And worship Him in humbleness<br>Oh praise Him alleluia<br>Praise praise the Father praise the Son<br>And praise the Spirit Three-in-One<br>Oh praise Him oh praise Him<br>Alleluia alleluia alleluia</p><h3>Verse 3</h3><p>All the redeemed washed by His blood<br>Come and rejoice in His great love<br>Oh praise Him alleluia<br>Christ has defeated every sin<br>Cast all your burdens now on Him<br>Oh praise Him oh praise Him<br>Alleluia alleluia alleluia</p><h3>Verse 4</h3><p>He shall return in pow&#x27;r to reign<br>Heaven and earth will join to say<br>Oh praise Him alleluia<br>Then who shall fall on bended knee<br>All creatures of our God and King<br>Oh praise Him oh praise Him<br>Alleluia alleluia alleluia</p>",
     "story": null,
@@ -1793,8 +1807,11 @@
     },
     "chartInfo": {
       "sections": [
+        "Intro",
         "Verse 1",
+        "Interlude 1",
         "Verse 2",
+        "Interlude 2",
         "Verse 3",
         "Verse 4"
       ],
@@ -1802,8 +1819,8 @@
         "C",
         "Am",
         "F",
-        "C/G",
-        "G"
+        "G",
+        "C/B"
       ],
       "tempo": 78,
       "time": "4/4"
