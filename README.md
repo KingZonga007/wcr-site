@@ -19,3 +19,6 @@ Deploys on Netlify from the main branch. Design spec: see the WCR Website Design
 - Files live in `public/charts/` as `<slug>-<KEY>.pdf` (guitar: `<slug>-<KEY>-capo-<N>.pdf`).
 - Unreleased songs: set `"unreleased": true` and `"source": "manual"` in songs.json. Charts are downloadable; listen buttons show "coming soon" until the release script finds the song.
 - Featured order (Songs page default view and the home page's first six) is `src/data/featured.json`.
+- When the recording and congregational charts are the same file, the page shows only the congregational card. Ryan says when a recording key differs.
+- Alternate arrangements go in `charts.extras` with a `description`; they show as cards under "Alternate arrangements". A chart that changes key gets `"modulatesTo": "D"`.
+- WCR copyright (every upload): songs with Publisher = WCR on the WCR Master Song List get `"wcrCopyrightYear"` (year of first release; unreleased songs use the current year). SGM songs and covers (e.g. Solid Rock) do not. After adding or replacing charts, run `python3 scripts/stamp-charts.py`. It adds "© YEAR West Coast Revival Music (ASCAP). Administered worldwide by Songtrust. All rights reserved." to any WCR chart missing it, replacing a short "© YEAR West Coast Revival Music" line in place. `--check` reports without changing anything. Song pages show the same line automatically.

@@ -51,7 +51,8 @@
         "F#m",
         "E/G#"
       ]
-    }
+    },
+    "wcrCopyrightYear": 2026
   },
   {
     "slug": "have-you-been-to-jesus",
@@ -131,7 +132,8 @@
       "tempo": 88,
       "time": "4/4"
     },
-    "lyricsManual": true
+    "lyricsManual": true,
+    "wcrCopyrightYear": 2025
   },
   {
     "slug": "i-give-you-all",
@@ -175,7 +177,8 @@
         "A",
         "C#m"
       ]
-    }
+    },
+    "wcrCopyrightYear": 2026
   },
   {
     "slug": "o-for-a-thousand-tongues-to-sing",
@@ -281,7 +284,8 @@
       ],
       "tempo": 140,
       "time": "4/4"
-    }
+    },
+    "wcrCopyrightYear": 2025
   },
   {
     "slug": "solid-rock",
@@ -406,7 +410,8 @@
       ],
       "tempo": 72,
       "time": "4/4"
-    }
+    },
+    "wcrCopyrightYear": 2022
   },
   {
     "slug": "grace",
@@ -444,7 +449,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Grace",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Grace",
       "exact": false
-    }
+    },
+    "wcrCopyrightYear": 2021
   },
   {
     "slug": "behold-the-lamb",
@@ -509,7 +515,8 @@
       ],
       "tempo": 80,
       "time": "4/4"
-    }
+    },
+    "wcrCopyrightYear": 2021
   },
   {
     "slug": "come-spirit-of-god",
@@ -557,7 +564,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Come%20Spirit%20of%20God",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Come%20Spirit%20of%20God",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2005
   },
   {
     "slug": "come-you-saints",
@@ -605,7 +613,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Come%20You%20Saints",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Come%20You%20Saints",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2005
   },
   {
     "slug": "grace-a-christmas-lullaby",
@@ -689,7 +698,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20My%20Savior%27s%20Precious%20Blood",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20My%20Savior%27s%20Precious%20Blood",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2021
   },
   {
     "slug": "oh-the-deep",
@@ -740,7 +750,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Oh%20the%20Deep",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Oh%20the%20Deep",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2005
   },
   {
     "slug": "only-you",
@@ -788,7 +799,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Only%20You",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Only%20You",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2005
   },
   {
     "slug": "the-pearl-of-great-price",
@@ -828,7 +840,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Pearl%20of%20Great%20Price",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Pearl%20of%20Great%20Price",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2021
   },
   {
     "slug": "the-sparrow",
@@ -894,7 +907,8 @@
       ],
       "tempo": 84,
       "time": "4/4"
-    }
+    },
+    "wcrCopyrightYear": 2021
   },
   {
     "slug": "flesh-and-blood",
@@ -955,7 +969,8 @@
         "G/B",
         "Am/G"
       ]
-    }
+    },
+    "wcrCopyrightYear": 2020
   },
   {
     "slug": "the-armor",
@@ -1017,7 +1032,8 @@
         "A",
         "D"
       ]
-    }
+    },
+    "wcrCopyrightYear": 2020
   },
   {
     "slug": "we-three-kings",
@@ -1084,7 +1100,8 @@
       ],
       "tempo": 112,
       "time": "4/4"
-    }
+    },
+    "wcrCopyrightYear": 2020
   },
   {
     "slug": "behold-our-god",
@@ -1250,7 +1267,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Cross%20the%20Jordan",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Cross%20the%20Jordan",
       "exact": false
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "depth-of-mercy",
@@ -1291,7 +1309,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Depth%20of%20Mercy",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Depth%20of%20Mercy",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "i-want-to-wake-up",
@@ -1329,7 +1348,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20I%20Want%20to%20Wake%20Up",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20I%20Want%20to%20Wake%20Up",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "killing-my-demons",
@@ -1367,7 +1387,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Killing%20My%20Demons",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Killing%20My%20Demons",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "not-backing-down",
@@ -1405,7 +1426,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Not%20Backing%20Down",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Not%20Backing%20Down",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "sing-your-mercies-new",
@@ -1443,7 +1465,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Sing%20Your%20Mercies%20New",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Sing%20Your%20Mercies%20New",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "some-bright-golden-morning",
@@ -1483,7 +1506,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Some%20Bright%20Golden%20Morning",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Some%20Bright%20Golden%20Morning",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "some-come-through-fire",
@@ -1543,7 +1567,8 @@
       ],
       "tempo": 150,
       "time": "6/8"
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "take-it-from-me",
@@ -1581,7 +1606,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Take%20It%20From%20Me",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Take%20It%20From%20Me",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "the-gathering",
@@ -1619,7 +1645,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20The%20Gathering",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20The%20Gathering",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "time-keeps-slippin-away",
@@ -1667,7 +1694,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Time%20Keeps%20Slippin%27%20Away",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Time%20Keeps%20Slippin%27%20Away",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "to-know-you",
@@ -1705,7 +1733,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20To%20Know%20You",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20To%20Know%20You",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "undivided-heart",
@@ -1743,7 +1772,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Undivided%20Heart",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Undivided%20Heart",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2015
   },
   {
     "slug": "all-creatures-of-our-god-and-king",
@@ -2260,7 +2290,8 @@
         "G#m",
         "B"
       ]
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "forever",
@@ -2308,7 +2339,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Forever",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Forever",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "goodbye",
@@ -2356,7 +2388,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Goodbye",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Goodbye",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "here-with-christ",
@@ -2404,7 +2437,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Here%20With%20Christ",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Here%20With%20Christ",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "house-of-the-lord",
@@ -2475,7 +2509,8 @@
       ],
       "tempo": 100,
       "time": "4/4"
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "only-for-you",
@@ -2523,7 +2558,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Only%20for%20You",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Only%20for%20You",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "refugee",
@@ -2571,7 +2607,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Refugee",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Refugee",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "rising-sun",
@@ -2619,7 +2656,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Rising%20Sun",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Rising%20Sun",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "simple-fix",
@@ -2667,7 +2705,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Simple%20Fix",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Simple%20Fix",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "wont-let-me-fall-away",
@@ -2715,7 +2754,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Won%27t%20Let%20Me%20Fall%20Away",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Won%27t%20Let%20Me%20Fall%20Away",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "wonders-of-jesus-crucified",
@@ -2763,7 +2803,8 @@
       "youtube": "https://www.youtube.com/results?search_query=West%20Coast%20Revival%20Wonders%20of%20Jesus%20Crucified",
       "amazon": "https://music.amazon.com/search/West%20Coast%20Revival%20Wonders%20of%20Jesus%20Crucified",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "you-were-always-there",
@@ -2799,7 +2840,8 @@
     "listen": {
       "apple": "https://music.apple.com/us/album/you-were-always-there/261915915?i=261919383&uo=4",
       "exact": true
-    }
+    },
+    "wcrCopyrightYear": 2006
   },
   {
     "slug": "always-forgiven",
