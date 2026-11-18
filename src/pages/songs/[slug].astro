@@ -74,7 +74,7 @@ const about = [
   song.unreleased
     ? `${song.title} is a West Coast Revival arrangement that has not been released as a recording yet. We are sharing the chart early so churches can start singing it.`
     : `${song.title} was ${song.recordings.length > 1 ? 'first released' : 'released'} in ${song.firstYear || song.year}${albumName ? ` on ${albumName}` : ''}${isSGM ? ' with Sovereign Grace Music' : ' by West Coast Revival'}.`,
-  song.writers ? `It was written by ${song.writers}.` : '',
+  song.writers ? `It was written by ${song.writers}${/[.?!]$/.test(song.writers) ? '' : '.'}` : '',
   song.recordings.length > 1 && Math.max(...song.recordings.map((r) => r.year)) > (song.firstYear || song.year) ? `There are ${song.recordings.length} recordings of it, the most recent from ${Math.max(...song.recordings.map((r) => r.year))}.` : '',
   song.themes.includes('Hymn') ? 'It is a hymn arrangement.' : '',
   song.themes.filter((t) => t !== 'Hymn').length ? `Its themes are ${list(song.themes.filter((t) => t !== 'Hymn').map((t) => (/^[A-Z][a-z]+$/.test(t) && t !== 'Christmas' ? t.toLowerCase() : t)))}.` : '',
@@ -164,7 +164,7 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
         <h2 style="margin-top:40px">About the song</h2>
         <div class="prose"><p>{about.join(' ')}</p>{song.story && <p>{song.story}</p>}</div>
 
-        {song.lyrics && (<><h2 style="margin-top:48px">{song.title} lyrics</h2><div class="prose lyrics" set:html={song.lyrics} />{(song.lyricsCredit || song.writers || wcrCredit) && <p class="muted" style="font-size:.85rem">{song.lyricsCredit ? song.lyricsCredit : [song.writers ? `Words and music: ${song.writers}.` : '', wcrCredit].filter(Boolean).join(' ')}</p>}</>)}
+        {song.lyrics && (<><h2 style="margin-top:48px">{song.title} lyrics</h2><div class="prose lyrics" set:html={song.lyrics} />{(song.lyricsCredit || song.writers || wcrCredit) && <p class="muted" style="font-size:.85rem">{song.lyricsCredit ? song.lyricsCredit : [song.writers ? `Words and music: ${song.writers}${/[.?!]$/.test(song.writers) ? '' : '.'}` : '', wcrCredit].filter(Boolean).join(' ')}</p>}</>)}
         {!song.lyrics && wcrCredit && <p class="muted" style="font-size:.85rem;margin-top:24px">{wcrCredit}</p>}
 
       </div>
