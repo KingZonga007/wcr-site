@@ -125,11 +125,28 @@ def spread(n, a, b):
 
 # ---------- taps (optional): line starts; also give every section a start time ----------
 TAPS = None
+WTAP = {}   # word-mode taps: line index -> (lead word times, second-voice word times)
 if A.tap:
     TAPS = []
+    def _nums(x): return [None if v == '-' else float(v) for v in x.split()]
     for ln in open(A.tap):
-        m = re.match(r'^\s*([\d:.]+)\s*\|', ln)
-        if m: TAPS.append(tsec(m.group(1)))
+        m = re.match(r'^\s*([\d:.]+|--:--\.-)\s*\|(.*)$', ln)
+        if not m: continue
+        rest = m.group(2)
+        if '||' in rest:
+            tm = rest.split('||', 1)[1]
+            a, b = (tm.split('//', 1) + [''])[:2]
+            WTAP[len(TAPS)] = (_nums(a), _nums(b))
+        TAPS.append(None if m.group(1).startswith('--') else tsec(m.group(1)))
+    # lines left untapped: fill from neighbours so the rest still works
+    for i, t in enumerate(TAPS):
+        if t is None:
+            lead = WTAP.get(i, ([], []))[0]
+            TAPS[i] = next((x for x in lead if x is not None), None)
+    for i in range(len(TAPS)):
+        if TAPS[i] is None:
+            prv = next((TAPS[j] for j in range(i - 1, -1, -1) if TAPS[j] is not None), 0.0)
+            TAPS[i] = prv + 0.5
     if len(TAPS) != len(LINES): print(f'WARNING: {len(TAPS)} taps for {len(LINES)} lines; using what lines up')
     li = 0
     for s_ in secs:
@@ -201,6 +218,13 @@ def _fixes(part):   # word numbers count the lead line first, then the second vo
         if (wi <= len(L['tokens'])) == (part == 1):
             (L['tokens'] + L['p2'])[wi - 1][2] = tsec(str(tm))
 
+# word-mode taps win over the engine for every word that was tapped
+for li, (lead, sec) in WTAP.items():
+    if li >= len(LINES): continue
+    vis = [x for x in LINES[li]['tokens'] if x[0] is not None]
+    for x, t in zip(vis, lead):
+        if t is not None: x[2] = t
+
 _fixes(1)
 prev = 0
 for L in LINES:
@@ -214,6 +238,10 @@ for li, L in enumerate(LINES):
     span = min(nxt - 0.7 - t0, 0.55 * len(L['p2']))
     for k, x in enumerate(L['p2']): x.append(t0 + max(0.3, span) * k / max(1, len(L['p2'])))
 
+for li, (lead, sec) in WTAP.items():
+    if li < len(LINES):
+        for x, t in zip(LINES[li]['p2'], sec):
+            if t is not None: x[2] = t
 _fixes(2)
 
 # ---------- screens ----------

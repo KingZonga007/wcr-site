@@ -7,7 +7,7 @@ FONT = '/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf'
 FONT_M = '/usr/share/fonts/truetype/google-fonts/Poppins-Medium.ttf'
 
 
-T = json.load(open(sys.argv[2] if sys.argv[1] == 'still' else sys.argv[5]))
+T = json.load(open(sys.argv[2] if sys.argv[1] in ('still', 'thumb') else sys.argv[5]))
 DUR = T['duration']
 LINES = T['lines']          # [{words:[[text,start],...], show, hide}]
 CHORUS = T['chorus']        # [[start,end],...]
@@ -203,7 +203,7 @@ def text_layer(t):
     return lay, glow
 
 # title + profile cards
-def title_card():
+def title_card(sub=34, subtrack=10, subfill=200, gap=44):
     sz = 132
     while True:
         f2 = ImageFont.truetype(FONT, sz); im = word_img(T['song_title'].upper(), f2, 6)
@@ -214,9 +214,9 @@ def title_card():
     bx, by = (W - bw) // 2, (H - bh) // 2 - 30
     ImageDraw.Draw(L).rectangle([bx, by, bx + bw, by + bh], outline=255, width=7)
     L.paste(im, (bx + 95, by + 50 - 2), im)
-    f3 = ImageFont.truetype(FONT_M, 34)
-    s = word_img('WEST COAST REVIVAL', f3, 10)
-    L.paste(Image.new('L', s.size, 200), ((W - s.width) // 2, by + bh + 44), s)
+    f3 = ImageFont.truetype(FONT_M if sub < 45 else FONT, sub)
+    s = word_img('WEST COAST REVIVAL', f3, subtrack)
+    L.paste(Image.new('L', s.size, subfill), ((W - s.width) // 2, by + bh + gap), s)
     return np.asarray(L, np.float32)
 
 TITLE_L = title_card()
@@ -287,7 +287,12 @@ def frame(i):
 if __name__ == '__main__':
     # still TIMELINE OUTDIR t1 t2 ...   |   video A B OUT TIMELINE [preview]
     mode = sys.argv[1]
-    if mode == 'still':
+    if mode == 'thumb':   # thumb TIMELINE OUT.jpg : YouTube thumbnail of the title screen, 1280x720
+        TITLE_L = title_card(sub=58, subtrack=8, subfill=245, gap=50)
+        TITLE_G = np.asarray(Image.fromarray(TITLE_L.astype(np.uint8)).filter(ImageFilter.GaussianBlur(16)), np.float32)
+        tm = (TITLE[0] + TITLE[1]) / 2
+        Image.fromarray(frame(int(tm * FPS))).resize((1280, 720), Image.LANCZOS).save(sys.argv[3], quality=92)
+    elif mode == 'still':
         for ts in sys.argv[4:]:
             Image.fromarray(frame(int(float(ts) * FPS))).save(f"{sys.argv[3]}/still_{ts}.jpg", quality=90)
     else:
