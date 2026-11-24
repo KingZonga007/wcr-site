@@ -194,6 +194,14 @@ else:
         if c: L['tokens'][0][2] = min(c, key=lambda o: abs(o - t0))
 
 # ---------- fixes ----------
+FIX = json.load(open(A.fix)) if A.fix else {}
+def _fixes(part):   # word numbers count the lead line first, then the second voice
+    for key, tm in FIX.items():
+        li, wi = map(int, key.split(':')); L = LINES[li - 1]
+        if (wi <= len(L['tokens'])) == (part == 1):
+            (L['tokens'] + L['p2'])[wi - 1][2] = tsec(str(tm))
+
+_fixes(1)
 prev = 0
 for L in LINES:
     for x in L['tokens']: x[2] = max(x[2], prev + 0.08); prev = x[2]
@@ -206,10 +214,7 @@ for li, L in enumerate(LINES):
     span = min(nxt - 0.7 - t0, 0.55 * len(L['p2']))
     for k, x in enumerate(L['p2']): x.append(t0 + max(0.3, span) * k / max(1, len(L['p2'])))
 
-if A.fix:   # word numbers count the lead line first, then the second voice
-    for key, tm in json.load(open(A.fix)).items():
-        li, wi = map(int, key.split(':')); L = LINES[li - 1]; allw = L['tokens'] + L['p2']
-        allw[wi - 1][2] = tsec(str(tm))
+_fixes(2)
 
 # ---------- screens ----------
 LEAD = 0.3
