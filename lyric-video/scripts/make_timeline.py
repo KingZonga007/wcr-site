@@ -235,6 +235,15 @@ for si, s in enumerate(secs):
         if chorus and a - chorus[-1][1] < 4: chorus[-1][1] = b
         else: chorus.append([round(a, 2), round(b, 2)])
 
+# songs that start singing right away get a lead-in so the profile and title screens play first
+PAD = round(max(0.0, 10.0 - out[0]["show"]), 2) if out[0]['show'] < 6.0 else 0.0
+if PAD:
+    for l in out:
+        l['show'] = round(l['show'] + PAD, 2); l['hide'] = round(l['hide'] + PAD, 2)
+        for w in l['words']: w[1] = round(w[1] + PAD, 2)
+    chorus = [[round(a + PAD, 2), round(b + PAD, 2)] for a, b in chorus]
+    DUR += PAD
+
 sections = []
 for si, s_ in enumerate(secs):
     ls = [l for l in out if l['sec'] == si]
@@ -243,13 +252,14 @@ for si, s_ in enumerate(secs):
 import random as _r
 first = out[0]['show']
 pin = min(8.4, max(3.0, first * 0.45))
-T = dict(duration=round(DUR, 2), song_title=title, template=A.template, seed=_r.randint(1, 10**9), sections=sections, photo=A.photo, photo_crop=crop, fade=0.3, chorus=chorus,
+T = dict(duration=round(DUR, 2), audio_offset=PAD, song_title=title, template=A.template, seed=_r.randint(1, 10**9), sections=sections, photo=A.photo, photo_crop=crop, fade=0.3, chorus=chorus,
          profile_in=[0, pin], title_window=[pin + 0.2, max(pin + 3.0, first - 0.6)],
          profile_out=[out[-1]['hide'] + 0.3, round(DUR, 2)],
          lines=[{k: v for k, v in l.items() if k != 'sec'} for l in out])
 json.dump(T, open(A.out, 'w'))
 
 def fmt(t): return f'{int(t // 60)}:{t % 60:04.1f}'
+if PAD: print(f'LEAD-IN: audio starts at {PAD}s in the video. Times below are VIDEO times; for --fix use song time = video time - {PAD}.')
 for i, l in enumerate(out):
     print(f'{i + 1:3d} {fmt(l["words"][0][1])}  ' + ' '.join(w[0] if len(w) < 3 else '/' + w[0] for w in l['words']))
 print('gold:', [[fmt(a), fmt(b)] for a, b in chorus])

@@ -46,7 +46,8 @@ render)
   T=$(python3 -c "import json,re;print(re.sub(r'[^A-Za-z0-9]+','_',json.load(open('timeline.json'))['song_title']).strip('_'))")
   TN=$(echo "$TPL" | sed 's/^geo:lowpoly$/Standard2/; s/^standard2$/Standard2/; s/^geo:/Geometric_/; s/^standard1$/Standard/; s/^canyon$/Canyon/; s/^ocean$/Ocean/')
   OUT="${T}_Lyric_Video_${TN}_$MODE.mp4"
-  ffmpeg -v error -y -f concat -safe 0 -i list.txt -i song.m4a -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k \
+  OFF=$(python3 -c "import json;print(int(1000*json.load(open('tl_run.json')).get('audio_offset',0)))")
+  ffmpeg -v error -y -f concat -safe 0 -i list.txt -i song.m4a -map 0:v -map 1:a -c:v copy -af "adelay=${OFF}:all=1,apad" -c:a aac -b:a 256k \
     -shortest -movflags +faststart "$OUT"
   echo "$W/$OUT" ;;
 esac
