@@ -46,15 +46,21 @@ words_dict = set(l.split(' ')[0] for l in open(DICT))
 def norm(w): return re.sub(r"[^a-z']", '', w.lower()).replace("'", '')
 
 # lines -> tokens: (display_text or None if hidden, norm)
-LINES = []  # dict(sec, tokens=[[disp, norm]])
+LINES = []
 for si, s in enumerate(secs):
     for ln in s['lines']:
-        toks = []
-        for w in ln.split():
+        # "lead line // second voice" = a round: both shown at once, second voice on the row below.
+        # Mark the lead word after which the second voice enters with ^ (default: middle of the lead line).
+        p1, p2 = (ln.split('//', 1) + [''])[:2]
+        toks, anchor = [], None
+        for w in p1.split():
+            if w.endswith('^'): w = w[:-1]; anchor = len(toks)
             hid = w.startswith('(') and w.endswith(')')
             d = w.strip('()').replace(',', '')
             toks.append([None if hid else d, norm(d)])
-        LINES.append(dict(sec=si, tokens=toks))
+        P2 = [[w.strip('()').replace(',', ''), norm(w)] for w in p2.split()]
+        if P2 and anchor is None: anchor = max(0, len(toks) // 2 - 1)
+        LINES.append(dict(sec=si, tokens=toks, p2=P2, anchor=anchor))
 
 # ---------- audio ----------
 w = wave.open(A.vox); RAW = np.frombuffer(w.readframes(w.getnframes()), np.int16)
@@ -188,26 +194,38 @@ else:
         if c: L['tokens'][0][2] = min(c, key=lambda o: abs(o - t0))
 
 # ---------- fixes ----------
-if A.fix:
-    for key, tm in json.load(open(A.fix)).items():
-        li, wi = map(int, key.split(':')); LINES[li - 1]['tokens'][wi - 1][2] = tsec(str(tm))
-
 prev = 0
 for L in LINES:
     for x in L['tokens']: x[2] = max(x[2], prev + 0.08); prev = x[2]
+
+# second voice of a round: enters just after the anchor word, words spaced evenly
+for li, L in enumerate(LINES):
+    if not L['p2']: continue
+    nxt = LINES[li + 1]['tokens'][0][2] if li + 1 < len(LINES) else L['tokens'][-1][2] + 6
+    t0 = L['tokens'][L['anchor']][2] + 0.35
+    span = min(nxt - 0.7 - t0, 0.55 * len(L['p2']))
+    for k, x in enumerate(L['p2']): x.append(t0 + max(0.3, span) * k / max(1, len(L['p2'])))
+
+if A.fix:   # word numbers count the lead line first, then the second voice
+    for key, tm in json.load(open(A.fix)).items():
+        li, wi = map(int, key.split(':')); L = LINES[li - 1]; allw = L['tokens'] + L['p2']
+        allw[wi - 1][2] = tsec(str(tm))
 
 # ---------- screens ----------
 LEAD = 0.3
 out = []
 for L in LINES:
-    vis = [[d, round(t, 2)] for d, n, t in L['tokens'] if d]
+    vis = [[d, round(t, 2)] for d, n, t in L['tokens'] if d] + [[d, round(t, 2), 1] for d, n, t in L['p2']]
     out.append(dict(words=vis, show=round(vis[0][1] - LEAD, 2), sec=L['sec']))
 for i, l in enumerate(out):
     nxt = out[i + 1]['show'] if i + 1 < len(out) else None
     last = l['words'][-1][1]
     l['hide'] = round(min(nxt, last + 4.0) if nxt else last + 3.5, 2)
-    lim = l['hide'] - 0.35; n = len(l['words'])
-    for j in range(n): l['words'][j][1] = round(min(l['words'][j][1], lim - 0.2 * (n - 1 - j)), 2)
+    lim = l['hide'] - 0.35
+    for row in (0, 1):
+        idx = [j for j, w in enumerate(l['words']) if (w[2] if len(w) > 2 else 0) == row]
+        n = len(idx)
+        for q, j in enumerate(idx): l['words'][j][1] = round(min(l['words'][j][1], lim - 0.2 * (n - 1 - q)), 2)
 
 chorus = []
 for si, s in enumerate(secs):
@@ -233,5 +251,5 @@ json.dump(T, open(A.out, 'w'))
 
 def fmt(t): return f'{int(t // 60)}:{t % 60:04.1f}'
 for i, l in enumerate(out):
-    print(f'{i + 1:3d} {fmt(l["words"][0][1])}  ' + ' '.join(f'{w}' for w, t in l['words']))
+    print(f'{i + 1:3d} {fmt(l["words"][0][1])}  ' + ' '.join(w[0] if len(w) < 3 else '/' + w[0] for w in l['words']))
 print('gold:', [[fmt(a), fmt(b)] for a, b in chorus])

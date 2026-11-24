@@ -147,27 +147,36 @@ def word_img(text, fnt=font, track=TRACK, pad=0):
 SPACE = font.getlength(' ') + 10
 
 def layout_line(L):
-    words = [(w.upper(), t) for w, t in L['words']]
-    imgs = [word_img(w, pad=PAD) for w, _ in words]
+    words = [(w[0].upper(), w[1]) for w in L['words']]
+    forced = [(w[2] if len(w) > 2 else 0) for w in L['words']]
+    fnt, SPACE_ = font, SPACE
+    if any(forced):   # a round: two fixed rows; shrink the font if a row is too wide
+        for sz in range(FS, 59, -4):
+            fnt = ImageFont.truetype(FONT, sz); SPACE_ = fnt.getlength(' ') + 10 * sz / FS
+            ws = [sum(word_img(w, fnt).width for (w, _), f in zip(words, forced) if f == r) + SPACE_ * (forced.count(r) - 1) for r in (0, 1)]
+            if max(ws) <= 1680: break
+    imgs = [word_img(w, fnt, pad=PAD) for w, _ in words]
     IW = [im.width - 2 * PAD for im in imgs]
-    n = len(imgs); tot = sum(IW) + SPACE * (n - 1)
-    if tot <= MAXW or n == 1:
+    n = len(imgs); tot = sum(IW) + SPACE_ * (n - 1)
+    if any(forced):
+        rows = [[k for k in range(n) if forced[k] == 0], [k for k in range(n) if forced[k] == 1]]
+    elif tot <= MAXW or n == 1:
         rows = [list(range(n))]
     else:
         best = None
         for c in range(1, n):
-            a = sum(IW[:c]) + SPACE * (c - 1); b = sum(IW[c:]) + SPACE * (n - c - 1)
+            a = sum(IW[:c]) + SPACE_ * (c - 1); b = sum(IW[c:]) + SPACE_ * (n - c - 1)
             cost = max(a, b) - (160 if words[c][0].strip(',').lower() in ('and','but','for','from','at','into','will','are','to','yes') else 0)
             if best is None or cost < best[0]: best = (cost, c)
         rows = [list(range(best[1])), list(range(best[1], n))]
-    rw = [sum(IW[k] for k in r) + SPACE * (len(r) - 1) for r in rows]
+    rw = [sum(IW[k] for k in r) + SPACE_ * (len(r) - 1) for r in rows]
     bw = max(rw) + 2 * PADX; bh = LINE_H * len(rows) + 2 * PADY - int(FS * 0.18)
     bx = (W - bw) // 2; by = (H - bh) // 2
     pos = [None] * len(imgs)
     for ri, r in enumerate(rows):
         x = (W - rw[ri]) / 2; y = by + PADY + ri * LINE_H - int(FS * 0.12)
         for k in r:
-            pos[k] = (int(x) - PAD, int(y) - PAD); x += IW[k] + SPACE
+            pos[k] = (int(x) - PAD, int(y) - PAD); x += IW[k] + SPACE_
     glows = [im.filter(ImageFilter.GaussianBlur(13)) for im in imgs]
     return dict(imgs=imgs, glows=glows, pos=pos, starts=[t for _, t in words],
                 box=(bx, by, bx + bw, by + bh), show=L['show'], hide=L['hide'])
