@@ -22,3 +22,14 @@ Deploys on Netlify from the main branch. Design spec: see the WCR Website Design
 - When the recording and congregational charts are the same file, the page shows only the congregational card. Ryan says when a recording key differs.
 - Alternate arrangements go in `charts.extras` with a `description`; they show as cards under "Alternate arrangements". A chart that changes key gets `"modulatesTo": "D"`.
 - WCR copyright (every upload): songs with Publisher = WCR on the WCR Master Song List get `"wcrCopyrightYear"` (year of first release; unreleased songs use the current year). SGM songs and covers (e.g. Solid Rock) do not. After adding or replacing charts, run `python3 scripts/stamp-charts.py`. It adds "© YEAR West Coast Revival Music (ASCAP). Administered worldwide by Songtrust. All rights reserved." to any WCR chart missing it, replacing a short "© YEAR West Coast Revival Music" line in place. `--check` reports without changing anything. Song pages show the same line automatically.
+
+## Worship Is Warfare devotionals
+
+Each episode becomes a devotional page: opening scripture, exhortation, prayer, closing scripture, then the video.
+
+- Data: `src/data/devotionals/<number>.json` with `status` (`draft` or `published`), `draftKey`, `title` (from the message, not the song), `speaker`, `opening`, `closing`, `summary`, `exhortation` (paragraphs), `prayer` (paragraphs).
+- Drafts render at `/worship-is-warfare/draft/<draftKey>/` (noindex, not in the sitemap). Published devotionals replace the episode page at `/worship-is-warfare/<slug>/`. The H1 shows the opening reference above the title.
+- Scripture text loads live from the ESV API through `netlify/functions/esv.mjs` (`/api/esv`, key in Netlify env `ESV_API_KEY`). Nothing is stored, so the site-wide 500-verse cap does not apply to devotionals.
+- Editing rules (from Ryan): light cleanup only. Keep the speaker's words and voice; fix transcription errors, drop filler and repeats, add paragraphs. Byline is whoever gave the exhortation (Ryan Baird or Jonathan Baird). Skip Friday Deep Dives and restreams.
+- New episodes: draft, send Ryan the draft link, publish on his approval. The backfill of past episodes was approved after a 5-episode spot-check.
+- An episode is added to `src/data/episodes.json` only when its devotional is ready, so no thin episode pages go live.

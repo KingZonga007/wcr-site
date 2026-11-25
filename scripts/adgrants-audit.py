@@ -221,7 +221,10 @@ try:
     esv=json.load(open(os.path.join(src,'scripture-esv.json'))); eps=json.load(open(os.path.join(src,'episodes.json')))
     nv=sum(len(x['verses']) for x in esv.values())
     if nv>450: fail('H1 ESV verses quoted site-wide stay under 450 (Crossway allows 500)', f'{nv} verses')
+    import glob
+    live={json.load(open(f))['number'] for f in glob.glob(os.path.join(src,'devotionals','*.json')) if json.load(open(f)).get('status')=='published'}
     for e in eps:
+        if e['number'] in live: continue  # devotional pages load ESV text live from the ESV API
         for r in e['scripture']:
             if r not in esv: fail('H2 every episode reading has its ESV text and notice', f'#{e["number"]} {r} has no text')
     for u,p in pages.items():
