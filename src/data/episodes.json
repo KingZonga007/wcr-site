@@ -1608,5 +1608,194 @@
       "all-creatures-of-our-god-and-king"
     ],
     "summary": null
+  },
+  {
+    "number": 51,
+    "slug": "51-to-know-you",
+    "title": "To Know You",
+    "date": "2026-03-18",
+    "youtubeId": "iGTmVwqXHHg",
+    "kind": "Live",
+    "scripture": [
+      "Colossians 1:15",
+      "2 Corinthians 3:17-18"
+    ],
+    "sung": [
+      "Be Thou My Vision",
+      "For His Glory and My Good",
+      "To Know You"
+    ],
+    "songs": [
+      "to-know-you"
+    ],
+    "summary": null
+  },
+  {
+    "number": 50,
+    "slug": "50-oh-to-see-you",
+    "title": "Oh to See You",
+    "date": "2026-03-17",
+    "youtubeId": "acnsgAa6IlU",
+    "kind": "Live",
+    "scripture": [
+      "Colossians 1:15",
+      "1 Corinthians 13:12"
+    ],
+    "sung": [
+      "Glorious Christ",
+      "Oh to See You",
+      "How Great is Our God"
+    ],
+    "songs": [
+      "oh-to-see-you"
+    ],
+    "summary": null
+  },
+  {
+    "number": 49,
+    "slug": "49-the-gathering",
+    "title": "The Gathering",
+    "date": "2026-03-13",
+    "youtubeId": "g3SwbgALNTo",
+    "kind": "Live",
+    "scripture": [
+      "Romans 10:13",
+      "Matthew 11:28-30"
+    ],
+    "sung": [
+      "Inside Out",
+      "The Gathering",
+      "Mighty To Save"
+    ],
+    "songs": [
+      "the-gathering"
+    ],
+    "summary": null
+  },
+  {
+    "number": 48,
+    "slug": "48-in-you-is-mercy",
+    "title": "In You Is Mercy",
+    "date": "2026-03-12",
+    "youtubeId": "gYnXrIlHLr4",
+    "kind": "Live",
+    "scripture": [
+      "Romans 10:9-13",
+      "1 John 1:8-9"
+    ],
+    "sung": [
+      "This I Believe",
+      "In You Is Mercy",
+      "His Mercy Is More"
+    ],
+    "songs": [
+      "in-you-is-mercy"
+    ],
+    "summary": null
+  },
+  {
+    "number": 47,
+    "slug": "47-before-my-knees-could-reach-the-ground",
+    "title": "Before My Knees Could Reach the Ground",
+    "date": "2026-03-11",
+    "youtubeId": "CIeiO9j2-7M",
+    "kind": "Live",
+    "scripture": [
+      "Romans 5:8-11",
+      "Psalm 25:8-9"
+    ],
+    "sung": [
+      "Jesus Thank You",
+      "Before My Knees Could Reach the Ground",
+      "All I Have Is Christ"
+    ],
+    "songs": [
+      "before-my-knees-could-reach-the-ground"
+    ],
+    "summary": null
+  },
+  {
+    "number": 46,
+    "slug": "46-undying-love",
+    "title": "Undying Love",
+    "date": "2026-03-10",
+    "youtubeId": "2a6gIl8-JBI",
+    "kind": "Live",
+    "scripture": [
+      "Romans 6:20-23",
+      "Isaiah 53:6"
+    ],
+    "sung": [
+      "Death Was Arrested",
+      "Undying Love",
+      "Glorious Day"
+    ],
+    "songs": [
+      "undying-love"
+    ],
+    "summary": null
+  },
+  {
+    "number": 45,
+    "slug": "45-always-forgiven",
+    "title": "Always Forgiven",
+    "date": "2026-03-09",
+    "youtubeId": "IIYucL4lxvo",
+    "kind": "Live",
+    "scripture": [
+      "Romans 3:23-25",
+      "Romans 10:11-13"
+    ],
+    "sung": [
+      "Grace Alone",
+      "Always Forgiven",
+      "I’m Forgiven"
+    ],
+    "songs": [
+      "always-forgiven"
+    ],
+    "summary": null
+  },
+  {
+    "number": 44,
+    "slug": "44-o-for-a-thousand-tongues",
+    "title": "O For A Thousand Tongues",
+    "date": "2026-03-06",
+    "youtubeId": "cnO1HtlZVtM",
+    "kind": "Live",
+    "scripture": [
+      "1 Corinthians 13:12",
+      "Romans 5:2-5"
+    ],
+    "sung": [
+      "O For A Thousand Tongues",
+      "Almost Home",
+      "Some Bright Golden Morning"
+    ],
+    "songs": [
+      "some-bright-golden-morning"
+    ],
+    "summary": null
+  },
+  {
+    "number": 43,
+    "slug": "43-at-the-foot-of-the-cross",
+    "title": "At the Foot of the Cross",
+    "date": "2026-03-05",
+    "youtubeId": "WCWHbiHnCEo",
+    "kind": "Live",
+    "scripture": [
+      "1 Corinthians 2:2-5",
+      "Romans 8:38-39"
+    ],
+    "sung": [
+      "At the Foot of the Cross",
+      "Undivided Heart",
+      "Only A Holy God"
+    ],
+    "songs": [
+      "undivided-heart"
+    ],
+    "summary": null
   }
 ]
