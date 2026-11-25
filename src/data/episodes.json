@@ -1417,5 +1417,196 @@
       "in-you-is-mercy"
     ],
     "summary": null
+  },
+  {
+    "number": 61,
+    "slug": "61-behold-the-lamb",
+    "title": "Behold the Lamb",
+    "date": "2026-04-02",
+    "youtubeId": "--Z0KUXqOa4",
+    "kind": "Live",
+    "scripture": [
+      "Luke 22:7-20",
+      "John 1:29-33"
+    ],
+    "sung": [
+      "No Not One",
+      "Behold the Lamb",
+      "Jesus Thank You"
+    ],
+    "songs": [
+      "behold-the-lamb"
+    ],
+    "summary": null
+  },
+  {
+    "number": 60,
+    "slug": "60-oh-the-deep",
+    "title": "Oh The Deep",
+    "date": "2026-04-01",
+    "youtubeId": "Drsjp1djBGc",
+    "kind": "Live",
+    "scripture": [
+      "Luke 22:3-4",
+      "2 Corinthians 5:21"
+    ],
+    "sung": [
+      "Oh The Deep",
+      "Before My Knees Could Reach the Ground",
+      "When I Survey"
+    ],
+    "songs": [
+      "oh-the-deep",
+      "before-my-knees-could-reach-the-ground"
+    ],
+    "summary": null
+  },
+  {
+    "number": 59,
+    "slug": "59-there-is-a-day",
+    "title": "There Is A Day",
+    "date": "2026-03-31",
+    "youtubeId": "J3Cqm8311bU",
+    "kind": "Live",
+    "scripture": [
+      "Matthew 24:24-27",
+      "Revelation 22:17"
+    ],
+    "sung": [
+      "King of Kings",
+      "Time Keeps Slippin Away",
+      "There Is A Day"
+    ],
+    "songs": [
+      "time-keeps-slippin-away"
+    ],
+    "summary": null
+  },
+  {
+    "number": 57,
+    "slug": "57-come-thou-fount",
+    "title": "Come Thou Fount",
+    "date": "2026-03-26",
+    "youtubeId": "q7JJ__2aEks",
+    "kind": "Live",
+    "scripture": [
+      "Colossians 1:19-20",
+      "1 Thessalonians 5:23-24"
+    ],
+    "sung": [
+      "Come Thou Fount",
+      "Always Forgiven",
+      "Time Keeps Slippin Away"
+    ],
+    "songs": [
+      "always-forgiven",
+      "time-keeps-slippin-away"
+    ],
+    "summary": null
+  },
+  {
+    "number": 56,
+    "slug": "56-sooner-count-the-stars",
+    "title": "Sooner Count The Stars",
+    "date": "2026-03-25",
+    "youtubeId": "3zK5aTPTiH0",
+    "kind": "Live",
+    "scripture": [
+      "Colossians 1:19",
+      "Hebrews 1:1-3"
+    ],
+    "sung": [
+      "Sooner Count The Stars",
+      "Greater Than We Can Imagine",
+      "Behold The Lamb"
+    ],
+    "songs": [
+      "behold-the-lamb"
+    ],
+    "summary": null
+  },
+  {
+    "number": 55,
+    "slug": "55-jesus-paid-it-all",
+    "title": "Jesus Paid It All",
+    "date": "2026-03-24",
+    "youtubeId": "1Ty93POqPjM",
+    "kind": "Live",
+    "scripture": [
+      "Colossians 1:18-20",
+      "John 16:33"
+    ],
+    "sung": [
+      "Jesus Paid It All",
+      "In the Beginning",
+      "Christ is Mine Forevermore"
+    ],
+    "songs": [
+      "in-the-beginning"
+    ],
+    "summary": null
+  },
+  {
+    "number": 54,
+    "slug": "54-ill-fly-away",
+    "title": "I'll Fly Away",
+    "date": "2026-03-23",
+    "youtubeId": "k85Ni6r8RCs",
+    "kind": "Live",
+    "scripture": [
+      "Colossians 1:18",
+      "Romans 8:38-39"
+    ],
+    "sung": [
+      "I'll Fly Away",
+      "The Armor",
+      "In Christ Alone"
+    ],
+    "songs": [
+      "the-armor"
+    ],
+    "summary": null
+  },
+  {
+    "number": 53,
+    "slug": "53-praise-to-the-lord",
+    "title": "Praise to the Lord",
+    "date": "2026-03-20",
+    "youtubeId": "32JcFpjpFz4",
+    "kind": "Live",
+    "scripture": [
+      "Colossians 1:17",
+      "John 1:1-5"
+    ],
+    "sung": [
+      "Praise to the Lord",
+      "Have You Been to Jesus",
+      "Stand In Awe"
+    ],
+    "songs": [
+      "have-you-been-to-jesus"
+    ],
+    "summary": null
+  },
+  {
+    "number": 52,
+    "slug": "52-all-creatures-of-our-god-and-king",
+    "title": "All Creatures of Our God and King",
+    "date": "2026-03-19",
+    "youtubeId": "LD-FkTeclqs",
+    "kind": "Live",
+    "scripture": [
+      "Colossians 1:16",
+      "Jude 1:24-25"
+    ],
+    "sung": [
+      "All Creatures of Our God and King",
+      "Let My Words Be Few",
+      "Come Behold"
+    ],
+    "songs": [
+      "all-creatures-of-our-god-and-king"
+    ],
+    "summary": null
   }
 ]
