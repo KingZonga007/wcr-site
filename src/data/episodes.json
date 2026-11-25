@@ -2216,5 +2216,120 @@
       "not-backing-down"
     ],
     "summary": null
+  },
+  {
+    "number": 21,
+    "slug": "21-a-love-like-no-other",
+    "title": "A Love Like No Other",
+    "date": "2026-02-02",
+    "youtubeId": "AFrp3Bi4kqA",
+    "kind": "Live",
+    "scripture": [
+      "1 John 3:1-3",
+      "2 Peter 1:2-3"
+    ],
+    "sung": [
+      "Stand in Awe",
+      "In You Is Mercy",
+      "I Will Glory in My Redeemer"
+    ],
+    "songs": [
+      "in-you-is-mercy"
+    ],
+    "summary": null
+  },
+  {
+    "number": 20,
+    "slug": "20-the-better-temple",
+    "title": "The Better Temple",
+    "date": "2026-01-30",
+    "youtubeId": "sSmu9oGoCG4",
+    "kind": "Live",
+    "scripture": [
+      "2 Chronicles 7:3",
+      "Psalm 84:10-12"
+    ],
+    "sung": [
+      "House of the Lord",
+      "Lord Let Your Glory Fall",
+      "Better is One Day"
+    ],
+    "songs": [
+      "house-of-the-lord"
+    ],
+    "summary": null
+  },
+  {
+    "number": 19,
+    "slug": "19-there-must-be-blood",
+    "title": "There Must Be Blood",
+    "date": "2026-01-29",
+    "youtubeId": "nBP5KRIVpMU",
+    "kind": "Live",
+    "scripture": [
+      "Hebrews 9:22",
+      "Revelation 1:5-6"
+    ],
+    "sung": [
+      "There Is A Fountain",
+      "I’m Forgiven",
+      "His Glory and My Good"
+    ],
+    "songs": [],
+    "summary": null
+  },
+  {
+    "number": 18,
+    "slug": "18-worship-is-warfare-18",
+    "title": "Worship Is Warfare #18",
+    "date": "2026-01-28",
+    "youtubeId": "Pt7uKD-QpFI",
+    "kind": "Live",
+    "scripture": [
+      "Philippians 1:6",
+      "Romans 15:13"
+    ],
+    "sung": [
+      "Blessed Be Your Name",
+      "Completely Done"
+    ],
+    "songs": [],
+    "summary": null
+  },
+  {
+    "number": 17,
+    "slug": "17-worship-is-warfare-17",
+    "title": "Worship Is Warfare #17",
+    "date": "2026-01-27",
+    "youtubeId": "_bAMTuEmppQ",
+    "kind": "Live",
+    "scripture": [
+      "John 16:33",
+      "Hebrews 12:2"
+    ],
+    "sung": [],
+    "songs": [],
+    "summary": null
+  },
+  {
+    "number": 16,
+    "slug": "16-worship-is-warfare-16",
+    "title": "Worship Is Warfare #16",
+    "date": "2026-01-26",
+    "youtubeId": "KtHwQkT-G3g",
+    "kind": "Live",
+    "scripture": [
+      "Colossians 2:13-14",
+      "Romans 16:25-27"
+    ],
+    "sung": [
+      "The Old Rugged Cross",
+      "Always Forgiven",
+      "Jesus Thank You"
+    ],
+    "songs": [
+      "always-forgiven"
+    ],
+    "summary": null
   }
 ]
