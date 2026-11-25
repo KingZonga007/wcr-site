@@ -28,7 +28,7 @@ Deploys on Netlify from the main branch. Design spec: see the WCR Website Design
 Each episode becomes a devotional page: opening scripture, exhortation, prayer, closing scripture, then the video.
 
 - Data: `src/data/devotionals/<number>.json` with `status` (`draft` or `published`), `draftKey`, `title` (from the message, not the song), `speaker`, `opening`, `closing`, `summary`, `exhortation` (paragraphs), `prayer` (paragraphs).
-- Drafts render at `/worship-is-warfare/draft/<draftKey>/` (noindex, not in the sitemap). Published devotionals replace the episode page at `/worship-is-warfare/<slug>/`. The H1 shows the opening reference above the title.
+- Drafts render at `/devotionals/draft/<draftKey>/` (noindex, not in the sitemap). Published devotionals replace the episode page at `/devotionals/<reference>-<title>/` (old `/worship-is-warfare/<slug>/` URLs 301 there via `scripts/redirects.mjs`). The H1 shows the opening reference above the title.
 - Scripture text loads live from the ESV API through `netlify/functions/esv.mjs` (`/api/esv`, key in Netlify env `ESV_API_KEY`). Nothing is stored, so the site-wide 500-verse cap does not apply to devotionals.
 - Editing rules (from Ryan): light cleanup only. Keep the speaker's words and voice; fix transcription errors, drop filler and repeats, add paragraphs. Byline is whoever gave the exhortation (Ryan Baird or Jonathan Baird). Skip Friday Deep Dives and restreams.
 - New episodes: draft, send Ryan the draft link, publish on his approval. The backfill of past episodes was approved after a 5-episode spot-check.

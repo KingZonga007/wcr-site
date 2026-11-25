@@ -5,6 +5,7 @@ import { SITE, href } from '../../lib/site.js';
 import songs from '../../data/songs.json';
 import episodes from '../../data/episodes.json';
 import { paged, fk } from '../../lib/songs.js';
+import { epPath } from '../../lib/devotionals.js';
 
 export function getStaticPaths() {
   return paged.map((s) => ({ params: { slug: s.slug }, props: { song: s } }));
@@ -78,7 +79,7 @@ const about = [
   song.recordings.length > 1 && Math.max(...song.recordings.map((r) => r.year)) > (song.firstYear || song.year) ? `There are ${song.recordings.length} recordings of it, the most recent from ${Math.max(...song.recordings.map((r) => r.year))}.` : '',
   song.themes.includes('Hymn') ? 'It is a hymn arrangement.' : '',
   song.themes.filter((t) => t !== 'Hymn').length ? `Its themes are ${list(song.themes.filter((t) => t !== 'Hymn').map((t) => (/^[A-Z][a-z]+$/.test(t) && t !== 'Christmas' ? t.toLowerCase() : t)))}.` : '',
-  inEpisodes.length ? `We ${inEpisodes.length > 1 ? `have sung or talked about it on ${inEpisodes.length} episodes` : 'sang or talked about it on an episode'} of Worship Is Warfare, most recently #${inEpisodes[0].number}.` : '',
+  inEpisodes.length ? `We ${inEpisodes.length > 1 ? `have sung or talked about it on ${inEpisodes.length} episodes` : 'sang or talked about it on an episode'} of our morning devotional livestream, most recently #${inEpisodes[0].number}.` : '',
 ].filter(Boolean);
 const hasLyrics = !!song.lyrics;
 const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the keys of ' + list(keys) : 'the key of ' + keys[0]}${hasLyrics ? ', with lyrics' : ''}${ci.tempo ? `, ${ci.tempo} bpm` : ''}. From West Coast Revival, free for your church.`;
@@ -183,8 +184,8 @@ const desc = `Free ${song.title} chord chart (PDF) in ${keys.length > 1 ? 'the k
         {isSGM && <p class="muted" style="font-size:.85rem;margin-top:14px">Originally released with Sovereign Grace Music.</p>}
         {inEpisodes.length > 0 && (
           <>
-            <h3 style="margin-top:22px">On Worship Is Warfare</h3>
-            {inEpisodes.map((e) => <p><a href={href(`/worship-is-warfare/${e.slug}`)}>#{e.number} {e.title}</a></p>)}
+            <h3 style="margin-top:22px">In our morning devotionals</h3>
+            {inEpisodes.map((e) => <p><a href={href(epPath(e))}>#{e.number} {e.title}</a></p>)}
           </>
         )}
         <h3 style="margin-top:22px">Lead this at your church?</h3>

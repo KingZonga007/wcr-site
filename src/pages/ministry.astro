@@ -9,7 +9,7 @@ const releasedCount = songs.filter((s) => !s.unreleased).length;
 const latestEpisode = Math.max(...episodes.map((e) => e.number));
 ---
 <Base title="Our Ministry: Mission, Programs and Financial Transparency" current="ministry"
-  description="West Coast Revival is a 501(c)(3) nonprofit worship ministry. Our mission, our programs (free chord charts, Worship Is Warfare, songwriting, serving churches) and how we are funded.">
+  description="West Coast Revival is a 501(c)(3) nonprofit worship ministry. Our mission, our programs (free chord charts, a morning devotional, songwriting, serving churches) and how we are funded.">
   <section class="section">
     <div class="wrap" style="max-width:860px">
       <p class="eyebrow">Our ministry</p>
@@ -38,10 +38,10 @@ const latestEpisode = Math.max(...episodes.map((e) => e.number));
           <a class="btn ghost" href={href('/songs')}>Get free charts</a>
         </div>
         <div class="card">
-          <h3>Worship Is Warfare</h3>
-          <p>Every Tuesday and Thursday at 6am MST we go live on YouTube with worship songs, Scripture reading and encouragement to begin the day focused on Christ. Each stream is also published as a podcast on Apple Podcasts, Spotify and Amazon Music.</p>
+          <h3>Morning Devotional</h3>
+          <p>Every Tuesday and Thursday at 6am MST we go live on YouTube with worship songs, Scripture reading and encouragement to begin the day focused on Christ. Each stream is also published as a podcast on Apple Podcasts, Spotify and Amazon Music, and as a written devotional on this site with the ESV reading, the encouragement and the closing prayer.</p>
           <p class="muted">{latestEpisode} episodes and counting, free to watch or listen.</p>
-          <a class="btn ghost" href={href('/worship-is-warfare')}>Watch or listen</a>
+          <a class="btn ghost" href={href('/devotionals')}>Read the devotionals</a>
         </div>
         <div class="card">
           <h3>Serving local churches</h3>
@@ -66,7 +66,7 @@ const latestEpisode = Math.max(...episodes.map((e) => e.number));
         <h2>How we are funded</h2>
         <ul class="plain-list">
           <li>West Coast Revival is supported by charitable gifts. We do not sell products on this website.</li>
-          <li>Gifts fund new songs, free resources for churches and the weekly production of Worship Is Warfare.</li>
+          <li>Gifts fund new songs, free resources for churches and the weekly production of our morning devotional.</li>
           <li>Online gifts are processed securely by the National Christian Foundation (NCF), and are tax-deductible as allowed by law.</li>
           <li>Our 501(c)(3) status can be confirmed in the <a href="https://apps.irs.gov/app/eos/" rel="noopener">IRS Tax Exempt Organization Search</a> (EIN {SITE.ein}).</li>
           <li>Financial information is available on request at <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</li>

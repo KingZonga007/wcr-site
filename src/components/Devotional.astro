@@ -1,5 +1,5 @@
 ---
-// One Worship Is Warfare episode presented as a devotional:
+// One livestream episode presented as a devotional:
 // opening scripture, exhortation, prayer, closing scripture, then the episode itself.
 // Scripture text is loaded live from /api/esv (ESV API, never stored). If a passage is
 // already in the site's small stored set, it renders immediately and the live call is skipped.
@@ -24,7 +24,7 @@ const live = [opening, closing].filter((p) => p && !p.stored).map((p) => p.ref);
   <header class="devo-hero">
     <div class="wrap narrow">
       {draft && <p class="devo-draft">Draft for review. Not published.</p>}
-      <p class="eyebrow">Morning Devotional · <a href={href('/worship-is-warfare')}>Worship Is Warfare</a> #{ep.number}</p>
+      <p class="eyebrow"><a href={href('/devotionals')}>Morning Devotional</a> · #{ep.number}</p>
       <h1><span class="devo-ref">{dev.opening}</span> {dev.title}</h1>
       <p class="devo-meta muted">{date}{dev.speaker ? ` · Exhortation by ${dev.speaker}` : ''}</p>
     </div>

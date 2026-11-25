@@ -3,6 +3,7 @@ import episodes from '../data/episodes.json';
 import releases from '../data/releases.json';
 import songs from '../data/songs.json';
 import { songUrl } from './songs.js';
+import { epPath, publishedDevotional } from './devotionals.js';
 
 const slugFor = (title) => {
   const n = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '');
@@ -11,13 +12,13 @@ const slugFor = (title) => {
 };
 
 export function updates(limit = 30) {
-  const eps = episodes.map((e) => ({
+  const eps = episodes.map((e) => { const d = publishedDevotional(e.number); return {
     date: e.date,
-    kind: 'Worship Is Warfare',
-    title: `Episode ${e.number}: ${e.title}`,
+    kind: 'Morning Devotional',
+    title: d ? `${d.opening}: ${d.title}` : `Episode ${e.number}: ${e.title}`,
     text: [e.scripture.length ? `Scripture: ${e.scripture.join(', ')}` : '', e.sung.length ? `Songs: ${e.sung.join(', ')}` : ''].filter(Boolean).join('. '),
-    href: `/worship-is-warfare/${e.slug}`,
-  }));
+    href: epPath(e),
+  }; });
   const seen = new Set();
   const rel = (releases.releases || [])
     .filter((r) => r.single && r.date >= '2019')

@@ -9,12 +9,12 @@ from collections import defaultdict, deque
 DIST = sys.argv[1] if len(sys.argv) > 1 else 'dist'
 NOINDEX_OK = {'/thanks/', '/404.html', '/links/'}
 KEY = {'/': 350, '/about/': 350, '/ministry/': 400, '/give/': 250, '/contact/': 120, '/invite/': 250,
-       '/songs/': 250, '/worship-is-warfare/': 250, '/updates/': 200}
+       '/songs/': 250, '/devotionals/': 250, '/updates/': 200}
 MIN_WORDS = 200          # every indexable text page (Google gives no number; 200 is a strict floor)
 MIN_VIDEO = 100          # video pages: supporting text beside the video
 MIN_LEGAL = 150          # privacy and terms
 def floor(u):
-    if u.startswith('/worship-is-warfare/') and u != '/worship-is-warfare/': return MIN_VIDEO
+    if u.startswith('/devotionals/') and u != '/devotionals/': return MIN_VIDEO
     if u in ('/privacy/', '/terms/'): return MIN_LEGAL
     return MIN_WORDS
 PLACEHOLDER = re.compile(r'lorem ipsum|under construction|(?<!am )(?<!is )coming soon(?! to )|\bTBD\b|\bTODO\b|placeholder text|check back soon|not posted yet|on release|releasing soon', re.I)

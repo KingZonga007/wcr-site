@@ -6,31 +6,39 @@ import LiveStatus from '../../components/LiveStatus.astro';
 import { SITE, href, PREVIEW } from '../../lib/site.js';
 import episodes from '../../data/episodes.json';
 import songs from '../../data/songs.json';
+import { publishedDevotional, epPath } from '../../lib/devotionals.js';
 
 // episodes.json is kept current by scripts/update-content.mjs (YouTube channel feed).
 const latest = episodes[0];
+const devoEps = episodes.filter((e) => publishedDevotional(e.number));
+const otherEps = episodes.filter((e) => !publishedDevotional(e.number));
+const latestDevoEp = devoEps[0];
+const latestDevo = latestDevoEp && publishedDevotional(latestDevoEp.number);
 const fmt = (d) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const songTitle = (slug) => songs.find((s) => s.slug === slug)?.title;
 const yt = (id) => `https://www.youtube.com/watch?v=${id}`;
 const schema = [{
   '@context': 'https://schema.org',
   '@type': 'PodcastSeries',
-  name: 'Worship Is Warfare',
-  url: `${SITE.url}/worship-is-warfare`,
+  name: 'Morning Devotional with West Coast Revival',
+  alternateName: 'Worship Is Warfare',
+  url: `${SITE.url}/devotionals/`,
   webFeed: SITE.social.podcastRss,
   author: { '@id': `${SITE.url}/#artist` },
-  description: 'Every morning the war for allegiance begins. Who will you serve? Worship and encouragement from the Word, live Tuesdays and Thursdays.',
+  description: 'A morning devotional with worship and Scripture: an ESV reading, a short encouragement, a prayer and worship songs, live Tuesdays and Thursdays.',
 }];
 ---
-<Base title="Worship Is Warfare: Live Worship and Podcast" description="Worship Is Warfare from West Coast Revival: live on YouTube Tuesdays and Thursdays at 6am MST, and on Apple Podcasts, Spotify and Amazon Music." image="/img/wiw-live-graphic-1600.webp" schema={schema} current="wiw">
+<Base title="Morning Devotional: Worship and Scripture to Start Your Day" description={`Free morning devotionals from West Coast Revival: an ESV Scripture reading, a short encouragement, a prayer and worship songs. ${devoEps.length} devotionals, with new ones live Tuesdays and Thursdays at 6am MST.`} image="/img/wiw-live-graphic-1600.webp" schema={schema} current="wiw">
   <section class="hero" style="min-height:min(78vh,720px)">
     <img width="1200" height="800" class="bg" src="/img/ryan-worship-1600.webp" alt="" />
     <div class="wrap">
       <p class="eyebrow">Live {SITE.wiw.label}</p>
-      <h1>Worship Is Warfare</h1>
+      <h1>Morning Devotional</h1>
+      <p class="lead">Worship and Scripture to start your day</p>
       <LiveStatus />
       <div class="btn-row" style="margin-top:22px">
-        <a class="btn primary" href={SITE.social.youtubeLive} data-out="youtube">Watch on YouTube</a>
+        {latestDevoEp && <a class="btn primary" href={href(epPath(latestDevoEp))}>Read today's devotional</a>}
+        <a class="btn ghost" href={SITE.social.youtubeLive} data-out="youtube">Watch live on YouTube</a>
         <a class="btn ghost" href={SITE.social.applePodcasts} data-out="apple_podcasts">Apple Podcasts</a>
         <a class="btn ghost" href={SITE.social.spotify} data-out="spotify">Spotify</a>
       </div>
@@ -47,13 +55,13 @@ const schema = [{
         )}
       </div>
       <div>
-        <p class="eyebrow">Latest episode · #{latest.number} · {fmt(latest.date)}</p>
-        <h2>{latest.title}</h2>
+        <p class="eyebrow">Latest livestream · {fmt(latest.date)}</p>
+        <h2>{publishedDevotional(latest.number) ? `${publishedDevotional(latest.number).opening}: ${publishedDevotional(latest.number).title}` : latest.title}</h2>
         {latest.scripture.length > 0 && <p class="muted">Scripture: {latest.scripture.join(' · ')}</p>}
         {latest.sung.length > 0 && <p class="muted">Songs: {latest.sung.join(' · ')}</p>}
         <div class="btn-row" style="margin-top:16px">
           <a class="btn primary" href={yt(latest.youtubeId)} data-out="youtube">Watch on YouTube</a>
-          <a class="btn ghost" href={href(`/worship-is-warfare/${latest.slug}`)}>Episode notes</a>
+          <a class="btn ghost" href={href(epPath(latest))}>{publishedDevotional(latest.number) ? 'Read the devotional' : 'Episode notes'}</a>
         </div>
       </div>
     </div>
@@ -63,9 +71,10 @@ const schema = [{
     <div class="wrap grid two" style="align-items:start">
       <div class="prose">
         <p class="eyebrow">Why we do this</p>
-        <h2>Every morning the war for allegiance begins</h2>
+        <h2>Start the day with Christ</h2>
         <p class="lead">Who will you serve? Will the day be decided by what is screaming the loudest and demanding your attention, or will you be about the business of your King?</p>
-        <p>Worship is spiritual warfare: the fight to make Christ our greatest delight and treasure. Each episode pairs worship songs with an exhortation from Scripture, to help you start the day lifting your eyes above earthly concerns, setting your face to see the glory of God, and putting your first steps of the day on holy ground.</p>
+        <p>Each morning devotional pairs worship songs with an exhortation from Scripture, to help you start the day lifting your eyes above earthly concerns, setting your face to see the glory of God, and putting your first steps of the day on holy ground. We believe worship is spiritual warfare: the fight to make Christ our greatest delight. That's why the live broadcast and podcast is called Worship Is Warfare.</p>
+        <p>Every devotional below has the ESV reading, the encouragement from that morning, the closing prayer and a closing Scripture, with the full video and the songs we sang.</p>
       </div>
       <div>
         <blockquote class="spurgeon">
@@ -74,7 +83,7 @@ const schema = [{
         </blockquote>
         <p style="margin-top:24px">That's what we're after: to help you strap on your spiritual armor every morning, and to put on Christ by worshiping Christ.</p>
         <div class="card" style="margin-top:24px">
-          <h3>Never miss a live stream</h3>
+          <h3>Never miss a live devotional</h3>
           <p class="muted">We'll email you before each one.</p>
           <EmailForm source="wiw-hub" event="reminder_signup" cta="Remind me" thanks="Done. We'll email you before each live stream." />
         </div>
@@ -82,18 +91,31 @@ const schema = [{
     </div>
   </section>
 
-  <section class="section alt">
+  <section class="section alt" id="all">
     <div class="wrap">
-      <h2>Recent episodes</h2>
+      <h2>All devotionals</h2>
       <div>
-        {episodes.map((e) => (
-          <a class="episode" href={href(`/worship-is-warfare/${e.slug}`)}>
+        {devoEps.map((e) => { const d = publishedDevotional(e.number); return (
+          <a class="episode" href={href(epPath(e))}>
             <span class="num">#{e.number}</span>
-            <span><strong>{e.kind === 'Friday Deep Dive' ? 'Deep Dive: ' : ''}{e.title}</strong><br /><span class="muted">{fmt(e.date)}{e.scripture.length ? ` · ${e.scripture[0]}` : ''}{e.songs.length ? ` · ${e.songs.map(songTitle).join(', ')}` : ''}</span></span>
+            <span><strong>{d.title}</strong><br /><span class="muted">{d.opening} · {fmt(e.date)}{d.speaker ? ` · ${d.speaker}` : ''}</span></span>
           </a>
-        ))}
+        ); })}
       </div>
-      <p style="margin-top:24px"><a class="btn ghost" href={SITE.social.youtubeLive} data-out="youtube">All {latest.number}+ episodes on YouTube</a></p>
+      {otherEps.length > 0 && (
+        <details style="margin-top:28px">
+          <summary>More livestream episodes ({otherEps.length})</summary>
+          <div>
+            {otherEps.map((e) => (
+              <a class="episode" href={href(epPath(e))}>
+                <span class="num">#{e.number}</span>
+                <span><strong>{e.kind === 'Friday Deep Dive' ? 'Deep Dive: ' : ''}{e.title}</strong><br /><span class="muted">{fmt(e.date)}{e.scripture.length ? ` · ${e.scripture[0]}` : ''}{e.songs.length ? ` · ${e.songs.map(songTitle).join(', ')}` : ''}</span></span>
+              </a>
+            ))}
+          </div>
+        </details>
+      )}
+      <p style="margin-top:24px"><a class="btn ghost" href={SITE.social.youtubeLive} data-out="youtube">All {latest.number}+ livestreams on YouTube</a></p>
     </div>
   </section>
 </Base>

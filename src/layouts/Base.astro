@@ -36,7 +36,7 @@ const christmas = inSeason('christmas');
 const nav = [
   ...(christmas ? [{ label: 'Christmas', path: '/christmas', key: 'christmas', season: SITE.season.christmas.to }] : []),
   { label: 'Songs & charts', path: '/songs', key: 'songs' },
-  { label: 'Worship Is Warfare', path: '/worship-is-warfare', key: 'wiw' },
+  { label: 'Morning Devotional', path: '/devotionals', key: 'wiw' },
   { label: 'Our ministry', path: '/ministry', key: 'ministry' },
   { label: 'Invite us', path: '/invite', key: 'invite' },
   { label: 'About', path: '/about', key: 'about' },
@@ -114,7 +114,7 @@ const nav = [
           <h2>Join what God is doing through song</h2>
           <div class="grid">
             <a class="card" href={href('/songs')}><strong>Get free charts</strong><span>Chord charts in two keys for your worship team</span></a>
-            <a class="card" href={href('/worship-is-warfare')}><strong>Worship with us live</strong><span>Tuesdays and Thursdays, 6am MST</span></a>
+            <a class="card" href={href('/devotionals')}><strong>Morning devotional, live</strong><span>Tuesdays and Thursdays, 6am MST</span></a>
             <a class="card" href={href('/invite')}><strong>Invite us</strong><span>Worship nights, services and workshops</span></a>
             <a class="card" href={href('/give')}><strong>Give</strong><span>Keep the songs and charts free for every church</span></a>
           </div>
@@ -133,7 +133,7 @@ const nav = [
             <p class="eyebrow">Explore</p>
             <ul>
               <li><a href={href('/songs')}>Songs and free charts</a></li>
-              <li><a href={href('/worship-is-warfare')}>Worship Is Warfare</a></li>
+              <li><a href={href('/devotionals')}>Morning Devotional</a></li>
               <li><a href={href('/invite')}>Invite us</a></li>
               <li><a href={href('/about')}>About</a></li>
               <li><a href={href('/press')}>Media kit</a></li>

@@ -8,6 +8,7 @@ import featuredList from '../data/featured.json';
 import songs from '../data/songs.json';
 import episodes from '../data/episodes.json';
 import { updates, fmtDate } from '../lib/updates.js';
+import { devotionals, publishedDevotional, epPath } from '../lib/devotionals.js';
 import releases from '../data/releases.json';
 
 // Most popular first (Ryan's order)
@@ -17,6 +18,9 @@ const featured = featuredSlugs.map((s) => songs.find((x) => x.slug === s)).filte
 // Latest release: kept current by scripts/update-content.mjs; falls back to the newest song.
 const latestRel = releases.latest;
 const episodeCount = Math.max(...episodes.map((e) => e.number));
+const devoCount = devotionals.filter((d) => d.status === 'published').length;
+const latestDevoEp = episodes.find((e) => publishedDevotional(e.number));
+const latestDevo = latestDevoEp && publishedDevotional(latestDevoEp.number);
 const latestUpdates = updates(4);
 const chartCount = songs.filter((s) => s.charts.recording || s.charts.congregational).length;
 const released = songs.filter((s) => !s.unreleased);
@@ -38,7 +42,7 @@ const STORE_ON = false; // switched on in phase 3
       <h1 class="hero-title"><span>Timeless truth.</span><span>Untamed affection.</span></h1>
       <p class="lead" style="color: var(--ink)">Songs that magnify Jesus Christ, with free chord charts for every church. From the writers of "Behold Our God."</p>
       <div class="btn-row" style="margin: 22px 0 28px">
-        <a class="btn ghost" href={href('/worship-is-warfare')}>Worship with us live</a>
+        <a class="btn ghost" href={href('/devotionals')}>Worship with us live</a>
         <a class="btn ghost" href={href('/songs')}>Free charts</a>
       </div>
       <p style="font-weight:600;margin-bottom:8px">Get new songs and free charts first</p>
@@ -58,7 +62,7 @@ const STORE_ON = false; // switched on in phase 3
       </div>
       <ul class="programs">
         <li><a href={href('/songs')}><strong>Free chord charts</strong><span>{chartCount} songs in recording and congregational keys, free for any church</span></a></li>
-        <li><a href={href('/worship-is-warfare')}><strong>Worship Is Warfare</strong><span>Live worship and Scripture every Tuesday and Thursday, {episodeCount} episodes and counting</span></a></li>
+        <li><a href={href('/devotionals')}><strong>Morning devotional</strong><span>Worship and Scripture live every Tuesday and Thursday, with {devoCount} devotionals to read</span></a></li>
         <li><a href={href('/songs')}><strong>Songwriting and recording</strong><span>Congregational songs and hymn arrangements since 2003, including "Behold Our God"</span></a></li>
         <li><a href={href('/invite')}><strong>Serving local churches</strong><span>Worship nights, conferences and help for worship teams</span></a></li>
       </ul>
@@ -106,27 +110,27 @@ const STORE_ON = false; // switched on in phase 3
     <ul class="wrap">
       <li>Behold Our God<span>Written by the Bairds, sung by churches worldwide</span></li>
       <li>Sovereign Grace Music<span>Contributing songwriters for church worship since 2005</span></li>
-      <li>Worship Is Warfare Livestream<span>100+ episodes available, live twice a week</span></li>
+      <li>Morning Devotional<span>{devoCount} devotionals, live twice a week</span></li>
       <li>{chartCount} free chord charts<span>Recording and congregational keys, with more added regularly</span></li>
     </ul>
   </section>
 
-  <!-- 3. Worship Is Warfare -->
-  <section class="section" id="worship-is-warfare">
+  <!-- 3. Morning devotional -->
+  <section class="section" id="morning-devotional">
     <div class="wrap grid two">
       <div class="photo"><img width="1200" height="800" src="/img/img-8165-1600.webp" alt="Ryan Baird with hand raised in worship, Psalm 150 projected behind him" loading="lazy" /></div>
       <div>
         <p class="eyebrow">Live {SITE.wiw.label}</p>
-        <h2>Worship Is Warfare</h2>
+        <h2>Morning Devotional</h2>
         <LiveStatus />
-        <p class="lead" style="margin-top:16px">Every morning the war for allegiance begins. Who will you serve? Start your day lifting your eyes above earthly concerns, with worship and encouragement from the Word.</p>
-        <p class="muted">Latest: <a href={`https://www.youtube.com/watch?v=${ep.youtubeId}`} data-out="youtube">#{ep.number} {ep.title}</a></p>
+        <p class="lead" style="margin-top:16px">Start your day with worship and Scripture. Each morning devotional pairs an ESV reading with a short encouragement from the Word, a prayer and worship songs.</p>
+        {latestDevo && <p class="muted">Latest: <a href={href(epPath(latestDevoEp))}>{latestDevo.opening}: {latestDevo.title}</a></p>}
         <div class="btn-row" style="margin:18px 0 24px">
-          <a class="btn primary" href={href('/worship-is-warfare')}>Watch and listen</a>
-          <a class="btn ghost" href={SITE.social.youtubeSubscribe} data-out="youtube">Subscribe on YouTube</a>
+          <a class="btn primary" href={href(latestDevoEp ? epPath(latestDevoEp) : '/devotionals')}>Read today's devotional</a>
+          <a class="btn ghost" href={href('/devotionals')}>All devotionals</a>
         </div>
-        <p style="font-weight:600;margin-bottom:8px">Get a reminder before each live stream</p>
-        <EmailForm source="wiw-home" event="reminder_signup" cta="Remind me" compact thanks="Done. We'll email you before each live stream." />
+        <p style="font-weight:600;margin-bottom:8px">Get a reminder before each live devotional</p>
+        <EmailForm source="wiw-home" event="reminder_signup" cta="Remind me" compact thanks="Done. We'll email you before each live devotional." />
       </div>
     </div>
   </section>
@@ -226,7 +230,7 @@ const STORE_ON = false; // switched on in phase 3
     <div class="wrap">
       <p class="eyebrow">Partner with us</p>
       <h2>Keep the songs free</h2>
-      <p class="lead">Gifts fund new songs for congregations, free charts for churches and Worship Is Warfare. West Coast Revival is a 501(c)(3) nonprofit.</p>
+      <p class="lead">Gifts fund new songs for congregations, free charts for churches and our morning devotional. West Coast Revival is a 501(c)(3) nonprofit.</p>
       <a class="btn primary" href={href('/give')}>Give</a>
     </div>
   </section>

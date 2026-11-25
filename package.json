@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "astro build",
+    "build": "astro build && node scripts/redirects.mjs",
     "dev": "astro dev",
     "preview": "PUBLIC_PREVIEW=1 astro build",
     "audit": "python3 scripts/adgrants-audit.py"
