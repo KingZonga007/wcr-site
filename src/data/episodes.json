@@ -1034,5 +1034,197 @@
       "all-that-thrills-my-soul"
     ],
     "summary": null
+  },
+  {
+    "number": 90,
+    "slug": "90-always-forgiven",
+    "title": "Always Forgiven",
+    "date": "2026-06-03",
+    "youtubeId": "lLrq_ssTQDk",
+    "kind": "Live",
+    "scripture": [
+      "Galatians 5:2",
+      "2 Timothy 1:7"
+    ],
+    "sung": [
+      "Nothing but the Blood",
+      "Always Forgiven",
+      "Jesus Paid It All"
+    ],
+    "songs": [
+      "always-forgiven"
+    ],
+    "summary": null
+  },
+  {
+    "number": 89,
+    "slug": "89-what-a-friend-we-have-in-jesus",
+    "title": "What a Friend We Have in Jesus",
+    "date": "2026-06-02",
+    "youtubeId": "12h2CyOQdVY",
+    "kind": "Live",
+    "scripture": [
+      "Mark 10:52",
+      "2 Corinthians 5:21"
+    ],
+    "sung": [
+      "What a Friend We Have in Jesus",
+      "Undying Love",
+      "Forever"
+    ],
+    "songs": [
+      "undying-love",
+      "forever"
+    ],
+    "summary": null
+  },
+  {
+    "number": 88,
+    "slug": "88-his-forever",
+    "title": "His Forever",
+    "date": "2026-05-27",
+    "youtubeId": "gFp8BIF_WdE",
+    "kind": "Live",
+    "scripture": [
+      "1 John 2:1-6",
+      "John 10:27"
+    ],
+    "sung": [
+      "His Forever",
+      "Come You Saints",
+      "His Mercy is More"
+    ],
+    "songs": [
+      "come-you-saints"
+    ],
+    "summary": null
+  },
+  {
+    "number": 87,
+    "slug": "87-standing-on-the-rock",
+    "title": "Standing on the Rock",
+    "date": "2026-05-26",
+    "youtubeId": "8uZinPIDMHI",
+    "kind": "Live",
+    "scripture": [
+      "Philippians 4:4-7",
+      "Philippians 4:8-9"
+    ],
+    "sung": [
+      "Rock of Ages",
+      "Rejoice",
+      "Plead For Me"
+    ],
+    "songs": [
+      "plead-for-me"
+    ],
+    "summary": null
+  },
+  {
+    "number": 85,
+    "slug": "85-absent-from-flesh",
+    "title": "Absent from Flesh",
+    "date": "2026-05-21",
+    "youtubeId": "k5pIvYIWVaY",
+    "kind": "Live",
+    "scripture": [
+      "John 21:4-7",
+      "Matthew 28:18-20"
+    ],
+    "sung": [
+      "Absent from Flesh",
+      "Only for You",
+      "We Are Thankful"
+    ],
+    "songs": [
+      "only-for-you"
+    ],
+    "summary": null
+  },
+  {
+    "number": 84,
+    "slug": "84-how-awesome-is-your-name",
+    "title": "How Awesome is Your Name",
+    "date": "2026-05-20",
+    "youtubeId": "rjbypjkaG40",
+    "kind": "Live",
+    "scripture": [
+      "Philippians 1:27",
+      "2 Peter 1:3"
+    ],
+    "sung": [
+      "Behold the Lamb",
+      "I Want to Wake Up",
+      "In the Presence"
+    ],
+    "songs": [
+      "behold-the-lamb",
+      "i-want-to-wake-up"
+    ],
+    "summary": null
+  },
+  {
+    "number": 83,
+    "slug": "83-everything-loss-or-surpassing-worth",
+    "title": "Everything Loss or Surpassing Worth?",
+    "date": "2026-05-19",
+    "youtubeId": "unFrk9EcZxg",
+    "kind": "Live",
+    "scripture": [
+      "Philippians 3:7-8",
+      "Proverbs 21:21"
+    ],
+    "sung": [
+      "Lead Me To The Cross",
+      "Oh The Deep",
+      "I Will Offer Up My Life"
+    ],
+    "songs": [
+      "oh-the-deep"
+    ],
+    "summary": null
+  },
+  {
+    "number": 81,
+    "slug": "81-learn-not-the-way-of-nations",
+    "title": "Learn Not the Way of Nations",
+    "date": "2026-05-14",
+    "youtubeId": "kmwEkS-SzP8",
+    "kind": "Live",
+    "scripture": [
+      "Jeremiah 10:2-3",
+      "2 Timothy 1:7"
+    ],
+    "sung": [
+      "In the Beginning",
+      "Gonna Trust in God",
+      "Solid Rock"
+    ],
+    "songs": [
+      "in-the-beginning",
+      "solid-rock"
+    ],
+    "summary": null
+  },
+  {
+    "number": 80,
+    "slug": "80-rock-of-ages",
+    "title": "Rock of Ages",
+    "date": "2026-05-13",
+    "youtubeId": "-8HY9yl9yyo",
+    "kind": "Live",
+    "scripture": [
+      "Romans 6:1-4",
+      "Philippians 1:6"
+    ],
+    "sung": [
+      "Rock of Ages",
+      "Have Mercy on Me",
+      "Always Forgiven"
+    ],
+    "songs": [
+      "always-forgiven"
+    ],
+    "summary": null
   }
 ]
