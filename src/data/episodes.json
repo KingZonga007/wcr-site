@@ -547,6 +547,24 @@
     "summary": "The story and meaning behind the song Isaiah 53."
   },
   {
+    "number": 124,
+    "slug": "124-i-love-you-lord",
+    "title": "I Love You Lord",
+    "date": "2026-09-03",
+    "youtubeId": "i90TaNNB0z4",
+    "kind": "Live",
+    "scripture": [
+      "Philippians 3:8",
+      "2 Corinthians 1:20"
+    ],
+    "sung": [
+      "I Love You Lord",
+      "The Pearl"
+    ],
+    "songs": [],
+    "summary": null
+  },
+  {
     "number": 123,
     "slug": "123-forever",
     "title": "Forever",
@@ -584,6 +602,26 @@
     ],
     "songs": [
       "isaiah-53"
+    ],
+    "summary": null
+  },
+  {
+    "number": 121,
+    "slug": "121-let-everything-that-has-breath",
+    "title": "Let Everything That Has Breath",
+    "date": "2026-08-20",
+    "youtubeId": "eESi3YIhH9s",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 105:1-4",
+      "Psalm 106:1-2"
+    ],
+    "sung": [
+      "Let Everything That Has Breath",
+      "Only for You"
+    ],
+    "songs": [
+      "only-for-you"
     ],
     "summary": null
   },
