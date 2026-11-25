@@ -8,5 +8,5 @@ export default defineConfig({
   // Preview builds use flat .html files so they work on any static host.
   build: { format: preview ? 'file' : 'directory', inlineStylesheets: 'always' },
   trailingSlash: 'ignore',
-  integrations: preview ? [] : [sitemap({ filter: (page) => !/\/(thanks|404|links)\/?$/.test(page) && !page.includes('/devotionals/draft/') })],
+  integrations: preview ? [] : [sitemap({ filter: (page) => !/\/(thanks|404|links)\/?$/.test(page) && !page.includes('/devotionals/draft/') && !page.includes('/tools/') })],
 });
