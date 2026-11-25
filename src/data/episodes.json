@@ -2027,5 +2027,194 @@
       "i-want-to-wake-up"
     ],
     "summary": null
+  },
+  {
+    "number": 30,
+    "slug": "30-come-thou-fount",
+    "title": "Come Thou Fount",
+    "date": "2026-02-13",
+    "youtubeId": "AY9w4ED-5pA",
+    "kind": "Live",
+    "scripture": [
+      "Micah 7:18-19",
+      "Matthew 11:28-30"
+    ],
+    "sung": [
+      "Come Thou Fount",
+      "Have You Been To Jesus",
+      "His Mercy Is More"
+    ],
+    "songs": [
+      "have-you-been-to-jesus"
+    ],
+    "summary": null
+  },
+  {
+    "number": 29,
+    "slug": "29-be-thou-my-vision",
+    "title": "Be Thou My Vision",
+    "date": "2026-02-12",
+    "youtubeId": "0qXQkY2BZA4",
+    "kind": "Live",
+    "scripture": [
+      "Isaiah 53",
+      "2 Corinthians 13:14"
+    ],
+    "sung": [
+      "Be Thou My Vision",
+      "Isaiah 53",
+      "The Glory of the Cross"
+    ],
+    "songs": [
+      "isaiah-53"
+    ],
+    "summary": null
+  },
+  {
+    "number": 28,
+    "slug": "28-god-of-wonders",
+    "title": "God Of Wonders",
+    "date": "2026-02-11",
+    "youtubeId": "r_xjCbDv2q8",
+    "kind": "Live",
+    "scripture": [
+      "John 1:1-5",
+      "Psalm 73:23-26"
+    ],
+    "sung": [
+      "God Of Wonders",
+      "Behold the Lamb",
+      "King of Kings"
+    ],
+    "songs": [
+      "behold-the-lamb"
+    ],
+    "summary": null
+  },
+  {
+    "number": 27,
+    "slug": "27-o-for-a-thousand-tongues-to-sing",
+    "title": "O For A Thousand Tongues to Sing",
+    "date": "2026-02-10",
+    "youtubeId": "YJohq0V1gWU",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 50:7-15",
+      "Revelation 1:5-6"
+    ],
+    "sung": [
+      "O For A Thousand Tongues to Sing",
+      "The Heart of Worship",
+      "Your Beauty and Your Majesty"
+    ],
+    "songs": [
+      "o-for-a-thousand-tongues-to-sing",
+      "your-beauty-and-your-majesty"
+    ],
+    "summary": null
+  },
+  {
+    "number": 26,
+    "slug": "26-all-creatures-of-our-god-and-king",
+    "title": "All Creatures of Our God and King",
+    "date": "2026-02-09",
+    "youtubeId": "4rfVPK1Zb50",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 19:1-2",
+      "Psalm 121:1-3"
+    ],
+    "sung": [
+      "All Creatures of Our God and King",
+      "Sooner Count The Stars",
+      "Here I Am To Worship"
+    ],
+    "songs": [
+      "all-creatures-of-our-god-and-king"
+    ],
+    "summary": null
+  },
+  {
+    "number": 25,
+    "slug": "25-holy-holy-holy",
+    "title": "Holy, Holy, Holy",
+    "date": "2026-02-06",
+    "youtubeId": "L3kmPYd1AuA",
+    "kind": "Live",
+    "scripture": [
+      "Isaiah 55:8-9",
+      "2 Corinthians 5:21"
+    ],
+    "sung": [
+      "Holy, Holy, Holy",
+      "Indescribable",
+      "Flesh and Blood"
+    ],
+    "songs": [
+      "flesh-and-blood"
+    ],
+    "summary": null
+  },
+  {
+    "number": 24,
+    "slug": "24-my-jesus-i-love-thee",
+    "title": "My Jesus I Love Thee",
+    "date": "2026-02-05",
+    "youtubeId": "xxTQZXCv-6k",
+    "kind": "Live",
+    "scripture": [
+      "Matthew 22:37-38",
+      "Galatians 1:3-5"
+    ],
+    "sung": [
+      "My Jesus I Love Thee",
+      "Come Spirit of God",
+      "As The Deer"
+    ],
+    "songs": [
+      "come-spirit-of-god"
+    ],
+    "summary": null
+  },
+  {
+    "number": 23,
+    "slug": "23-how-deep-the-fathers-love",
+    "title": "How Deep the Father’s Love",
+    "date": "2026-02-04",
+    "youtubeId": "2drslVKm0as",
+    "kind": "Live",
+    "scripture": [
+      "Romans 8:31-37",
+      "Romans 8:38-39"
+    ],
+    "sung": [
+      "All That Thrills My Soul",
+      "How Deep the Father’s Love"
+    ],
+    "songs": [
+      "all-that-thrills-my-soul"
+    ],
+    "summary": null
+  },
+  {
+    "number": 22,
+    "slug": "22-oh-the-wonderful-cross",
+    "title": "Oh the Wonderful Cross",
+    "date": "2026-02-03",
+    "youtubeId": "B4txVyO0mHU",
+    "kind": "Live",
+    "scripture": [
+      "Philippians 1:21-25",
+      "Jude 1:24-25"
+    ],
+    "sung": [
+      "I Will Offer Up My Life",
+      "Not Backing Down",
+      "Oh the Wonderful Cross"
+    ],
+    "songs": [
+      "not-backing-down"
+    ],
+    "summary": null
   }
 ]
