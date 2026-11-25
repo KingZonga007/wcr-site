@@ -36,13 +36,16 @@ import Base from '../../layouts/Base.astro';
       const src = off.createBufferSource(); src.buffer = dec; src.connect(off.destination); src.start();
       return (await off.startRendering()).getChannelData(0);
     }
-    let asr = null;
-    async function transcribe(i, t0, t1) {
+    let asr = null, asrKey = '';
+    const DEF = { model: 'onnx-community/whisper-base.en', device: 'wasm', dtype: 'q8', timestamps: true };
+    async function transcribe(i, t0, t1, opts = {}) {
+      const o = { ...DEF, ...opts };
       st(`loading audio ${i}`);
       const pcm = await audio(i, t0, t1);
-      if (!asr) { st('loading whisper'); asr = await pipeline('automatic-speech-recognition', 'onnx-community/whisper-small.en', { device: navigator.gpu ? 'webgpu' : 'wasm', dtype: navigator.gpu ? 'fp32' : 'q8' }); }
+      const key = `${o.model}|${o.device}|${JSON.stringify(o.dtype)}`;
+      if (!asr || asrKey !== key) { st('loading whisper'); asr = await pipeline('automatic-speech-recognition', o.model, { device: o.device, dtype: o.dtype }); asrKey = key; }
       st(`transcribing ${i}`);
-      const r = await asr(pcm, { chunk_length_s: 30, stride_length_s: 5, return_timestamps: true });
+      const r = await asr(pcm, { chunk_length_s: 30, stride_length_s: 5, return_timestamps: o.timestamps });
       st('done');
       return r;
     }
