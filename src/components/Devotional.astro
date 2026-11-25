@@ -25,8 +25,7 @@ const live = [opening, closing].filter((p) => p && !p.stored).map((p) => p.ref);
     <div class="wrap narrow">
       {draft && <p class="devo-draft">Draft for review. Not published.</p>}
       <p class="eyebrow">Morning Devotional · <a href={href('/worship-is-warfare')}>Worship Is Warfare</a> #{ep.number}</p>
-      <h1>{dev.title}</h1>
-      <p class="devo-meta">{dev.opening}{closing ? ` · ${dev.closing}` : ''}</p>
+      <h1><span class="devo-ref">{dev.opening}</span> {dev.title}</h1>
       <p class="devo-meta muted">{date}{dev.speaker ? ` · Exhortation by ${dev.speaker}` : ''}</p>
     </div>
   </header>
