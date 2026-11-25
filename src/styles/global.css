@@ -2,6 +2,7 @@
 @import '@fontsource/oswald/600.css';
 @import '@fontsource/inter/400.css';
 @import '@fontsource/inter/600.css';
+@import '@fontsource/source-serif-4/400.css';
 @import '@fontsource/source-serif-4/400-italic.css';
 
 :root {
@@ -243,3 +244,28 @@ dialog::backdrop { background: rgba(0,0,0,.65); }
 @font-face{font-family:'Inter Fallback';font-weight:600;src:local('Arial Bold'),local('Arial-BoldMT'),local('Liberation Sans Bold'),local('Roboto Bold'),local('Helvetica Bold');size-adjust:103%;ascent-override:90%;descent-override:22.4%;line-gap-override:0%}
 
 .acc { letter-spacing: 0; margin-left: -.06em; font-family: var(--body); font-weight: 600; text-transform: none; }
+
+/* Devotional pages (Worship Is Warfare episodes) */
+.wrap.narrow { width: min(100% - 40px, 760px); }
+.devo-hero { padding: clamp(56px, 8vw, 96px) 0 40px; background: radial-gradient(120% 140% at 50% 0%, #1b2150 0%, var(--bg) 70%); }
+.devo-hero h1 { font-size: clamp(2.2rem, 6vw, 4rem); }
+.devo-hero .eyebrow a { color: inherit; text-decoration: none; }
+.devo-meta { margin: .2em 0; font-size: 1.05rem; }
+.devo-draft { display: inline-block; margin-bottom: 18px; padding: 6px 14px; border-radius: 999px; background: #5a2a0e; color: #ffd9b0; font-size: .9rem; font-weight: 600; }
+.devo-label { font: 500 .85rem/1 var(--head); text-transform: uppercase; letter-spacing: .22em; color: var(--accent); margin: 0 0 22px; }
+.devo-scripture { padding: clamp(56px, 8vw, 96px) 0; }
+.devo-scripture.open { background: linear-gradient(180deg, #f4efe6 0%, #ebe3d3 100%); color: #1d1a14; }
+.devo-scripture.close { background: linear-gradient(180deg, #ece6f5 0%, #ddd5ec 100%); color: #1a1730; }
+.devo-scripture .devo-label { color: #9a5b12; }
+.devo-scripture.close .devo-label { color: #4b3c8f; }
+.devo-text { margin: 0; font: 400 clamp(1.35rem, 2.6vw, 1.75rem)/1.65 var(--serif); }
+.devo-text .v sup { font: 600 .55em/1 var(--body); vertical-align: .55em; margin-right: .2em; opacity: .55; }
+.devo-loading { opacity: .6; }
+.devo-cite { margin: 22px 0 0; font: 500 1rem/1.2 var(--head); text-transform: uppercase; letter-spacing: .12em; opacity: .8; }
+.devo-scripture a { color: inherit; }
+.devo-body { padding: clamp(56px, 8vw, 96px) 0; background: var(--bg); }
+.devo-body.prose p, .devo-body .prose p { font-size: 1.15rem; line-height: 1.75; }
+.devo-prayer { padding: clamp(48px, 7vw, 80px) 0; background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.devo-prayer-text { border-left: 3px solid var(--accent); padding-left: 24px; }
+.devo-prayer-text p { font: italic 400 1.25rem/1.7 var(--serif); margin: 0 0 1em; }
+.devo-episode { padding-top: clamp(56px, 8vw, 96px); }

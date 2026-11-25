@@ -1,0 +1,15 @@
+---
+// Draft devotionals for review. Unlisted, noindex, excluded from the sitemap.
+import Base from '../../../layouts/Base.astro';
+import Devotional from '../../../components/Devotional.astro';
+import episodes from '../../../data/episodes.json';
+import { drafts } from '../../../lib/devotionals.js';
+
+export function getStaticPaths() {
+  return drafts().map((d) => ({ params: { key: d.draftKey }, props: { dev: d, ep: episodes.find((e) => e.number === d.number) } })).filter((p) => p.props.ep);
+}
+const { dev, ep } = Astro.props;
+---
+<Base title={`Draft: ${dev.opening} Devotional: ${dev.title}`} noindex current="wiw">
+  <Devotional ep={ep} dev={dev} draft />
+</Base>

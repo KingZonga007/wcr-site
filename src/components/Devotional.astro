@@ -1,0 +1,121 @@
+---
+// One Worship Is Warfare episode presented as a devotional:
+// opening scripture, exhortation, prayer, closing scripture, then the episode itself.
+// Scripture text is loaded live from /api/esv (ESV API, never stored). If a passage is
+// already in the site's small stored set, it renders immediately and the live call is skipped.
+import YouTube from './YouTube.astro';
+import EmailForm from './EmailForm.astro';
+import { SITE, href, PREVIEW } from '../lib/site.js';
+import { passage, ESV_NOTICE } from '../lib/scripture.js';
+import { hasPage, songUrl } from '../lib/songs.js';
+import songs from '../data/songs.json';
+
+const { ep, dev, draft = false } = Astro.props;
+const date = new Date(ep.date + 'T12:00:00Z').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const watch = `https://www.youtube.com/watch?v=${ep.youtubeId}`;
+const stored = (ref) => passage(ref);
+const opening = { ref: dev.opening, stored: stored(dev.opening) };
+const closing = dev.closing ? { ref: dev.closing, stored: stored(dev.closing) } : null;
+const epSongs = ep.songs.map((s) => songs.find((x) => x.slug === s)).filter(Boolean).filter(hasPage);
+const keysOf = (x) => [...new Set([x.charts.recording?.key, x.charts.congregational?.key].filter(Boolean))].join(' and ');
+const live = [opening, closing].filter((p) => p && !p.stored).map((p) => p.ref);
+---
+<article class="devo">
+  <header class="devo-hero">
+    <div class="wrap narrow">
+      {draft && <p class="devo-draft">Draft for review. Not published.</p>}
+      <p class="eyebrow">Morning Devotional · <a href={href('/worship-is-warfare')}>Worship Is Warfare</a> #{ep.number}</p>
+      <h1>{dev.title}</h1>
+      <p class="devo-meta">{dev.opening}{closing ? ` · ${dev.closing}` : ''}</p>
+      <p class="devo-meta muted">{date}{dev.speaker ? ` · Exhortation by ${dev.speaker}` : ''}</p>
+    </div>
+  </header>
+
+  <section class="devo-scripture open">
+    <div class="wrap narrow">
+      <p class="devo-label">Read</p>
+      <blockquote class="devo-text" data-ref={opening.ref}>
+        {opening.stored ? opening.stored.verses.map((v) => <span class="v"><sup>{v.n}</sup>{v.text} </span>) : <span class="devo-loading">{opening.ref}</span>}
+      </blockquote>
+      <p class="devo-cite">{opening.ref} (<a href="https://www.esv.org" rel="noopener">ESV</a>)</p>
+    </div>
+  </section>
+
+  <section class="devo-body">
+    <div class="wrap narrow prose">
+      <p class="devo-label">Reflect</p>
+      {dev.exhortation.map((p) => <p>{p}</p>)}
+    </div>
+  </section>
+
+  {dev.prayer?.length > 0 && (
+    <section class="devo-prayer">
+      <div class="wrap narrow">
+        <p class="devo-label">Pray</p>
+        <div class="devo-prayer-text">
+          {dev.prayer.map((p) => <p>{p}</p>)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {closing && (
+    <section class="devo-scripture close">
+      <div class="wrap narrow">
+        <p class="devo-label">Go with this word</p>
+        <blockquote class="devo-text" data-ref={closing.ref}>
+          {closing.stored ? closing.stored.verses.map((v) => <span class="v"><sup>{v.n}</sup>{v.text} </span>) : <span class="devo-loading">{closing.ref}</span>}
+        </blockquote>
+        <p class="devo-cite">{closing.ref} (<a href="https://www.esv.org" rel="noopener">ESV</a>)</p>
+      </div>
+    </section>
+  )}
+
+  <section class="section devo-episode">
+    <div class="wrap">
+      <div class="grid two" style="align-items:start">
+        <div>
+          <h2 style="font-size:1.6rem">Watch the episode</h2>
+          {PREVIEW ? (
+            <a class="embed" href={watch} data-out="youtube" style="display:block"><img width="800" height="500" src="/img/wiw-live-graphic-800.webp" alt={`Watch ${ep.title} on YouTube`} style="width:100%;height:100%;object-fit:cover" /></a>
+          ) : (
+            <YouTube id={ep.youtubeId} title={ep.title} />
+          )}
+          <div class="btn-row" style="margin-top:16px">
+            <a class="btn primary" href={watch} data-out="youtube">Watch on YouTube</a>
+            <a class="btn ghost" href={SITE.social.applePodcasts} data-out="apple_podcasts">Apple Podcasts</a>
+            <a class="btn ghost" href={SITE.social.spotify} data-out="spotify">Spotify</a>
+          </div>
+        </div>
+        <aside class="card">
+          {ep.sung.length > 0 && (<><h3>Songs in this episode</h3>{ep.sung.map((n) => <p style="margin:4px 0">{n}</p>)}</>)}
+          {epSongs.length > 0 && (
+            <>
+              <h3 style="margin-top:20px">Free chord charts</h3>
+              {epSongs.map((x) => <p style="margin:4px 0"><a href={href(songUrl(x))}>{x.title}</a> <span class="muted">in {keysOf(x)}</span></p>)}
+            </>
+          )}
+          <h3 style="margin-top:20px">Start your morning with us</h3>
+          <p class="muted" style="margin-top:0">Live worship and Scripture {SITE.wiw.label}. Get a reminder before each one.</p>
+          <EmailForm source={`devotional:${ep.number}`} event="reminder_signup" cta="Remind me" compact thanks="Done. We'll email you before each live devotional." />
+        </aside>
+      </div>
+      <p class="muted" style="font-size:.8rem;margin-top:28px;max-width:820px">{ESV_NOTICE}</p>
+    </div>
+  </section>
+</article>
+
+{live.length > 0 && (
+  <script is:inline define:vars={{ live }}>
+    fetch('/api/esv?q=' + encodeURIComponent(live.join('|')))
+      .then((r) => (r.ok ? r.json() : { passages: [] }))
+      .then(({ passages }) => {
+        passages.forEach((p, i) => {
+          const el = document.querySelector(`.devo-text[data-ref="${live[i]}"]`);
+          if (!el || !p.verses.length) return;
+          el.innerHTML = p.verses.map((v) => `<span class="v"><sup>${v.n}</sup>${v.text.replace(/</g, '&lt;')} </span>`).join('');
+        });
+      })
+      .catch(() => {});
+  </script>
+)}

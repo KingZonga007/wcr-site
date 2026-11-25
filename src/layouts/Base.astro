@@ -7,7 +7,7 @@ import inter400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
 import inter600 from '@fontsource/inter/files/inter-latin-600-normal.woff2?url';
 import oswald500 from '@fontsource/oswald/files/oswald-latin-500-normal.woff2?url';
 
-const { title, description = SITE.description, image = '/img/band-best-1600.webp', schema = [], current = '' } = Astro.props;
+const { title, description = SITE.description, image = '/img/band-best-1600.webp', schema = [], current = '', noindex = false } = Astro.props;
 const fullTitle = title ? `${title} | ${SITE.name}` : SITE.homeTitle;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const orgSchema = {
@@ -51,6 +51,7 @@ const nav = [
     <link rel="preload" href={oswald500} as="font" type="font/woff2" crossorigin />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={fullTitle} />

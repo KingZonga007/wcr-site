@@ -8,11 +8,14 @@ import songs from '../../data/songs.json';
 import { hasPage, songUrl } from '../../lib/songs.js';
 import { passage, ESV_NOTICE } from '../../lib/scripture.js';
 import recaps from '../../data/episode-recaps.json';
+import Devotional from '../../components/Devotional.astro';
+import { publishedDevotional } from '../../lib/devotionals.js';
 
 export function getStaticPaths() {
   return episodes.map((e) => ({ params: { slug: e.slug }, props: { ep: e } }));
 }
 const { ep } = Astro.props;
+const dev = publishedDevotional(ep.number);
 const date = new Date(ep.date + 'T12:00:00Z').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 const epSongs = ep.songs.map((s) => songs.find((x) => x.slug === s)).filter(Boolean);
 const watch = `https://www.youtube.com/watch?v=${ep.youtubeId}`;
@@ -45,7 +48,14 @@ const schema = [{
   video: { '@type': 'VideoObject', name: ep.title, embedUrl: `https://www.youtube.com/embed/${ep.youtubeId}`, uploadDate: ep.date, thumbnailUrl: `https://i.ytimg.com/vi/${ep.youtubeId}/hqdefault.jpg`, description: `Worship Is Warfare #${ep.number}: ${ep.title}` },
   partOfSeries: { '@type': 'PodcastSeries', name: 'Worship Is Warfare', url: `${SITE.url}/worship-is-warfare` },
 }];
+const devTitle = dev && `${dev.opening} Devotional: ${dev.title}`;
+const devDesc = dev && `${dev.summary || dev.exhortation[0].slice(0, 140)} A morning devotional with worship and Scripture from West Coast Revival.`;
 ---
+{dev ? (
+<Base title={`${devTitle} | Morning Devotional`} description={devDesc} image={`https://i.ytimg.com/vi/${ep.youtubeId}/hqdefault.jpg`} schema={[{ '@context': 'https://schema.org', '@type': 'Article', headline: devTitle, datePublished: ep.date, author: dev.speaker ? { '@type': 'Person', name: dev.speaker } : { '@type': 'Organization', name: 'West Coast Revival' }, publisher: { '@type': 'Organization', name: 'West Coast Revival' }, url: `${SITE.url}/worship-is-warfare/${ep.slug}` }, ...schema]} current="wiw">
+  <Devotional ep={ep} dev={dev} />
+</Base>
+) : (
 <Base title={`${ep.title} | Worship Is Warfare #${ep.number}`} description={`Worship Is Warfare #${ep.number}: ${ep.title}.${ep.scripture.length ? ' Scripture: ' + ep.scripture.join(', ') + '.' : ''} Worship and encouragement from the Word with West Coast Revival.`} image="/img/wiw-live-graphic-1600.webp" schema={schema} current="wiw">
   <section class="section">
     <div class="wrap">
@@ -114,3 +124,4 @@ const schema = [{
     </div>
   </section>
 </Base>
+)}
