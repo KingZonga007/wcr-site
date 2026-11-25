@@ -1797,5 +1797,235 @@
       "undivided-heart"
     ],
     "summary": null
+  },
+  {
+    "number": 42,
+    "slug": "42-no-not-one",
+    "title": "No Not One",
+    "date": "2026-03-04",
+    "youtubeId": "i5kaAszT0uc",
+    "kind": "Live",
+    "scripture": [
+      "Proverbs 27:17",
+      "Romans 6:8-10"
+    ],
+    "sung": [
+      "No Not One",
+      "Not Backing Down",
+      "Shout to The Lord"
+    ],
+    "songs": [
+      "not-backing-down"
+    ],
+    "summary": null
+  },
+  {
+    "number": 41,
+    "slug": "41-in-the-beginning",
+    "title": "In the Beginning",
+    "date": "2026-03-03",
+    "youtubeId": "Jst97Ib0pAk",
+    "kind": "Live",
+    "scripture": [
+      "2 Corinthians 5:6-10",
+      "1 Corinthians 13:12"
+    ],
+    "sung": [
+      "In the Beginning",
+      "Absent from Flesh",
+      "Soon and Very Soon"
+    ],
+    "songs": [
+      "in-the-beginning"
+    ],
+    "summary": null
+  },
+  {
+    "number": 40,
+    "slug": "40-amazing-grace",
+    "title": "Amazing Grace",
+    "date": "2026-03-02",
+    "youtubeId": "Db1gqJFBk3w",
+    "kind": "Live",
+    "scripture": [
+      "Galatians 2:9-10",
+      "2 Peter 1:2-3"
+    ],
+    "sung": [
+      "Amazing Grace",
+      "Your Great Renown",
+      "Sovereign Over Us"
+    ],
+    "songs": [],
+    "summary": null
+  },
+  {
+    "number": 39,
+    "slug": "39-alas-and-did-my-savior-bleed",
+    "title": "Alas and Did My Savior Bleed",
+    "date": "2026-02-27",
+    "youtubeId": "qMmrxgCeeIc",
+    "kind": "Live",
+    "scripture": [
+      "Revelation 22:12-16",
+      "Matthew 28:18-20"
+    ],
+    "sung": [
+      "Alas and Did My Savior Bleed",
+      "My Savior's Precious Blood",
+      "Beautiful Savior"
+    ],
+    "songs": [
+      "my-saviors-precious-blood"
+    ],
+    "summary": null
+  },
+  {
+    "number": 38,
+    "slug": "38-the-prodigal",
+    "title": "The Prodigal",
+    "date": "2026-02-26",
+    "youtubeId": "RbcikDFD4Uc",
+    "kind": "Live",
+    "scripture": [
+      "Luke 15:11-24",
+      "Jude 1:24-25"
+    ],
+    "sung": [
+      "The Prodigal",
+      "Before My Knees Could Reach The Ground",
+      "Jesus Thank You"
+    ],
+    "songs": [
+      "the-prodigal",
+      "before-my-knees-could-reach-the-ground"
+    ],
+    "summary": null
+  },
+  {
+    "number": 36,
+    "slug": "36-come-you-saints",
+    "title": "Come You Saints",
+    "date": "2026-02-24",
+    "youtubeId": "1-UHhTZGR1c",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 118:14-18",
+      "1 Thessalonians 5:23-24"
+    ],
+    "sung": [
+      "King Of My Heart",
+      "For Your Glory Alone",
+      "Come You Saints"
+    ],
+    "songs": [
+      "come-you-saints"
+    ],
+    "summary": null
+  },
+  {
+    "number": 35,
+    "slug": "35-let-my-words-be-few",
+    "title": "Let My Words Be Few",
+    "date": "2026-02-23",
+    "youtubeId": "L-pOJu6DI5o",
+    "kind": "Live",
+    "scripture": [
+      "Isaiah 6:1-7",
+      "Revelation 5:13-14"
+    ],
+    "sung": [
+      "Let My Words Be Few",
+      "Only You",
+      "Come Behold the Wondrous Mystery"
+    ],
+    "songs": [
+      "only-you"
+    ],
+    "summary": null
+  },
+  {
+    "number": 34,
+    "slug": "34-oh-to-see-you",
+    "title": "Oh To See You",
+    "date": "2026-02-20",
+    "youtubeId": "Md9px-wF2yQ",
+    "kind": "Live",
+    "scripture": [
+      "Hebrews 1:3-4",
+      "Revelation 19:11-13"
+    ],
+    "sung": [
+      "In Christ Alone",
+      "Oh To See You",
+      "Revelation Song"
+    ],
+    "songs": [
+      "oh-to-see-you"
+    ],
+    "summary": null
+  },
+  {
+    "number": 33,
+    "slug": "33-holy-holy-holy",
+    "title": "Holy, Holy, Holy",
+    "date": "2026-02-19",
+    "youtubeId": "HP875PEb-Uc",
+    "kind": "Live",
+    "scripture": [
+      "1 Peter 1:10-12",
+      "Revelation 22:17"
+    ],
+    "sung": [
+      "Holy, Holy, Holy",
+      "Greater than We Can Imagine",
+      "Time Keeps Slippin' Away"
+    ],
+    "songs": [
+      "time-keeps-slippin-away"
+    ],
+    "summary": null
+  },
+  {
+    "number": 32,
+    "slug": "32-great-is-thy-faithfulness",
+    "title": "Great is Thy Faithfulness",
+    "date": "2026-02-18",
+    "youtubeId": "5Nl9pw_HK-E",
+    "kind": "Live",
+    "scripture": [
+      "Proverbs 3:5-8",
+      "Ephesians 1:3-6"
+    ],
+    "sung": [
+      "Great is Thy Faithfulness",
+      "The Sparrow",
+      "To You O Lord"
+    ],
+    "songs": [
+      "the-sparrow"
+    ],
+    "summary": null
+  },
+  {
+    "number": 31,
+    "slug": "31-i-want-to-wake-up",
+    "title": "I Want to Wake Up",
+    "date": "2026-02-17",
+    "youtubeId": "Iyk-ziXmsbc",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 48:9-11",
+      "Romans 16:25-27"
+    ],
+    "sung": [
+      "I Want To Wake Up",
+      "Amazing Grace",
+      "In The Presence"
+    ],
+    "songs": [
+      "i-want-to-wake-up"
+    ],
+    "summary": null
   }
 ]
