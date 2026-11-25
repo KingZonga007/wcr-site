@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /tools/
 
 Sitemap: https://westcoastrevival.org/sitemap-index.xml
-Disallow: /tools/
