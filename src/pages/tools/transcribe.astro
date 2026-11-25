@@ -24,9 +24,14 @@ import Base from '../../layouts/Base.astro';
       const bps = total / dur;
       const a = Math.floor(t0 * bps), b = Math.floor(t1 * bps);
       const parts = [];
-      for (let s = a; s < b; s += 4_000_000) {
-        const r = await fetch(`/api/podcast?i=${i}&start=${s}&end=${Math.min(b, s + 4_000_000)}`);
-        parts.push(new Uint8Array(await r.arrayBuffer()));
+      for (let s = a; s < b; s += 2_000_000) {
+        let got = null;
+        for (let k = 0; k < 4 && !got; k++) {
+          try { const r = await fetch(`/api/podcast?i=${i}&start=${s}&end=${Math.min(b, s + 2_000_000)}`); if (r.ok) got = new Uint8Array(await r.arrayBuffer()); } catch (e) {}
+          if (!got) await new Promise((r) => setTimeout(r, 1500));
+        }
+        if (!got) throw new Error('audio fetch failed');
+        parts.push(got);
       }
       const buf = new Uint8Array(parts.reduce((n, p) => n + p.length, 0));
       let o = 0; for (const p of parts) { buf.set(p, o); o += p.length; }
