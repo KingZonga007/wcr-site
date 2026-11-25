@@ -6,7 +6,7 @@ import episodes from '../../../data/episodes.json';
 import { drafts } from '../../../lib/devotionals.js';
 
 export function getStaticPaths() {
-  return drafts().map((d) => ({ params: { key: d.draftKey }, props: { dev: d, ep: episodes.find((e) => e.number === d.number) } })).filter((p) => p.props.ep);
+  return drafts().map((d) => ({ params: { key: d.draftKey }, props: { dev: d, ep: episodes.find((e) => e.number === d.number) || d.episode } })).filter((p) => p.props.ep);
 }
 const { dev, ep } = Astro.props;
 ---
