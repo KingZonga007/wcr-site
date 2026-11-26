@@ -646,6 +646,24 @@
     "summary": null
   },
   {
+    "number": 119,
+    "slug": "119-grace-and-peace",
+    "title": "Grace and Peace",
+    "date": "2026-08-18",
+    "youtubeId": "r4OTYp4f6f0",
+    "kind": "Live",
+    "scripture": [
+      "1 Thessalonians 5:23-24",
+      "Romans 8:34"
+    ],
+    "sung": [
+      "Great is Thy Faithfulness",
+      "Grace and Peace"
+    ],
+    "songs": [],
+    "summary": null
+  },
+  {
     "number": 117,
     "slug": "117-lead-me-to-the-cross",
     "title": "Lead Me to the Cross",
@@ -1249,6 +1267,28 @@
     "summary": null
   },
   {
+    "number": 77,
+    "slug": "77-the-pearl-of-great-price",
+    "title": "The Pearl Of Great Price",
+    "date": "2026-05-07",
+    "youtubeId": "VU5k0mOBHlk",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 63:1-3",
+      "Numbers 6:24-26"
+    ],
+    "sung": [
+      "Day After Day",
+      "Lord I Need You",
+      "The Pearl Of Great Price"
+    ],
+    "songs": [
+      "day-after-day",
+      "the-pearl-of-great-price"
+    ],
+    "summary": null
+  },
+  {
     "number": 76,
     "slug": "76-here-with-christ",
     "title": "Here With Christ",
@@ -1312,6 +1352,25 @@
     "summary": null
   },
   {
+    "number": 72,
+    "slug": "72-we-are-thankful",
+    "title": "We Are Thankful",
+    "date": "2026-04-29",
+    "youtubeId": "oRz-fHewE6Y",
+    "kind": "Live",
+    "scripture": [
+      "1 Thessalonians 5:14-24",
+      "1 Peter 5:6-11"
+    ],
+    "sung": [
+      "Grace Alone",
+      "We Are Thankful",
+      "His Mercy is More"
+    ],
+    "songs": [],
+    "summary": null
+  },
+  {
     "number": 71,
     "slug": "71-sing-your-mercies-new",
     "title": "Sing Your Mercies New",
@@ -1372,6 +1431,27 @@
     "songs": [
       "i-want-to-wake-up",
       "solid-rock"
+    ],
+    "summary": null
+  },
+  {
+    "number": 67,
+    "slug": "67-the-sparrow",
+    "title": "The Sparrow",
+    "date": "2026-04-21",
+    "youtubeId": "0ogSsnU_uIs",
+    "kind": "Live",
+    "scripture": [
+      "Matthew 28:16-20",
+      "2 Peter 1:2-3"
+    ],
+    "sung": [
+      "Oceans",
+      "The Sparrow",
+      "Yet Not I But Through Christ"
+    ],
+    "songs": [
+      "the-sparrow"
     ],
     "summary": null
   },
