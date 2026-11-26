@@ -1,6 +1,6 @@
 {
   "number": 91,
-  "status": "draft",
+  "status": "published",
   "draftKey": "91-fb5ea962d6",
   "title": "God Alone Is My Rock",
   "speaker": "Ryan Baird",
@@ -16,27 +16,5 @@
   "prayer": [
     "Lord, may we wait on you until trusting you becomes not a trite phrase but a reality that creates power in us, because our hope is sure and strong. It is not weak or feeble. It is secure and rests wholly in you.",
     "Help us meditate and soak in your word. Give everyone listening a particular scripture to meditate on all day, so that by the power of your word you create in us a radical, unshakable trust that weathers the storm of political chaos and leaders who don't live up to their promises. These things cannot be our hope. You alone are our trust and our fortress, and we put our hope in you. Help us pick up the weapons of spiritual warfare: your word, sharper than any two-edged sword, the power of your Spirit, constant prayer, and praise lifted to you. Transform our day, Lord. In Jesus' name, amen."
-  ],
-  "episode": {
-    "number": 91,
-    "slug": "91-god-is-a-refuge",
-    "title": "God is a Refuge",
-    "date": "2026-06-09",
-    "youtubeId": "l1K6A-KWf1c",
-    "kind": "Live",
-    "scripture": [
-      "Psalm 62",
-      "Psalm 20:7"
-    ],
-    "sung": [
-      "Shout To The Lord",
-      "The Sparrow",
-      "Solid Rock"
-    ],
-    "songs": [
-      "the-sparrow",
-      "solid-rock"
-    ],
-    "summary": null
-  }
+  ]
 }

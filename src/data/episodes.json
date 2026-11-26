@@ -1032,6 +1032,27 @@
     "summary": null
   },
   {
+    "number": 93,
+    "slug": "93-pride-the-destroyer-christ-the-redeemer",
+    "title": "Pride the Destroyer, Christ the Redeemer",
+    "date": "2026-06-11",
+    "youtubeId": "lpEQa20CD2E",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 10:4",
+      "Deuteronomy 32:4"
+    ],
+    "sung": [
+      "Grace Alone",
+      "Before My Knees Could Reach the Ground",
+      "His Mercy Is More"
+    ],
+    "songs": [
+      "before-my-knees-could-reach-the-ground"
+    ],
+    "summary": null
+  },
+  {
     "number": 92,
     "slug": "92-you-do-nothing",
     "title": "You. Do. Nothing.",
@@ -1050,6 +1071,28 @@
     "songs": [
       "day-after-day",
       "all-that-thrills-my-soul"
+    ],
+    "summary": null
+  },
+  {
+    "number": 91,
+    "slug": "91-god-is-a-refuge",
+    "title": "God is a Refuge",
+    "date": "2026-06-09",
+    "youtubeId": "l1K6A-KWf1c",
+    "kind": "Live",
+    "scripture": [
+      "Psalm 62",
+      "Psalm 20:7"
+    ],
+    "sung": [
+      "Shout To The Lord",
+      "The Sparrow",
+      "Solid Rock"
+    ],
+    "songs": [
+      "the-sparrow",
+      "solid-rock"
     ],
     "summary": null
   },
