@@ -33,4 +33,13 @@ Statuses: proposed, approved, done, declined, deferred. Newest first within each
 
 ## Suggestions
 
-(None yet. The first review adds them here.)
+Review 2026-11-26 (reports/2026-11-26.md). All proposed, awaiting Ryan.
+
+- 2026-11-26 #1 proposed: Show QS, pause enabled QS 1-2 keywords, record Nov MTD CTR. Auto-pause rule held until Dec 9.
+- 2026-11-26 #2 proposed: Decline AI Max, broad match and portfolio bid recommendations; confirm AI Max off in all 4 campaigns.
+- 2026-11-26 #3 proposed: Rewrite the limited "Worship Is Warfare Podcast" RSA with Morning Devotional headlines. Keyword changes wait for Dec 3.
+- 2026-11-26 #4 proposed: Add We Three Kings close variants to Christmas Charts / Ad group 1.
+- 2026-11-26 #5 proposed: Hero RSAs Poor to Good; callouts on 3 campaigns.
+- 2026-11-26 #6 proposed: /christmas/ chart button downloads the We Three Kings PDF directly, chart_download fires once.
+- 2026-11-26 #7 proposed: Internal links use trailing-slash URLs.
+- 2026-11-26 #8 proposed: Link Search Console to GA4; no GA4 tag on noindex drafts.
