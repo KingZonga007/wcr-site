@@ -17,14 +17,40 @@ Instructions for Claude Code. Build a simple, owned email system for West Coast 
 
 | Part | Choice | Why |
 |---|---|---|
-| Sending | An email API provider (recommended: **Resend**; alternatives: Postmark, Amazon SES). Wrap it in one `sendEmail()` module so the provider can be swapped. | Handles deliverability, bounces and webhooks. Check current free-tier limits before choosing. |
+| Sending | **Resend**, free plan (decided Nov 27 2026). Wrap it in one `sendEmail()` module so the provider can be swapped (Amazon SES is the fallback). | Handles deliverability, bounces and webhooks. See 2a for the limits this imposes. |
 | Sending domain | Subdomain `mail.westcoastrevival.org` | Keeps marketing reputation separate from the root domain and avoids conflicts with Porkbun forwarding. |
-| Database | Postgres (recommended: **Netlify DB / Neon** free tier). | Real storage, easy export, works from Netlify Functions and GitHub Actions. |
+| Database | Postgres on **Neon, free plan, account created directly at neon.com** (decided Nov 27 2026). Do not provision it through Netlify DB. | Real storage, easy export, works from Netlify Functions and GitHub Actions. Netlify DB bills compute against the site's 300 monthly credits; a direct Neon project does not. |
 | Capture and links | Netlify Functions under `/api/*` | Same host as the site. |
 | Scheduled sending | GitHub Actions cron running a Node script | No function timeouts, free minutes, matches existing automation. |
 | Email content | Markdown files in the repo with frontmatter | Ryan can say "write and schedule this email" and Claude edits a file. A commit is the schedule. |
 
 Never commit subscriber data, exports or secrets to the repo. Secrets live in Netlify environment variables and GitHub Actions secrets.
+
+## 2a. Decisions and limits (verified Nov 27 2026)
+
+These are final for V1. Do not reopen them during the build. Re-check the numbers only if a send fails on a limit.
+
+**Resend free plan:** 3,000 emails per month, hard cap of 100 per day, no overage (sends fail until the cap resets). Build around the daily cap:
+
+- Add `DAILY_SEND_LIMIT` to the config module, default `90` (leaves 10 a day for tests and retries). Every send path counts against it: confirmations, sequences, campaigns and the import.
+- Priority when the budget is short: confirmation emails first, then sequence steps, then campaigns.
+- Confirmation emails are sent from the Netlify Function at signup. If the day's budget is spent, store the subscriber as `pending` with no send and let the next scheduled job send the confirmation. Never drop a signup.
+- `send-due.mjs` sends as many campaign recipients as the remaining budget allows, leaves the campaign in `sending`, and continues on later runs until everyone has it. The unique constraints on `sends` already make this safe.
+- The one-time Netlify Forms import (section 4, step 4) must drip confirmations under the same limit, oldest signups first.
+- `stats` prints today's sends against the limit and the number of active subscribers.
+- Upgrade trigger: when a campaign would take more than 3 days to finish (about 270 active subscribers), tell Ryan. Resend Pro is $20 a month for 50,000 emails with no daily cap. Raising `DAILY_SEND_LIMIT` is the only code change.
+
+**Neon free plan:** 1 GB storage and 100 compute-hours a month per project, scales to zero after 5 idle minutes, no card required. Far more than this list needs. Use the pooled connection string from Functions. The first query after idle is slow (cold start), so give `/api/subscribe` a generous timeout and let the form show success regardless, as it does today.
+
+**Netlify credits:** the free plan is 300 credits a month, and each production deploy costs about 15. The site already deploys often (content bot, devotionals, growth review). The emailer must not add deploys:
+
+- Add an `ignore` command to `netlify.toml` so commits that only touch `emails/`, `docs/` or `scripts/email/` skip the build.
+- Campaign and sequence files are read by GitHub Actions from the repo, so they need no deploy.
+- Functions usage from signups is small (requests and compute are metered in the same pool but at low rates).
+
+**GitHub Actions:** the repo is public, so standard runners are free. Run `send-due` every 15 minutes and `send-sequences` daily as specified.
+
+**Ryan's handoffs (only these):** create the Resend account, create the Neon account, and approve the DNS records at Porkbun. Everything else is driven by Claude.
 
 ## 3. Data model
 
